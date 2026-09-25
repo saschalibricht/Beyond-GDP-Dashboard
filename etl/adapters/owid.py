@@ -16,6 +16,7 @@ from __future__ import annotations
 import csv
 import io
 import json
+import threading
 from pathlib import Path
 
 from .. import http
@@ -26,6 +27,7 @@ API = "https://api.ourworldindata.org/v1/indicators/{id}.{kind}.json"
 HEADERS = {"User-Agent": "Our World In Data data fetch/1.0 (BeyondGDP dashboard)"}
 KEYS = {"entity", "code", "year", "day"}
 ID_CACHE = Path(__file__).resolve().parents[2] / "data" / "owid_ids.json"
+_cache_lock = threading.Lock()  # sources run in parallel threads
 
 
 def _grapher_rows(slug: str, query: dict | None) -> list[dict]:
@@ -93,9 +95,10 @@ def _resolve_id(params: dict) -> int:
         except Exception:
             continue
         if meta.get("shortName") == short:
-            cache[short] = i
-            ID_CACHE.parent.mkdir(parents=True, exist_ok=True)
-            ID_CACHE.write_text(json.dumps(cache, indent=2))
+            with _cache_lock:  # re-read: another thread may have added an id meanwhile
+                cache = {**_load_cache(), short: i}
+                ID_CACHE.parent.mkdir(parents=True, exist_ok=True)
+                ID_CACHE.write_text(json.dumps(cache, indent=2))
             return i
     raise AdapterError(f"OWID indicator '{short}' not found near id {anchor}")
 

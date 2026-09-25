@@ -20,9 +20,9 @@ from .base import TOTAL_CODES, AdapterError, Point, Result, match_pref, to_float
 
 BASE = "https://unstats.un.org/SDGAPI/v1/sdg"
 PAGE = 5000
-MAX_PAGES = 80
-# above this many countries, fetch all areas and filter locally (keeps URLs short)
-MANY = 40
+MAX_PAGES = 40
+# countries per request: keeps URLs short and responses small
+MANY = 50
 DEFAULT_DIMS = {"Reporting Type": ["G", "N"]}
 IGNORE_DIMS = {"Units", "Nature", "Observation Status", "UnitMultiplier", "Unit multiplier"}
 
@@ -42,12 +42,18 @@ def _pages(endpoint: str, params: dict) -> list[dict]:
     return rows
 
 
+def _batched(endpoint: str, params: dict, m49s: list[str]) -> list[dict]:
+    """Ask for the configured countries only, in parallel batches (no regional aggregates)."""
+    batches = [m49s[i:i + MANY] for i in range(0, len(m49s), MANY)]
+    parts = http.pmap(lambda b: _pages(endpoint, {**params, "areaCode": b}), batches, workers=4)
+    return [r for part in parts for r in part]
+
+
 def _load(params: dict, m49s: list[str]) -> tuple[list[dict], str]:
-    area = {"areaCode": m49s} if len(m49s) <= MANY else {}
     series = params.get("series")
     if series:
         try:
-            rows = _pages("Series/Data", {"seriesCode": series, **area})
+            rows = _batched("Series/Data", {"seriesCode": series}, m49s)
             if rows:
                 return rows, f"series {series}"
         except Exception:
@@ -56,7 +62,7 @@ def _load(params: dict, m49s: list[str]) -> tuple[list[dict], str]:
     ind = params.get("indicator")
     if not ind:
         return [], ""
-    rows = _pages("Indicator/Data", {"indicator": ind, **area})
+    rows = _batched("Indicator/Data", {"indicator": ind}, m49s)
     return rows, f"indicator {ind}"
 
 

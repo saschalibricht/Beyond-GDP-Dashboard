@@ -46,12 +46,15 @@ def _by_country(countries: list[dict]) -> dict[str, list[dict]]:
             if code in wanted:
                 out.setdefault(code, []).append(r)
         return out
-    errors = 0
-    for iso3 in wanted:
+    def one(iso3: str) -> list[dict] | None:
         try:
-            out[iso3] = _national(_rows(iso3))
+            return _national(_rows(iso3))
         except Exception:
-            errors += 1
+            return None
+
+    got = dict(zip(wanted, http.pmap(one, wanted, workers=6)))
+    out = {k: v for k, v in got.items() if v is not None}
+    errors = len(wanted) - len(out)
     if errors == len(wanted):
         raise AdapterError("PIP API unreachable for all countries")
     return out
@@ -98,18 +101,27 @@ def fetch_mean(params: dict, countries: list[dict], ctx: dict) -> Result:
 def fetch_spl(params: dict, countries: list[dict], ctx: dict) -> Result:
     baseline = int(params.get("baseline", 2017))
     res = Result()
-    errors = 0
     base_rows = _by_country(countries)
+    lines: dict[str, tuple[int, float]] = {}
     for iso3, rows in base_rows.items():
         candidates = [(abs(_year(r) - baseline), _year(r), _spl(r)) for r in rows if _year(r) and _spl(r)]
-        if not candidates:
-            continue
-        _, base_year, line = min(candidates)
+        if candidates:
+            _, base_year, line = min(candidates)
+            lines[iso3] = (base_year, line)
+
+    def fixed_rows(iso3: str) -> list[dict] | None:
         try:
-            fixed = _national(_rows(iso3, povline=line))
+            return _national(_rows(iso3, povline=lines[iso3][1]))
         except Exception:
-            errors += 1
+            return None
+
+    # one request per country at its own fixed line; run them in parallel
+    fetched = dict(zip(lines, http.pmap(fixed_rows, list(lines), workers=6)))
+    errors = sum(1 for v in fetched.values() if v is None)
+    for iso3, fixed in fetched.items():
+        if fixed is None:
             continue
+        base_year, line = lines[iso3]
         welfare = set()
         for r in fixed:
             y, hc = _year(r), to_float(r.get("headcount"))

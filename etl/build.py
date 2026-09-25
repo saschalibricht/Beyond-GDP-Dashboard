@@ -18,7 +18,10 @@ import datetime as dt
 import hashlib
 import json
 import sys
+import threading
+import time
 import traceback
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from . import http
@@ -32,6 +35,11 @@ STATE_DIR = ROOT / "data"
 
 OUTDATED_AFTER_YEARS = 5
 ALERT_AFTER_FAILURES = 3
+# Sources are fetched in parallel. Each gets a time budget; past it the source counts as
+# failed for this run and keeps its last good values, so the job always finishes and saves.
+WORKERS = 8
+SOURCE_BUDGET_S = 8 * 60
+TOTAL_BUDGET_S = 22 * 60
 MODELLED_NATURE = {"E", "M", "EST", "MODELLED", "ESTIMATED"}
 DYNAMIC_TAGS = {"outdated", "substitute"}
 
@@ -297,29 +305,49 @@ def run(only: list[str] | None = None, log=print) -> int:
 
     selected = [i for i in indicators if not only or i["id"] in only]
     runs: dict[str, dict] = {}
-    ctx: dict = {}
+    todo: list[tuple[str, dict]] = []
     for ind in selected:
         for src in ind["sources"]:
             key = source_key(src)
             if key in runs:
                 runs[key]["indicators"].append(ind["id"])
                 continue
-            log(f"Fetching {src['adapter']} for {ind['id']} …")
-            entry = {"adapter": src["adapter"], "label": src["label"], "url": src.get("url"),
-                     "optional": bool(src.get("optional")), "indicators": [ind["id"]]}
-            try:
-                res = ADAPTERS[src["adapter"]](src.get("params", {}), countries, ctx)
-                entry.update(status="ok", result=res, countries=sorted(res.series))
-                log(f"  ok: {len(res.series)} countries")
-            except AdapterDisabled as e:
-                entry.update(status="disabled", error=str(e))
-                log(f"  disabled: {e}")
-            except Exception as e:  # never let one source break the run
-                entry.update(status="error", error=f"{type(e).__name__}: {e}"[:500])
-                log(f"  ERROR: {entry['error']}")
-                if "--debug" in sys.argv:
-                    traceback.print_exc()
-            runs[key] = entry
+            runs[key] = {"adapter": src["adapter"], "label": src["label"], "url": src.get("url"),
+                         "optional": bool(src.get("optional")), "indicators": [ind["id"]]}
+            todo.append((key, src))
+
+    ctx: dict = {}
+    run_deadline = time.monotonic() + TOTAL_BUDGET_S
+    log_lock = threading.Lock()
+
+    def fetch(item: tuple[str, dict]) -> None:
+        key, src = item
+        entry = runs[key]
+        name = f"{src['adapter']} ({src['label']})"
+        t0 = time.monotonic()
+        http.set_deadline(min(t0 + SOURCE_BUDGET_S, run_deadline))
+        try:
+            if t0 >= run_deadline:
+                raise TimeoutError("not started: the run's time budget was used up")
+            res = ADAPTERS[src["adapter"]](src.get("params", {}), countries, ctx)
+            entry.update(status="ok", result=res, countries=sorted(res.series))
+            msg = f"ok, {len(res.series)} countries"
+        except AdapterDisabled as e:
+            entry.update(status="disabled", error=str(e))
+            msg = f"disabled: {e}"
+        except Exception as e:  # never let one source break the run
+            entry.update(status="error", error=f"{type(e).__name__}: {e}"[:500])
+            msg = f"ERROR: {entry['error']}"
+            if "--debug" in sys.argv:
+                traceback.print_exc()
+        finally:
+            http.set_deadline(None)
+        with log_lock:
+            log(f"  {time.monotonic() - t0:6.1f}s  {name}: {msg}")
+
+    log(f"Fetching {len(todo)} sources, {WORKERS} at a time…")
+    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
+        list(ex.map(fetch, todo))
 
     prev_values = load_values(prev)
     values = dict(prev_values) if only else {}

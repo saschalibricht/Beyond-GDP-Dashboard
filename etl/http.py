@@ -8,14 +8,54 @@ from __future__ import annotations
 import gzip
 import io
 import json
+import threading
 import time
-from typing import Any, Callable
+from concurrent.futures import ThreadPoolExecutor
+from typing import Any, Callable, Iterable, TypeVar
+from urllib.parse import urlsplit
 
 import requests
 
 USER_AGENT = "BeyondGDP-Dashboard/1.0 (open-data dashboard; +https://github.com)"
-TIMEOUT = 90
+TIMEOUT = 60
 RETRIES = 3
+PER_HOST = 6  # parallel requests allowed to one host
+
+T = TypeVar("T")
+R = TypeVar("R")
+
+# Each fetching thread may carry a deadline (time.monotonic()); requests past it fail fast,
+# so one slow source cannot hold up the whole run.
+_local = threading.local()
+_host_locks: dict[str, threading.BoundedSemaphore] = {}
+_host_guard = threading.Lock()
+
+
+def set_deadline(deadline: float | None) -> None:
+    _local.deadline = deadline
+
+
+def _remaining() -> float | None:
+    d = getattr(_local, "deadline", None)
+    return None if d is None else d - time.monotonic()
+
+
+def _host_lock(url: str) -> threading.BoundedSemaphore:
+    host = urlsplit(url).netloc
+    with _host_guard:
+        return _host_locks.setdefault(host, threading.BoundedSemaphore(PER_HOST))
+
+
+def pmap(fn: Callable[[T], R], items: Iterable[T], workers: int = 6) -> list[R]:
+    """Map in threads, in order; workers inherit the caller's deadline."""
+    deadline = getattr(_local, "deadline", None)
+
+    def run(item: T) -> R:
+        set_deadline(deadline)
+        return fn(item)
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        return list(ex.map(run, items))
 
 _session = requests.Session()
 _session.headers.update({"User-Agent": USER_AGENT, "Accept-Encoding": "gzip, deflate"})
@@ -37,6 +77,9 @@ def get(url: str, params: dict | None = None, headers: dict | None = None, memo:
     key = _key(url, params, headers)
     if memo and key in _memo:
         return _memo[key]
+    left = _remaining()
+    if left is not None and left <= 1:
+        raise FetchError(f"Time budget used up before fetching {url}")
     if transport is not None:
         data = transport(url, params, headers)
     else:
@@ -49,8 +92,13 @@ def get(url: str, params: dict | None = None, headers: dict | None = None, memo:
 def _get_live(url: str, params: dict | None, headers: dict | None) -> bytes:
     last: Exception | None = None
     for attempt in range(RETRIES):
+        left = _remaining()
+        if left is not None and left <= 1:
+            raise FetchError(f"Time budget used up before fetching {url}")
+        timeout = TIMEOUT if left is None else max(1.0, min(TIMEOUT, left))
         try:
-            r = _session.get(url, params=params, headers=headers or {}, timeout=TIMEOUT)
+            with _host_lock(url):
+                r = _session.get(url, params=params, headers=headers or {}, timeout=timeout)
             if r.status_code == 429 or r.status_code >= 500:
                 raise FetchError(f"HTTP {r.status_code} from {url}")
             if r.status_code >= 400:
@@ -63,7 +111,11 @@ def _get_live(url: str, params: dict | None, headers: dict | None) -> bytes:
                 break
         except requests.RequestException as e:
             last = FetchError(f"{type(e).__name__} for {url}: {e}")
-        time.sleep(2 ** attempt * 2)
+        pause = 2 ** attempt * 2
+        left = _remaining()
+        if left is not None and left <= pause:
+            break
+        time.sleep(pause)
     raise last or FetchError(f"Failed to fetch {url}")
 
 

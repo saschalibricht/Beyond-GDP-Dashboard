@@ -17,7 +17,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40  # the fetch step caps itself at ~22 min; see etl/build.py
     steps:
       - uses: actions/checkout@v4
 
@@ -33,6 +33,7 @@ jobs:
 
       - name: Fetch all sources
         env:
+          PYTHONUNBUFFERED: "1"   # stream progress to the log while the step runs
           UCDP_TOKEN: ${{ secrets.UCDP_TOKEN }}   # optional
         run: python -m etl.build
 

@@ -111,15 +111,28 @@ class ManyCountriesTest(Base):
         res = worldbank.fetch({"indicator": "X"}, self.MANY, {})
         self.assertEqual(list(res.series), ["DEU"])  # aggregates filtered out locally
 
-    def test_sdg_omits_area_list(self):
-        seen = {}
+    def test_sdg_asks_for_countries_in_batches(self):
+        many = [{"iso3": f"C{i:03d}", "m49": 1000 + i} for i in range(120)] + [{"iso3": "DEU", "m49": 276}]
+        batches = []
         def handler(u, p, h):
-            seen.update(p)
-            return {"totalPages": 1, "data": [sdg_row(276, 2020, 5, {}), sdg_row(150, 2020, 6, {})]}
+            batches.append(list(p["areaCode"]))
+            rows = [sdg_row(276, 2020, 5, {})] if "276" in p["areaCode"] else []
+            return {"totalPages": 1, "data": rows + [sdg_row(150, 2020, 6, {})]}  # 150 = Europe, never asked for
         self.srv.on(r"Series/Data", handler)
-        res = sdg.fetch({"series": "S1"}, self.MANY, {})
-        self.assertNotIn("areaCode", seen)
+        res = sdg.fetch({"series": "S1"}, many, {})
+        self.assertEqual(len(batches), 3)
+        self.assertTrue(all(len(b) <= 50 for b in batches))
+        self.assertEqual(sorted(a for b in batches for a in b), sorted(str(c["m49"]) for c in many))
         self.assertEqual(list(res.series), ["DEU"])
+
+    def test_time_budget_stops_requests(self):
+        import time
+        http.set_deadline(time.monotonic() - 1)
+        try:
+            with self.assertRaises(http.FetchError):
+                http.get("https://example.org/slow")
+        finally:
+            http.set_deadline(None)
 
     def test_pip_single_bulk_request(self):
         calls = []
@@ -355,6 +368,25 @@ class BuildTest(Base):
         self.assertEqual(v["discrimination"]["USA"]["status"], "no_data")
         # loneliness: WHR page missing -> source error with the explanation kept
         self.assertEqual(v["loneliness"]["DEU"]["status"], "source_error")
+
+    def test_slow_source_is_cut_off_and_the_run_still_saves(self):
+        import time
+        def slow(u, p, h):
+            time.sleep(1.5)
+            return [{"country_code": p["country"], "reporting_year": 2019, "reporting_level": "national",
+                     "median": 5, "headcount": 0.2, "mean": 7, "welfare_type": "income"}]
+        self.srv.on(r"pip/v1/pip", slow)
+        # two rounds of 1.5 s requests (pip_spl) do not fit a 2 s budget; one round (pip_mean) does
+        with mock.patch.object(build, "SOURCE_BUDGET_S", 2.0):
+            t0 = time.monotonic()
+            dash, status, _ = self.run_build()
+        self.assertLess(time.monotonic() - t0, 6)
+        pip_spl = [s for s in status["sources"] if s["key"].startswith("pip_spl")][0]
+        self.assertEqual(pip_spl["status"], "error")  # cut off; keeps last good values next time
+        pip_mean = [s for s in status["sources"] if s["key"].startswith("pip_mean")][0]
+        self.assertEqual(pip_mean["status"], "ok")
+        # everything else still arrived and was written
+        self.assertEqual(dash["values"]["hale"]["DEU"]["status"], "ok")
 
     def test_stale_reuse_and_alert(self):
         self.run_build()
