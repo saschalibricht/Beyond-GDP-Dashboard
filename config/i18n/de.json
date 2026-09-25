@@ -1,7 +1,9 @@
 {
   "_help": "German texts, keyed by the ids in framework.json, tags.json and indicators.json. English in those files is the source; anything missing here falls back to English (the test suite lists gaps). proxyNotes maps the English proxyNote of a source to German.",
   "framework": {
-    "report": { "publisher": "Hochrangige Expertengruppe des UN-Generalsekretärs zu „Beyond GDP“" },
+    "report": {
+      "publisher": "Hochrangige Expertengruppe des UN-Generalsekretärs zu „Beyond GDP“"
+    },
     "pillars": {
       "foundational": {
         "name": "Grundprinzipien",
@@ -25,43 +27,146 @@
       }
     },
     "domains": {
-      "peace": { "name": "Frieden", "why": "Frieden ist mehr als die Abwesenheit von Gewalt: Er umfasst die Normen und Institutionen, mit denen Gesellschaften Konflikte bewältigen und zusammenarbeiten." },
-      "human_rights": { "name": "Menschenrechte", "why": "Fortschritt und Menschenrechte sind untrennbar; bürgerliche, politische, wirtschaftliche, soziale und kulturelle Rechte gelten als universell und unteilbar." },
-      "planet": { "name": "Respekt vor dem Planeten", "why": "Planetare Grenzen markieren den Rahmen, in dem die Menschheit sicher wirtschaften kann; ihre Überschreitung droht irreversible Schäden." },
-      "material": { "name": "Materielle Lebensbedingungen und Arbeit", "why": "Ausreichende materielle Mittel erlauben es, zu planen, in die Zukunft zu investieren und am gesellschaftlichen Leben teilzunehmen; Arbeit stiftet zudem Würde über das Einkommen hinaus." },
-      "health": { "name": "Gesundheit", "why": "Gute Gesundheit ist die Grundlage für Lebensqualität und die Fähigkeit zu arbeiten, zu lernen und teilzuhaben; Nachteile in der frühen Kindheit wirken ein Leben lang." },
-      "education": { "name": "Bildung", "why": "Bildung stärkt gesellschaftliche Teilhabe, Selbstbestimmung und die Fähigkeit, sich an veränderte Arbeitsmärkte anzupassen." },
-      "security": { "name": "Sicherheit", "why": "Angst vor Gewalt schränkt Bewegungsfreiheit und Wirtschaftsleben ein und untergräbt Vertrauen; die Last tragen vor allem Frauen und verletzliche Gruppen." },
-      "subjective": { "name": "Subjektives Wohlbefinden", "why": "Wie Menschen ihr Leben wahrnehmen, prägt ihr Verhalten und ihre Entscheidungen und erfasst, was objektive Indikatoren übersehen." },
-      "cohesion": { "name": "Sozialer Zusammenhalt", "why": "Soziale Bindungen sind informelle Sicherheitsnetze; Isolation schadet psychischer und körperlicher Gesundheit und nimmt in vielen Gesellschaften zu." },
-      "institutions": { "name": "Qualität der Institutionen", "why": "Leistungsfähige Institutionen erbringen öffentliche Leistungen, schützen Rechte und entscheiden darüber, ob Bürgerinnen und Bürger dem Staat vertrauen können." },
-      "environment": { "name": "Umweltqualität", "why": "Verschmutzung und geschädigte Umwelt beeinträchtigen unmittelbar Gesundheit, Lebensgrundlagen und Lebenszufriedenheit." },
-      "wealth_ineq": { "name": "Vermögensungleichheit", "why": "Konzentriertes Vermögen kann zu konzentrierter politischer Macht werden." },
-      "income_ineq": { "name": "Einkommensungleichheit", "why": "Wie gleichmäßig Einkommen verteilt ist, entscheidet darüber, ob Wachstum bei den meisten Menschen ankommt." },
-      "poverty": { "name": "Armut", "why": "Zeigt, wie viele Menschen unter einem Mindestlebensstandard leben." },
-      "work_inclusion": { "name": "Teilhabe am Arbeitsleben", "why": "Das Geschlecht ist eine universelle horizontale Ungleichheit; Lohnunterschiede sind ihre sichtbarste wirtschaftliche Spur." },
-      "regional": { "name": "Regionale Ungleichheit", "why": "Der Wohnort bestimmt den Zugang zu Märkten, Schulen und Gesundheitsversorgung." },
-      "overlapping": { "name": "Mehrfache Benachteiligung", "why": "Wer in mehreren Bereichen zugleich benachteiligt ist, bleibt am deutlichsten zurück." },
-      "produced": { "name": "Produziertes Kapital", "why": "Maschinen, Gebäude und Infrastruktur, die künftige Produktion ermöglichen." },
-      "human": { "name": "Humankapital", "why": "Fähigkeiten und Gesundheit der Bevölkerung, die künftige Möglichkeiten bestimmen." },
-      "social": { "name": "Sozialkapital", "why": "Vertrauen zwischen Menschen macht Zusammenarbeit und gemeinsames Handeln möglich." },
-      "institutional": { "name": "Institutionelles Kapital", "why": "Vertrauen in öffentliche Institutionen erhält ihre Handlungsfähigkeit." },
-      "natural": { "name": "Naturkapital", "why": "Land, Wasser, Wälder und Bodenschätze, auf denen alle anderen Kapitalformen beruhen." }
+      "peace": {
+        "name": "Frieden",
+        "why": "Frieden ist mehr als die Abwesenheit von Gewalt: Er umfasst die Normen und Institutionen, mit denen Gesellschaften Konflikte bewältigen und zusammenarbeiten."
+      },
+      "human_rights": {
+        "name": "Menschenrechte",
+        "why": "Fortschritt und Menschenrechte sind untrennbar; bürgerliche, politische, wirtschaftliche, soziale und kulturelle Rechte gelten als universell und unteilbar."
+      },
+      "planet": {
+        "name": "Respekt vor dem Planeten",
+        "why": "Planetare Grenzen markieren den Rahmen, in dem die Menschheit sicher wirtschaften kann; ihre Überschreitung droht irreversible Schäden."
+      },
+      "material": {
+        "name": "Materielle Lebensbedingungen und Arbeit",
+        "why": "Ausreichende materielle Mittel erlauben es, zu planen, in die Zukunft zu investieren und am gesellschaftlichen Leben teilzunehmen; Arbeit stiftet zudem Würde über das Einkommen hinaus."
+      },
+      "health": {
+        "name": "Gesundheit",
+        "why": "Gute Gesundheit ist die Grundlage für Lebensqualität und die Fähigkeit zu arbeiten, zu lernen und teilzuhaben; Nachteile in der frühen Kindheit wirken ein Leben lang."
+      },
+      "education": {
+        "name": "Bildung",
+        "why": "Bildung stärkt gesellschaftliche Teilhabe, Selbstbestimmung und die Fähigkeit, sich an veränderte Arbeitsmärkte anzupassen."
+      },
+      "security": {
+        "name": "Sicherheit",
+        "why": "Angst vor Gewalt schränkt Bewegungsfreiheit und Wirtschaftsleben ein und untergräbt Vertrauen; die Last tragen vor allem Frauen und verletzliche Gruppen."
+      },
+      "subjective": {
+        "name": "Subjektives Wohlbefinden",
+        "why": "Wie Menschen ihr Leben wahrnehmen, prägt ihr Verhalten und ihre Entscheidungen und erfasst, was objektive Indikatoren übersehen."
+      },
+      "cohesion": {
+        "name": "Sozialer Zusammenhalt",
+        "why": "Soziale Bindungen sind informelle Sicherheitsnetze; Isolation schadet psychischer und körperlicher Gesundheit und nimmt in vielen Gesellschaften zu."
+      },
+      "institutions": {
+        "name": "Qualität der Institutionen",
+        "why": "Leistungsfähige Institutionen erbringen öffentliche Leistungen, schützen Rechte und entscheiden darüber, ob Bürgerinnen und Bürger dem Staat vertrauen können."
+      },
+      "environment": {
+        "name": "Umweltqualität",
+        "why": "Verschmutzung und geschädigte Umwelt beeinträchtigen unmittelbar Gesundheit, Lebensgrundlagen und Lebenszufriedenheit."
+      },
+      "wealth_ineq": {
+        "name": "Vermögensungleichheit",
+        "why": "Konzentriertes Vermögen kann zu konzentrierter politischer Macht werden."
+      },
+      "income_ineq": {
+        "name": "Einkommensungleichheit",
+        "why": "Wie gleichmäßig Einkommen verteilt ist, entscheidet darüber, ob Wachstum bei den meisten Menschen ankommt."
+      },
+      "poverty": {
+        "name": "Armut",
+        "why": "Zeigt, wie viele Menschen unter einem Mindestlebensstandard leben."
+      },
+      "work_inclusion": {
+        "name": "Teilhabe am Arbeitsleben",
+        "why": "Das Geschlecht ist eine universelle horizontale Ungleichheit; Lohnunterschiede sind ihre sichtbarste wirtschaftliche Spur."
+      },
+      "regional": {
+        "name": "Regionale Ungleichheit",
+        "why": "Der Wohnort bestimmt den Zugang zu Märkten, Schulen und Gesundheitsversorgung."
+      },
+      "overlapping": {
+        "name": "Mehrfache Benachteiligung",
+        "why": "Wer in mehreren Bereichen zugleich benachteiligt ist, bleibt am deutlichsten zurück."
+      },
+      "produced": {
+        "name": "Produziertes Kapital",
+        "why": "Maschinen, Gebäude und Infrastruktur, die künftige Produktion ermöglichen."
+      },
+      "human": {
+        "name": "Humankapital",
+        "why": "Fähigkeiten und Gesundheit der Bevölkerung, die künftige Möglichkeiten bestimmen."
+      },
+      "social": {
+        "name": "Sozialkapital",
+        "why": "Vertrauen zwischen Menschen macht Zusammenarbeit und gemeinsames Handeln möglich."
+      },
+      "institutional": {
+        "name": "Institutionelles Kapital",
+        "why": "Vertrauen in öffentliche Institutionen erhält ihre Handlungsfähigkeit."
+      },
+      "natural": {
+        "name": "Naturkapital",
+        "why": "Land, Wasser, Wälder und Bodenschätze, auf denen alle anderen Kapitalformen beruhen."
+      }
     },
     "notIncluded": [
-      { "name": "Übergreifende Leitindikatoren", "text": "Der Bericht empfiehlt, einige wenige „Well-being Beyond GDP“-Leitindizes zu entwickeln, doch die Gruppe konnte sich nicht auf bestimmte einigen. Sie werden hier nicht gezeigt." },
-      { "name": "Grenzüberschreitende Effekte", "text": "Wie sich das Handeln eines Landes auf andere auswirkt (z. B. in Handel enthaltene Emissionen, Entwicklungszusammenarbeit). Der Bericht fordert solche Indikatoren, stellt aber fest, dass umfassende Maße noch fehlen." },
-      { "name": "Rahmenbedingungen", "text": "Technologie, Innovation, Regierungsführung und staatliche Leistungsfähigkeit gehören zum konzeptionellen Rahmen, sind aber bewusst nicht Teil des Dashboards, das sich auf Ergebnisse beschränkt." }
+      {
+        "name": "Übergreifende Leitindikatoren",
+        "text": "Der Bericht empfiehlt, einige wenige „Well-being Beyond GDP“-Leitindizes zu entwickeln, doch die Gruppe konnte sich nicht auf bestimmte einigen. Sie werden hier nicht gezeigt."
+      },
+      {
+        "name": "Grenzüberschreitende Effekte",
+        "text": "Wie sich das Handeln eines Landes auf andere auswirkt (z. B. in Handel enthaltene Emissionen, Entwicklungszusammenarbeit). Der Bericht fordert solche Indikatoren, stellt aber fest, dass umfassende Maße noch fehlen."
+      },
+      {
+        "name": "Rahmenbedingungen",
+        "text": "Technologie, Innovation, Regierungsführung und staatliche Leistungsfähigkeit gehören zum konzeptionellen Rahmen, sind aber bewusst nicht Teil des Dashboards, das sich auf Ergebnisse beschränkt."
+      }
     ]
   },
   "tags": {
-    "outdated": { "label": "Veraltet", "short": "Der neueste Wert ist mehr als 5 Jahre alt.", "long": "Die neueste Beobachtung ist mehr als fünf Jahre alt und spiegelt die heutige Lage möglicherweise nicht wider. Der Bericht nennt die Aktualität als große Schwäche: Verzögerungen von zwei bis vier Jahren sind üblich." },
-    "modelled": { "label": "Modelliert", "short": "Eine Schätzung aus einem statistischen Modell, keine direkte Messung.", "long": "Die Werte stammen aus einem Modell, das Lücken füllt oder Quellen kombiniert. Modellschätzungen werden mitunter deutlich revidiert und können plötzliche Veränderungen übersehen. Markiert eine Quelle einen Wert als geschätzt oder modelliert, wird dieses Merkmal automatisch gesetzt." },
-    "survey": { "label": "Umfragebasiert", "short": "Beruht auf den Angaben einer Stichprobe von Befragten.", "long": "Abgeleitet aus den Antworten in Befragungen. Die Ergebnisse haben einen Stichprobenfehler (bei rund 1.000 Befragten etwa ±3 Prozentpunkte), und kulturelle Unterschiede im Antwortverhalten können Ländervergleiche verzerren." },
-    "infrequent": { "label": "Selten erhoben", "short": "Wird nur alle paar Jahre erhoben.", "long": "Die Quelle veröffentlicht diesen Indikator unregelmäßig oder alle drei bis fünf Jahre. Trends beruhen daher auf wenigen Datenpunkten, kurzfristige Veränderungen bleiben unsichtbar." },
-    "low_coverage": { "label": "Geringe Abdeckung", "short": "Für weniger als die Hälfte aller Länder verfügbar.", "long": "Laut Anhang des Berichts erheben weniger als die Hälfte der Länder diesen Indikator. Lücken sind häufig, Vergleiche beschränken sich auf die berichtenden Länder." },
-    "substitute": { "label": "Ersatzindikator", "short": "Ein Näherungswert oder eine andere Quelle als im Bericht vorgesehen.", "long": "Das vom Bericht vorgeschlagene Maß ist hier nicht frei verfügbar, daher zeigt das Dashboard die nächstliegende offene Alternative. Vor einer Deutung als das vom Bericht gemeinte Maß sollte die Erläuterung gelesen werden." },
-    "comparability": { "label": "Eingeschränkt vergleichbar", "short": "Die Methoden unterscheiden sich zwischen Ländern.", "long": "Länder messen dies unterschiedlich (etwa Einkommens- statt Konsumerhebungen oder unterschiedliche nationale Definitionen). Abstände zwischen Ländern können daher teilweise auf die Methode statt auf die Wirklichkeit zurückgehen." }
+    "outdated": {
+      "label": "Veraltet",
+      "short": "Der neueste Wert ist mehr als 5 Jahre alt.",
+      "long": "Die neueste Beobachtung ist mehr als fünf Jahre alt und spiegelt die heutige Lage möglicherweise nicht wider. Der Bericht nennt die Aktualität als große Schwäche: Verzögerungen von zwei bis vier Jahren sind üblich."
+    },
+    "modelled": {
+      "label": "Modelliert",
+      "short": "Eine Schätzung aus einem statistischen Modell, keine direkte Messung.",
+      "long": "Die Werte stammen aus einem Modell, das Lücken füllt oder Quellen kombiniert. Modellschätzungen werden mitunter deutlich revidiert und können plötzliche Veränderungen übersehen. Markiert eine Quelle einen Wert als geschätzt oder modelliert, wird dieses Merkmal automatisch gesetzt."
+    },
+    "survey": {
+      "label": "Umfragebasiert",
+      "short": "Beruht auf den Angaben einer Stichprobe von Befragten.",
+      "long": "Abgeleitet aus den Antworten in Befragungen. Die Ergebnisse haben einen Stichprobenfehler (bei rund 1.000 Befragten etwa ±3 Prozentpunkte), und kulturelle Unterschiede im Antwortverhalten können Ländervergleiche verzerren."
+    },
+    "infrequent": {
+      "label": "Selten erhoben",
+      "short": "Wird nur alle paar Jahre erhoben.",
+      "long": "Die Quelle veröffentlicht diesen Indikator unregelmäßig oder alle drei bis fünf Jahre. Trends beruhen daher auf wenigen Datenpunkten, kurzfristige Veränderungen bleiben unsichtbar."
+    },
+    "low_coverage": {
+      "label": "Geringe Abdeckung",
+      "short": "Für weniger als die Hälfte aller Länder verfügbar.",
+      "long": "Laut Anhang des Berichts erheben weniger als die Hälfte der Länder diesen Indikator. Lücken sind häufig, Vergleiche beschränken sich auf die berichtenden Länder."
+    },
+    "substitute": {
+      "label": "Ersatzindikator",
+      "short": "Ein Näherungswert oder eine andere Quelle als im Bericht vorgesehen.",
+      "long": "Das vom Bericht vorgeschlagene Maß ist hier nicht frei verfügbar, daher zeigt das Dashboard die nächstliegende offene Alternative. Vor einer Deutung als das vom Bericht gemeinte Maß sollte die Erläuterung gelesen werden."
+    },
+    "comparability": {
+      "label": "Eingeschränkt vergleichbar",
+      "short": "Die Methoden unterscheiden sich zwischen Ländern.",
+      "long": "Länder messen dies unterschiedlich (etwa Einkommens- statt Konsumerhebungen oder unterschiedliche nationale Definitionen). Abstände zwischen Ländern können daher teilweise auf die Methode statt auf die Wirklichkeit zurückgehen."
+    }
   },
   "indicators": {
     "conflict_deaths": {
@@ -77,7 +182,7 @@
       }
     },
     "discrimination": {
-      "label": "Erlebte Diskriminierung",
+      "label": "Erlebte Diskrimi­nierung",
       "name": "Anteil der Bevölkerung, der angibt, sich in den letzten 12 Monaten persönlich diskriminiert oder belästigt gefühlt zu haben",
       "explanation": "Anteil der Menschen, die angeben, im vergangenen Jahr persönlich Diskriminierung oder Belästigung aus einem nach internationalem Menschenrecht verbotenen Grund erlebt zu haben.",
       "unit": "% der Bevölkerung",
@@ -99,7 +204,9 @@
       "unit": "Tonnen CO₂e pro Person",
       "unitShort": "t CO₂e",
       "limitations": "Der Bericht verweist auf die offiziellen UNFCCC-Inventare (SDG 13.2.2), die aber nur für Industrieländer (Annex I) vollständig und jährlich vorliegen. Für die Vergleichbarkeit aller Länder nutzt das Dashboard den harmonisierten Datensatz von Our World in Data (auf Basis von Jones et al. / PRIMAP / EDGAR). Emissionen werden dort gezählt, wo sie entstehen, nicht dort, wo Güter verbraucht werden.",
-      "proxyNotes": { "Harmonised global dataset instead of UNFCCC national inventories": "Harmonisierter globaler Datensatz statt nationaler UNFCCC-Inventare" }
+      "proxyNotes": {
+        "Harmonised global dataset instead of UNFCCC national inventories": "Harmonisierter globaler Datensatz statt nationaler UNFCCC-Inventare"
+      }
     },
     "ghg_total": {
       "label": "Treibhaus­gas­emissionen gesamt",
@@ -108,10 +215,12 @@
       "unit": "Millionen Tonnen CO₂e",
       "unitShort": "Mt CO₂e",
       "limitations": "Siehe Emissionen pro Kopf.",
-      "proxyNotes": { "Harmonised global dataset instead of UNFCCC national inventories": "Harmonisierter globaler Datensatz statt nationaler UNFCCC-Inventare" }
+      "proxyNotes": {
+        "Harmonised global dataset instead of UNFCCC national inventories": "Harmonisierter globaler Datensatz statt nationaler UNFCCC-Inventare"
+      }
     },
     "bii": {
-      "label": "Intaktheit der Biodiversität",
+      "label": "Intaktheit der Bio­diversität",
       "name": "Biodiversitäts-Intaktheitsindex",
       "explanation": "Wie viel der ursprünglichen Artenhäufigkeit an Land im Vergleich zu einem ungestörten Ökosystem noch vorhanden ist. 100 % bedeutet vollständig intakt; die Forschung zu planetaren Grenzen nennt etwa 90 % als sicheres Niveau.",
       "unit": "% der ursprünglichen Artenhäufigkeit",
@@ -119,16 +228,18 @@
       "limitations": "Modelliert aus Landnutzungskarten und lokalen Biodiversitätserhebungen (PREDICTS-Datenbank). Die frei verfügbare nationale Reihe ist auf dem Stand von 2021 eingefroren und vom Herausgeber als veraltet markiert; neuere Versionen sind nur eingeschränkt zugänglich. Der Bericht selbst merkt an, dass die Daten nur bis 2014 reichen, und fordert Investitionen in eine jährliche Erhebung."
     },
     "disposable_income": {
-      "label": "Haushaltseinkommen pro Kopf",
+      "label": "Haushalts­einkommen pro Kopf",
       "name": "Verfügbares Haushaltseinkommen pro Kopf",
       "explanation": "Durchschnittliches Einkommen (oder Konsum, wo Erhebungen diesen messen) je Haushaltsmitglied und Jahr, in internationalen Dollar, die Preisunterschiede zwischen Ländern ausgleichen.",
       "unit": "internationale $ pro Person und Jahr (KKP 2021)",
       "unitShort": "$ / Jahr",
       "limitations": "Das Maß des Berichts stammt aus den Volkswirtschaftlichen Gesamtrechnungen, die nur 70–80 Länder veröffentlichen. Um alle Länder auf derselben Grundlage vergleichen zu können, nutzt das Dashboard den Durchschnitt aus Haushaltserhebungen der Poverty and Inequality Platform der Weltbank. Manche Länder messen Einkommen, andere Konsum (in der Detailansicht angegeben); Konsumerhebungen ergeben niedrigere und gleichmäßigere Werte, und Erhebungen erfassen die sehr Reichen meist nicht.",
-      "proxyNotes": { "Household-survey mean (annualised) instead of national-accounts disposable income": "Durchschnitt aus Haushaltserhebungen (aufs Jahr hochgerechnet) statt verfügbarem Einkommen aus den Volkswirtschaftlichen Gesamtrechnungen" }
+      "proxyNotes": {
+        "Household-survey mean (annualised) instead of national-accounts disposable income": "Durchschnitt aus Haushaltserhebungen (aufs Jahr hochgerechnet) statt verfügbarem Einkommen aus den Volkswirtschaftlichen Gesamtrechnungen"
+      }
     },
     "labour_underutil": {
-      "label": "Ungenutztes Arbeitskräftepotenzial",
+      "label": "Ungenutztes Arbeits­kräfte­potenzial",
       "name": "Zusammengesetzte Quote des ungenutzten Arbeitskräftepotenzials (LU4)",
       "explanation": "Anteil des erweiterten Arbeitskräftepotenzials, der arbeitslos ist, weniger Stunden arbeitet als gewünscht oder zwar verfügbar und arbeitswillig ist, aber nicht aktiv sucht. Das ergibt ein breiteres Bild als die Arbeitslosenquote.",
       "unit": "% des erweiterten Arbeitskräftepotenzials",
@@ -136,7 +247,7 @@
       "limitations": "Beruht auf Arbeitskräfteerhebungen; etwa zwei Drittel der Länder erheben sie jährlich. Große informelle Sektoren erschweren es in Ländern mit niedrigerem Einkommen, Unterbeschäftigung zu erfassen."
     },
     "unpaid_care": {
-      "label": "Zeit für unbezahlte Sorgearbeit",
+      "label": "Zeit für unbezahlte Sorge­arbeit",
       "name": "Anteil der Zeit für unbezahlte Haus- und Sorgearbeit",
       "explanation": "Anteil eines 24-Stunden-Tages, der auf unbezahlte Hausarbeit und die Betreuung von Haushaltsmitgliedern entfällt. Ein Großteil dieser Arbeit wird von Frauen geleistet und ist im BIP unsichtbar.",
       "unit": "% eines Tages",
@@ -144,7 +255,7 @@
       "limitations": "Erfordert eigene Zeitverwendungserhebungen, die nur etwa 46 % der Länder durchführen, im Schnitt alle fünf Jahre. Die Erhebungsdesigns unterscheiden sich stark zwischen Ländern. Das Dashboard zeigt den Wert für Frauen, bei denen die Last konzentriert ist; weder ein hoher noch ein niedriger Wert ist für sich genommen gut."
     },
     "hale": {
-      "label": "Gesunde Lebenserwartung",
+      "label": "Gesunde Lebens­erwartung",
       "name": "Gesunde Lebenserwartung bei Geburt",
       "explanation": "Zahl der Jahre, die ein Neugeborenes bei voller Gesundheit zu leben erwarten kann, unter Berücksichtigung der Jahre mit Krankheit oder Behinderung.",
       "unit": "Jahre",
@@ -152,7 +263,7 @@
       "limitations": "Die WHO-Schätzungen kombinieren Sterblichkeits- und Krankheitslastmodelle. Die Abdeckung ist nahezu vollständig, doch die Anfang 2026 verfügbaren Daten reichten bis 2021. Die WHO stellt zudem ihre Daten-API um, daher greift das Dashboard bei Bedarf auf eine gespiegelte Kopie der Daten zurück."
     },
     "low_birthweight": {
-      "label": "Niedriges Geburtsgewicht",
+      "label": "Niedriges Geburts­gewicht",
       "name": "Neugeborene mit niedrigem Geburtsgewicht (Anteil an den Geburten)",
       "explanation": "Anteil der Neugeborenen unter 2.500 Gramm, ein starker Hinweis auf spätere Gesundheitsprobleme.",
       "unit": "% der Geburten",
@@ -160,7 +271,7 @@
       "limitations": "Modellschätzungen von UNICEF und WHO; viele Neugeborene in Ländern mit niedrigem Einkommen werden nicht gewogen. Die Anfang 2026 verfügbaren Daten reichten bis 2020."
     },
     "min_proficiency": {
-      "label": "Mindestkompetenz Lesen & Mathematik",
+      "label": "Mindest­kompetenz Lesen & Mathematik",
       "name": "Anteil der Kinder und Jugendlichen, die ein Mindestkompetenzniveau in Lesen und Mathematik erreichen",
       "explanation": "Anteil der Schülerinnen und Schüler am Ende der Sekundarstufe I, die in Lesen und in Mathematik mindestens ein Mindestniveau erreichen. Das Dashboard zeigt den Durchschnitt beider Werte.",
       "unit": "% der Schülerinnen und Schüler",
@@ -192,7 +303,7 @@
       "limitations": "Offizielle nationale Daten gibt es nur für etwa ein Viertel der Länder. Das Sicherheitsgefühl entspricht nicht immer der tatsächlichen Kriminalität und hängt von Geschlecht und Alter ab."
     },
     "life_satisfaction": {
-      "label": "Lebenszufriedenheit",
+      "label": "Lebens­zufriedenheit",
       "name": "Lebenszufriedenheit",
       "explanation": "Durchschnittliche Antwort, wenn Menschen ihr jetziges Leben auf einer Leiter von 0 (schlechtestmöglich) bis 10 (bestmöglich) einordnen.",
       "unit": "Wert 0–10",
@@ -207,7 +318,9 @@
       "unitShort": "%",
       "limitations": "Soziale Unterstützung hängt mit Einsamkeit zusammen, ist aber nicht dasselbe: Man kann Unterstützung haben und sich trotzdem einsam fühlen. Der Bericht selbst merkt an, dass sozialer Zusammenhalt vielschichtiger ist als Einsamkeit allein. Der Wert ist eine Gallup-basierte Zahl aus den Daten des World Happiness Report.",
       "unavailableNote": "Die Einsamkeitsdaten von Gallup sind proprietär und nicht frei verfügbar.",
-      "proxyNotes": { "Social support used as proxy for loneliness": "Soziale Unterstützung als Ersatz für Einsamkeit" }
+      "proxyNotes": {
+        "Social support used as proxy for loneliness": "Soziale Unterstützung als Ersatz für Einsamkeit"
+      }
     },
     "public_services": {
       "label": "Zufrieden mit öffentlichen Leistungen",
@@ -218,13 +331,15 @@
       "limitations": "Nur etwa 18 % der Länder veröffentlichen diesen Indikator, die geringste Abdeckung im Dashboard. Zufriedenheit hängt ebenso von Erwartungen wie von der Qualität der Leistungen ab."
     },
     "pm25": {
-      "label": "Luftverschmutzung in Städten (PM2,5)",
+      "label": "Luft­verschmutzung in Städten (PM2,5)",
       "name": "Jahresmittel der Feinstaubbelastung in Städten",
       "explanation": "Durchschnittliche jährliche Konzentration von Feinstaub (kleiner als 2,5 Mikrometer) in der Stadtluft, gewichtet nach Bevölkerung. Der WHO-Richtwert liegt bei 5 µg/m³.",
       "unit": "µg/m³",
       "unitShort": "µg/m³",
       "limitations": "Von der WHO aus Satellitendaten, Bodenmessstationen und chemischen Transportmodellen modelliert. Für 98 % der Länder verfügbar, doch die Anfang 2026 verfügbaren Daten reichten bis 2019.",
-      "proxyNotes": { "National population-weighted mean, not only cities": "Landesweiter bevölkerungsgewichteter Mittelwert, nicht nur Städte" }
+      "proxyNotes": {
+        "National population-weighted mean, not only cities": "Landesweiter bevölkerungsgewichteter Mittelwert, nicht nur Städte"
+      }
     },
     "safe_water": {
       "label": "Sicheres Trinkwasser",
@@ -235,7 +350,7 @@
       "limitations": "Vom Joint Monitoring Programme (JMP) von WHO und UNICEF aus Erhebungen und Verwaltungsdaten geschätzt. Wasserqualität wird in vielen Ländern selten geprüft, daher ist das Niveau „sicher verwaltet“ oft modelliert; aktuelle Daten gibt es für etwa 70 % der Länder."
     },
     "wealth_top1": {
-      "label": "Vermögensanteil des reichsten 1 %",
+      "label": "Vermögens­anteil des reichsten 1 %",
       "name": "Vermögensanteil des reichsten 1 %",
       "explanation": "Anteil des gesamten privaten Vermögens (Vermögenswerte abzüglich Schulden), der dem reichsten 1 % der Erwachsenen gehört.",
       "unit": "% des Gesamtvermögens",
@@ -243,7 +358,7 @@
       "limitations": "Schätzungen gibt es für die meisten Länder, sie sind aber weitgehend modelliert: Nur etwa 30 % der Länder haben Schätzungen, die direkt auf Erhebungen und Vermögensrechnungen beruhen. Verborgenes Offshore-Vermögen ist schwer zu erfassen."
     },
     "gini": {
-      "label": "Einkommensungleichheit (Gini)",
+      "label": "Einkommens­ungleichheit (Gini)",
       "name": "Gini-Index",
       "explanation": "Fasst zusammen, wie ungleich Einkommen oder Konsum verteilt sind, von 0 (alle haben gleich viel) bis 100 (eine Person hat alles).",
       "unit": "Index 0–100",
@@ -259,7 +374,7 @@
       "limitations": "Die gesellschaftliche Armutsgrenze ist der höhere von zwei Werten: die internationale Grenze für extreme Armut oder ein fester Betrag zuzüglich der Hälfte des nationalen Medians; sie steigt also mit dem Wohlstand. Das Dashboard hält die Grenze jedes Landes auf dem Stand des Erhebungsjahres fest, das 2017 am nächsten liegt. Erhebungshäufigkeit und Unterschiede zwischen Einkommen und Konsum schränken die Vergleichbarkeit ein."
     },
     "gender_pay": {
-      "label": "Stundenlohn von Frauen im Vergleich zu Männern",
+      "label": "Stunden­lohn von Frauen im Vergleich zu Männern",
       "name": "Durchschnittlicher Stundenverdienst von Frauen im Verhältnis zu Männern",
       "explanation": "Durchschnittlicher Stundenlohn von Frauen in Prozent des Stundenlohns von Männern. 100 % bedeutet gleiche Durchschnittsbezahlung.",
       "unit": "% des Verdienstes von Männern",
@@ -267,7 +382,7 @@
       "limitations": "Berechnet aus den durchschnittlichen Stundenverdiensten nach Geschlecht (SDG 8.5.1), für etwa 65 % der Länder alle zwei Jahre verfügbar. Es handelt sich um die unbereinigte Lohnlücke: Unterschiede in Beruf oder Arbeitszeit werden nicht berücksichtigt, und informelle Arbeit fehlt in vielen Ländern."
     },
     "rural_access": {
-      "label": "Straßenanbindung im ländlichen Raum",
+      "label": "Straßen­anbindung im ländlichen Raum",
       "name": "Anteil der ländlichen Bevölkerung, die höchstens 2 km von einer ganzjährig befahrbaren Straße entfernt lebt",
       "explanation": "Anteil der Menschen auf dem Land, die höchstens 2 km von einer ganzjährig befahrbaren Straße entfernt leben, ein grundlegendes Maß für die Anbindung an Märkte und Dienstleistungen.",
       "unit": "% der ländlichen Bevölkerung",
@@ -275,14 +390,16 @@
       "limitations": "Mit Geodatenmodellen aus Straßen- und Bevölkerungskarten geschätzt, unregelmäßig und nur für eine begrenzte Zahl von Ländern veröffentlicht."
     },
     "mpi": {
-      "label": "Mehrdimensionale Armut",
+      "label": "Mehr­dimensionale Armut",
       "name": "Index der mehrdimensionalen Armut",
       "explanation": "Anteil der Menschen, denen es gleichzeitig in mindestens einem Drittel der gewichteten Indikatoren zu Gesundheit, Bildung und Lebensstandard (etwa Ernährung, Schulbesuch, Sanitärversorgung und Wohnen) fehlt.",
       "unit": "% der Bevölkerung (MPI-Quote)",
       "unitShort": "%",
       "limitations": "Zeigt die MPI-Quote (Anteil der mehrdimensional Armen) statt des Indexwerts, der auch die Intensität der Armut abbildet. Hängt von demografischen und Haushaltserhebungen ab, die alle paar Jahre stattfinden.",
       "naNote": "Der globale MPI wird nur für Länder mit niedrigem und mittlerem Einkommen berechnet.",
-      "proxyNotes": { "MPI headcount ratio instead of the index value": "MPI-Quote statt des Indexwerts" }
+      "proxyNotes": {
+        "MPI headcount ratio instead of the index value": "MPI-Quote statt des Indexwerts"
+      }
     },
     "produced_capital": {
       "label": "Produziertes Kapital pro Kopf",
@@ -301,13 +418,15 @@
       "limitations": "Beruht auf Arbeitskräfteerhebungen; Daten gibt es für etwa die Hälfte der Länder."
     },
     "pyll": {
-      "label": "Vorzeitige Sterblichkeit (statt PYLL)",
+      "label": "Vorzeitige Sterb­lichkeit (statt PYLL)",
       "name": "Verlorene potenzielle Lebensjahre (PYLL), alle Ursachen",
       "explanation": "Das Maß des Berichts summiert die Lebensjahre, die verloren gehen, wenn Menschen vor dem 75. Lebensjahr sterben. Es wird nur für etwa 40–50, überwiegend OECD-Länder erhoben, daher zeigt diese Kachel den nächstliegenden weltweiten Ersatz: die Wahrscheinlichkeit, zwischen 30 und 70 Jahren an Herz-Kreislauf-Erkrankungen, Krebs, Diabetes oder chronischen Lungenerkrankungen zu sterben.",
       "unit": "% Wahrscheinlichkeit",
       "unitShort": "%",
       "limitations": "Der Ersatz umfasst nur vier große Gruppen nichtübertragbarer Krankheiten, keine Verletzungen, Infektionen oder Müttersterblichkeit, und ist eine WHO-Modellschätzung. PYLL für OECD-Länder ist als Ergänzung geplant.",
-      "proxyNotes": { "NCD mortality ages 30–70 instead of PYLL": "Sterblichkeit an nichtübertragbaren Krankheiten zwischen 30 und 70 Jahren statt PYLL" }
+      "proxyNotes": {
+        "NCD mortality ages 30–70 instead of PYLL": "Sterblichkeit an nichtübertragbaren Krankheiten zwischen 30 und 70 Jahren statt PYLL"
+      }
     },
     "trust": {
       "label": "Vertrauen in andere Menschen",
@@ -324,7 +443,9 @@
       "unit": "% der Bevölkerung",
       "unitShort": "%",
       "limitations": "Aus dem World Values Survey und der European Values Study, die in Wellen etwa alle fünf Jahre stattfinden und rund 56 % der Länder abdecken; die letzte Welle endet 2022. Ist diese Reihe nicht auffindbar, dient das Vertrauen in die nationale Regierung (Gallup, über die OECD) als Ersatz.",
-      "proxyNotes": { "Confidence in national government instead of civil service": "Vertrauen in die nationale Regierung statt in die Verwaltung" }
+      "proxyNotes": {
+        "Confidence in national government instead of civil service": "Vertrauen in die nationale Regierung statt in die Verwaltung"
+      }
     },
     "natural_capital": {
       "label": "Naturkapital pro Kopf",
@@ -333,7 +454,9 @@
       "unit": "konstante US$ pro Person",
       "unitShort": "$ / Person",
       "limitations": "Der Bericht fordert nationale Umweltgesamtrechnungen nach SEEA, die nur etwa 44 % der Länder veröffentlichen. Die Vermögensrechnungen der Weltbank bewerten Naturgüter für die meisten Länder vergleichbar, aber nur nach ihrem Marktwert, sodass viele Ökosystemleistungen unberücksichtigt bleiben. Steigende Preise für fossile Brennstoffe können den Wert erhöhen, obwohl die Reserven schrumpfen.",
-      "proxyNotes": { "Monetary wealth accounts instead of full SEEA environmental accounts": "Monetäre Vermögensrechnungen statt vollständiger SEEA-Umweltgesamtrechnungen" }
+      "proxyNotes": {
+        "Monetary wealth accounts instead of full SEEA environmental accounts": "Monetäre Vermögensrechnungen statt vollständiger SEEA-Umweltgesamtrechnungen"
+      }
     }
   }
 }

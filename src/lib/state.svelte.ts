@@ -1,7 +1,7 @@
 // App state: loaded data plus the reader's choices (countries, pins, view, theme, language).
 // Choices are mirrored to the URL so any view can be shared as a link.
 import { SvelteMap } from "svelte/reactivity";
-import { fmt, fmtDate } from "./format";
+import { fmt, fmtAxis, fmtDate } from "./format";
 import { detectLang, isLang, LOCALE, localizeRegistry, MESSAGES, translateNote, type Lang } from "./i18n";
 import type { Texts } from "./logic";
 import type { CountryValues, Entry, Indicator, Manifest, Pillar, Registry, Status, Tag } from "./types";
@@ -95,6 +95,7 @@ class AppState {
 
   /** numbers and dates in the chosen language */
   fmt = (v: number | null | undefined, d = 1) => fmt(v, d, this.locale);
+  fmtAxis = (v: number, d = 1) => fmtAxis(v, d, this.locale);
   fmtDate = (iso: string | null | undefined) => fmtDate(iso, this.lang === "en" ? "en-GB" : this.locale, this.t.footer.never);
 
   /** a pipeline note in the chosen language */

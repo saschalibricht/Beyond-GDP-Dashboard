@@ -18,6 +18,21 @@ export function fmt(value: number | null | undefined, decimals = 1, locale = "en
   return f.format(value);
 }
 
+const compact = new Map<string, Intl.NumberFormat>();
+
+/** Short axis labels: large numbers in compact form (28K, 28 Tsd.), small ones as usual. */
+export function fmtAxis(value: number, decimals = 1, locale = "en-US"): string {
+  if (Math.abs(value) >= 10_000) {
+    let f = compact.get(locale);
+    if (!f) {
+      f = new Intl.NumberFormat(locale, { notation: "compact", maximumFractionDigits: 1 });
+      compact.set(locale, f);
+    }
+    return f.format(value);
+  }
+  return fmt(value, Math.min(decimals, 2), locale);
+}
+
 export function fmtDate(iso: string | null | undefined, locale = "en-GB", never = "never"): string {
   if (!iso) return never;
   const d = new Date(iso);

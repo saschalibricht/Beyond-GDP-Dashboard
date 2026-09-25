@@ -3051,7 +3051,7 @@
           }
         },
         "discrimination": {
-          "label": "Erlebte Diskriminierung",
+          "label": "Erlebte Diskrimi­nierung",
           "name": "Anteil der Bevölkerung, der angibt, sich in den letzten 12 Monaten persönlich diskriminiert oder belästigt gefühlt zu haben",
           "explanation": "Anteil der Menschen, die angeben, im vergangenen Jahr persönlich Diskriminierung oder Belästigung aus einem nach internationalem Menschenrecht verbotenen Grund erlebt zu haben.",
           "unit": "% der Bevölkerung",
@@ -3089,7 +3089,7 @@
           }
         },
         "bii": {
-          "label": "Intaktheit der Biodiversität",
+          "label": "Intaktheit der Bio­diversität",
           "name": "Biodiversitäts-Intaktheitsindex",
           "explanation": "Wie viel der ursprünglichen Artenhäufigkeit an Land im Vergleich zu einem ungestörten Ökosystem noch vorhanden ist. 100 % bedeutet vollständig intakt; die Forschung zu planetaren Grenzen nennt etwa 90 % als sicheres Niveau.",
           "unit": "% der ursprünglichen Artenhäufigkeit",
@@ -3097,7 +3097,7 @@
           "limitations": "Modelliert aus Landnutzungskarten und lokalen Biodiversitätserhebungen (PREDICTS-Datenbank). Die frei verfügbare nationale Reihe ist auf dem Stand von 2021 eingefroren und vom Herausgeber als veraltet markiert; neuere Versionen sind nur eingeschränkt zugänglich. Der Bericht selbst merkt an, dass die Daten nur bis 2014 reichen, und fordert Investitionen in eine jährliche Erhebung."
         },
         "disposable_income": {
-          "label": "Haushaltseinkommen pro Kopf",
+          "label": "Haushalts­einkommen pro Kopf",
           "name": "Verfügbares Haushaltseinkommen pro Kopf",
           "explanation": "Durchschnittliches Einkommen (oder Konsum, wo Erhebungen diesen messen) je Haushaltsmitglied und Jahr, in internationalen Dollar, die Preisunterschiede zwischen Ländern ausgleichen.",
           "unit": "internationale $ pro Person und Jahr (KKP 2021)",
@@ -3108,7 +3108,7 @@
           }
         },
         "labour_underutil": {
-          "label": "Ungenutztes Arbeitskräftepotenzial",
+          "label": "Ungenutztes Arbeits­kräfte­potenzial",
           "name": "Zusammengesetzte Quote des ungenutzten Arbeitskräftepotenzials (LU4)",
           "explanation": "Anteil des erweiterten Arbeitskräftepotenzials, der arbeitslos ist, weniger Stunden arbeitet als gewünscht oder zwar verfügbar und arbeitswillig ist, aber nicht aktiv sucht. Das ergibt ein breiteres Bild als die Arbeitslosenquote.",
           "unit": "% des erweiterten Arbeitskräftepotenzials",
@@ -3116,7 +3116,7 @@
           "limitations": "Beruht auf Arbeitskräfteerhebungen; etwa zwei Drittel der Länder erheben sie jährlich. Große informelle Sektoren erschweren es in Ländern mit niedrigerem Einkommen, Unterbeschäftigung zu erfassen."
         },
         "unpaid_care": {
-          "label": "Zeit für unbezahlte Sorgearbeit",
+          "label": "Zeit für unbezahlte Sorge­arbeit",
           "name": "Anteil der Zeit für unbezahlte Haus- und Sorgearbeit",
           "explanation": "Anteil eines 24-Stunden-Tages, der auf unbezahlte Hausarbeit und die Betreuung von Haushaltsmitgliedern entfällt. Ein Großteil dieser Arbeit wird von Frauen geleistet und ist im BIP unsichtbar.",
           "unit": "% eines Tages",
@@ -3124,7 +3124,7 @@
           "limitations": "Erfordert eigene Zeitverwendungserhebungen, die nur etwa 46 % der Länder durchführen, im Schnitt alle fünf Jahre. Die Erhebungsdesigns unterscheiden sich stark zwischen Ländern. Das Dashboard zeigt den Wert für Frauen, bei denen die Last konzentriert ist; weder ein hoher noch ein niedriger Wert ist für sich genommen gut."
         },
         "hale": {
-          "label": "Gesunde Lebenserwartung",
+          "label": "Gesunde Lebens­erwartung",
           "name": "Gesunde Lebenserwartung bei Geburt",
           "explanation": "Zahl der Jahre, die ein Neugeborenes bei voller Gesundheit zu leben erwarten kann, unter Berücksichtigung der Jahre mit Krankheit oder Behinderung.",
           "unit": "Jahre",
@@ -3132,7 +3132,7 @@
           "limitations": "Die WHO-Schätzungen kombinieren Sterblichkeits- und Krankheitslastmodelle. Die Abdeckung ist nahezu vollständig, doch die Anfang 2026 verfügbaren Daten reichten bis 2021. Die WHO stellt zudem ihre Daten-API um, daher greift das Dashboard bei Bedarf auf eine gespiegelte Kopie der Daten zurück."
         },
         "low_birthweight": {
-          "label": "Niedriges Geburtsgewicht",
+          "label": "Niedriges Geburts­gewicht",
           "name": "Neugeborene mit niedrigem Geburtsgewicht (Anteil an den Geburten)",
           "explanation": "Anteil der Neugeborenen unter 2.500 Gramm, ein starker Hinweis auf spätere Gesundheitsprobleme.",
           "unit": "% der Geburten",
@@ -3140,7 +3140,7 @@
           "limitations": "Modellschätzungen von UNICEF und WHO; viele Neugeborene in Ländern mit niedrigem Einkommen werden nicht gewogen. Die Anfang 2026 verfügbaren Daten reichten bis 2020."
         },
         "min_proficiency": {
-          "label": "Mindestkompetenz Lesen & Mathematik",
+          "label": "Mindest­kompetenz Lesen & Mathematik",
           "name": "Anteil der Kinder und Jugendlichen, die ein Mindestkompetenzniveau in Lesen und Mathematik erreichen",
           "explanation": "Anteil der Schülerinnen und Schüler am Ende der Sekundarstufe I, die in Lesen und in Mathematik mindestens ein Mindestniveau erreichen. Das Dashboard zeigt den Durchschnitt beider Werte.",
           "unit": "% der Schülerinnen und Schüler",
@@ -3172,7 +3172,7 @@
           "limitations": "Offizielle nationale Daten gibt es nur für etwa ein Viertel der Länder. Das Sicherheitsgefühl entspricht nicht immer der tatsächlichen Kriminalität und hängt von Geschlecht und Alter ab."
         },
         "life_satisfaction": {
-          "label": "Lebenszufriedenheit",
+          "label": "Lebens­zufriedenheit",
           "name": "Lebenszufriedenheit",
           "explanation": "Durchschnittliche Antwort, wenn Menschen ihr jetziges Leben auf einer Leiter von 0 (schlechtestmöglich) bis 10 (bestmöglich) einordnen.",
           "unit": "Wert 0–10",
@@ -3200,7 +3200,7 @@
           "limitations": "Nur etwa 18 % der Länder veröffentlichen diesen Indikator, die geringste Abdeckung im Dashboard. Zufriedenheit hängt ebenso von Erwartungen wie von der Qualität der Leistungen ab."
         },
         "pm25": {
-          "label": "Luftverschmutzung in Städten (PM2,5)",
+          "label": "Luft­verschmutzung in Städten (PM2,5)",
           "name": "Jahresmittel der Feinstaubbelastung in Städten",
           "explanation": "Durchschnittliche jährliche Konzentration von Feinstaub (kleiner als 2,5 Mikrometer) in der Stadtluft, gewichtet nach Bevölkerung. Der WHO-Richtwert liegt bei 5 µg/m³.",
           "unit": "µg/m³",
@@ -3219,7 +3219,7 @@
           "limitations": "Vom Joint Monitoring Programme (JMP) von WHO und UNICEF aus Erhebungen und Verwaltungsdaten geschätzt. Wasserqualität wird in vielen Ländern selten geprüft, daher ist das Niveau „sicher verwaltet“ oft modelliert; aktuelle Daten gibt es für etwa 70 % der Länder."
         },
         "wealth_top1": {
-          "label": "Vermögensanteil des reichsten 1 %",
+          "label": "Vermögens­anteil des reichsten 1 %",
           "name": "Vermögensanteil des reichsten 1 %",
           "explanation": "Anteil des gesamten privaten Vermögens (Vermögenswerte abzüglich Schulden), der dem reichsten 1 % der Erwachsenen gehört.",
           "unit": "% des Gesamtvermögens",
@@ -3227,7 +3227,7 @@
           "limitations": "Schätzungen gibt es für die meisten Länder, sie sind aber weitgehend modelliert: Nur etwa 30 % der Länder haben Schätzungen, die direkt auf Erhebungen und Vermögensrechnungen beruhen. Verborgenes Offshore-Vermögen ist schwer zu erfassen."
         },
         "gini": {
-          "label": "Einkommensungleichheit (Gini)",
+          "label": "Einkommens­ungleichheit (Gini)",
           "name": "Gini-Index",
           "explanation": "Fasst zusammen, wie ungleich Einkommen oder Konsum verteilt sind, von 0 (alle haben gleich viel) bis 100 (eine Person hat alles).",
           "unit": "Index 0–100",
@@ -3243,7 +3243,7 @@
           "limitations": "Die gesellschaftliche Armutsgrenze ist der höhere von zwei Werten: die internationale Grenze für extreme Armut oder ein fester Betrag zuzüglich der Hälfte des nationalen Medians; sie steigt also mit dem Wohlstand. Das Dashboard hält die Grenze jedes Landes auf dem Stand des Erhebungsjahres fest, das 2017 am nächsten liegt. Erhebungshäufigkeit und Unterschiede zwischen Einkommen und Konsum schränken die Vergleichbarkeit ein."
         },
         "gender_pay": {
-          "label": "Stundenlohn von Frauen im Vergleich zu Männern",
+          "label": "Stunden­lohn von Frauen im Vergleich zu Männern",
           "name": "Durchschnittlicher Stundenverdienst von Frauen im Verhältnis zu Männern",
           "explanation": "Durchschnittlicher Stundenlohn von Frauen in Prozent des Stundenlohns von Männern. 100 % bedeutet gleiche Durchschnittsbezahlung.",
           "unit": "% des Verdienstes von Männern",
@@ -3251,7 +3251,7 @@
           "limitations": "Berechnet aus den durchschnittlichen Stundenverdiensten nach Geschlecht (SDG 8.5.1), für etwa 65 % der Länder alle zwei Jahre verfügbar. Es handelt sich um die unbereinigte Lohnlücke: Unterschiede in Beruf oder Arbeitszeit werden nicht berücksichtigt, und informelle Arbeit fehlt in vielen Ländern."
         },
         "rural_access": {
-          "label": "Straßenanbindung im ländlichen Raum",
+          "label": "Straßen­anbindung im ländlichen Raum",
           "name": "Anteil der ländlichen Bevölkerung, die höchstens 2 km von einer ganzjährig befahrbaren Straße entfernt lebt",
           "explanation": "Anteil der Menschen auf dem Land, die höchstens 2 km von einer ganzjährig befahrbaren Straße entfernt leben, ein grundlegendes Maß für die Anbindung an Märkte und Dienstleistungen.",
           "unit": "% der ländlichen Bevölkerung",
@@ -3259,7 +3259,7 @@
           "limitations": "Mit Geodatenmodellen aus Straßen- und Bevölkerungskarten geschätzt, unregelmäßig und nur für eine begrenzte Zahl von Ländern veröffentlicht."
         },
         "mpi": {
-          "label": "Mehrdimensionale Armut",
+          "label": "Mehr­dimensionale Armut",
           "name": "Index der mehrdimensionalen Armut",
           "explanation": "Anteil der Menschen, denen es gleichzeitig in mindestens einem Drittel der gewichteten Indikatoren zu Gesundheit, Bildung und Lebensstandard (etwa Ernährung, Schulbesuch, Sanitärversorgung und Wohnen) fehlt.",
           "unit": "% der Bevölkerung (MPI-Quote)",
@@ -3287,7 +3287,7 @@
           "limitations": "Beruht auf Arbeitskräfteerhebungen; Daten gibt es für etwa die Hälfte der Länder."
         },
         "pyll": {
-          "label": "Vorzeitige Sterblichkeit (statt PYLL)",
+          "label": "Vorzeitige Sterb­lichkeit (statt PYLL)",
           "name": "Verlorene potenzielle Lebensjahre (PYLL), alle Ursachen",
           "explanation": "Das Maß des Berichts summiert die Lebensjahre, die verloren gehen, wenn Menschen vor dem 75. Lebensjahr sterben. Es wird nur für etwa 40–50, überwiegend OECD-Länder erhoben, daher zeigt diese Kachel den nächstliegenden weltweiten Ersatz: die Wahrscheinlichkeit, zwischen 30 und 70 Jahren an Herz-Kreislauf-Erkrankungen, Krebs, Diabetes oder chronischen Lungenerkrankungen zu sterben.",
           "unit": "% Wahrscheinlichkeit",

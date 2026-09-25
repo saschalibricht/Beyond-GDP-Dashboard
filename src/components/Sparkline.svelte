@@ -5,7 +5,11 @@
   import BetterRail from "./BetterRail.svelte";
 
   /** one or two countries' series on a shared scale; each line takes its country colour */
-  let { lines, direction = "neutral" }: { lines: { side: Side; series: Point[] }[]; direction?: Direction } = $props();
+  let {
+    lines,
+    direction = "neutral",
+    decimals = 1,
+  }: { lines: { side: Side; series: Point[] }[]; direction?: Direction; decimals?: number } = $props();
 
   let w = $state(0);
   const h = 36;
@@ -17,12 +21,16 @@
   const y0 = $derived(years.length ? Math.min(...years) : 0);
   const y1 = $derived(years.length ? Math.max(...years) : 0);
   const single = $derived(y0 === y1); // every value is from the same year
+  const vals = $derived(shown.flatMap((l) => l.series.map((p) => p[1])));
+  const vmin = $derived(vals.length ? Math.min(...vals) : 0);
+  const vmax = $derived(vals.length ? Math.max(...vals) : 0);
+  // a value scale only makes sense for a line with some range
+  const axis = $derived(!single && vmin !== vmax);
 
   const geo = $derived.by(() => {
     if (!shown.length || w < 20) return null;
-    const vals = shown.flatMap((l) => l.series.map((p) => p[1]));
-    let v0 = Math.min(...vals);
-    let v1 = Math.max(...vals);
+    let v0 = vmin;
+    let v1 = vmax;
     if (v0 === v1) {
       v0 -= 1;
       v1 += 1;
@@ -45,7 +53,13 @@
 </script>
 
 {#if shown.length}
-  <div class="spark" aria-hidden="true">
+  <div class="spark" class:axis aria-hidden="true">
+    {#if axis}
+      <div class="yaxis num">
+        <span class="hi">{app.fmtAxis(vmax, decimals)}</span>
+        <span class="lo">{app.fmtAxis(vmin, decimals)}</span>
+      </div>
+    {/if}
     <div class="plot" bind:clientWidth={w}>
       {#if geo}
         <svg width={w} height={h} viewBox="0 0 {w} {h}">
@@ -55,6 +69,11 @@
               <stop offset="1" stop-color="var(--c, var(--a))" stop-opacity="0" />
             </linearGradient>
           </defs>
+          {#if axis}
+            <!-- faint guides at the highest and lowest value, matching the labels -->
+            <line class="grid" x1="0" x2={w} y1={pad} y2={pad} />
+            <line class="grid" x1="0" x2={w} y1={h - pad} y2={h - pad} />
+          {/if}
           {#if single}
             <!-- one year only: dots on a faint guide, so the tile doesn't look broken -->
             <line class="guide" x1={pad} x2={w - pad} y1={h / 2} y2={h / 2} />
@@ -81,9 +100,58 @@
 {/if}
 
 <style>
+  .spark.axis {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "axis plot rail"
+      ". years .";
+  }
+
+  .plot {
+    grid-area: plot;
+  }
+
+  .spark :global(.rail) {
+    grid-area: rail;
+  }
+
+  /* labels centred on the guide lines at 4px from the top and bottom */
+  .yaxis {
+    grid-area: axis;
+    position: relative;
+    height: 36px;
+    min-width: 1.5em;
+    font-size: 0.625rem;
+    line-height: 1;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  .yaxis span {
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+  }
+
+  .yaxis .hi {
+    top: -1px;
+  }
+
+  .yaxis .lo {
+    bottom: -1px;
+  }
+
+  .grid {
+    stroke: var(--line);
+    stroke-width: 1;
+  }
+
   .spark {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "plot rail"
+      "years .";
     column-gap: 6px;
     row-gap: 2px;
     width: 100%;
@@ -130,7 +198,7 @@
   }
 
   .years {
-    grid-column: 1;
+    grid-area: years;
     display: flex;
     justify-content: space-between;
     font-size: 0.6875rem;

@@ -81,7 +81,8 @@
       </div>
       {#if app.mode === "trend"}
         <div class="trend">
-          <Sparkline lines={[{ side: "a", series: ea.series ?? [] }]} direction={ind.direction} />
+          <Sparkline lines={[{ side: "a", series: ea.series ?? [] }]} direction={ind.direction}
+          decimals={ind.decimals} />
         </div>
       {:else}
         <div class="latest"><span class="year num">{ea.latest.year}</span></div>
@@ -121,6 +122,7 @@
             { side: "b", series: isOk(eb) ? (eb.series ?? []) : [] },
           ]}
           direction={ind.direction}
+          decimals={ind.decimals}
         />
       </div>
     {/if}
