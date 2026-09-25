@@ -11,6 +11,7 @@
       {
         "id": "foundational",
         "name": "Foundational principles",
+        "summary": "The conditions for progress: peace, human rights and respect for the planet. Numbers capture only part of them.",
         "color": "#A62C5C",
         "ink": "#8E2250",
         "inkDark": "#E57FA8",
@@ -32,12 +33,12 @@
             "name": "Respect for the planet",
             "why": "Planetary boundaries mark the environmental limits within which humanity can operate safely; crossing them risks irreversible damage."
           }
-        ],
-        "summary": "The conditions for progress: peace, human rights and respect for the planet. Numbers capture only part of them."
+        ]
       },
       {
         "id": "current",
         "name": "Current well-being",
+        "summary": "How people experience their lives today, across eight domains with strong evidence behind them.",
         "color": "#F5A81C",
         "ink": "#8A5700",
         "inkDark": "#F7C35F",
@@ -84,12 +85,12 @@
             "name": "Environmental quality",
             "why": "Pollution and degraded environments directly affect health, livelihoods and life satisfaction."
           }
-        ],
-        "summary": "How people experience their lives today, across eight domains with strong evidence behind them."
+        ]
       },
       {
         "id": "equity",
         "name": "Equity and inclusion",
+        "summary": "Who is left behind: gaps between rich and poor, between groups such as women and men, and people facing several deprivations at once.",
         "color": "#9E62A6",
         "ink": "#6F3E7A",
         "inkDark": "#CFA3D6",
@@ -126,12 +127,12 @@
             "name": "Overlapping deprivations",
             "why": "People deprived in several dimensions at once are those most truly left behind."
           }
-        ],
-        "summary": "Who is left behind: gaps between rich and poor, between groups such as women and men, and people facing several deprivations at once."
+        ]
       },
       {
         "id": "sustainability",
         "name": "Sustainability and resilience",
+        "summary": "The stocks that sustain well-being over time: produced, human, social, institutional and natural capital.",
         "color": "#6DB33F",
         "ink": "#3E7520",
         "inkDark": "#9AD274",
@@ -163,8 +164,7 @@
             "name": "Natural capital",
             "why": "Land, water, forests and subsoil resources that underpin all other forms of capital."
           }
-        ],
-        "summary": "The stocks that sustain well-being over time: produced, human, social, institutional and natural capital."
+        ]
       }
     ],
     "notIncluded": [

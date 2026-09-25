@@ -1,6 +1,6 @@
 {
-  "lastChecked": "2026-09-25T12:46:22+00:00",
-  "lastChanged": "2026-09-25T12:46:22+00:00",
+  "lastChecked": "2026-09-25T17:42:45+00:00",
+  "lastChanged": "2026-09-25T17:42:45+00:00",
   "sources": [
     {
       "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Cause of death\":[\"ALL\",\"TOTAL\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.1.2\",\"series\":\"VC_DTH_TOTR\"}",
@@ -15,7 +15,7 @@
         "conflict_deaths"
       ],
       "countries": [],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -53,7 +53,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -72,7 +72,7 @@
         "DEU",
         "KEN"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -95,7 +95,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -118,7 +118,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -141,7 +141,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -158,7 +158,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 2
     },
     {
       "key": "pip_mean:{}",
@@ -180,7 +180,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -202,7 +202,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -224,7 +224,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -247,7 +247,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -270,7 +270,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -293,7 +293,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -315,7 +315,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -338,7 +338,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -361,7 +361,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -384,7 +384,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -405,7 +405,7 @@
         "IDN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -428,7 +428,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -445,7 +445,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 2
     },
     {
       "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
@@ -461,7 +461,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 2
     },
     {
       "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Disability status\":[\"_T\",\"TOTAL\"],\"Location\":[\"ALLAREA\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.6.2\",\"series\":\"SP_PSR_OSATIS_GOV\"}",
@@ -479,7 +479,7 @@
         "BRA",
         "DEU"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -502,7 +502,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -525,7 +525,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -547,7 +547,7 @@
         "IND",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -569,7 +569,7 @@
         "IND",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -592,7 +592,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -615,7 +615,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -633,7 +633,7 @@
       "countries": [
         "BRA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -656,7 +656,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -674,7 +674,7 @@
       "countries": [
         "KEN"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -694,7 +694,7 @@
         "IND",
         "KEN"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -717,7 +717,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -740,7 +740,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -763,7 +763,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -786,7 +786,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -809,7 +809,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -832,7 +832,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -853,7 +853,7 @@
         "IDN",
         "USA"
       ],
-      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "lastSuccess": "2026-09-25T17:42:45+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -870,7 +870,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 1
+      "consecutiveFailures": 2
     }
   ]
 }
