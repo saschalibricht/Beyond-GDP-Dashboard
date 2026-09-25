@@ -85,8 +85,8 @@
               {#if c.better}<span class="better">Does better</span>{/if}
               {#if isEstimate(c.e.latest.nature)}<span class="muted">estimate</span>{/if}
             </div>
-            {#if (c.e.series?.length ?? 0) > 1}
-              <div class="trend"><Sparkline series={c.e.series ?? []} /></div>
+            {#if c.e.series?.length}
+              <div class="trend"><Sparkline series={c.e.series ?? []} direction={ind.direction} /></div>
             {/if}
             {#if typeof c.e.latest.lo === "number" && typeof c.e.latest.hi === "number"}
               <p class="muted">

@@ -24,5 +24,7 @@ export const ICONS: Record<string, string> = {
   plus: '<path d="M8 3v10M3 8h10"/>',
   help: '<circle cx="8" cy="8" r="6.2"/><path d="M6.3 6.3a1.8 1.8 0 1 1 2.5 1.7c-.5.2-.8.6-.8 1.1v.3M8 11.4v.2"/>',
   info: '<circle cx="8" cy="8" r="6.2"/><path d="M8 7.2v4M8 4.8v.2"/>',
+  arrowUp: '<path d="M8 13V3.5M4.2 7.3 8 3.5l3.8 3.8"/>',
+  arrowDown: '<path d="M8 3v9.5M4.2 8.7 8 12.5l3.8-3.8"/>',
   table: '<rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M2 6.5h12M2 9.8h12M6.5 6.5V13"/>',
 };

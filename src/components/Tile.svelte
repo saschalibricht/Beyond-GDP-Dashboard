@@ -81,8 +81,7 @@
         <span class="unit">{unit}</span>
       </div>
       <div class="trend">
-        <Sparkline series={ea.series ?? []} />
-        <span class="year num">{ea.latest.year}</span>
+        <Sparkline series={ea.series ?? []} direction={ind.direction} />
       </div>
     {:else}
       {@const m = missingInfo(ea, app.cname(app.viewA))}
@@ -243,10 +242,6 @@
   }
 
   .trend {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: end;
-    gap: 8px;
     margin-top: auto;
   }
 

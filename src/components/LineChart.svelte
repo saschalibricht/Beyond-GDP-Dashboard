@@ -10,7 +10,8 @@
 </script>
 
 <script lang="ts">
-  import { fmt } from "../lib/format";
+  import { directionText, fmt } from "../lib/format";
+  import BetterRail from "./BetterRail.svelte";
   import { isEstimate, niceTicks } from "../lib/logic";
   import type { Indicator } from "../lib/types";
   import Icon from "./Icon.svelte";
@@ -20,7 +21,8 @@
   let w = $state(0);
   let active = $state<number | null>(null);
   const h = 230;
-  const m = { l: 46, r: 14, t: 14, b: 28 };
+  // room on the right for the "better" rail
+  const m = $derived({ l: 46, r: ind.direction === "neutral" ? 14 : 30, t: 14, b: 28 });
 
   const years = $derived([...new Set(lines.flatMap((l) => l.series.map((p) => p[0])))].sort((x, y) => x - y));
   const hasData = $derived(years.length > 0);
@@ -173,6 +175,7 @@
           {/each}
         {/if}
       </svg>
+      <div class="rail" style="top:{m.t}px;height:{h - m.t - m.b}px"><BetterRail direction={ind.direction} /></div>
       {#if active !== null}
         <div class="tip" style="left:{tipLeft}px" aria-live="polite">
           <div class="tip-year">{active}</div>
@@ -194,6 +197,9 @@
       {#each lines as l (l.side)}
         <span class="side-{l.side}"><span class="key"></span>{l.label}</span>
       {/each}
+    {/if}
+    {#if ind.direction !== "neutral"}
+      <span class="better"><Icon name={ind.direction === "higher" ? "arrowUp" : "arrowDown"} />{directionText(ind.direction)}</span>
     {/if}
     <span class="note">{ind.unit}{anyEstimate ? ". Hollow points are estimates" : ""}.</span>
   </div>
@@ -357,6 +363,23 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
+  }
+
+  .rail {
+    position: absolute;
+    right: 0;
+  }
+
+  .legend .better {
+    color: var(--good);
+    font-weight: 500;
+    gap: 3px;
+  }
+
+  .legend .better :global(.ic) {
+    width: 13px;
+    height: 13px;
+    stroke-width: 2;
   }
 
   .legend .note {
