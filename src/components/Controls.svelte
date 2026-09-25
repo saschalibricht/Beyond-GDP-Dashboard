@@ -3,6 +3,10 @@
   import Icon from "./Icon.svelte";
 
   const countries = $derived(app.countries);
+  const SHOWS = [
+    { id: "latest", icon: "bars", label: "Latest", title: "Latest values" },
+    { id: "trend", icon: "trend", label: "Trend", title: "Values over time" },
+  ] as const;
 </script>
 
 <div class="bar">
@@ -59,17 +63,33 @@
       {/if}
     </label>
 
-    <button
-      type="button"
-      class="soft-btn pins"
-      aria-pressed={app.view === "pinned"}
-      title={app.view === "pinned" ? "Show all indicators" : "Show pinned indicators only"}
-      onclick={() => (app.view = app.view === "pinned" ? "all" : "pinned")}
-    >
-      <Icon name={app.view === "pinned" ? "pinFilled" : "pin"} />
-      {#if app.pins.length}<span class="count num" aria-hidden="true">{app.pins.length}</span>{/if}
-      <span class="visually-hidden">Pinned only, {app.pins.length} pinned</span>
-    </button>
+    <div class="tools">
+      <div class="show" role="radiogroup" aria-label="Show in tiles">
+        {#each SHOWS as s (s.id)}
+          <button
+            type="button"
+            role="radio"
+            aria-checked={app.mode === s.id}
+            title={s.title}
+            onclick={() => app.setShow(s.id)}
+          >
+            <Icon name={s.icon} /><span>{s.label}</span>
+          </button>
+        {/each}
+      </div>
+
+      <button
+        type="button"
+        class="soft-btn pins"
+        aria-pressed={app.view === "pinned"}
+        title={app.view === "pinned" ? "Show all indicators" : "Show pinned indicators only"}
+        onclick={() => (app.view = app.view === "pinned" ? "all" : "pinned")}
+      >
+        <Icon name={app.view === "pinned" ? "pinFilled" : "pin"} />
+        {#if app.pins.length}<span class="count num" aria-hidden="true">{app.pins.length}</span>{/if}
+        <span class="visually-hidden">Pinned only, {app.pins.length} pinned</span>
+      </button>
+    </div>
   </div>
 </div>
 
@@ -211,6 +231,47 @@
     color: var(--muted);
   }
 
+  .tools {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .show {
+    display: inline-flex;
+    gap: 2px;
+    padding: 4px;
+    border-radius: var(--r-pill);
+    background: var(--tile);
+    border: 1px solid var(--edge);
+    box-shadow: var(--lift-sm);
+  }
+
+  .show button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 34px;
+    padding: 0 12px 0 10px;
+    border: 0;
+    border-radius: var(--r-pill);
+    background: transparent;
+    color: var(--muted);
+    font-size: 0.8125rem;
+    cursor: pointer;
+  }
+
+  .show button:hover {
+    color: var(--ink);
+  }
+
+  .show button[aria-checked="true"] {
+    color: var(--ink);
+    font-weight: 500;
+    box-shadow: var(--press);
+  }
+
   .pins {
     margin-left: auto;
     position: relative;
@@ -221,6 +282,12 @@
   @media (max-width: 560px) {
     .inner {
       gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* second row on phones: the view toggle left, pinned toggle right */
+    .tools {
+      flex-basis: 100%;
     }
 
     .pill {

@@ -26,5 +26,7 @@ export const ICONS: Record<string, string> = {
   info: '<circle cx="8" cy="8" r="6.2"/><path d="M8 7.2v4M8 4.8v.2"/>',
   arrowUp: '<path d="M8 13V3.5M4.2 7.3 8 3.5l3.8 3.8"/>',
   arrowDown: '<path d="M8 3v9.5M4.2 8.7 8 12.5l3.8-3.8"/>',
+  bars: '<path d="M3.5 13.5v-4M8 13.5v-9M12.5 13.5v-6"/>',
+  trend: '<path d="M2 11.5 6 7.5l3 3 5-6"/><path d="M11 4.5h3v3"/>',
   table: '<rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M2 6.5h12M2 9.8h12M6.5 6.5V13"/>',
 };

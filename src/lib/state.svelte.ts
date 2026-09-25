@@ -5,6 +5,9 @@ import type { CountryValues, Entry, Indicator, Manifest, Pillar, Registry, Statu
 
 export type Theme = "light" | "dark" | "system";
 export type Sheet = "help" | "health" | null;
+/** what tiles show: the latest values, or the values over time */
+export type Show = "latest" | "trend";
+const SHOW_DEFAULT = { single: "trend", compare: "latest" } as const;
 
 const PIN_KEY = "bgdp-pins";
 const THEME_KEY = "bgdp-theme";
@@ -46,6 +49,10 @@ class AppState {
   viewA = $state("");
   viewB = $state<string | null>(null);
   view = $state<"all" | "pinned">("all");
+  /** per view, so one country and a comparison each keep their own choice */
+  show = $state<{ single: Show; compare: Show }>({ ...SHOW_DEFAULT });
+  /** the choice for what is on screen */
+  mode: Show = $derived(this.viewB ? this.show.compare : this.show.single);
   pins = $state<string[]>([]);
   detail = $state<string | null>(null);
   sheet = $state<Sheet>(null);
@@ -114,6 +121,8 @@ class AppState {
     this.b = vs === "none" ? null : (valid(vs) ?? (q.has("c") ? null : valid(reg.defaultCompare)));
     if (this.b === this.a) this.b = null;
     this.view = q.get("view") === "pinned" ? "pinned" : "all";
+    const s = q.get("show");
+    if (s === "latest" || s === "trend") this.show[this.b ? "compare" : "single"] = s;
     const pins = q.get("pins") ?? readStore(PIN_KEY) ?? "";
     this.pins = pins.split(",").filter((id) => this.ind.has(id));
     const d = q.get("i");
@@ -128,6 +137,8 @@ class AppState {
     q.set("vs", this.b ?? "none");
     if (this.pins.length) q.set("pins", this.pins.join(","));
     if (this.view === "pinned") q.set("view", "pinned");
+    const which = this.b ? "compare" : "single";
+    if (this.show[which] !== SHOW_DEFAULT[which]) q.set("show", this.show[which]);
     if (this.detail) q.set("i", this.detail);
     history.replaceState(history.state, "", `${location.pathname}?${q}`); // keep the sheet marker
     writeStore(PIN_KEY, this.pins.join(","));
@@ -150,6 +161,10 @@ class AppState {
   swap(): void {
     if (!this.b) return;
     [this.a, this.b] = [this.b, this.a];
+  }
+
+  setShow(s: Show): void {
+    this.show[this.b ? "compare" : "single"] = s;
   }
 
   togglePin(id: string): void {

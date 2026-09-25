@@ -19,8 +19,9 @@
     <h3>Reading a tile</h3>
     <p>
       Each tile is one indicator, titled in the colour of its component. It shows the latest value, the year it refers to and
-      the trend over time. Select a tile for the explanation, caveats, full time series and sources. Pin tiles to build your own
-      set.
+      the trend over time. <em>Latest</em> / <em>Trend</em> next to the compare selector switches between the latest values
+      and the values over time. Select a tile for the explanation, caveats, full time series and sources. Pin tiles to build
+      your own set.
     </p>
     <ul class="pillars">
       {#each f.pillars as p (p.id)}

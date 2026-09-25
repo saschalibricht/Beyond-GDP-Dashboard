@@ -80,9 +80,13 @@
         <span class="v">{fmt(ea.latest.value, ind.decimals)}</span>
         <span class="unit">{unit}</span>
       </div>
-      <div class="trend">
-        <Sparkline series={ea.series ?? []} direction={ind.direction} />
-      </div>
+      {#if app.mode === "trend"}
+        <div class="trend">
+          <Sparkline lines={[{ side: "a", series: ea.series ?? [] }]} direction={ind.direction} />
+        </div>
+      {:else}
+        <div class="latest"><span class="year num">{ea.latest.year}</span></div>
+      {/if}
     {:else}
       {@const m = missingInfo(ea, app.cname(app.viewA))}
       <div class="missing {m.kind}">{m.title}</div>
@@ -99,7 +103,7 @@
           {#if r.ok}
             <span class="year num" class:older={r.older}>{r.year}</span>
             <span class="val"><span class="v">{r.value}</span> <span class="unit">{unit}</span></span>
-            {#if r.width !== null}
+            {#if r.width !== null && app.mode === "latest"}
               <span class="bar"><span style="width:{r.width.toFixed(1)}%"></span></span>
             {/if}
             {#if r.better}<span class="visually-hidden">Does better.</span>{/if}
@@ -110,6 +114,17 @@
         </div>
       {/each}
     </div>
+    {#if app.mode === "trend"}
+      <div class="trend">
+        <Sparkline
+          lines={[
+            { side: "a", series: isOk(ea) ? (ea.series ?? []) : [] },
+            { side: "b", series: isOk(eb) ? (eb.series ?? []) : [] },
+          ]}
+          direction={ind.direction}
+        />
+      </div>
+    {/if}
   {/if}
 
   {#if flags.length}
@@ -242,7 +257,8 @@
     font-size: 0.8125rem;
   }
 
-  .trend {
+  .trend,
+  .latest {
     margin-top: auto;
   }
 
@@ -379,7 +395,8 @@
     gap: 4px;
   }
 
-  .trend + .flags {
+  .trend + .flags,
+  .latest + .flags {
     margin-top: 0;
   }
 

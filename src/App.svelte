@@ -12,7 +12,7 @@
 
   // mirror choices to the URL and local storage
   $effect(() => {
-    void [app.a, app.b, app.view, app.pins, app.detail, app.phase];
+    void [app.a, app.b, app.view, app.pins, app.detail, app.phase, app.show.single, app.show.compare];
     app.persist();
   });
 
