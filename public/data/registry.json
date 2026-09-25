@@ -2995,7 +2995,7 @@
             "text": "Wie sich das Handeln eines Landes auf andere auswirkt (z. B. in Handel enthaltene Emissionen, Entwicklungszusammenarbeit). Der Bericht fordert solche Indikatoren, stellt aber fest, dass umfassende Maße noch fehlen."
           },
           {
-            "name": "Voraussetzungen",
+            "name": "Rahmenbedingungen",
             "text": "Technologie, Innovation, Regierungsführung und staatliche Leistungsfähigkeit gehören zum konzeptionellen Rahmen, sind aber bewusst nicht Teil des Dashboards, das sich auf Ergebnisse beschränkt."
           }
         ]
@@ -3009,12 +3009,12 @@
         "modelled": {
           "label": "Modelliert",
           "short": "Eine Schätzung aus einem statistischen Modell, keine direkte Messung.",
-          "long": "Die Werte stammen aus einem Modell, das Lücken füllt oder Quellen kombiniert. Modellschätzungen können deutlich revidiert werden und plötzliche Veränderungen übersehen. Markiert eine Quelle einen Wert als geschätzt oder modelliert, wird dieses Merkmal automatisch gesetzt."
+          "long": "Die Werte stammen aus einem Modell, das Lücken füllt oder Quellen kombiniert. Modellschätzungen werden mitunter deutlich revidiert und können plötzliche Veränderungen übersehen. Markiert eine Quelle einen Wert als geschätzt oder modelliert, wird dieses Merkmal automatisch gesetzt."
         },
         "survey": {
           "label": "Umfragebasiert",
-          "short": "Beruht auf den Angaben einer Stichprobe von Menschen.",
-          "long": "Abgeleitet aus Antworten auf Umfragefragen. Die Ergebnisse haben einen Stichprobenfehler (bei rund 1.000 Befragten etwa ±3 Prozentpunkte), und kulturelle Unterschiede im Antwortverhalten können Ländervergleiche verzerren."
+          "short": "Beruht auf den Angaben einer Stichprobe von Befragten.",
+          "long": "Abgeleitet aus den Antworten in Befragungen. Die Ergebnisse haben einen Stichprobenfehler (bei rund 1.000 Befragten etwa ±3 Prozentpunkte), und kulturelle Unterschiede im Antwortverhalten können Ländervergleiche verzerren."
         },
         "infrequent": {
           "label": "Selten erhoben",
@@ -3027,7 +3027,7 @@
           "long": "Laut Anhang des Berichts erheben weniger als die Hälfte der Länder diesen Indikator. Lücken sind häufig, Vergleiche beschränken sich auf die berichtenden Länder."
         },
         "substitute": {
-          "label": "Ersatzwert",
+          "label": "Ersatzindikator",
           "short": "Ein Näherungswert oder eine andere Quelle als im Bericht vorgesehen.",
           "long": "Das vom Bericht vorgeschlagene Maß ist hier nicht frei verfügbar, daher zeigt das Dashboard die nächstliegende offene Alternative. Vor einer Deutung als das vom Bericht gemeinte Maß sollte die Erläuterung gelesen werden."
         },
@@ -3041,22 +3041,22 @@
         "conflict_deaths": {
           "label": "Konflikttote",
           "name": "Gesamtzahl der konfliktbedingten Todesfälle je 100.000 Einwohner",
-          "explanation": "Menschen, die jedes Jahr in bewaffneten Konflikten getötet werden, bezogen auf die Bevölkerung. Einschließlich getöteter Kämpfender und Zivilpersonen.",
-          "unit": "Todesfälle je 100.000 Menschen",
+          "explanation": "Menschen, die jährlich in bewaffneten Konflikten getötet werden, bezogen auf die Bevölkerungszahl – Kämpfende ebenso wie Zivilpersonen.",
+          "unit": "Todesopfer je 100.000 Einwohner",
           "unitShort": "je 100.000",
-          "limitations": "Die offizielle SDG-Reihe deckt nur etwa ein Drittel der Länder mit Konflikten ab. Wo sie fehlt, nutzt das Dashboard UCDP-Ereignisdaten (alle drei Arten organisierter Gewalt) oder, falls auch diese fehlen, die Kampftoten der Weltbank (nur zwischenstaatliche und innerstaatliche Konflikte), die einseitige Gewalt gegen Zivilpersonen untererfassen. Ein Wert von null bei UCDP bedeutet keine erfassten Konfliktereignisse, nicht eine belegte Abwesenheit von Gewalt.",
+          "limitations": "Die offizielle SDG-Reihe deckt nur etwa ein Drittel der Länder mit Konflikten ab. Wo sie fehlt, nutzt das Dashboard UCDP-Ereignisdaten (alle drei Arten organisierter Gewalt) oder, falls auch diese fehlen, die Kampftoten der Weltbank (nur Konflikte mit staatlicher Beteiligung), die einseitige Gewalt gegen Zivilpersonen nicht erfassen. Ein Wert von null bei UCDP bedeutet, dass keine Konfliktereignisse erfasst wurden – nicht, dass nachweislich keine Gewalt herrschte.",
           "proxyNotes": {
             "UCDP event-based fatality counts, aggregated to country-years": "Ereignisbasierte Opferzahlen von UCDP, zu Länderjahren zusammengefasst",
-            "Battle-related deaths in state-based conflicts only, divided by population": "Nur Kampftote in staatlichen Konflikten, bezogen auf die Bevölkerung"
+            "Battle-related deaths in state-based conflicts only, divided by population": "Nur Kampftote in Konflikten mit staatlicher Beteiligung, bezogen auf die Bevölkerung"
           }
         },
         "discrimination": {
-          "label": "Diskriminierung erlebt",
+          "label": "Erlebte Diskriminierung",
           "name": "Anteil der Bevölkerung, der angibt, sich in den letzten 12 Monaten persönlich diskriminiert oder belästigt gefühlt zu haben",
           "explanation": "Anteil der Menschen, die angeben, im vergangenen Jahr persönlich Diskriminierung oder Belästigung aus einem nach internationalem Menschenrecht verbotenen Grund erlebt zu haben.",
           "unit": "% der Bevölkerung",
           "unitShort": "%",
-          "limitations": "Nur etwa die Hälfte der Länder erhebt dies, meist alle zwei Jahre, in unterschiedlichen nationalen Umfragen. Die Bereitschaft, Diskriminierung anzugeben, hängt von Bewusstsein und sozialen Normen ab; höhere Werte können daher mehr Bewusstsein statt mehr Diskriminierung bedeuten."
+          "limitations": "Nur etwa die Hälfte der Länder erhebt dies, meist alle zwei Jahre, in unterschiedlichen nationalen Umfragen. Die Bereitschaft, Diskriminierung anzugeben, hängt von Bewusstsein und sozialen Normen ab; höhere Werte können daher auch ein stärkeres Bewusstsein widerspiegeln statt mehr Diskriminierung."
         },
         "ipv": {
           "label": "Gewalt in Partnerschaften",
@@ -3064,7 +3064,7 @@
           "explanation": "Anteil der Frauen zwischen 15 und 49 Jahren, die je einen Partner hatten und im vergangenen Jahr körperliche oder sexuelle Gewalt durch einen Partner erlebt haben.",
           "unit": "% der Frauen mit Partnererfahrung",
           "unitShort": "%",
-          "limitations": "Die weltweiten Schätzungen werden von der WHO und Partnern modelliert und beziehen sich derzeit auf ein einziges Jahr (2018); ein Trend lässt sich daher nicht verfolgen. Gewalt wird stark untererfasst; die Werte sind Untergrenzen."
+          "limitations": "Die weltweiten Schätzungen werden von der WHO und Partnern modelliert und beziehen sich derzeit auf ein einziges Jahr (2018); ein Trend lässt sich daher nicht verfolgen. Gewalt wird häufig nicht angezeigt oder berichtet; die Werte sind daher Untergrenzen."
         },
         "ghg_pc": {
           "label": "Treibhaus­gas­emissionen pro Kopf",
@@ -3100,17 +3100,17 @@
           "label": "Haushaltseinkommen pro Kopf",
           "name": "Verfügbares Haushaltseinkommen pro Kopf",
           "explanation": "Durchschnittliches Einkommen (oder Konsum, wo Erhebungen diesen messen) je Haushaltsmitglied und Jahr, in internationalen Dollar, die Preisunterschiede zwischen Ländern ausgleichen.",
-          "unit": "int. $ pro Person und Jahr (KKP 2021)",
+          "unit": "internationale $ pro Person und Jahr (KKP 2021)",
           "unitShort": "$ / Jahr",
-          "limitations": "Das Maß des Berichts stammt aus den Volkswirtschaftlichen Gesamtrechnungen, die nur 70–80 Länder veröffentlichen. Um alle Länder auf einer Grundlage zu vergleichen, nutzt das Dashboard den Durchschnitt aus Haushaltserhebungen der Poverty and Inequality Platform der Weltbank. Manche Länder messen Einkommen, andere Konsum (in der Detailansicht angegeben); Konsumerhebungen ergeben niedrigere und gleichmäßigere Werte, und Erhebungen erfassen die sehr Reichen meist nicht.",
+          "limitations": "Das Maß des Berichts stammt aus den Volkswirtschaftlichen Gesamtrechnungen, die nur 70–80 Länder veröffentlichen. Um alle Länder auf derselben Grundlage vergleichen zu können, nutzt das Dashboard den Durchschnitt aus Haushaltserhebungen der Poverty and Inequality Platform der Weltbank. Manche Länder messen Einkommen, andere Konsum (in der Detailansicht angegeben); Konsumerhebungen ergeben niedrigere und gleichmäßigere Werte, und Erhebungen erfassen die sehr Reichen meist nicht.",
           "proxyNotes": {
             "Household-survey mean (annualised) instead of national-accounts disposable income": "Durchschnitt aus Haushaltserhebungen (aufs Jahr hochgerechnet) statt verfügbarem Einkommen aus den Volkswirtschaftlichen Gesamtrechnungen"
           }
         },
         "labour_underutil": {
-          "label": "Unterauslastung am Arbeitsmarkt",
-          "name": "Zusammengesetzte Quote der Arbeitsmarkt-Unterauslastung (LU4)",
-          "explanation": "Anteil des erweiterten Arbeitskräftepotenzials, der arbeitslos ist, weniger Stunden arbeitet als gewünscht oder verfügbar und arbeitswillig ist, aber nicht aktiv sucht. Ein breiteres Bild als die Arbeitslosenquote.",
+          "label": "Ungenutztes Arbeitskräftepotenzial",
+          "name": "Zusammengesetzte Quote des ungenutzten Arbeitskräftepotenzials (LU4)",
+          "explanation": "Anteil des erweiterten Arbeitskräftepotenzials, der arbeitslos ist, weniger Stunden arbeitet als gewünscht oder zwar verfügbar und arbeitswillig ist, aber nicht aktiv sucht. Das ergibt ein breiteres Bild als die Arbeitslosenquote.",
           "unit": "% des erweiterten Arbeitskräftepotenzials",
           "unitShort": "%",
           "limitations": "Beruht auf Arbeitskräfteerhebungen; etwa zwei Drittel der Länder erheben sie jährlich. Große informelle Sektoren erschweren es in Ländern mit niedrigerem Einkommen, Unterbeschäftigung zu erfassen."
@@ -3121,7 +3121,7 @@
           "explanation": "Anteil eines 24-Stunden-Tages, der auf unbezahlte Hausarbeit und die Betreuung von Haushaltsmitgliedern entfällt. Ein Großteil dieser Arbeit wird von Frauen geleistet und ist im BIP unsichtbar.",
           "unit": "% eines Tages",
           "unitShort": "% des Tages",
-          "limitations": "Erfordert eigene Zeitverwendungserhebungen, die nur etwa 46 % der Länder durchführen, im Schnitt alle fünf Jahre. Die Erhebungsdesigns unterscheiden sich stark zwischen Ländern. Das Dashboard zeigt den Wert für Frauen, bei denen die Last konzentriert ist; weder „hoch“ noch „niedrig“ ist einfach gut."
+          "limitations": "Erfordert eigene Zeitverwendungserhebungen, die nur etwa 46 % der Länder durchführen, im Schnitt alle fünf Jahre. Die Erhebungsdesigns unterscheiden sich stark zwischen Ländern. Das Dashboard zeigt den Wert für Frauen, bei denen die Last konzentriert ist; weder ein hoher noch ein niedriger Wert ist für sich genommen gut."
         },
         "hale": {
           "label": "Gesunde Lebenserwartung",
@@ -3129,7 +3129,7 @@
           "explanation": "Zahl der Jahre, die ein Neugeborenes bei voller Gesundheit zu leben erwarten kann, unter Berücksichtigung der Jahre mit Krankheit oder Behinderung.",
           "unit": "Jahre",
           "unitShort": "Jahre",
-          "limitations": "Die WHO-Schätzungen kombinieren Sterblichkeits- und Krankheitslastmodelle. Die Abdeckung ist nahezu vollständig, doch die Anfang 2026 verfügbaren Daten reichten bis 2021. Die WHO stellt zudem ihre Daten-API um, daher greift das Dashboard bei Bedarf auf einen Spiegel zurück."
+          "limitations": "Die WHO-Schätzungen kombinieren Sterblichkeits- und Krankheitslastmodelle. Die Abdeckung ist nahezu vollständig, doch die Anfang 2026 verfügbaren Daten reichten bis 2021. Die WHO stellt zudem ihre Daten-API um, daher greift das Dashboard bei Bedarf auf eine gespiegelte Kopie der Daten zurück."
         },
         "low_birthweight": {
           "label": "Niedriges Geburtsgewicht",
@@ -3153,13 +3153,13 @@
           "explanation": "Anteil der Menschen ab 15 Jahren, die eine grundlegende digitale Aufgabe ausführen können. Das Dashboard nutzt „E-Mails mit Anhängen versenden“, eine der Kompetenzarten der offiziellen Reihe.",
           "unit": "% der Bevölkerung",
           "unitShort": "%",
-          "limitations": "Selbstangaben in Haushaltserhebungen, für etwa die Hälfte der Länder verfügbar. Der offizielle Indikator ist in viele Kompetenzarten ohne Gesamtwert aufgeteilt, daher wird eine repräsentative gezeigt. Der Bericht merkt an, dass der Indikator nicht erfasst, wie digitale Chancen und Risiken verteilt sind."
+          "limitations": "Selbstangaben in Haushaltserhebungen, für etwa die Hälfte der Länder verfügbar. Der offizielle Indikator ist in viele Kompetenzarten ohne Gesamtwert aufgeteilt, daher wird stellvertretend eine typische Kompetenz gezeigt. Der Bericht merkt an, dass der Indikator nicht erfasst, wie digitale Chancen und Risiken verteilt sind."
         },
         "homicides": {
           "label": "Vorsätzliche Tötungen",
           "name": "Vorsätzliche Tötungsdelikte je 100.000 Einwohner",
           "explanation": "Zahl der Menschen, die jedes Jahr rechtswidrig und vorsätzlich getötet werden, bezogen auf die Bevölkerung.",
-          "unit": "je 100.000 Menschen",
+          "unit": "je 100.000 Einwohner",
           "unitShort": "je 100.000",
           "limitations": "Gehört zu den am besten vergleichbaren Kriminalstatistiken, hängt aber dennoch von Polizei- und Gesundheitsdaten sowie nationalen Rechtsdefinitionen ab. Tötungsdelikte erfassen nur die schwerste Gewalt; der Bericht regt einen breiteren Sicherheitsindex an."
         },
@@ -3177,7 +3177,7 @@
           "explanation": "Durchschnittliche Antwort, wenn Menschen ihr jetziges Leben auf einer Leiter von 0 (schlechtestmöglich) bis 10 (bestmöglich) einordnen.",
           "unit": "Wert 0–10",
           "unitShort": "/ 10",
-          "limitations": "Erhoben im Gallup World Poll (rund 1.000 Befragte pro Land und Jahr) und im World Happiness Report veröffentlicht, einer privaten Quelle. Kulturelle Antwortstile beeinflussen Ländervergleiche; der Bericht empfiehlt länderseitige Erhebungen, um die Abhängigkeit von privaten Daten zu verringern."
+          "limitations": "Erhoben im Gallup World Poll (rund 1.000 Befragte pro Land und Jahr) und veröffentlicht im World Happiness Report, also aus einer privaten Quelle. Kulturell geprägtes Antwortverhalten beeinflusst Ländervergleiche; der Bericht empfiehlt Erhebungen durch die nationalen Statistikämter, um die Abhängigkeit von privaten Daten zu verringern."
         },
         "loneliness": {
           "label": "Soziale Unterstützung (statt Einsamkeit)",
@@ -3216,7 +3216,7 @@
           "explanation": "Anteil der Menschen, die eine verbesserte Wasserquelle auf dem eigenen Grundstück nutzen, die bei Bedarf verfügbar und frei von Verunreinigungen ist.",
           "unit": "% der Bevölkerung",
           "unitShort": "%",
-          "limitations": "Vom gemeinsamen Monitoring-Programm von WHO und UNICEF aus Erhebungen und Verwaltungsdaten geschätzt. Wasserqualität wird in vielen Ländern selten geprüft, daher ist das Niveau „sicher verwaltet“ oft modelliert; aktuelle Daten gibt es für etwa 70 % der Länder."
+          "limitations": "Vom Joint Monitoring Programme (JMP) von WHO und UNICEF aus Erhebungen und Verwaltungsdaten geschätzt. Wasserqualität wird in vielen Ländern selten geprüft, daher ist das Niveau „sicher verwaltet“ oft modelliert; aktuelle Daten gibt es für etwa 70 % der Länder."
         },
         "wealth_top1": {
           "label": "Vermögensanteil des reichsten 1 %",
@@ -3235,20 +3235,20 @@
           "limitations": "Beruht auf Haushaltserhebungen, die im Schnitt alle drei Jahre stattfinden. Manche Länder messen Einkommen, andere Konsum; konsumbasierte Gini-Werte sind in der Regel niedriger. Erhebungen erfassen hohe Einkommen unzureichend."
         },
         "poverty_spl": {
-          "label": "Armut (gesellschaftliche Linie, fixiert)",
+          "label": "Armut (feste gesellschaftliche Armutsgrenze)",
           "name": "Armutsquote an der gesellschaftlichen Armutsgrenze (auf ein Basisjahr fixiert)",
-          "explanation": "Anteil der Menschen unter einer Armutsgrenze, die den typischen Lebensstandard des jeweiligen Landes widerspiegelt. Die Grenze ist auf ihren Wert in einem Basisjahr fixiert, sodass Veränderungen echten Fortschritt zeigen und keine wandernde Schwelle.",
+          "explanation": "Anteil der Menschen unter einer Armutsgrenze, die den typischen Lebensstandard des jeweiligen Landes widerspiegelt. Die Grenze ist auf ihren Wert in einem Basisjahr fixiert, sodass Veränderungen echten Fortschritt zeigen und nicht bloß eine verschobene Schwelle.",
           "unit": "% der Bevölkerung",
           "unitShort": "%",
-          "limitations": "Die gesellschaftliche Armutsgrenze ist der höhere Wert aus internationaler Grenze für extreme Armut und einem festen Betrag plus der Hälfte des nationalen Medians; sie steigt also mit dem Wohlstand. Das Dashboard fixiert die Grenze jedes Landes im Erhebungsjahr, das 2017 am nächsten liegt. Erhebungshäufigkeit und Unterschiede zwischen Einkommen und Konsum schränken die Vergleichbarkeit ein."
+          "limitations": "Die gesellschaftliche Armutsgrenze ist der höhere von zwei Werten: die internationale Grenze für extreme Armut oder ein fester Betrag zuzüglich der Hälfte des nationalen Medians; sie steigt also mit dem Wohlstand. Das Dashboard hält die Grenze jedes Landes auf dem Stand des Erhebungsjahres fest, das 2017 am nächsten liegt. Erhebungshäufigkeit und Unterschiede zwischen Einkommen und Konsum schränken die Vergleichbarkeit ein."
         },
         "gender_pay": {
-          "label": "Stundenverdienst von Frauen im Vergleich zu Männern",
+          "label": "Stundenlohn von Frauen im Vergleich zu Männern",
           "name": "Durchschnittlicher Stundenverdienst von Frauen im Verhältnis zu Männern",
           "explanation": "Durchschnittlicher Stundenlohn von Frauen in Prozent des Stundenlohns von Männern. 100 % bedeutet gleiche Durchschnittsbezahlung.",
           "unit": "% des Verdienstes von Männern",
           "unitShort": "%",
-          "limitations": "Berechnet aus den durchschnittlichen Stundenverdiensten nach Geschlecht (SDG 8.5.1), für etwa 65 % der Länder alle zwei Jahre verfügbar. Es ist ein unbereinigter Abstand: Unterschiede in Beruf oder Arbeitszeit werden nicht berücksichtigt, informelle Arbeit fehlt in vielen Ländern."
+          "limitations": "Berechnet aus den durchschnittlichen Stundenverdiensten nach Geschlecht (SDG 8.5.1), für etwa 65 % der Länder alle zwei Jahre verfügbar. Es handelt sich um die unbereinigte Lohnlücke: Unterschiede in Beruf oder Arbeitszeit werden nicht berücksichtigt, und informelle Arbeit fehlt in vielen Ländern."
         },
         "rural_access": {
           "label": "Straßenanbindung im ländlichen Raum",
@@ -3289,7 +3289,7 @@
         "pyll": {
           "label": "Vorzeitige Sterblichkeit (statt PYLL)",
           "name": "Verlorene potenzielle Lebensjahre (PYLL), alle Ursachen",
-          "explanation": "Das Maß des Berichts summiert die Lebensjahre, die verloren gehen, wenn Menschen vor dem 75. Lebensjahr sterben. Es wird nur für etwa 40–50 meist OECD-Länder erhoben, daher zeigt diese Kachel den nächstliegenden weltweiten Ersatz: die Wahrscheinlichkeit, zwischen 30 und 70 Jahren an Herz-Kreislauf-Erkrankungen, Krebs, Diabetes oder chronischen Lungenerkrankungen zu sterben.",
+          "explanation": "Das Maß des Berichts summiert die Lebensjahre, die verloren gehen, wenn Menschen vor dem 75. Lebensjahr sterben. Es wird nur für etwa 40–50, überwiegend OECD-Länder erhoben, daher zeigt diese Kachel den nächstliegenden weltweiten Ersatz: die Wahrscheinlichkeit, zwischen 30 und 70 Jahren an Herz-Kreislauf-Erkrankungen, Krebs, Diabetes oder chronischen Lungenerkrankungen zu sterben.",
           "unit": "% Wahrscheinlichkeit",
           "unitShort": "%",
           "limitations": "Der Ersatz umfasst nur vier große Gruppen nichtübertragbarer Krankheiten, keine Verletzungen, Infektionen oder Müttersterblichkeit, und ist eine WHO-Modellschätzung. PYLL für OECD-Länder ist als Ergänzung geplant.",
@@ -3298,7 +3298,7 @@
           }
         },
         "trust": {
-          "label": "Den meisten Menschen kann man vertrauen",
+          "label": "Vertrauen in andere Menschen",
           "name": "Anteil der Menschen, die sagen, dass man den meisten Menschen vertrauen kann",
           "explanation": "Anteil der Menschen, die zustimmen, dass „man den meisten Menschen vertrauen kann“, statt „man kann nicht vorsichtig genug sein“.",
           "unit": "% der Bevölkerung",
@@ -3322,7 +3322,7 @@
           "explanation": "Geschätzter Wert von Wäldern, Ackerland, Schutzgebieten, Fischgründen, Mineralien und fossilen Reserven je Einwohner.",
           "unit": "konstante US$ pro Person",
           "unitShort": "$ / Person",
-          "limitations": "Der Bericht fordert nationale Umweltgesamtrechnungen nach SEEA, die nur etwa 44 % der Länder veröffentlichen. Die Vermögensrechnungen der Weltbank bewerten Naturgüter für die meisten Länder vergleichbar, aber nur nach ihrem Marktwert, wodurch viele Ökosystemleistungen fehlen. Steigende Preise für fossile Brennstoffe können den Wert erhöhen, obwohl die Reserven schrumpfen.",
+          "limitations": "Der Bericht fordert nationale Umweltgesamtrechnungen nach SEEA, die nur etwa 44 % der Länder veröffentlichen. Die Vermögensrechnungen der Weltbank bewerten Naturgüter für die meisten Länder vergleichbar, aber nur nach ihrem Marktwert, sodass viele Ökosystemleistungen unberücksichtigt bleiben. Steigende Preise für fossile Brennstoffe können den Wert erhöhen, obwohl die Reserven schrumpfen.",
           "proxyNotes": {
             "Monetary wealth accounts instead of full SEEA environmental accounts": "Monetäre Vermögensrechnungen statt vollständiger SEEA-Umweltgesamtrechnungen"
           }

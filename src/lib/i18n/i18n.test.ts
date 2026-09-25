@@ -86,13 +86,13 @@ describe("pipeline notes", () => {
   const tn = (s: string) => translateNote(s, "de", raw, ind, de, f);
 
   it("translates every template the pipeline writes", () => {
-    expect(tn("Substitute: MPI headcount ratio instead of the index value.")).toBe("Ersatz: MPI-Quote statt des Indexwerts.");
-    expect(tn("Breakdown shown: Location = URBAN.")).toBe("Gezeigte Aufschlüsselung: Location = URBAN.");
+    expect(tn("Substitute: MPI headcount ratio instead of the index value.")).toBe("Ersatzindikator: MPI-Quote statt des Indexwerts.");
+    expect(tn("Breakdown shown: Location = URBAN.")).toBe("Dargestellte Aufschlüsselung: Location = URBAN.");
     expect(tn("Survey measures consumption and income.")).toBe("Die Erhebung misst Konsum und Einkommen.");
     expect(tn("Converted to a rate per 100,000 people using World Bank population data.")).toBe(de.notes.per100k);
     expect(tn("Calculated as the ratio of female and male values (Sex).")).toBe("Berechnet als Verhältnis der Werte female und male (Sex).");
     expect(tn("Poverty line fixed at $8.25 per person per day (2021 PPP), the societal line in 2017.")).toBe(
-      "Armutsgrenze fixiert bei 8,25 $ pro Person und Tag (KKP 2021), der gesellschaftlichen Grenze im Jahr 2017.",
+      "Armutsgrenze fest bei 8,25 $ pro Person und Tag (KKP 2021), entsprechend der gesellschaftlichen Armutsgrenze von 2017.",
     );
     expect(tn("3 value(s) outside the plausible range were excluded.")).toBe("3 Wert(e) außerhalb des plausiblen Bereichs wurden ausgeschlossen.");
     expect(tn(ind.naNote!)).toBe("Der globale MPI wird nur für Länder mit niedrigem und mittlerem Einkommen berechnet.");
