@@ -4,11 +4,7 @@ on:
   schedule:
     - cron: "17 4 * * *"      # every day at 04:17 UTC
   workflow_dispatch:           # "Run workflow" button in the Actions tab
-  push:
-    branches: [main]
-    paths:                     # re-run when indicators or countries change
-      - "config/**"
-      - "etl/**"
+  # deliberately no push trigger: after changing config/ or etl/, start a run by hand
 
 permissions:
   contents: write              # commit refreshed data

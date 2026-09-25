@@ -34,7 +34,7 @@ GitHub Actions (daily, free)                 Render (free static site)
 1. **Create a GitHub repository** and push this folder to it.
 2. **Allow the workflow to commit.** Go to *Settings → Actions → General → Workflow permissions* and select **Read and write permissions**.
 3. **Optional: conflict data from UCDP.** Request a free API token by emailing the UCDP API maintainer (see https://ucdp.uu.se/apidocs/). Then add it under *Settings → Secrets and variables → Actions → New repository secret* with the name `UCDP_TOKEN`. Without it, the dashboard uses the SDG series and World Bank battle-death data instead.
-4. **Run the first data update.** Go to *Actions → Update data → Run workflow*. This also runs automatically on the first push. It takes 2–5 minutes.
+4. **Run the first data update.** Go to *Actions → Update data → Run workflow*. It takes a few minutes. The job runs only on its daily schedule and when started by hand like this, never on a push, so after changing `config/` or `etl/` start it by hand.
 5. **Create the site on Render.**
    - Go to *New → Blueprint*, pick the repository, and Render reads `render.yaml`.
    - Alternatively: *New → Static Site*, with build command `npm ci && npm run build`, publish directory `dist` and environment variable `NODE_VERSION=22`.
