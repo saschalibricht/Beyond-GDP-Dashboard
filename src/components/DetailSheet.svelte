@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { directionText, fmt, fmtDate } from "../lib/format";
+  import { fmt } from "../lib/format";
   import { compare, flagsFor, isEstimate, isOk, missingInfo, type Side } from "../lib/logic";
   import { app } from "../lib/state.svelte";
   import Icon from "./Icon.svelte";
@@ -73,6 +73,7 @@
 >
   {#if ind && pillar}
     <p class="lead">{ind.explanation}</p>
+    <p class="report">Report indicator{ind.sdg ? ` (SDG ${ind.sdg})` : ""}: <q>{ind.name}</q></p>
 
     <!-- one top tile: latest values, the full time series, then sources -->
     <div class="top">
@@ -135,6 +136,16 @@
             </div>
           {/if}
         {/each}
+        {#if ind.sources.length > 1}
+          <p class="muted chain">
+            Sources checked in order, the first with data is used:
+            {#each ind.sources as s, i (i)}
+              {#if i > 0}<span aria-hidden="true"> → </span>{/if}{#if s.url}<a href={s.url} target="_blank" rel="noopener"
+                  >{s.label}</a
+                >{:else}{s.label}{/if}{s.proxy ? " (substitute)" : ""}
+            {/each}
+          </p>
+        {/if}
       </div>
     </div>
     {#if app.viewB}
@@ -165,48 +176,30 @@
 
     <h3>Context</h3>
     <div class="context">
-      <p><strong>{pillar.name}.</strong> {pillar.summary ?? pillar.justification}</p>
+      <p>
+        <strong>{pillar.name}.</strong>
+        {pillar.summary ?? pillar.justification}
+        <span class="muted">(Report: Table 1 and Annex; {pillar.ref})</span>
+      </p>
       {#if domain}<p><strong>{domain.name}.</strong> {domain.why} {ind.why ?? ""}</p>{/if}
     </div>
 
-    <h3>Details</h3>
-    <dl class="kv">
-      <dt>Report indicator</dt>
-      <dd>{ind.name}</dd>
-      <dt>Unit</dt>
-      <dd>{ind.unit}</dd>
-      <dt>Direction</dt>
-      <dd>{directionText(ind.direction)}</dd>
-      <dt>Report tier</dt>
-      <dd>
-        Tier {ind.tier}
-        {ind.tier === "I" ? "(established, regularly produced)" : "(established method, not yet regularly produced)"}
-      </dd>
-      {#if ind.sdg}
-        <dt>SDG indicator</dt>
-        <dd>{ind.sdg}</dd>
-      {/if}
-      <dt>Sources, in order of use</dt>
-      <dd>
-        {#each ind.sources as s, i (i)}
-          <div>
-            {#if s.url}<a href={s.url} target="_blank" rel="noopener">{s.label}</a>{:else}{s.label}{/if}{s.proxy
-              ? " (substitute)"
-              : ""}
-          </div>
-        {/each}
-      </dd>
-      <dt>Report reference</dt>
-      <dd>Table 1, Annex; {pillar.ref}</dd>
-      {#if app.status?.lastChecked}
-        <dt>Last checked</dt>
-        <dd>{fmtDate(app.status.lastChecked)}</dd>
-      {/if}
-    </dl>
   {/if}
 </Sheet>
 
 <style>
+  .report {
+    margin-top: 10px;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent, var(--line));
+    color: var(--muted);
+    font-size: 0.8125rem;
+  }
+
+  .chain {
+    font-size: 0.8125rem;
+  }
+
   .lead {
     font-size: 1rem;
   }
@@ -394,21 +387,8 @@
     color: var(--ink);
   }
 
-  .kv {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    gap: 6px 14px;
-    margin: 0;
-    font-size: 0.8125rem;
-  }
 
-  .kv dt {
-    color: var(--muted);
-  }
 
-  .kv dd {
-    margin: 0;
-  }
 
   @media (max-width: 520px) {
     .values.two {
@@ -421,15 +401,6 @@
 
     .two .big .v {
       font-size: 1.375rem;
-    }
-
-    .kv {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-
-    .kv dd {
-      margin-bottom: 8px;
     }
   }
 </style>

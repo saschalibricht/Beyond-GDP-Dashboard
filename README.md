@@ -86,7 +86,7 @@ Each entry in `config/indicators.json` holds the texts shown on the site and an 
 | `pillar`, `domain` | placement; ids from `framework.json` |
 | `label`, `explanation`, `name` | tile title, plain-language text, the report's exact wording |
 | `unit`, `unitShort`, `decimals`, `direction` (`higher`/`lower`/`neutral`), `scale` | display settings; `scale` fixes the comparison bar range |
-| `tier`, `sdg` | report annex tier, SDG code |
+| `tier`, `sdg` | report annex tier (kept for reference, not displayed), SDG code |
 | `tags` | static limitation tags (see below) |
 | `limitations` | indicator-specific caveats |
 | `range` | plausibility check; values outside are dropped and noted |
@@ -133,7 +133,6 @@ In comparison mode, the detail view names the country a tag applies to when it a
 The site also shows:
 - **Not updated since…** (red icon): the source failed and the last good value is shown.
 - **Comparison caveats** (orange warning icon): the two values come from different sources, or one survey measures income and the other consumption.
-- The report's Tier I/II classification, in the detail view only.
 
 ## Substitutes currently used
 
