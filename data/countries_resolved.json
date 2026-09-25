@@ -1,0 +1,44 @@
+{
+  "DEU": {
+    "name": "Germany",
+    "income": "HIC",
+    "incomeLabel": "High income",
+    "region": "Europe & Central Asia",
+    "m49": 276
+  },
+  "USA": {
+    "name": "United States",
+    "income": "HIC",
+    "incomeLabel": "High income",
+    "region": "North America",
+    "m49": 840
+  },
+  "BRA": {
+    "name": "Brazil",
+    "income": "UMC",
+    "incomeLabel": "Upper middle income",
+    "region": "Latin America & Caribbean ",
+    "m49": 76
+  },
+  "IND": {
+    "name": "India",
+    "income": "LMC",
+    "incomeLabel": "Lower middle income",
+    "region": "South Asia",
+    "m49": 356
+  },
+  "IDN": {
+    "name": "Indonesia",
+    "income": "UMC",
+    "incomeLabel": "Upper middle income",
+    "region": "East Asia & Pacific",
+    "m49": 360
+  },
+  "KEN": {
+    "name": "Kenya",
+    "income": "LMC",
+    "incomeLabel": "Lower middle income",
+    "region": "Sub-Saharan Africa ",
+    "m49": 404
+  }
+}

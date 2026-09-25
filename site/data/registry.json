@@ -1238,44 +1238,44 @@
     {
       "iso3": "DEU",
       "name": "Germany",
-      "income": null,
-      "incomeLabel": null,
-      "region": null
+      "income": "HIC",
+      "incomeLabel": "High income",
+      "region": "Europe & Central Asia"
     },
     {
       "iso3": "USA",
       "name": "United States",
-      "income": null,
-      "incomeLabel": null,
-      "region": null
+      "income": "HIC",
+      "incomeLabel": "High income",
+      "region": "North America"
     },
     {
       "iso3": "BRA",
       "name": "Brazil",
-      "income": null,
-      "incomeLabel": null,
-      "region": null
+      "income": "UMC",
+      "incomeLabel": "Upper middle income",
+      "region": "Latin America & Caribbean "
     },
     {
       "iso3": "IND",
       "name": "India",
-      "income": null,
-      "incomeLabel": null,
-      "region": null
+      "income": "LMC",
+      "incomeLabel": "Lower middle income",
+      "region": "South Asia"
     },
     {
       "iso3": "IDN",
       "name": "Indonesia",
-      "income": null,
-      "incomeLabel": null,
-      "region": null
+      "income": "UMC",
+      "incomeLabel": "Upper middle income",
+      "region": "East Asia & Pacific"
     },
     {
       "iso3": "KEN",
       "name": "Kenya",
-      "income": null,
-      "incomeLabel": null,
-      "region": null
+      "income": "LMC",
+      "incomeLabel": "Lower middle income",
+      "region": "Sub-Saharan Africa "
     }
   ],
   "defaultCountry": "DEU",

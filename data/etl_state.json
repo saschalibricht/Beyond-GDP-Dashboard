@@ -1,0 +1,163 @@
+{
+  "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Cause of death\":[\"ALL\",\"TOTAL\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.1.2\",\"series\":\"VC_DTH_TOTR\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "ucdp:{}": {},
+  "worldbank:{\"indicator\":\"VC.BTL.DETH\",\"transform\":\"per100k\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"dims\":{\"Grounds of discrimination\":[\"ALL\",\"_T\",\"TOTAL\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"10.3.1\",\"series\":\"VC_VOV_GDSD\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"dims\":{\"Age\":[\"15-49\",\"15+\",\"ALLAGE\"]},\"indicator\":\"5.2.1\",\"series\":\"VC_VAW_MARR\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "owid_grapher:{\"slug\":\"per-capita-ghg-emissions\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "owid_grapher:{\"slug\":\"total-ghg-emissions\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "nhm_bii:{\"maxYear\":2014,\"package\":\"bii-bte\"}": {
+    "consecutiveFailures": 1,
+    "lastError": "AdapterError: NHM BII could not be parsed: NHM file contained none of the configured countries"
+  },
+  "pip_mean:{}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "ilostat:{\"filters\":{\"classif1\":[\"AGE_YTHADULT_YGE15\",\"AGE_AGGREGATE_TOTAL\"],\"sex\":\"SEX_T\"},\"indicator\":\"LUU_XLU4_SEX_AGE_RT_A\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"dims\":{\"Age\":[\"15+\",\"ALLAGE\",\"15-64\"],\"Location\":[\"ALLAREA\"],\"Sex\":[\"FEMALE\"]},\"indicator\":\"5.4.1\",\"series\":\"SL_DOM_TSPD\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "who_gho:{\"code\":\"WHOSIS_000002\",\"sex\":[\"SEX_BTSX\",\"BTSX\"]}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "owid_grapher:{\"slug\":\"healthy-life-expectancy-at-birth\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "worldbank:{\"indicator\":\"SH.STA.BRTW.ZS\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"combine\":{\"dim\":\"Type of skill\",\"op\":\"mean\",\"values\":[\"READ\",\"MATH\"]},\"dims\":{\"Education level\":[\"LOWSEC\"],\"Sex\":[\"BOTHSEX\"],\"Type of skill\":[\"READ\",\"MATH\"]},\"indicator\":\"4.1.1\",\"series\":\"SE_TOT_PRFL\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"dims\":{\"Age\":[\"15+\",\"ALLAGE\",\"15-74\"],\"Sex\":[\"BOTHSEX\"],\"Type of skill\":[\"EMAIL\",\"ATCH\",\"CMFL\"]},\"indicator\":\"4.4.1\",\"series\":\"SE_ADT_ACTS\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "worldbank:{\"indicator\":\"VC.IHR.PSRC.P5\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.1.1\",\"series\":\"VC_IHR_PSRC\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"dims\":{\"Age\":[\"ALLAGE\",\"15+\",\"18+\"],\"Location\":[\"ALLAREA\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.1.4\",\"series\":\"VC_SNS_WALN_DRK\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "owid_grapher:{\"slug\":\"happiness-cantril-ladder\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "whr:{\"column\":[\"Life Ladder\",\"Ladder score\"]}": {
+    "consecutiveFailures": 1,
+    "lastError": "AdapterError: No WHR data file link found"
+  },
+  "whr:{\"column\":[\"Social support\"],\"multiply\":100}": {
+    "consecutiveFailures": 1,
+    "lastError": "AdapterError: No WHR data file link found"
+  },
+  "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Disability status\":[\"_T\",\"TOTAL\"],\"Location\":[\"ALLAREA\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.6.2\",\"series\":\"SP_PSR_OSATIS_GOV\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"dims\":{\"Location\":[\"URBAN\",\"ALLAREA\"]},\"indicator\":\"11.6.2\",\"series\":\"EN_ATM_PM25\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "worldbank:{\"indicator\":\"EN.ATM.PM25.MC.M3\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "worldbank:{\"indicator\":\"SH.H2O.SMDW.ZS\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"dims\":{\"Location\":[\"ALLAREA\"]},\"indicator\":\"6.1.1\",\"series\":\"SH_H2O_SAFE\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "owid_grapher:{\"altSlugs\":[{\"query\":{\"quantile\":\"richest_1pct\"},\"slug\":\"wealth-share-richest\"}],\"slug\":\"wealth-share-richest-1-percent\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "worldbank:{\"indicator\":\"SI.POV.GINI\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "pip_spl:{\"baseline\":2017}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"combine\":{\"dim\":\"Sex\",\"op\":\"ratio_pct\",\"values\":[\"FEMALE\",\"MALE\"]},\"dims\":{\"Disability status\":[\"_T\",\"TOTAL\"],\"Occupation\":[\"TOTAL\",\"_T\",\"ISCO08_TOTAL\"]},\"indicator\":\"8.5.1\",\"series\":\"SL_EMP_EARN\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"indicator\":\"9.1.1\",\"series\":\"SP_ROD_R2KM\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "owid_indicator:{\"id\":1132070}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "worldbank:{\"indicator\":\"NW.PCA.PC\",\"source\":59}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "worldbank:{\"indicator\":\"SL.UEM.NEET.ZS\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "sdg:{\"dims\":{\"Age\":[\"15-24\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"8.6.1\",\"series\":\"SL_TLF_NEET\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "worldbank:{\"indicator\":\"SH.DYN.NCOM.ZS\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "owid_grapher:{\"slug\":\"self-reported-trust-attitudes\"}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "owid_indicator:{\"searchAround\":1076243,\"shortName\":\"confidence_civil_services\",\"window\":80}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "owid_indicator:{\"id\":1195708}": {
+    "lastSuccess": "2026-09-25T12:04:27+00:00",
+    "consecutiveFailures": 0
+  },
+  "worldbank:{\"indicator\":\"NW.NCA.PC\",\"source\":59}": {
+    "consecutiveFailures": 1,
+    "lastError": "AdapterError: World Bank API error for NW.NCA.PC: [{'id': '120', 'key': 'Invalid value', 'value': 'The provided parameter value is not valid'}]"
+  }
+}
