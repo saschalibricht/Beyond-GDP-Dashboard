@@ -1,1 +1,66 @@
-[]
+[
+  {
+    "key": "nhm_bii:{\"maxYear\":2014,\"package\":\"bii-bte\"}",
+    "provider": "Natural History Museum Data Portal",
+    "providerUrl": "https://data.nhm.ac.uk/",
+    "label": "Natural History Museum London – Biodiversity Trends Explorer",
+    "url": "https://data.nhm.ac.uk/dataset/bii-bte",
+    "status": "error",
+    "error": "AdapterError: NHM BII could not be parsed: NHM file contained none of the configured countries",
+    "optional": false,
+    "indicators": [
+      "bii"
+    ],
+    "countries": [],
+    "lastSuccess": null,
+    "consecutiveFailures": 3
+  },
+  {
+    "key": "whr:{\"column\":[\"Life Ladder\",\"Ladder score\"]}",
+    "provider": "World Happiness Report",
+    "providerUrl": "https://worldhappiness.report/",
+    "label": "World Happiness Report data file",
+    "url": "https://worldhappiness.report/",
+    "status": "error",
+    "error": "AdapterError: No WHR data file link found",
+    "optional": false,
+    "indicators": [
+      "life_satisfaction"
+    ],
+    "countries": [],
+    "lastSuccess": null,
+    "consecutiveFailures": 3
+  },
+  {
+    "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
+    "provider": "World Happiness Report",
+    "providerUrl": "https://worldhappiness.report/",
+    "label": "World Happiness Report data (Gallup) – social support",
+    "url": "https://worldhappiness.report/",
+    "status": "error",
+    "error": "AdapterError: No WHR data file link found",
+    "optional": false,
+    "indicators": [
+      "loneliness"
+    ],
+    "countries": [],
+    "lastSuccess": null,
+    "consecutiveFailures": 3
+  },
+  {
+    "key": "worldbank:{\"indicator\":\"NW.NCA.PC\",\"source\":59}",
+    "provider": "World Bank Indicators API",
+    "providerUrl": "https://data.worldbank.org/",
+    "label": "World Bank Changing Wealth of Nations",
+    "url": "https://www.worldbank.org/en/publication/changing-wealth-of-nations",
+    "status": "error",
+    "error": "AdapterError: World Bank API error for NW.NCA.PC: [{'id': '120', 'key': 'Invalid value', 'value': 'The provided parameter value is not valid'}]",
+    "optional": false,
+    "indicators": [
+      "natural_capital"
+    ],
+    "countries": [],
+    "lastSuccess": null,
+    "consecutiveFailures": 3
+  }
+]
