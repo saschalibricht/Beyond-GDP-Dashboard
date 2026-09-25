@@ -1,0 +1,876 @@
+{
+  "lastChecked": "2026-09-25T12:46:22+00:00",
+  "lastChanged": "2026-09-25T12:46:22+00:00",
+  "sources": [
+    {
+      "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Cause of death\":[\"ALL\",\"TOTAL\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.1.2\",\"series\":\"VC_DTH_TOTR\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (16.1.2)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "conflict_deaths"
+      ],
+      "countries": [],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "ucdp:{}",
+      "provider": "Uppsala Conflict Data Program",
+      "providerUrl": "https://ucdp.uu.se/",
+      "label": "UCDP organised violence (API)",
+      "url": "https://ucdp.uu.se/",
+      "status": "disabled",
+      "error": "UCDP_TOKEN not configured",
+      "optional": true,
+      "indicators": [
+        "conflict_deaths"
+      ],
+      "countries": [],
+      "lastSuccess": null,
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "worldbank:{\"indicator\":\"VC.BTL.DETH\",\"transform\":\"per100k\"}",
+      "provider": "World Bank Indicators API",
+      "providerUrl": "https://data.worldbank.org/",
+      "label": "World Bank / UCDP battle-related deaths",
+      "url": "https://data.worldbank.org/indicator/VC.BTL.DETH",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "conflict_deaths"
+      ],
+      "countries": [
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"dims\":{\"Grounds of discrimination\":[\"ALL\",\"_T\",\"TOTAL\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"10.3.1\",\"series\":\"VC_VOV_GDSD\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (10.3.1)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "discrimination"
+      ],
+      "countries": [
+        "DEU",
+        "KEN"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"dims\":{\"Age\":[\"15-49\",\"15+\",\"ALLAGE\"]},\"indicator\":\"5.2.1\",\"series\":\"VC_VAW_MARR\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (5.2.1)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "ipv"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "owid_grapher:{\"slug\":\"per-capita-ghg-emissions\"}",
+      "provider": "Our World in Data",
+      "providerUrl": "https://ourworldindata.org/",
+      "label": "Our World in Data – GHG emissions per capita",
+      "url": "https://ourworldindata.org/grapher/per-capita-ghg-emissions",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "ghg_pc"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "owid_grapher:{\"slug\":\"total-ghg-emissions\"}",
+      "provider": "Our World in Data",
+      "providerUrl": "https://ourworldindata.org/",
+      "label": "Our World in Data – total GHG emissions",
+      "url": "https://ourworldindata.org/grapher/total-ghg-emissions",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "ghg_total"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "nhm_bii:{\"maxYear\":2014,\"package\":\"bii-bte\"}",
+      "provider": "Natural History Museum Data Portal",
+      "providerUrl": "https://data.nhm.ac.uk/",
+      "label": "Natural History Museum London – Biodiversity Trends Explorer",
+      "url": "https://data.nhm.ac.uk/dataset/bii-bte",
+      "status": "error",
+      "error": "AdapterError: NHM BII could not be parsed: NHM file contained none of the configured countries",
+      "optional": false,
+      "indicators": [
+        "bii"
+      ],
+      "countries": [],
+      "lastSuccess": null,
+      "consecutiveFailures": 1
+    },
+    {
+      "key": "pip_mean:{}",
+      "provider": "World Bank Poverty & Inequality Platform",
+      "providerUrl": "https://pip.worldbank.org/",
+      "label": "World Bank PIP – survey mean income/consumption",
+      "url": "https://pip.worldbank.org/",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "disposable_income"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "ilostat:{\"filters\":{\"classif1\":[\"AGE_YTHADULT_YGE15\",\"AGE_AGGREGATE_TOTAL\"],\"sex\":\"SEX_T\"},\"indicator\":\"LUU_XLU4_SEX_AGE_RT_A\"}",
+      "provider": "ILOSTAT",
+      "providerUrl": "https://ilostat.ilo.org/",
+      "label": "ILOSTAT (LU4)",
+      "url": "https://ilostat.ilo.org/",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "labour_underutil"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"dims\":{\"Age\":[\"15+\",\"ALLAGE\",\"15-64\"],\"Location\":[\"ALLAREA\"],\"Sex\":[\"FEMALE\"]},\"indicator\":\"5.4.1\",\"series\":\"SL_DOM_TSPD\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (5.4.1)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "unpaid_care"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "who_gho:{\"code\":\"WHOSIS_000002\",\"sex\":[\"SEX_BTSX\",\"BTSX\"]}",
+      "provider": "WHO Global Health Observatory",
+      "providerUrl": "https://www.who.int/data/gho",
+      "label": "WHO Global Health Observatory",
+      "url": "https://www.who.int/data/gho",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "hale"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "owid_grapher:{\"slug\":\"healthy-life-expectancy-at-birth\"}",
+      "provider": "Our World in Data",
+      "providerUrl": "https://ourworldindata.org/",
+      "label": "WHO via Our World in Data",
+      "url": "https://ourworldindata.org/grapher/healthy-life-expectancy-at-birth",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "hale"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "worldbank:{\"indicator\":\"SH.STA.BRTW.ZS\"}",
+      "provider": "World Bank Indicators API",
+      "providerUrl": "https://data.worldbank.org/",
+      "label": "World Bank WDI (UNICEF–WHO estimates)",
+      "url": "https://data.worldbank.org/indicator/SH.STA.BRTW.ZS",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "low_birthweight"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"combine\":{\"dim\":\"Type of skill\",\"op\":\"mean\",\"values\":[\"READ\",\"MATH\"]},\"dims\":{\"Education level\":[\"LOWSEC\"],\"Sex\":[\"BOTHSEX\"],\"Type of skill\":[\"READ\",\"MATH\"]},\"indicator\":\"4.1.1\",\"series\":\"SE_TOT_PRFL\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (4.1.1, UNESCO-UIS)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "min_proficiency"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"dims\":{\"Age\":[\"15+\",\"ALLAGE\",\"15-74\"],\"Sex\":[\"BOTHSEX\"],\"Type of skill\":[\"EMAIL\",\"ATCH\",\"CMFL\"]},\"indicator\":\"4.4.1\",\"series\":\"SE_ADT_ACTS\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (4.4.1, ITU)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "ict_skills"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "worldbank:{\"indicator\":\"VC.IHR.PSRC.P5\"}",
+      "provider": "World Bank Indicators API",
+      "providerUrl": "https://data.worldbank.org/",
+      "label": "World Bank WDI (UNODC)",
+      "url": "https://data.worldbank.org/indicator/VC.IHR.PSRC.P5",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "homicides"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.1.1\",\"series\":\"VC_IHR_PSRC\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (16.1.1)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "homicides"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\",\"15+\",\"18+\"],\"Location\":[\"ALLAREA\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.1.4\",\"series\":\"VC_SNS_WALN_DRK\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (16.1.4)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "safe_after_dark"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "owid_grapher:{\"slug\":\"happiness-cantril-ladder\"}",
+      "provider": "Our World in Data",
+      "providerUrl": "https://ourworldindata.org/",
+      "label": "World Happiness Report (Gallup) via Our World in Data",
+      "url": "https://ourworldindata.org/grapher/happiness-cantril-ladder",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "life_satisfaction"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "whr:{\"column\":[\"Life Ladder\",\"Ladder score\"]}",
+      "provider": "World Happiness Report",
+      "providerUrl": "https://worldhappiness.report/",
+      "label": "World Happiness Report data file",
+      "url": "https://worldhappiness.report/",
+      "status": "error",
+      "error": "AdapterError: No WHR data file link found",
+      "optional": false,
+      "indicators": [
+        "life_satisfaction"
+      ],
+      "countries": [],
+      "lastSuccess": null,
+      "consecutiveFailures": 1
+    },
+    {
+      "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
+      "provider": "World Happiness Report",
+      "providerUrl": "https://worldhappiness.report/",
+      "label": "World Happiness Report data (Gallup) – social support",
+      "url": "https://worldhappiness.report/",
+      "status": "error",
+      "error": "AdapterError: No WHR data file link found",
+      "optional": false,
+      "indicators": [
+        "loneliness"
+      ],
+      "countries": [],
+      "lastSuccess": null,
+      "consecutiveFailures": 1
+    },
+    {
+      "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Disability status\":[\"_T\",\"TOTAL\"],\"Location\":[\"ALLAREA\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.6.2\",\"series\":\"SP_PSR_OSATIS_GOV\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (16.6.2)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "public_services"
+      ],
+      "countries": [
+        "BRA",
+        "DEU"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"dims\":{\"Location\":[\"URBAN\",\"ALLAREA\"]},\"indicator\":\"11.6.2\",\"series\":\"EN_ATM_PM25\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (11.6.2, WHO)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "pm25"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "worldbank:{\"indicator\":\"EN.ATM.PM25.MC.M3\"}",
+      "provider": "World Bank Indicators API",
+      "providerUrl": "https://data.worldbank.org/",
+      "label": "World Bank WDI – national mean PM2.5",
+      "url": "https://data.worldbank.org/indicator/EN.ATM.PM25.MC.M3",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "pm25"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "worldbank:{\"indicator\":\"SH.H2O.SMDW.ZS\"}",
+      "provider": "World Bank Indicators API",
+      "providerUrl": "https://data.worldbank.org/",
+      "label": "World Bank WDI (WHO/UNICEF JMP)",
+      "url": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "safe_water"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"dims\":{\"Location\":[\"ALLAREA\"]},\"indicator\":\"6.1.1\",\"series\":\"SH_H2O_SAFE\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (6.1.1)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "safe_water"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "owid_grapher:{\"altSlugs\":[{\"query\":{\"quantile\":\"richest_1pct\"},\"slug\":\"wealth-share-richest\"}],\"slug\":\"wealth-share-richest-1-percent\"}",
+      "provider": "Our World in Data",
+      "providerUrl": "https://ourworldindata.org/",
+      "label": "World Inequality Database via Our World in Data",
+      "url": "https://wid.world/",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "wealth_top1"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "worldbank:{\"indicator\":\"SI.POV.GINI\"}",
+      "provider": "World Bank Indicators API",
+      "providerUrl": "https://data.worldbank.org/",
+      "label": "World Bank WDI (PIP)",
+      "url": "https://data.worldbank.org/indicator/SI.POV.GINI",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "gini"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "pip_spl:{\"baseline\":2017}",
+      "provider": "World Bank Poverty & Inequality Platform",
+      "providerUrl": "https://pip.worldbank.org/",
+      "label": "World Bank Poverty and Inequality Platform",
+      "url": "https://pip.worldbank.org/",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "poverty_spl"
+      ],
+      "countries": [
+        "BRA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"combine\":{\"dim\":\"Sex\",\"op\":\"ratio_pct\",\"values\":[\"FEMALE\",\"MALE\"]},\"dims\":{\"Disability status\":[\"_T\",\"TOTAL\"],\"Occupation\":[\"TOTAL\",\"_T\",\"ISCO08_TOTAL\"]},\"indicator\":\"8.5.1\",\"series\":\"SL_EMP_EARN\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (8.5.1, ILO)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "gender_pay"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"indicator\":\"9.1.1\",\"series\":\"SP_ROD_R2KM\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (9.1.1, World Bank)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "rural_access"
+      ],
+      "countries": [
+        "KEN"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "owid_indicator:{\"id\":1132070}",
+      "provider": "Our World in Data",
+      "providerUrl": "https://ourworldindata.org/",
+      "label": "UNDP/OPHI global MPI via Our World in Data",
+      "url": "https://ophi.org.uk/global-mpi",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "mpi"
+      ],
+      "countries": [
+        "IDN",
+        "IND",
+        "KEN"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "worldbank:{\"indicator\":\"NW.PCA.PC\",\"source\":59}",
+      "provider": "World Bank Indicators API",
+      "providerUrl": "https://data.worldbank.org/",
+      "label": "World Bank Changing Wealth of Nations",
+      "url": "https://www.worldbank.org/en/publication/changing-wealth-of-nations",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "produced_capital"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "worldbank:{\"indicator\":\"SL.UEM.NEET.ZS\"}",
+      "provider": "World Bank Indicators API",
+      "providerUrl": "https://data.worldbank.org/",
+      "label": "World Bank WDI (ILO)",
+      "url": "https://data.worldbank.org/indicator/SL.UEM.NEET.ZS",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "neet"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "sdg:{\"dims\":{\"Age\":[\"15-24\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"8.6.1\",\"series\":\"SL_TLF_NEET\"}",
+      "provider": "UN SDG Global Database",
+      "providerUrl": "https://unstats.un.org/sdgs/dataportal",
+      "label": "UN SDG Global Database (8.6.1)",
+      "url": "https://unstats.un.org/sdgs/dataportal",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "neet"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "worldbank:{\"indicator\":\"SH.DYN.NCOM.ZS\"}",
+      "provider": "World Bank Indicators API",
+      "providerUrl": "https://data.worldbank.org/",
+      "label": "World Bank WDI (WHO, SDG 3.4.1)",
+      "url": "https://data.worldbank.org/indicator/SH.DYN.NCOM.ZS",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "pyll"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "owid_grapher:{\"slug\":\"self-reported-trust-attitudes\"}",
+      "provider": "Our World in Data",
+      "providerUrl": "https://ourworldindata.org/",
+      "label": "World Values Survey via Our World in Data",
+      "url": "https://ourworldindata.org/grapher/self-reported-trust-attitudes",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "trust"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "owid_indicator:{\"searchAround\":1076243,\"shortName\":\"confidence_civil_services\",\"window\":80}",
+      "provider": "Our World in Data",
+      "providerUrl": "https://ourworldindata.org/",
+      "label": "World Values Survey via Our World in Data",
+      "url": "https://www.worldvaluessurvey.org/",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "confidence_civil_service"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "IND",
+        "KEN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "owid_indicator:{\"id\":1195708}",
+      "provider": "Our World in Data",
+      "providerUrl": "https://ourworldindata.org/",
+      "label": "Gallup via OECD – trust in national government",
+      "url": "https://www.oecd.org/en/data/datasets/oecd-trust-survey-data.html",
+      "status": "ok",
+      "error": null,
+      "optional": false,
+      "indicators": [
+        "confidence_civil_service"
+      ],
+      "countries": [
+        "BRA",
+        "DEU",
+        "IDN",
+        "USA"
+      ],
+      "lastSuccess": "2026-09-25T12:46:22+00:00",
+      "consecutiveFailures": 0
+    },
+    {
+      "key": "worldbank:{\"indicator\":\"NW.NCA.PC\",\"source\":59}",
+      "provider": "World Bank Indicators API",
+      "providerUrl": "https://data.worldbank.org/",
+      "label": "World Bank Changing Wealth of Nations",
+      "url": "https://www.worldbank.org/en/publication/changing-wealth-of-nations",
+      "status": "error",
+      "error": "AdapterError: World Bank API error for NW.NCA.PC: [{'id': '120', 'key': 'Invalid value', 'value': 'The provided parameter value is not valid'}]",
+      "optional": false,
+      "indicators": [
+        "natural_capital"
+      ],
+      "countries": [],
+      "lastSuccess": null,
+      "consecutiveFailures": 1
+    }
+  ]
+}
