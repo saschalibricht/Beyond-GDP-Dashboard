@@ -31,7 +31,7 @@
     <h3>Comparing two countries</h3>
     <ul class="rules">
       <li><span class="dot"></span>Pick a second country under <em>Compare</em>; remove it with the × button.</li>
-      <li>The first country is always blue, the comparison country pink. Bars share one scale, so their lengths compare directly.</li>
+      <li>The first country is always blue, the comparison country indigo. Bars share one scale, so their lengths compare directly.</li>
       <li>
         <span class="better">68.9</span>A green background marks the country that does better, following the indicator's
         direction. It is left out when the two values come from different sources.

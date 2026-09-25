@@ -18,7 +18,7 @@
 
   /* countries: categorical slots (validated pair) */
   --a: #2f8fe8;
-  --b: #e8508a;
+  --b: #3d4fa8;
 
   /* status, reserved meanings */
   --good: #11703a;
@@ -64,7 +64,7 @@
     --edge: rgb(255 255 255 / 0.07);
     --focus: #4da6f5;
     --a: #3e97ec;
-    --b: #e85c92;
+    --b: #4d57cc;
     --good: #6fdc95;
     --good-bg: #1f3d2e;
     --older: #f7cd45;
@@ -96,7 +96,7 @@
   --edge: rgb(255 255 255 / 0.07);
   --focus: #4da6f5;
   --a: #3e97ec;
-  --b: #e85c92;
+  --b: #4d57cc;
   --good: #6fdc95;
   --good-bg: #1f3d2e;
   --older: #f7cd45;
