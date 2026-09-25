@@ -1,9 +1,7 @@
 <script lang="ts">
-  import { fmtDate } from "../lib/format";
   import { app } from "../lib/state.svelte";
   import Sheet from "./Sheet.svelte";
 
-  const LABEL = { ok: "Working", error: "Failing", disabled: "Not configured" } as const;
   const RANK = { error: 0, disabled: 1, ok: 2 } as const;
 
   const sources = $derived(
@@ -13,22 +11,21 @@
   );
 </script>
 
-<Sheet open={app.sheet === "health"} onclose={() => (app.sheet = null)} title="Source health">
+<Sheet open={app.sheet === "health"} onclose={() => (app.sheet = null)} title={app.t.health.title}>
   <p>
-    Last check: {fmtDate(app.status?.lastChecked)}. Data last changed: {fmtDate(app.status?.lastChanged)}. A failing source
-    keeps its last good values on the dashboard; after three failed days an alert is raised automatically.
+    {app.t.health.intro(app.fmtDate(app.status?.lastChecked), app.fmtDate(app.status?.lastChanged))}
   </p>
   {#if sources.length}
     <ul class="list">
       {#each sources as s (s.key)}
         <li class="st-{s.status}">
           <div class="row">
-            <span class="state"><span class="dot"></span>{LABEL[s.status]}{s.consecutiveFailures ? ` (${s.consecutiveFailures}×)` : ""}</span>
-            <span class="when">{s.status === "ok" ? "" : `last success ${fmtDate(s.lastSuccess)}`}</span>
+            <span class="state"><span class="dot"></span>{app.t.health[s.status]}{s.consecutiveFailures ? ` (${s.consecutiveFailures}×)` : ""}</span>
+            <span class="when">{s.status === "ok" ? "" : app.t.health.lastSuccess(app.fmtDate(s.lastSuccess))}</span>
           </div>
           <div class="name">
             {#if s.url}<a href={s.url} target="_blank" rel="noopener">{s.label}</a>{:else}{s.label}{/if}
-            {#if s.optional}<span class="muted"> · optional</span>{/if}
+            {#if s.optional}<span class="muted"> · {app.t.health.optional}</span>{/if}
           </div>
           <div class="muted">{s.indicators.map((i) => app.ind.get(i)?.label ?? i).join(", ")}</div>
           {#if s.error}<code>{s.error}</code>{/if}
@@ -36,7 +33,7 @@
       {/each}
     </ul>
   {:else}
-    <p class="muted">No status available yet.</p>
+    <p class="muted">{app.t.health.none}</p>
   {/if}
 </Sheet>
 

@@ -1241,6 +1241,7 @@
   "countries": [
     {
       "iso3": "AFG",
+      "iso2": "AF",
       "name": "Afghanistan",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1248,6 +1249,7 @@
     },
     {
       "iso3": "ALB",
+      "iso2": "AL",
       "name": "Albania",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1255,6 +1257,7 @@
     },
     {
       "iso3": "DZA",
+      "iso2": "DZ",
       "name": "Algeria",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1262,6 +1265,7 @@
     },
     {
       "iso3": "AND",
+      "iso2": "AD",
       "name": "Andorra",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1269,6 +1273,7 @@
     },
     {
       "iso3": "AGO",
+      "iso2": "AO",
       "name": "Angola",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1276,6 +1281,7 @@
     },
     {
       "iso3": "ATG",
+      "iso2": "AG",
       "name": "Antigua and Barbuda",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1283,6 +1289,7 @@
     },
     {
       "iso3": "ARG",
+      "iso2": "AR",
       "name": "Argentina",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1290,6 +1297,7 @@
     },
     {
       "iso3": "ARM",
+      "iso2": "AM",
       "name": "Armenia",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1297,6 +1305,7 @@
     },
     {
       "iso3": "ABW",
+      "iso2": "AW",
       "name": "Aruba",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1304,6 +1313,7 @@
     },
     {
       "iso3": "AUS",
+      "iso2": "AU",
       "name": "Australia",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1311,6 +1321,7 @@
     },
     {
       "iso3": "AUT",
+      "iso2": "AT",
       "name": "Austria",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1318,6 +1329,7 @@
     },
     {
       "iso3": "AZE",
+      "iso2": "AZ",
       "name": "Azerbaijan",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1325,6 +1337,7 @@
     },
     {
       "iso3": "BHS",
+      "iso2": "BS",
       "name": "Bahamas",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1332,6 +1345,7 @@
     },
     {
       "iso3": "BHR",
+      "iso2": "BH",
       "name": "Bahrain",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1339,6 +1353,7 @@
     },
     {
       "iso3": "BGD",
+      "iso2": "BD",
       "name": "Bangladesh",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1346,6 +1361,7 @@
     },
     {
       "iso3": "BRB",
+      "iso2": "BB",
       "name": "Barbados",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1353,6 +1369,7 @@
     },
     {
       "iso3": "BLR",
+      "iso2": "BY",
       "name": "Belarus",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1360,6 +1377,7 @@
     },
     {
       "iso3": "BEL",
+      "iso2": "BE",
       "name": "Belgium",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1367,6 +1385,7 @@
     },
     {
       "iso3": "BLZ",
+      "iso2": "BZ",
       "name": "Belize",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1374,6 +1393,7 @@
     },
     {
       "iso3": "BEN",
+      "iso2": "BJ",
       "name": "Benin",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1381,6 +1401,7 @@
     },
     {
       "iso3": "BTN",
+      "iso2": "BT",
       "name": "Bhutan",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1388,6 +1409,7 @@
     },
     {
       "iso3": "BOL",
+      "iso2": "BO",
       "name": "Bolivia",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1395,6 +1417,7 @@
     },
     {
       "iso3": "BIH",
+      "iso2": "BA",
       "name": "Bosnia and Herzegovina",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1402,6 +1425,7 @@
     },
     {
       "iso3": "BWA",
+      "iso2": "BW",
       "name": "Botswana",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1409,6 +1433,7 @@
     },
     {
       "iso3": "BRA",
+      "iso2": "BR",
       "name": "Brazil",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1416,6 +1441,7 @@
     },
     {
       "iso3": "VGB",
+      "iso2": "VG",
       "name": "British Virgin Islands",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1423,6 +1449,7 @@
     },
     {
       "iso3": "BRN",
+      "iso2": "BN",
       "name": "Brunei",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1430,6 +1457,7 @@
     },
     {
       "iso3": "BGR",
+      "iso2": "BG",
       "name": "Bulgaria",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1437,6 +1465,7 @@
     },
     {
       "iso3": "BFA",
+      "iso2": "BF",
       "name": "Burkina Faso",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1444,6 +1473,7 @@
     },
     {
       "iso3": "BDI",
+      "iso2": "BI",
       "name": "Burundi",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1451,6 +1481,7 @@
     },
     {
       "iso3": "CPV",
+      "iso2": "CV",
       "name": "Cabo Verde",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1458,6 +1489,7 @@
     },
     {
       "iso3": "KHM",
+      "iso2": "KH",
       "name": "Cambodia",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1465,6 +1497,7 @@
     },
     {
       "iso3": "CMR",
+      "iso2": "CM",
       "name": "Cameroon",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1472,6 +1505,7 @@
     },
     {
       "iso3": "CAN",
+      "iso2": "CA",
       "name": "Canada",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1479,6 +1513,7 @@
     },
     {
       "iso3": "CAF",
+      "iso2": "CF",
       "name": "Central African Republic",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1486,6 +1521,7 @@
     },
     {
       "iso3": "TCD",
+      "iso2": "TD",
       "name": "Chad",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1493,6 +1529,7 @@
     },
     {
       "iso3": "CHL",
+      "iso2": "CL",
       "name": "Chile",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1500,6 +1537,7 @@
     },
     {
       "iso3": "CHN",
+      "iso2": "CN",
       "name": "China",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1507,6 +1545,7 @@
     },
     {
       "iso3": "COL",
+      "iso2": "CO",
       "name": "Colombia",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1514,6 +1553,7 @@
     },
     {
       "iso3": "COM",
+      "iso2": "KM",
       "name": "Comoros",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1521,6 +1561,7 @@
     },
     {
       "iso3": "CRI",
+      "iso2": "CR",
       "name": "Costa Rica",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1528,6 +1569,7 @@
     },
     {
       "iso3": "HRV",
+      "iso2": "HR",
       "name": "Croatia",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1535,6 +1577,7 @@
     },
     {
       "iso3": "CUB",
+      "iso2": "CU",
       "name": "Cuba",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1542,6 +1585,7 @@
     },
     {
       "iso3": "CUW",
+      "iso2": "CW",
       "name": "Curaçao",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1549,6 +1593,7 @@
     },
     {
       "iso3": "CYP",
+      "iso2": "CY",
       "name": "Cyprus",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1556,6 +1601,7 @@
     },
     {
       "iso3": "CZE",
+      "iso2": "CZ",
       "name": "Czechia",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1563,6 +1609,7 @@
     },
     {
       "iso3": "CIV",
+      "iso2": "CI",
       "name": "Côte d'Ivoire",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1570,6 +1617,7 @@
     },
     {
       "iso3": "DNK",
+      "iso2": "DK",
       "name": "Denmark",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1577,6 +1625,7 @@
     },
     {
       "iso3": "DJI",
+      "iso2": "DJ",
       "name": "Djibouti",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1584,6 +1633,7 @@
     },
     {
       "iso3": "DMA",
+      "iso2": "DM",
       "name": "Dominica",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1591,6 +1641,7 @@
     },
     {
       "iso3": "DOM",
+      "iso2": "DO",
       "name": "Dominican Republic",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1598,6 +1649,7 @@
     },
     {
       "iso3": "COD",
+      "iso2": "CD",
       "name": "DR Congo",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1605,6 +1657,7 @@
     },
     {
       "iso3": "ECU",
+      "iso2": "EC",
       "name": "Ecuador",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1612,6 +1665,7 @@
     },
     {
       "iso3": "EGY",
+      "iso2": "EG",
       "name": "Egypt",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1619,6 +1673,7 @@
     },
     {
       "iso3": "SLV",
+      "iso2": "SV",
       "name": "El Salvador",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1626,6 +1681,7 @@
     },
     {
       "iso3": "GNQ",
+      "iso2": "GQ",
       "name": "Equatorial Guinea",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1633,6 +1689,7 @@
     },
     {
       "iso3": "ERI",
+      "iso2": "ER",
       "name": "Eritrea",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1640,6 +1697,7 @@
     },
     {
       "iso3": "EST",
+      "iso2": "EE",
       "name": "Estonia",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1647,6 +1705,7 @@
     },
     {
       "iso3": "SWZ",
+      "iso2": "SZ",
       "name": "Eswatini",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1654,6 +1713,7 @@
     },
     {
       "iso3": "ETH",
+      "iso2": "ET",
       "name": "Ethiopia",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1661,6 +1721,7 @@
     },
     {
       "iso3": "FJI",
+      "iso2": "FJ",
       "name": "Fiji",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1668,6 +1729,7 @@
     },
     {
       "iso3": "FIN",
+      "iso2": "FI",
       "name": "Finland",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1675,6 +1737,7 @@
     },
     {
       "iso3": "FRA",
+      "iso2": "FR",
       "name": "France",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1682,6 +1745,7 @@
     },
     {
       "iso3": "GAB",
+      "iso2": "GA",
       "name": "Gabon",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1689,6 +1753,7 @@
     },
     {
       "iso3": "GMB",
+      "iso2": "GM",
       "name": "Gambia",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1696,6 +1761,7 @@
     },
     {
       "iso3": "GEO",
+      "iso2": "GE",
       "name": "Georgia",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1703,6 +1769,7 @@
     },
     {
       "iso3": "DEU",
+      "iso2": "DE",
       "name": "Germany",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1710,6 +1777,7 @@
     },
     {
       "iso3": "GHA",
+      "iso2": "GH",
       "name": "Ghana",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1717,6 +1785,7 @@
     },
     {
       "iso3": "GRC",
+      "iso2": "GR",
       "name": "Greece",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1724,6 +1793,7 @@
     },
     {
       "iso3": "GRD",
+      "iso2": "GD",
       "name": "Grenada",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1731,6 +1801,7 @@
     },
     {
       "iso3": "GTM",
+      "iso2": "GT",
       "name": "Guatemala",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1738,6 +1809,7 @@
     },
     {
       "iso3": "GIN",
+      "iso2": "GN",
       "name": "Guinea",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1745,6 +1817,7 @@
     },
     {
       "iso3": "GNB",
+      "iso2": "GW",
       "name": "Guinea-Bissau",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1752,6 +1825,7 @@
     },
     {
       "iso3": "GUY",
+      "iso2": "GY",
       "name": "Guyana",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1759,6 +1833,7 @@
     },
     {
       "iso3": "HTI",
+      "iso2": "HT",
       "name": "Haiti",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1766,6 +1841,7 @@
     },
     {
       "iso3": "HND",
+      "iso2": "HN",
       "name": "Honduras",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1773,6 +1849,7 @@
     },
     {
       "iso3": "HKG",
+      "iso2": "HK",
       "name": "Hong Kong",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1780,6 +1857,7 @@
     },
     {
       "iso3": "HUN",
+      "iso2": "HU",
       "name": "Hungary",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1787,6 +1865,7 @@
     },
     {
       "iso3": "ISL",
+      "iso2": "IS",
       "name": "Iceland",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1794,6 +1873,7 @@
     },
     {
       "iso3": "IND",
+      "iso2": "IN",
       "name": "India",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1801,6 +1881,7 @@
     },
     {
       "iso3": "IDN",
+      "iso2": "ID",
       "name": "Indonesia",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1808,6 +1889,7 @@
     },
     {
       "iso3": "IRN",
+      "iso2": "IR",
       "name": "Iran",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1815,6 +1897,7 @@
     },
     {
       "iso3": "IRQ",
+      "iso2": "IQ",
       "name": "Iraq",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1822,6 +1905,7 @@
     },
     {
       "iso3": "IRL",
+      "iso2": "IE",
       "name": "Ireland",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1829,6 +1913,7 @@
     },
     {
       "iso3": "ISR",
+      "iso2": "IL",
       "name": "Israel",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1836,6 +1921,7 @@
     },
     {
       "iso3": "ITA",
+      "iso2": "IT",
       "name": "Italy",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1843,6 +1929,7 @@
     },
     {
       "iso3": "JAM",
+      "iso2": "JM",
       "name": "Jamaica",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1850,6 +1937,7 @@
     },
     {
       "iso3": "JPN",
+      "iso2": "JP",
       "name": "Japan",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1857,6 +1945,7 @@
     },
     {
       "iso3": "JOR",
+      "iso2": "JO",
       "name": "Jordan",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1864,6 +1953,7 @@
     },
     {
       "iso3": "KAZ",
+      "iso2": "KZ",
       "name": "Kazakhstan",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1871,6 +1961,7 @@
     },
     {
       "iso3": "KEN",
+      "iso2": "KE",
       "name": "Kenya",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1878,6 +1969,7 @@
     },
     {
       "iso3": "KIR",
+      "iso2": "KI",
       "name": "Kiribati",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1885,6 +1977,7 @@
     },
     {
       "iso3": "XKX",
+      "iso2": "XK",
       "name": "Kosovo",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1892,6 +1985,7 @@
     },
     {
       "iso3": "KWT",
+      "iso2": "KW",
       "name": "Kuwait",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1899,6 +1993,7 @@
     },
     {
       "iso3": "KGZ",
+      "iso2": "KG",
       "name": "Kyrgyzstan",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1906,6 +2001,7 @@
     },
     {
       "iso3": "LAO",
+      "iso2": "LA",
       "name": "Laos",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1913,6 +2009,7 @@
     },
     {
       "iso3": "LVA",
+      "iso2": "LV",
       "name": "Latvia",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1920,6 +2017,7 @@
     },
     {
       "iso3": "LBN",
+      "iso2": "LB",
       "name": "Lebanon",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1927,6 +2025,7 @@
     },
     {
       "iso3": "LSO",
+      "iso2": "LS",
       "name": "Lesotho",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -1934,6 +2033,7 @@
     },
     {
       "iso3": "LBR",
+      "iso2": "LR",
       "name": "Liberia",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1941,6 +2041,7 @@
     },
     {
       "iso3": "LBY",
+      "iso2": "LY",
       "name": "Libya",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1948,6 +2049,7 @@
     },
     {
       "iso3": "LIE",
+      "iso2": "LI",
       "name": "Liechtenstein",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1955,6 +2057,7 @@
     },
     {
       "iso3": "LTU",
+      "iso2": "LT",
       "name": "Lithuania",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1962,6 +2065,7 @@
     },
     {
       "iso3": "LUX",
+      "iso2": "LU",
       "name": "Luxembourg",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1969,6 +2073,7 @@
     },
     {
       "iso3": "MAC",
+      "iso2": "MO",
       "name": "Macao",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -1976,6 +2081,7 @@
     },
     {
       "iso3": "MDG",
+      "iso2": "MG",
       "name": "Madagascar",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1983,6 +2089,7 @@
     },
     {
       "iso3": "MWI",
+      "iso2": "MW",
       "name": "Malawi",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -1990,6 +2097,7 @@
     },
     {
       "iso3": "MYS",
+      "iso2": "MY",
       "name": "Malaysia",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -1997,6 +2105,7 @@
     },
     {
       "iso3": "MDV",
+      "iso2": "MV",
       "name": "Maldives",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2004,6 +2113,7 @@
     },
     {
       "iso3": "MLI",
+      "iso2": "ML",
       "name": "Mali",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2011,6 +2121,7 @@
     },
     {
       "iso3": "MLT",
+      "iso2": "MT",
       "name": "Malta",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2018,6 +2129,7 @@
     },
     {
       "iso3": "MHL",
+      "iso2": "MH",
       "name": "Marshall Islands",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2025,6 +2137,7 @@
     },
     {
       "iso3": "MRT",
+      "iso2": "MR",
       "name": "Mauritania",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2032,6 +2145,7 @@
     },
     {
       "iso3": "MUS",
+      "iso2": "MU",
       "name": "Mauritius",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2039,6 +2153,7 @@
     },
     {
       "iso3": "MEX",
+      "iso2": "MX",
       "name": "Mexico",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2046,6 +2161,7 @@
     },
     {
       "iso3": "FSM",
+      "iso2": "FM",
       "name": "Micronesia",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2053,6 +2169,7 @@
     },
     {
       "iso3": "MDA",
+      "iso2": "MD",
       "name": "Moldova",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2060,6 +2177,7 @@
     },
     {
       "iso3": "MCO",
+      "iso2": "MC",
       "name": "Monaco",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2067,6 +2185,7 @@
     },
     {
       "iso3": "MNG",
+      "iso2": "MN",
       "name": "Mongolia",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2074,6 +2193,7 @@
     },
     {
       "iso3": "MNE",
+      "iso2": "ME",
       "name": "Montenegro",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2081,6 +2201,7 @@
     },
     {
       "iso3": "MAR",
+      "iso2": "MA",
       "name": "Morocco",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2088,6 +2209,7 @@
     },
     {
       "iso3": "MOZ",
+      "iso2": "MZ",
       "name": "Mozambique",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2095,6 +2217,7 @@
     },
     {
       "iso3": "MMR",
+      "iso2": "MM",
       "name": "Myanmar",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2102,6 +2225,7 @@
     },
     {
       "iso3": "NAM",
+      "iso2": "NA",
       "name": "Namibia",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2109,6 +2233,7 @@
     },
     {
       "iso3": "NRU",
+      "iso2": "NR",
       "name": "Nauru",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2116,6 +2241,7 @@
     },
     {
       "iso3": "NPL",
+      "iso2": "NP",
       "name": "Nepal",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2123,6 +2249,7 @@
     },
     {
       "iso3": "NLD",
+      "iso2": "NL",
       "name": "Netherlands",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2130,6 +2257,7 @@
     },
     {
       "iso3": "NCL",
+      "iso2": "NC",
       "name": "New Caledonia",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2137,6 +2265,7 @@
     },
     {
       "iso3": "NZL",
+      "iso2": "NZ",
       "name": "New Zealand",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2144,6 +2273,7 @@
     },
     {
       "iso3": "NIC",
+      "iso2": "NI",
       "name": "Nicaragua",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2151,6 +2281,7 @@
     },
     {
       "iso3": "NER",
+      "iso2": "NE",
       "name": "Niger",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2158,6 +2289,7 @@
     },
     {
       "iso3": "NGA",
+      "iso2": "NG",
       "name": "Nigeria",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2165,6 +2297,7 @@
     },
     {
       "iso3": "PRK",
+      "iso2": "KP",
       "name": "North Korea",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2172,6 +2305,7 @@
     },
     {
       "iso3": "MKD",
+      "iso2": "MK",
       "name": "North Macedonia",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2179,6 +2313,7 @@
     },
     {
       "iso3": "NOR",
+      "iso2": "NO",
       "name": "Norway",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2186,6 +2321,7 @@
     },
     {
       "iso3": "OMN",
+      "iso2": "OM",
       "name": "Oman",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2193,6 +2329,7 @@
     },
     {
       "iso3": "PAK",
+      "iso2": "PK",
       "name": "Pakistan",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2200,6 +2337,7 @@
     },
     {
       "iso3": "PLW",
+      "iso2": "PW",
       "name": "Palau",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2207,6 +2345,7 @@
     },
     {
       "iso3": "PSE",
+      "iso2": "PS",
       "name": "Palestine",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2214,6 +2353,7 @@
     },
     {
       "iso3": "PAN",
+      "iso2": "PA",
       "name": "Panama",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2221,6 +2361,7 @@
     },
     {
       "iso3": "PNG",
+      "iso2": "PG",
       "name": "Papua New Guinea",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2228,6 +2369,7 @@
     },
     {
       "iso3": "PRY",
+      "iso2": "PY",
       "name": "Paraguay",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2235,6 +2377,7 @@
     },
     {
       "iso3": "PER",
+      "iso2": "PE",
       "name": "Peru",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2242,6 +2385,7 @@
     },
     {
       "iso3": "PHL",
+      "iso2": "PH",
       "name": "Philippines",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2249,6 +2393,7 @@
     },
     {
       "iso3": "POL",
+      "iso2": "PL",
       "name": "Poland",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2256,6 +2401,7 @@
     },
     {
       "iso3": "PRT",
+      "iso2": "PT",
       "name": "Portugal",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2263,6 +2409,7 @@
     },
     {
       "iso3": "PRI",
+      "iso2": "PR",
       "name": "Puerto Rico",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2270,6 +2417,7 @@
     },
     {
       "iso3": "QAT",
+      "iso2": "QA",
       "name": "Qatar",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2277,6 +2425,7 @@
     },
     {
       "iso3": "COG",
+      "iso2": "CG",
       "name": "Republic of the Congo",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2284,6 +2433,7 @@
     },
     {
       "iso3": "ROU",
+      "iso2": "RO",
       "name": "Romania",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2291,6 +2441,7 @@
     },
     {
       "iso3": "RUS",
+      "iso2": "RU",
       "name": "Russia",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2298,6 +2449,7 @@
     },
     {
       "iso3": "RWA",
+      "iso2": "RW",
       "name": "Rwanda",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2305,6 +2457,7 @@
     },
     {
       "iso3": "KNA",
+      "iso2": "KN",
       "name": "Saint Kitts and Nevis",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2312,6 +2465,7 @@
     },
     {
       "iso3": "LCA",
+      "iso2": "LC",
       "name": "Saint Lucia",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2319,6 +2473,7 @@
     },
     {
       "iso3": "VCT",
+      "iso2": "VC",
       "name": "Saint Vincent and the Grenadines",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2326,6 +2481,7 @@
     },
     {
       "iso3": "WSM",
+      "iso2": "WS",
       "name": "Samoa",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2333,6 +2489,7 @@
     },
     {
       "iso3": "SMR",
+      "iso2": "SM",
       "name": "San Marino",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2340,6 +2497,7 @@
     },
     {
       "iso3": "SAU",
+      "iso2": "SA",
       "name": "Saudi Arabia",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2347,6 +2505,7 @@
     },
     {
       "iso3": "SEN",
+      "iso2": "SN",
       "name": "Senegal",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2354,6 +2513,7 @@
     },
     {
       "iso3": "SRB",
+      "iso2": "RS",
       "name": "Serbia",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2361,6 +2521,7 @@
     },
     {
       "iso3": "SYC",
+      "iso2": "SC",
       "name": "Seychelles",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2368,6 +2529,7 @@
     },
     {
       "iso3": "SLE",
+      "iso2": "SL",
       "name": "Sierra Leone",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2375,6 +2537,7 @@
     },
     {
       "iso3": "SGP",
+      "iso2": "SG",
       "name": "Singapore",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2382,6 +2545,7 @@
     },
     {
       "iso3": "SVK",
+      "iso2": "SK",
       "name": "Slovakia",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2389,6 +2553,7 @@
     },
     {
       "iso3": "SVN",
+      "iso2": "SI",
       "name": "Slovenia",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2396,6 +2561,7 @@
     },
     {
       "iso3": "SLB",
+      "iso2": "SB",
       "name": "Solomon Islands",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2403,6 +2569,7 @@
     },
     {
       "iso3": "SOM",
+      "iso2": "SO",
       "name": "Somalia",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2410,6 +2577,7 @@
     },
     {
       "iso3": "ZAF",
+      "iso2": "ZA",
       "name": "South Africa",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2417,6 +2585,7 @@
     },
     {
       "iso3": "KOR",
+      "iso2": "KR",
       "name": "South Korea",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2424,6 +2593,7 @@
     },
     {
       "iso3": "SSD",
+      "iso2": "SS",
       "name": "South Sudan",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2431,6 +2601,7 @@
     },
     {
       "iso3": "ESP",
+      "iso2": "ES",
       "name": "Spain",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2438,6 +2609,7 @@
     },
     {
       "iso3": "LKA",
+      "iso2": "LK",
       "name": "Sri Lanka",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2445,6 +2617,7 @@
     },
     {
       "iso3": "SDN",
+      "iso2": "SD",
       "name": "Sudan",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2452,6 +2625,7 @@
     },
     {
       "iso3": "SUR",
+      "iso2": "SR",
       "name": "Suriname",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2459,6 +2633,7 @@
     },
     {
       "iso3": "SWE",
+      "iso2": "SE",
       "name": "Sweden",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2466,6 +2641,7 @@
     },
     {
       "iso3": "CHE",
+      "iso2": "CH",
       "name": "Switzerland",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2473,6 +2649,7 @@
     },
     {
       "iso3": "SYR",
+      "iso2": "SY",
       "name": "Syria",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2480,6 +2657,7 @@
     },
     {
       "iso3": "STP",
+      "iso2": "ST",
       "name": "São Tomé and Príncipe",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2487,6 +2665,7 @@
     },
     {
       "iso3": "TJK",
+      "iso2": "TJ",
       "name": "Tajikistan",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2494,6 +2673,7 @@
     },
     {
       "iso3": "TZA",
+      "iso2": "TZ",
       "name": "Tanzania",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2501,6 +2681,7 @@
     },
     {
       "iso3": "THA",
+      "iso2": "TH",
       "name": "Thailand",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2508,6 +2689,7 @@
     },
     {
       "iso3": "TLS",
+      "iso2": "TL",
       "name": "Timor-Leste",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2515,6 +2697,7 @@
     },
     {
       "iso3": "TGO",
+      "iso2": "TG",
       "name": "Togo",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2522,6 +2705,7 @@
     },
     {
       "iso3": "TON",
+      "iso2": "TO",
       "name": "Tonga",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2529,6 +2713,7 @@
     },
     {
       "iso3": "TTO",
+      "iso2": "TT",
       "name": "Trinidad and Tobago",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2536,6 +2721,7 @@
     },
     {
       "iso3": "TUN",
+      "iso2": "TN",
       "name": "Tunisia",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2543,6 +2729,7 @@
     },
     {
       "iso3": "TKM",
+      "iso2": "TM",
       "name": "Turkmenistan",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2550,6 +2737,7 @@
     },
     {
       "iso3": "TCA",
+      "iso2": "TC",
       "name": "Turks and Caicos Islands",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2557,6 +2745,7 @@
     },
     {
       "iso3": "TUV",
+      "iso2": "TV",
       "name": "Tuvalu",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2564,6 +2753,7 @@
     },
     {
       "iso3": "TUR",
+      "iso2": "TR",
       "name": "Türkiye",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2571,6 +2761,7 @@
     },
     {
       "iso3": "UGA",
+      "iso2": "UG",
       "name": "Uganda",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2578,6 +2769,7 @@
     },
     {
       "iso3": "UKR",
+      "iso2": "UA",
       "name": "Ukraine",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2585,6 +2777,7 @@
     },
     {
       "iso3": "ARE",
+      "iso2": "AE",
       "name": "United Arab Emirates",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2592,6 +2785,7 @@
     },
     {
       "iso3": "GBR",
+      "iso2": "GB",
       "name": "United Kingdom",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2599,6 +2793,7 @@
     },
     {
       "iso3": "USA",
+      "iso2": "US",
       "name": "United States",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2606,6 +2801,7 @@
     },
     {
       "iso3": "URY",
+      "iso2": "UY",
       "name": "Uruguay",
       "income": "HIC",
       "incomeLabel": "High income",
@@ -2613,6 +2809,7 @@
     },
     {
       "iso3": "UZB",
+      "iso2": "UZ",
       "name": "Uzbekistan",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2620,6 +2817,7 @@
     },
     {
       "iso3": "VUT",
+      "iso2": "VU",
       "name": "Vanuatu",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2627,6 +2825,7 @@
     },
     {
       "iso3": "VEN",
+      "iso2": "VE",
       "name": "Venezuela",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2634,6 +2833,7 @@
     },
     {
       "iso3": "VNM",
+      "iso2": "VN",
       "name": "Vietnam",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
@@ -2641,6 +2841,7 @@
     },
     {
       "iso3": "YEM",
+      "iso2": "YE",
       "name": "Yemen",
       "income": "LIC",
       "incomeLabel": "Low income",
@@ -2648,6 +2849,7 @@
     },
     {
       "iso3": "ZMB",
+      "iso2": "ZM",
       "name": "Zambia",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2655,6 +2857,7 @@
     },
     {
       "iso3": "ZWE",
+      "iso2": "ZW",
       "name": "Zimbabwe",
       "income": "LMC",
       "incomeLabel": "Lower middle income",
@@ -2663,5 +2866,468 @@
   ],
   "defaultCountry": "DEU",
   "defaultCompare": null,
-  "outdatedAfterYears": 5
+  "outdatedAfterYears": 5,
+  "i18n": {
+    "de": {
+      "framework": {
+        "report": {
+          "publisher": "Hochrangige Expertengruppe des UN-Generalsekretärs zu „Beyond GDP“"
+        },
+        "pillars": {
+          "foundational": {
+            "name": "Grundprinzipien",
+            "summary": "Die Voraussetzungen für Fortschritt: Frieden, Menschenrechte und Respekt vor dem Planeten. Zahlen erfassen davon nur einen Teil.",
+            "justification": "Frieden, Menschenrechte und Respekt vor dem Planeten sind die Voraussetzungen für Fortschritt, wie sie die UN-Charta festlegt. Der Bericht schlägt hier fünf Indikatoren vor und betont, dass sie nur ein Teilbild liefern: Manche Verletzungen, etwa Folter oder Verschwindenlassen, lassen sich nicht auf eine Zahl reduzieren und brauchen qualitative Beobachtung und institutionelle Schutzmechanismen."
+          },
+          "current": {
+            "name": "Aktuelles Wohlergehen",
+            "summary": "Wie Menschen ihr Leben heute erleben, in acht empirisch gut belegten Bereichen.",
+            "justification": "Wie Menschen ihr Leben heute erleben. Die acht Bereiche wurden gewählt, weil sie empirisch gut belegt sind, in nationalen und internationalen Wohlergehens-Rahmenwerken immer wiederkehren und Bedingungen abbilden, die Politik beeinflussen kann."
+          },
+          "equity": {
+            "name": "Gerechtigkeit und Teilhabe",
+            "summary": "Wer zurückbleibt: Abstände zwischen Arm und Reich, zwischen Gruppen wie Frauen und Männern und Menschen, denen es an mehreren Dingen zugleich fehlt.",
+            "justification": "Eine Querschnittsperspektive: Durchschnitte verbergen, wer zurückbleibt. Die Indikatoren erfassen vertikale Ungleichheit zwischen Arm und Reich, horizontale Abstände zwischen Gruppen wie Frauen und Männern oder Stadt und Land sowie Menschen mit mehrfachen Benachteiligungen. Das Geschlecht erhält besondere Aufmerksamkeit, weil es jede andere Ungleichheit verstärkt."
+          },
+          "sustainability": {
+            "name": "Nachhaltigkeit und Resilienz",
+            "summary": "Die Bestände, die Wohlergehen über die Zeit tragen: produziertes, menschliches, soziales, institutionelles und natürliches Kapital.",
+            "justification": "Verbindet heute mit morgen, indem die Kapitalbestände verfolgt werden, die Wohlergehen über die Zeit tragen: produziertes, menschliches, soziales, institutionelles und natürliches Kapital. Anders als das BIP zeigt eine Vermögensperspektive, wenn Wachstum durch den Verbrauch anderer Güter entsteht. Der Bericht räumt ein, dass die Indikatoren hier noch weiterentwickelt werden müssen."
+          }
+        },
+        "domains": {
+          "peace": {
+            "name": "Frieden",
+            "why": "Frieden ist mehr als die Abwesenheit von Gewalt: Er umfasst die Normen und Institutionen, mit denen Gesellschaften Konflikte bewältigen und zusammenarbeiten."
+          },
+          "human_rights": {
+            "name": "Menschenrechte",
+            "why": "Fortschritt und Menschenrechte sind untrennbar; bürgerliche, politische, wirtschaftliche, soziale und kulturelle Rechte gelten als universell und unteilbar."
+          },
+          "planet": {
+            "name": "Respekt vor dem Planeten",
+            "why": "Planetare Grenzen markieren den Rahmen, in dem die Menschheit sicher wirtschaften kann; ihre Überschreitung droht irreversible Schäden."
+          },
+          "material": {
+            "name": "Materielle Lebensbedingungen und Arbeit",
+            "why": "Ausreichende materielle Mittel erlauben es, zu planen, in die Zukunft zu investieren und am gesellschaftlichen Leben teilzunehmen; Arbeit stiftet zudem Würde über das Einkommen hinaus."
+          },
+          "health": {
+            "name": "Gesundheit",
+            "why": "Gute Gesundheit ist die Grundlage für Lebensqualität und die Fähigkeit zu arbeiten, zu lernen und teilzuhaben; Nachteile in der frühen Kindheit wirken ein Leben lang."
+          },
+          "education": {
+            "name": "Bildung",
+            "why": "Bildung stärkt gesellschaftliche Teilhabe, Selbstbestimmung und die Fähigkeit, sich an veränderte Arbeitsmärkte anzupassen."
+          },
+          "security": {
+            "name": "Sicherheit",
+            "why": "Angst vor Gewalt schränkt Bewegungsfreiheit und Wirtschaftsleben ein und untergräbt Vertrauen; die Last tragen vor allem Frauen und verletzliche Gruppen."
+          },
+          "subjective": {
+            "name": "Subjektives Wohlbefinden",
+            "why": "Wie Menschen ihr Leben wahrnehmen, prägt ihr Verhalten und ihre Entscheidungen und erfasst, was objektive Indikatoren übersehen."
+          },
+          "cohesion": {
+            "name": "Sozialer Zusammenhalt",
+            "why": "Soziale Bindungen sind informelle Sicherheitsnetze; Isolation schadet psychischer und körperlicher Gesundheit und nimmt in vielen Gesellschaften zu."
+          },
+          "institutions": {
+            "name": "Qualität der Institutionen",
+            "why": "Leistungsfähige Institutionen erbringen öffentliche Leistungen, schützen Rechte und entscheiden darüber, ob Bürgerinnen und Bürger dem Staat vertrauen können."
+          },
+          "environment": {
+            "name": "Umweltqualität",
+            "why": "Verschmutzung und geschädigte Umwelt beeinträchtigen unmittelbar Gesundheit, Lebensgrundlagen und Lebenszufriedenheit."
+          },
+          "wealth_ineq": {
+            "name": "Vermögensungleichheit",
+            "why": "Konzentriertes Vermögen kann zu konzentrierter politischer Macht werden."
+          },
+          "income_ineq": {
+            "name": "Einkommensungleichheit",
+            "why": "Wie gleichmäßig Einkommen verteilt ist, entscheidet darüber, ob Wachstum bei den meisten Menschen ankommt."
+          },
+          "poverty": {
+            "name": "Armut",
+            "why": "Zeigt, wie viele Menschen unter einem Mindestlebensstandard leben."
+          },
+          "work_inclusion": {
+            "name": "Teilhabe am Arbeitsleben",
+            "why": "Das Geschlecht ist eine universelle horizontale Ungleichheit; Lohnunterschiede sind ihre sichtbarste wirtschaftliche Spur."
+          },
+          "regional": {
+            "name": "Regionale Ungleichheit",
+            "why": "Der Wohnort bestimmt den Zugang zu Märkten, Schulen und Gesundheitsversorgung."
+          },
+          "overlapping": {
+            "name": "Mehrfache Benachteiligung",
+            "why": "Wer in mehreren Bereichen zugleich benachteiligt ist, bleibt am deutlichsten zurück."
+          },
+          "produced": {
+            "name": "Produziertes Kapital",
+            "why": "Maschinen, Gebäude und Infrastruktur, die künftige Produktion ermöglichen."
+          },
+          "human": {
+            "name": "Humankapital",
+            "why": "Fähigkeiten und Gesundheit der Bevölkerung, die künftige Möglichkeiten bestimmen."
+          },
+          "social": {
+            "name": "Sozialkapital",
+            "why": "Vertrauen zwischen Menschen macht Zusammenarbeit und gemeinsames Handeln möglich."
+          },
+          "institutional": {
+            "name": "Institutionelles Kapital",
+            "why": "Vertrauen in öffentliche Institutionen erhält ihre Handlungsfähigkeit."
+          },
+          "natural": {
+            "name": "Naturkapital",
+            "why": "Land, Wasser, Wälder und Bodenschätze, auf denen alle anderen Kapitalformen beruhen."
+          }
+        },
+        "notIncluded": [
+          {
+            "name": "Übergreifende Leitindikatoren",
+            "text": "Der Bericht empfiehlt, einige wenige „Well-being Beyond GDP“-Leitindizes zu entwickeln, doch die Gruppe konnte sich nicht auf bestimmte einigen. Sie werden hier nicht gezeigt."
+          },
+          {
+            "name": "Grenzüberschreitende Effekte",
+            "text": "Wie sich das Handeln eines Landes auf andere auswirkt (z. B. in Handel enthaltene Emissionen, Entwicklungszusammenarbeit). Der Bericht fordert solche Indikatoren, stellt aber fest, dass umfassende Maße noch fehlen."
+          },
+          {
+            "name": "Voraussetzungen",
+            "text": "Technologie, Innovation, Regierungsführung und staatliche Leistungsfähigkeit gehören zum konzeptionellen Rahmen, sind aber bewusst nicht Teil des Dashboards, das sich auf Ergebnisse beschränkt."
+          }
+        ]
+      },
+      "tags": {
+        "outdated": {
+          "label": "Veraltet",
+          "short": "Der neueste Wert ist mehr als 5 Jahre alt.",
+          "long": "Die neueste Beobachtung ist mehr als fünf Jahre alt und spiegelt die heutige Lage möglicherweise nicht wider. Der Bericht nennt die Aktualität als große Schwäche: Verzögerungen von zwei bis vier Jahren sind üblich."
+        },
+        "modelled": {
+          "label": "Modelliert",
+          "short": "Eine Schätzung aus einem statistischen Modell, keine direkte Messung.",
+          "long": "Die Werte stammen aus einem Modell, das Lücken füllt oder Quellen kombiniert. Modellschätzungen können deutlich revidiert werden und plötzliche Veränderungen übersehen. Markiert eine Quelle einen Wert als geschätzt oder modelliert, wird dieses Merkmal automatisch gesetzt."
+        },
+        "survey": {
+          "label": "Umfragebasiert",
+          "short": "Beruht auf den Angaben einer Stichprobe von Menschen.",
+          "long": "Abgeleitet aus Antworten auf Umfragefragen. Die Ergebnisse haben einen Stichprobenfehler (bei rund 1.000 Befragten etwa ±3 Prozentpunkte), und kulturelle Unterschiede im Antwortverhalten können Ländervergleiche verzerren."
+        },
+        "infrequent": {
+          "label": "Selten erhoben",
+          "short": "Wird nur alle paar Jahre erhoben.",
+          "long": "Die Quelle veröffentlicht diesen Indikator unregelmäßig oder alle drei bis fünf Jahre. Trends beruhen daher auf wenigen Datenpunkten, kurzfristige Veränderungen bleiben unsichtbar."
+        },
+        "low_coverage": {
+          "label": "Geringe Abdeckung",
+          "short": "Für weniger als die Hälfte aller Länder verfügbar.",
+          "long": "Laut Anhang des Berichts erheben weniger als die Hälfte der Länder diesen Indikator. Lücken sind häufig, Vergleiche beschränken sich auf die berichtenden Länder."
+        },
+        "substitute": {
+          "label": "Ersatzwert",
+          "short": "Ein Näherungswert oder eine andere Quelle als im Bericht vorgesehen.",
+          "long": "Das vom Bericht vorgeschlagene Maß ist hier nicht frei verfügbar, daher zeigt das Dashboard die nächstliegende offene Alternative. Vor einer Deutung als das vom Bericht gemeinte Maß sollte die Erläuterung gelesen werden."
+        },
+        "comparability": {
+          "label": "Eingeschränkt vergleichbar",
+          "short": "Die Methoden unterscheiden sich zwischen Ländern.",
+          "long": "Länder messen dies unterschiedlich (etwa Einkommens- statt Konsumerhebungen oder unterschiedliche nationale Definitionen). Abstände zwischen Ländern können daher teilweise auf die Methode statt auf die Wirklichkeit zurückgehen."
+        }
+      },
+      "indicators": {
+        "conflict_deaths": {
+          "label": "Konflikttote",
+          "name": "Gesamtzahl der konfliktbedingten Todesfälle je 100.000 Einwohner",
+          "explanation": "Menschen, die jedes Jahr in bewaffneten Konflikten getötet werden, bezogen auf die Bevölkerung. Einschließlich getöteter Kämpfender und Zivilpersonen.",
+          "unit": "Todesfälle je 100.000 Menschen",
+          "unitShort": "je 100.000",
+          "limitations": "Die offizielle SDG-Reihe deckt nur etwa ein Drittel der Länder mit Konflikten ab. Wo sie fehlt, nutzt das Dashboard UCDP-Ereignisdaten (alle drei Arten organisierter Gewalt) oder, falls auch diese fehlen, die Kampftoten der Weltbank (nur zwischenstaatliche und innerstaatliche Konflikte), die einseitige Gewalt gegen Zivilpersonen untererfassen. Ein Wert von null bei UCDP bedeutet keine erfassten Konfliktereignisse, nicht eine belegte Abwesenheit von Gewalt.",
+          "proxyNotes": {
+            "UCDP event-based fatality counts, aggregated to country-years": "Ereignisbasierte Opferzahlen von UCDP, zu Länderjahren zusammengefasst",
+            "Battle-related deaths in state-based conflicts only, divided by population": "Nur Kampftote in staatlichen Konflikten, bezogen auf die Bevölkerung"
+          }
+        },
+        "discrimination": {
+          "label": "Diskriminierung erlebt",
+          "name": "Anteil der Bevölkerung, der angibt, sich in den letzten 12 Monaten persönlich diskriminiert oder belästigt gefühlt zu haben",
+          "explanation": "Anteil der Menschen, die angeben, im vergangenen Jahr persönlich Diskriminierung oder Belästigung aus einem nach internationalem Menschenrecht verbotenen Grund erlebt zu haben.",
+          "unit": "% der Bevölkerung",
+          "unitShort": "%",
+          "limitations": "Nur etwa die Hälfte der Länder erhebt dies, meist alle zwei Jahre, in unterschiedlichen nationalen Umfragen. Die Bereitschaft, Diskriminierung anzugeben, hängt von Bewusstsein und sozialen Normen ab; höhere Werte können daher mehr Bewusstsein statt mehr Diskriminierung bedeuten."
+        },
+        "ipv": {
+          "label": "Gewalt in Partnerschaften",
+          "name": "Anteil der Frauen und Mädchen mit Partnererfahrung, die in den letzten 12 Monaten körperliche und/oder sexuelle Gewalt durch einen aktuellen oder früheren Partner erlebt haben",
+          "explanation": "Anteil der Frauen zwischen 15 und 49 Jahren, die je einen Partner hatten und im vergangenen Jahr körperliche oder sexuelle Gewalt durch einen Partner erlebt haben.",
+          "unit": "% der Frauen mit Partnererfahrung",
+          "unitShort": "%",
+          "limitations": "Die weltweiten Schätzungen werden von der WHO und Partnern modelliert und beziehen sich derzeit auf ein einziges Jahr (2018); ein Trend lässt sich daher nicht verfolgen. Gewalt wird stark untererfasst; die Werte sind Untergrenzen."
+        },
+        "ghg_pc": {
+          "label": "Treibhaus­gas­emissionen pro Kopf",
+          "name": "Gesamte Treibhausgasemissionen und Treibhausgasemissionen pro Kopf",
+          "explanation": "Alle im Land ausgestoßenen Treibhausgase je Einwohner, in Tonnen CO₂-Äquivalent. Die Detailansicht zeigt auch die nationale Gesamtmenge.",
+          "unit": "Tonnen CO₂e pro Person",
+          "unitShort": "t CO₂e",
+          "limitations": "Der Bericht verweist auf die offiziellen UNFCCC-Inventare (SDG 13.2.2), die aber nur für Industrieländer (Annex I) vollständig und jährlich vorliegen. Für die Vergleichbarkeit aller Länder nutzt das Dashboard den harmonisierten Datensatz von Our World in Data (auf Basis von Jones et al. / PRIMAP / EDGAR). Emissionen werden dort gezählt, wo sie entstehen, nicht dort, wo Güter verbraucht werden.",
+          "proxyNotes": {
+            "Harmonised global dataset instead of UNFCCC national inventories": "Harmonisierter globaler Datensatz statt nationaler UNFCCC-Inventare"
+          }
+        },
+        "ghg_total": {
+          "label": "Treibhaus­gas­emissionen gesamt",
+          "name": "Gesamte Treibhausgasemissionen",
+          "explanation": "Alle im Land jährlich ausgestoßenen Treibhausgase.",
+          "unit": "Millionen Tonnen CO₂e",
+          "unitShort": "Mt CO₂e",
+          "limitations": "Siehe Emissionen pro Kopf.",
+          "proxyNotes": {
+            "Harmonised global dataset instead of UNFCCC national inventories": "Harmonisierter globaler Datensatz statt nationaler UNFCCC-Inventare"
+          }
+        },
+        "bii": {
+          "label": "Intaktheit der Biodiversität",
+          "name": "Biodiversitäts-Intaktheitsindex",
+          "explanation": "Wie viel der ursprünglichen Artenhäufigkeit an Land im Vergleich zu einem ungestörten Ökosystem noch vorhanden ist. 100 % bedeutet vollständig intakt; die Forschung zu planetaren Grenzen nennt etwa 90 % als sicheres Niveau.",
+          "unit": "% der ursprünglichen Artenhäufigkeit",
+          "unitShort": "%",
+          "limitations": "Modelliert aus Landnutzungskarten und lokalen Biodiversitätserhebungen (PREDICTS-Datenbank). Die frei verfügbare nationale Reihe ist auf dem Stand von 2021 eingefroren und vom Herausgeber als veraltet markiert; neuere Versionen sind nur eingeschränkt zugänglich. Der Bericht selbst merkt an, dass die Daten nur bis 2014 reichen, und fordert Investitionen in eine jährliche Erhebung."
+        },
+        "disposable_income": {
+          "label": "Haushaltseinkommen pro Kopf",
+          "name": "Verfügbares Haushaltseinkommen pro Kopf",
+          "explanation": "Durchschnittliches Einkommen (oder Konsum, wo Erhebungen diesen messen) je Haushaltsmitglied und Jahr, in internationalen Dollar, die Preisunterschiede zwischen Ländern ausgleichen.",
+          "unit": "int. $ pro Person und Jahr (KKP 2021)",
+          "unitShort": "$ / Jahr",
+          "limitations": "Das Maß des Berichts stammt aus den Volkswirtschaftlichen Gesamtrechnungen, die nur 70–80 Länder veröffentlichen. Um alle Länder auf einer Grundlage zu vergleichen, nutzt das Dashboard den Durchschnitt aus Haushaltserhebungen der Poverty and Inequality Platform der Weltbank. Manche Länder messen Einkommen, andere Konsum (in der Detailansicht angegeben); Konsumerhebungen ergeben niedrigere und gleichmäßigere Werte, und Erhebungen erfassen die sehr Reichen meist nicht.",
+          "proxyNotes": {
+            "Household-survey mean (annualised) instead of national-accounts disposable income": "Durchschnitt aus Haushaltserhebungen (aufs Jahr hochgerechnet) statt verfügbarem Einkommen aus den Volkswirtschaftlichen Gesamtrechnungen"
+          }
+        },
+        "labour_underutil": {
+          "label": "Unterauslastung am Arbeitsmarkt",
+          "name": "Zusammengesetzte Quote der Arbeitsmarkt-Unterauslastung (LU4)",
+          "explanation": "Anteil des erweiterten Arbeitskräftepotenzials, der arbeitslos ist, weniger Stunden arbeitet als gewünscht oder verfügbar und arbeitswillig ist, aber nicht aktiv sucht. Ein breiteres Bild als die Arbeitslosenquote.",
+          "unit": "% des erweiterten Arbeitskräftepotenzials",
+          "unitShort": "%",
+          "limitations": "Beruht auf Arbeitskräfteerhebungen; etwa zwei Drittel der Länder erheben sie jährlich. Große informelle Sektoren erschweren es in Ländern mit niedrigerem Einkommen, Unterbeschäftigung zu erfassen."
+        },
+        "unpaid_care": {
+          "label": "Zeit für unbezahlte Sorgearbeit",
+          "name": "Anteil der Zeit für unbezahlte Haus- und Sorgearbeit",
+          "explanation": "Anteil eines 24-Stunden-Tages, der auf unbezahlte Hausarbeit und die Betreuung von Haushaltsmitgliedern entfällt. Ein Großteil dieser Arbeit wird von Frauen geleistet und ist im BIP unsichtbar.",
+          "unit": "% eines Tages",
+          "unitShort": "% des Tages",
+          "limitations": "Erfordert eigene Zeitverwendungserhebungen, die nur etwa 46 % der Länder durchführen, im Schnitt alle fünf Jahre. Die Erhebungsdesigns unterscheiden sich stark zwischen Ländern. Das Dashboard zeigt den Wert für Frauen, bei denen die Last konzentriert ist; weder „hoch“ noch „niedrig“ ist einfach gut."
+        },
+        "hale": {
+          "label": "Gesunde Lebenserwartung",
+          "name": "Gesunde Lebenserwartung bei Geburt",
+          "explanation": "Zahl der Jahre, die ein Neugeborenes bei voller Gesundheit zu leben erwarten kann, unter Berücksichtigung der Jahre mit Krankheit oder Behinderung.",
+          "unit": "Jahre",
+          "unitShort": "Jahre",
+          "limitations": "Die WHO-Schätzungen kombinieren Sterblichkeits- und Krankheitslastmodelle. Die Abdeckung ist nahezu vollständig, doch die Anfang 2026 verfügbaren Daten reichten bis 2021. Die WHO stellt zudem ihre Daten-API um, daher greift das Dashboard bei Bedarf auf einen Spiegel zurück."
+        },
+        "low_birthweight": {
+          "label": "Niedriges Geburtsgewicht",
+          "name": "Neugeborene mit niedrigem Geburtsgewicht (Anteil an den Geburten)",
+          "explanation": "Anteil der Neugeborenen unter 2.500 Gramm, ein starker Hinweis auf spätere Gesundheitsprobleme.",
+          "unit": "% der Geburten",
+          "unitShort": "%",
+          "limitations": "Modellschätzungen von UNICEF und WHO; viele Neugeborene in Ländern mit niedrigem Einkommen werden nicht gewogen. Die Anfang 2026 verfügbaren Daten reichten bis 2020."
+        },
+        "min_proficiency": {
+          "label": "Mindestkompetenz Lesen & Mathematik",
+          "name": "Anteil der Kinder und Jugendlichen, die ein Mindestkompetenzniveau in Lesen und Mathematik erreichen",
+          "explanation": "Anteil der Schülerinnen und Schüler am Ende der Sekundarstufe I, die in Lesen und in Mathematik mindestens ein Mindestniveau erreichen. Das Dashboard zeigt den Durchschnitt beider Werte.",
+          "unit": "% der Schülerinnen und Schüler",
+          "unitShort": "%",
+          "limitations": "Beruht auf verschiedenen internationalen und regionalen Leistungsstudien (z. B. PISA, TIMSS, PASEC), die auf ein gemeinsames Mindestniveau abgebildet werden; Vergleiche sind daher nur näherungsweise möglich. Die Studien laufen alle drei bis fünf Jahre und erfassen nur Kinder, die zur Schule gehen."
+        },
+        "ict_skills": {
+          "label": "Digitale Kompetenzen",
+          "name": "Anteil der Jugendlichen und Erwachsenen mit Kompetenzen in Informations- und Kommunikationstechnologie",
+          "explanation": "Anteil der Menschen ab 15 Jahren, die eine grundlegende digitale Aufgabe ausführen können. Das Dashboard nutzt „E-Mails mit Anhängen versenden“, eine der Kompetenzarten der offiziellen Reihe.",
+          "unit": "% der Bevölkerung",
+          "unitShort": "%",
+          "limitations": "Selbstangaben in Haushaltserhebungen, für etwa die Hälfte der Länder verfügbar. Der offizielle Indikator ist in viele Kompetenzarten ohne Gesamtwert aufgeteilt, daher wird eine repräsentative gezeigt. Der Bericht merkt an, dass der Indikator nicht erfasst, wie digitale Chancen und Risiken verteilt sind."
+        },
+        "homicides": {
+          "label": "Vorsätzliche Tötungen",
+          "name": "Vorsätzliche Tötungsdelikte je 100.000 Einwohner",
+          "explanation": "Zahl der Menschen, die jedes Jahr rechtswidrig und vorsätzlich getötet werden, bezogen auf die Bevölkerung.",
+          "unit": "je 100.000 Menschen",
+          "unitShort": "je 100.000",
+          "limitations": "Gehört zu den am besten vergleichbaren Kriminalstatistiken, hängt aber dennoch von Polizei- und Gesundheitsdaten sowie nationalen Rechtsdefinitionen ab. Tötungsdelikte erfassen nur die schwerste Gewalt; der Bericht regt einen breiteren Sicherheitsindex an."
+        },
+        "safe_after_dark": {
+          "label": "Nachts allein sicher unterwegs",
+          "name": "Anteil der Bevölkerung, der sich nach Einbruch der Dunkelheit allein in der eigenen Wohngegend sicher fühlt",
+          "explanation": "Anteil der Menschen, die sich nach Einbruch der Dunkelheit allein in ihrer Nachbarschaft sicher fühlen.",
+          "unit": "% der Bevölkerung",
+          "unitShort": "%",
+          "limitations": "Offizielle nationale Daten gibt es nur für etwa ein Viertel der Länder. Das Sicherheitsgefühl entspricht nicht immer der tatsächlichen Kriminalität und hängt von Geschlecht und Alter ab."
+        },
+        "life_satisfaction": {
+          "label": "Lebenszufriedenheit",
+          "name": "Lebenszufriedenheit",
+          "explanation": "Durchschnittliche Antwort, wenn Menschen ihr jetziges Leben auf einer Leiter von 0 (schlechtestmöglich) bis 10 (bestmöglich) einordnen.",
+          "unit": "Wert 0–10",
+          "unitShort": "/ 10",
+          "limitations": "Erhoben im Gallup World Poll (rund 1.000 Befragte pro Land und Jahr) und im World Happiness Report veröffentlicht, einer privaten Quelle. Kulturelle Antwortstile beeinflussen Ländervergleiche; der Bericht empfiehlt länderseitige Erhebungen, um die Abhängigkeit von privaten Daten zu verringern."
+        },
+        "loneliness": {
+          "label": "Soziale Unterstützung (statt Einsamkeit)",
+          "name": "Anteil der Menschen, die angeben, sich „gestern einen Großteil des Tages“ einsam gefühlt zu haben",
+          "explanation": "Das Maß des Berichts, tägliche Einsamkeit aus dem Gallup World Poll, ist nicht frei veröffentlicht. Ersatzweise zeigt die Kachel den Anteil der Menschen, die Verwandte oder Freunde haben, auf die sie sich in schwierigen Zeiten verlassen können.",
+          "unit": "% mit jemandem, auf den man zählen kann",
+          "unitShort": "%",
+          "limitations": "Soziale Unterstützung hängt mit Einsamkeit zusammen, ist aber nicht dasselbe: Man kann Unterstützung haben und sich trotzdem einsam fühlen. Der Bericht selbst merkt an, dass sozialer Zusammenhalt vielschichtiger ist als Einsamkeit allein. Der Wert ist eine Gallup-basierte Zahl aus den Daten des World Happiness Report.",
+          "unavailableNote": "Die Einsamkeitsdaten von Gallup sind proprietär und nicht frei verfügbar.",
+          "proxyNotes": {
+            "Social support used as proxy for loneliness": "Soziale Unterstützung als Ersatz für Einsamkeit"
+          }
+        },
+        "public_services": {
+          "label": "Zufrieden mit öffentlichen Leistungen",
+          "name": "Anteil der Bevölkerung, der mit der letzten Inanspruchnahme öffentlicher Leistungen zufrieden war",
+          "explanation": "Anteil der Menschen, die insgesamt mit der Qualität der genutzten staatlichen Leistungen zufrieden sind.",
+          "unit": "% der Bevölkerung",
+          "unitShort": "%",
+          "limitations": "Nur etwa 18 % der Länder veröffentlichen diesen Indikator, die geringste Abdeckung im Dashboard. Zufriedenheit hängt ebenso von Erwartungen wie von der Qualität der Leistungen ab."
+        },
+        "pm25": {
+          "label": "Luftverschmutzung in Städten (PM2,5)",
+          "name": "Jahresmittel der Feinstaubbelastung in Städten",
+          "explanation": "Durchschnittliche jährliche Konzentration von Feinstaub (kleiner als 2,5 Mikrometer) in der Stadtluft, gewichtet nach Bevölkerung. Der WHO-Richtwert liegt bei 5 µg/m³.",
+          "unit": "µg/m³",
+          "unitShort": "µg/m³",
+          "limitations": "Von der WHO aus Satellitendaten, Bodenmessstationen und chemischen Transportmodellen modelliert. Für 98 % der Länder verfügbar, doch die Anfang 2026 verfügbaren Daten reichten bis 2019.",
+          "proxyNotes": {
+            "National population-weighted mean, not only cities": "Landesweiter bevölkerungsgewichteter Mittelwert, nicht nur Städte"
+          }
+        },
+        "safe_water": {
+          "label": "Sicheres Trinkwasser",
+          "name": "Anteil der Bevölkerung mit sicher verwalteter Trinkwasserversorgung",
+          "explanation": "Anteil der Menschen, die eine verbesserte Wasserquelle auf dem eigenen Grundstück nutzen, die bei Bedarf verfügbar und frei von Verunreinigungen ist.",
+          "unit": "% der Bevölkerung",
+          "unitShort": "%",
+          "limitations": "Vom gemeinsamen Monitoring-Programm von WHO und UNICEF aus Erhebungen und Verwaltungsdaten geschätzt. Wasserqualität wird in vielen Ländern selten geprüft, daher ist das Niveau „sicher verwaltet“ oft modelliert; aktuelle Daten gibt es für etwa 70 % der Länder."
+        },
+        "wealth_top1": {
+          "label": "Vermögensanteil des reichsten 1 %",
+          "name": "Vermögensanteil des reichsten 1 %",
+          "explanation": "Anteil des gesamten privaten Vermögens (Vermögenswerte abzüglich Schulden), der dem reichsten 1 % der Erwachsenen gehört.",
+          "unit": "% des Gesamtvermögens",
+          "unitShort": "%",
+          "limitations": "Schätzungen gibt es für die meisten Länder, sie sind aber weitgehend modelliert: Nur etwa 30 % der Länder haben Schätzungen, die direkt auf Erhebungen und Vermögensrechnungen beruhen. Verborgenes Offshore-Vermögen ist schwer zu erfassen."
+        },
+        "gini": {
+          "label": "Einkommensungleichheit (Gini)",
+          "name": "Gini-Index",
+          "explanation": "Fasst zusammen, wie ungleich Einkommen oder Konsum verteilt sind, von 0 (alle haben gleich viel) bis 100 (eine Person hat alles).",
+          "unit": "Index 0–100",
+          "unitShort": "Gini",
+          "limitations": "Beruht auf Haushaltserhebungen, die im Schnitt alle drei Jahre stattfinden. Manche Länder messen Einkommen, andere Konsum; konsumbasierte Gini-Werte sind in der Regel niedriger. Erhebungen erfassen hohe Einkommen unzureichend."
+        },
+        "poverty_spl": {
+          "label": "Armut (gesellschaftliche Linie, fixiert)",
+          "name": "Armutsquote an der gesellschaftlichen Armutsgrenze (auf ein Basisjahr fixiert)",
+          "explanation": "Anteil der Menschen unter einer Armutsgrenze, die den typischen Lebensstandard des jeweiligen Landes widerspiegelt. Die Grenze ist auf ihren Wert in einem Basisjahr fixiert, sodass Veränderungen echten Fortschritt zeigen und keine wandernde Schwelle.",
+          "unit": "% der Bevölkerung",
+          "unitShort": "%",
+          "limitations": "Die gesellschaftliche Armutsgrenze ist der höhere Wert aus internationaler Grenze für extreme Armut und einem festen Betrag plus der Hälfte des nationalen Medians; sie steigt also mit dem Wohlstand. Das Dashboard fixiert die Grenze jedes Landes im Erhebungsjahr, das 2017 am nächsten liegt. Erhebungshäufigkeit und Unterschiede zwischen Einkommen und Konsum schränken die Vergleichbarkeit ein."
+        },
+        "gender_pay": {
+          "label": "Stundenverdienst von Frauen im Vergleich zu Männern",
+          "name": "Durchschnittlicher Stundenverdienst von Frauen im Verhältnis zu Männern",
+          "explanation": "Durchschnittlicher Stundenlohn von Frauen in Prozent des Stundenlohns von Männern. 100 % bedeutet gleiche Durchschnittsbezahlung.",
+          "unit": "% des Verdienstes von Männern",
+          "unitShort": "%",
+          "limitations": "Berechnet aus den durchschnittlichen Stundenverdiensten nach Geschlecht (SDG 8.5.1), für etwa 65 % der Länder alle zwei Jahre verfügbar. Es ist ein unbereinigter Abstand: Unterschiede in Beruf oder Arbeitszeit werden nicht berücksichtigt, informelle Arbeit fehlt in vielen Ländern."
+        },
+        "rural_access": {
+          "label": "Straßenanbindung im ländlichen Raum",
+          "name": "Anteil der ländlichen Bevölkerung, die höchstens 2 km von einer ganzjährig befahrbaren Straße entfernt lebt",
+          "explanation": "Anteil der Menschen auf dem Land, die höchstens 2 km von einer ganzjährig befahrbaren Straße entfernt leben, ein grundlegendes Maß für die Anbindung an Märkte und Dienstleistungen.",
+          "unit": "% der ländlichen Bevölkerung",
+          "unitShort": "%",
+          "limitations": "Mit Geodatenmodellen aus Straßen- und Bevölkerungskarten geschätzt, unregelmäßig und nur für eine begrenzte Zahl von Ländern veröffentlicht."
+        },
+        "mpi": {
+          "label": "Mehrdimensionale Armut",
+          "name": "Index der mehrdimensionalen Armut",
+          "explanation": "Anteil der Menschen, denen es gleichzeitig in mindestens einem Drittel der gewichteten Indikatoren zu Gesundheit, Bildung und Lebensstandard (etwa Ernährung, Schulbesuch, Sanitärversorgung und Wohnen) fehlt.",
+          "unit": "% der Bevölkerung (MPI-Quote)",
+          "unitShort": "%",
+          "limitations": "Zeigt die MPI-Quote (Anteil der mehrdimensional Armen) statt des Indexwerts, der auch die Intensität der Armut abbildet. Hängt von demografischen und Haushaltserhebungen ab, die alle paar Jahre stattfinden.",
+          "naNote": "Der globale MPI wird nur für Länder mit niedrigem und mittlerem Einkommen berechnet.",
+          "proxyNotes": {
+            "MPI headcount ratio instead of the index value": "MPI-Quote statt des Indexwerts"
+          }
+        },
+        "produced_capital": {
+          "label": "Produziertes Kapital pro Kopf",
+          "name": "Nettobestand an produziertem Kapital",
+          "explanation": "Wert von Maschinen, Gebäuden, Infrastruktur und städtischem Boden je Einwohner, nach Abschreibungen.",
+          "unit": "konstante US$ pro Person",
+          "unitShort": "$ / Person",
+          "limitations": "Aus den Vermögensrechnungen „Changing Wealth of Nations“ der Weltbank, die mit der Perpetual-Inventory-Methode geschätzt und alle paar Jahre veröffentlicht werden. Pro Kopf gezeigt, damit Länder unterschiedlicher Größe vergleichbar sind."
+        },
+        "neet": {
+          "label": "Junge Menschen ohne Arbeit, Schule oder Ausbildung",
+          "name": "Anteil der Jugendlichen, die weder in Ausbildung noch in Beschäftigung oder Schulung sind (NEET)",
+          "explanation": "Anteil der 15- bis 24-Jährigen, die weder arbeiten noch zur Schule gehen oder eine Ausbildung machen, ein Zeichen für ungenutzte Fähigkeiten und Potenziale.",
+          "unit": "% der Jugendlichen",
+          "unitShort": "%",
+          "limitations": "Beruht auf Arbeitskräfteerhebungen; Daten gibt es für etwa die Hälfte der Länder."
+        },
+        "pyll": {
+          "label": "Vorzeitige Sterblichkeit (statt PYLL)",
+          "name": "Verlorene potenzielle Lebensjahre (PYLL), alle Ursachen",
+          "explanation": "Das Maß des Berichts summiert die Lebensjahre, die verloren gehen, wenn Menschen vor dem 75. Lebensjahr sterben. Es wird nur für etwa 40–50 meist OECD-Länder erhoben, daher zeigt diese Kachel den nächstliegenden weltweiten Ersatz: die Wahrscheinlichkeit, zwischen 30 und 70 Jahren an Herz-Kreislauf-Erkrankungen, Krebs, Diabetes oder chronischen Lungenerkrankungen zu sterben.",
+          "unit": "% Wahrscheinlichkeit",
+          "unitShort": "%",
+          "limitations": "Der Ersatz umfasst nur vier große Gruppen nichtübertragbarer Krankheiten, keine Verletzungen, Infektionen oder Müttersterblichkeit, und ist eine WHO-Modellschätzung. PYLL für OECD-Länder ist als Ergänzung geplant.",
+          "proxyNotes": {
+            "NCD mortality ages 30–70 instead of PYLL": "Sterblichkeit an nichtübertragbaren Krankheiten zwischen 30 und 70 Jahren statt PYLL"
+          }
+        },
+        "trust": {
+          "label": "Den meisten Menschen kann man vertrauen",
+          "name": "Anteil der Menschen, die sagen, dass man den meisten Menschen vertrauen kann",
+          "explanation": "Anteil der Menschen, die zustimmen, dass „man den meisten Menschen vertrauen kann“, statt „man kann nicht vorsichtig genug sein“.",
+          "unit": "% der Bevölkerung",
+          "unitShort": "%",
+          "limitations": "Aus dem World Values Survey und der European Values Study, die in Wellen etwa alle fünf Jahre stattfinden und rund 56 % der Länder abdecken. Jede Welle ist auf ihr letztes Jahr datiert, auch wenn die Befragung einige Jahre früher lag."
+        },
+        "confidence_civil_service": {
+          "label": "Vertrauen in die Verwaltung",
+          "name": "Anteil der Bevölkerung, der angibt, Vertrauen in die öffentliche Verwaltung zu haben",
+          "explanation": "Anteil der Menschen, die „sehr viel“ oder „ziemlich viel“ Vertrauen in die öffentliche Verwaltung ihres Landes haben.",
+          "unit": "% der Bevölkerung",
+          "unitShort": "%",
+          "limitations": "Aus dem World Values Survey und der European Values Study, die in Wellen etwa alle fünf Jahre stattfinden und rund 56 % der Länder abdecken; die letzte Welle endet 2022. Ist diese Reihe nicht auffindbar, dient das Vertrauen in die nationale Regierung (Gallup, über die OECD) als Ersatz.",
+          "proxyNotes": {
+            "Confidence in national government instead of civil service": "Vertrauen in die nationale Regierung statt in die Verwaltung"
+          }
+        },
+        "natural_capital": {
+          "label": "Naturkapital pro Kopf",
+          "name": "Umweltvermögen (Land, Wasser, Böden, Bodenschätze usw.) auf Grundlage des Systems der Umweltökonomischen Gesamtrechnungen (SEEA)",
+          "explanation": "Geschätzter Wert von Wäldern, Ackerland, Schutzgebieten, Fischgründen, Mineralien und fossilen Reserven je Einwohner.",
+          "unit": "konstante US$ pro Person",
+          "unitShort": "$ / Person",
+          "limitations": "Der Bericht fordert nationale Umweltgesamtrechnungen nach SEEA, die nur etwa 44 % der Länder veröffentlichen. Die Vermögensrechnungen der Weltbank bewerten Naturgüter für die meisten Länder vergleichbar, aber nur nach ihrem Marktwert, wodurch viele Ökosystemleistungen fehlen. Steigende Preise für fossile Brennstoffe können den Wert erhöhen, obwohl die Reserven schrumpfen.",
+          "proxyNotes": {
+            "Monetary wealth accounts instead of full SEEA environmental accounts": "Monetäre Vermögensrechnungen statt vollständiger SEEA-Umweltgesamtrechnungen"
+          }
+        }
+      }
+    }
+  }
 }

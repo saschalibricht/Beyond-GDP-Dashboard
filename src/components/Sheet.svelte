@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
+  import { app } from "../lib/state.svelte";
   import Icon from "./Icon.svelte";
 
   let {
@@ -110,7 +111,7 @@
           {#if eyebrow}<p class="eyebrow">{eyebrow}</p>{/if}
           <h2 {id}>{title}</h2>
         </div>
-        <button type="button" class="soft-btn" aria-label="Close" onclick={() => dlg?.close()}>
+        <button type="button" class="soft-btn" aria-label={app.t.detail.close} onclick={() => dlg?.close()}>
           <Icon name="close" />
         </button>
       </header>
@@ -183,6 +184,8 @@
   }
 
   h2 {
+    hyphens: auto;
+    overflow-wrap: anywhere;
     font-size: 1.375rem;
     font-weight: 700;
     letter-spacing: -0.01em;

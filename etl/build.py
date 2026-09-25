@@ -103,6 +103,7 @@ def resolve_countries(cfg: dict, log) -> list[dict]:
         code = codes.get(c["iso3"], {})
         if not c.get("m49") and code.get("m49"):
             c["m49"] = code["m49"]
+        c.setdefault("iso2", code.get("iso2"))
         c["aliases"] = list(dict.fromkeys(c.get("aliases", []) + code.get("names", [])))
     need_m49 = [c for c in countries if not c.get("m49") and not cache.get(c["iso3"], {}).get("m49")]
     geo = {}
@@ -267,6 +268,15 @@ def applicable(countries: list[dict], values: dict, ccfg: dict) -> list[dict]:
     return keep
 
 
+def translations() -> dict:
+    """Other languages' texts from config/i18n/<lang>.json; English in the main config is the source."""
+    out = {}
+    for path in sorted((CONFIG / "i18n").glob("*.json")):
+        data = load_json(path, {}) or {}
+        out[path.stem] = {k: v for k, v in data.items() if not k.startswith("_")}
+    return out
+
+
 def public_registry(framework: dict, tags: dict, indicators: list[dict], countries: list[dict], ccfg: dict) -> dict:
     inds = []
     for ind in indicators:
@@ -278,11 +288,12 @@ def public_registry(framework: dict, tags: dict, indicators: list[dict], countri
         "framework": framework,
         "tags": tags["tags"],
         "indicators": inds,
-        "countries": sorted(({k: c.get(k) for k in ("iso3", "name", "income", "incomeLabel", "region")} for c in countries),
+        "countries": sorted(({k: c.get(k) for k in ("iso3", "iso2", "name", "income", "incomeLabel", "region")} for c in countries),
                             key=lambda c: str(c["name"] or c["iso3"]).casefold()),
         "defaultCountry": ccfg.get("default"),
         "defaultCompare": ccfg.get("defaultCompare"),
         "outdatedAfterYears": OUTDATED_AFTER_YEARS,
+        "i18n": translations(),
     }
 
 

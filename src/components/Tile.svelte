@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { fmt } from "../lib/format";
   import { barScale, compare, flagsFor, isOk, missingInfo, type Side } from "../lib/logic";
   import { app } from "../lib/state.svelte";
   import type { Indicator } from "../lib/types";
@@ -21,7 +20,7 @@
         ]
       : [{ iso3: app.viewA, entry: ea }],
   );
-  const flags = $derived(app.reg ? flagsFor(app.reg, ind, countries, app.thisYear) : []);
+  const flags = $derived(app.reg ? flagsFor(app.reg, ind, countries, app.thisYear, app.texts(ind.id)) : []);
 
   const rows = $derived.by(() => {
     if (!app.viewB) return [];
@@ -42,12 +41,12 @@
       side: side as Side,
       iso3,
       ok: isOk(e),
-      value: isOk(e) ? fmt(e.latest.value, ind.decimals) : "",
+      value: isOk(e) ? app.fmt(e.latest.value, ind.decimals) : "",
       year: isOk(e) ? e.latest.year : null,
       width: isOk(e) && showBar ? pct(e.latest.value) : null,
       better: cmp.better === side,
       older: cmp.older === side,
-      missing: missingInfo(e, app.cname(iso3)).title,
+      missing: missingInfo(e, app.cname(iso3), app.texts(ind.id)).title,
     }));
   });
 
@@ -66,18 +65,18 @@
       type="button"
       class="pin"
       aria-pressed={pinned}
-      title={pinned ? "Unpin" : "Pin"}
+      title={pinned ? app.t.tile.unpin : app.t.tile.pin}
       onclick={() => app.togglePin(ind.id)}
     >
       <Icon name={pinned ? "pinFilled" : "pin"} />
-      <span class="visually-hidden">{pinned ? "Unpin" : "Pin"} {ind.label}</span>
+      <span class="visually-hidden">{pinned ? app.t.tile.unpin : app.t.tile.pin}: {ind.label}</span>
     </button>
   </div>
 
   {#if !app.viewB}
     {#if isOk(ea)}
       <div class="value">
-        <span class="v">{fmt(ea.latest.value, ind.decimals)}</span>
+        <span class="v">{app.fmt(ea.latest.value, ind.decimals)}</span>
         <span class="unit">{unit}</span>
       </div>
       {#if app.mode === "trend"}
@@ -88,7 +87,7 @@
         <div class="latest"><span class="year num">{ea.latest.year}</span></div>
       {/if}
     {:else}
-      {@const m = missingInfo(ea, app.cname(app.viewA))}
+      {@const m = missingInfo(ea, app.cname(app.viewA), app.texts(ind.id))}
       <div class="missing {m.kind}">{m.title}</div>
     {/if}
   {:else}
@@ -97,7 +96,7 @@
         <div
           class="row side-{r.side}"
           class:better={r.better}
-          title="{app.cname(r.iso3)}{r.better ? ' – does better' : ''}"
+          title="{app.cname(r.iso3)}{r.better ? ` – ${app.t.tile.doesBetter}` : ''}"
         >
           <span class="iso">{r.iso3}</span>
           {#if r.ok}
@@ -106,8 +105,8 @@
             {#if r.width !== null && app.mode === "latest"}
               <span class="bar"><span style="width:{r.width.toFixed(1)}%"></span></span>
             {/if}
-            {#if r.better}<span class="visually-hidden">Does better.</span>{/if}
-            {#if r.older}<span class="visually-hidden">Older data.</span>{/if}
+            {#if r.better}<span class="visually-hidden">{app.t.tile.doesBetter}.</span>{/if}
+            {#if r.older}<span class="visually-hidden">{app.t.tile.olderData}.</span>{/if}
           {:else}
             <span class="gap">{r.missing}</span>
           {/if}
@@ -128,7 +127,7 @@
   {/if}
 
   {#if flags.length}
-    <ul class="flags" aria-label="Caveats">
+    <ul class="flags" aria-label={app.t.tile.caveats}>
       {#each flags as f (f.id)}
         <li class="tone-{f.tone}" title={flagTitle(f)}>
           <Icon name={f.icon} /><span class="visually-hidden">{flagTitle(f)}</span>
@@ -176,6 +175,9 @@
   .title {
     all: unset;
     cursor: pointer;
+    /* long German compounds (Treibhausgasemissionen) must not run under the pin */
+    hyphens: auto;
+    overflow-wrap: anywhere;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;

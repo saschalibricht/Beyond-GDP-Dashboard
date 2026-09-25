@@ -28,6 +28,8 @@
     font-weight: 700;
     letter-spacing: -0.01em;
     color: var(--pillar-ink);
+    hyphens: auto;
+    overflow-wrap: anywhere;
   }
 
   .dot {

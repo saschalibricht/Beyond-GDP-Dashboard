@@ -10,7 +10,8 @@
 </script>
 
 <script lang="ts">
-  import { directionText, fmt } from "../lib/format";
+  import { directionText } from "../lib/format";
+  import { app } from "../lib/state.svelte";
   import BetterRail from "./BetterRail.svelte";
   import { isEstimate, niceTicks } from "../lib/logic";
   import type { Indicator } from "../lib/types";
@@ -112,7 +113,7 @@
     if (yr === undefined) return "";
     const parts = lines.map((l) => {
       const pt = valueAt(l, yr);
-      return `${l.label} ${pt ? fmt(pt[1], ind.decimals) : "no value"}`;
+      return `${l.label} ${pt ? app.fmt(pt[1], ind.decimals) : app.t.chart.noValue}`;
     });
     return `${yr}: ${parts.join(", ")}`;
   });
@@ -121,7 +122,7 @@
 </script>
 
 {#if !hasData}
-  <p class="empty">No time series available.</p>
+  <p class="empty">{app.t.chart.empty}</p>
 {:else}
   <div class="chart" bind:clientWidth={w}>
     {#if geo}
@@ -130,7 +131,7 @@
         height={h}
         viewBox="0 0 {w} {h}"
         role="slider"
-        aria-label="{ind.label} over time. Use the left and right arrow keys to read values by year."
+        aria-label={app.t.chart.label(ind.label)}
         aria-valuemin={years[0]}
         aria-valuemax={years[years.length - 1]}
         aria-valuenow={active ?? years[years.length - 1]}
@@ -144,7 +145,7 @@
       >
         {#each geo.ticks as t (t)}
           <line class="grid" x1={m.l} x2={w - m.r} y1={geo.Y(t)} y2={geo.Y(t)} />
-          <text class="tick" x={m.l - 8} y={geo.Y(t) + 4} text-anchor="end">{fmt(t, geo.tickDecimals)}</text>
+          <text class="tick" x={m.l - 8} y={geo.Y(t) + 4} text-anchor="end">{app.fmt(t, geo.tickDecimals)}</text>
         {/each}
         {#each geo.xLabels as yr (yr)}
           <text class="tick" x={geo.X(yr)} y={h - 8} text-anchor="middle">{yr}</text>
@@ -183,8 +184,8 @@
             {@const pt = valueAt(l, active)}
             <div class="tip-row side-{l.side}">
               <span class="key"></span>
-              <strong class="num">{pt ? fmt(pt[1], ind.decimals) : "–"}</strong>
-              <span class="tip-label">{l.label}{pt && isEstimate(pt[2]?.n) ? " (estimate)" : ""}</span>
+              <strong class="num">{pt ? app.fmt(pt[1], ind.decimals) : "–"}</strong>
+              <span class="tip-label">{l.label}{pt && isEstimate(pt[2]?.n) ? ` (${app.t.chart.estimate})` : ""}</span>
             </div>
           {/each}
         </div>
@@ -199,18 +200,18 @@
       {/each}
     {/if}
     {#if ind.direction !== "neutral"}
-      <span class="better"><Icon name={ind.direction === "higher" ? "arrowUp" : "arrowDown"} />{directionText(ind.direction)}</span>
+      <span class="better"><Icon name={ind.direction === "higher" ? "arrowUp" : "arrowDown"} />{directionText(ind.direction, app.t)}</span>
     {/if}
-    <span class="note">{ind.unit}{anyEstimate ? ". Hollow points are estimates" : ""}.</span>
+    <span class="note">{ind.unit}{anyEstimate ? `. ${app.t.chart.hollow}` : ""}.</span>
   </div>
 
   <details class="table">
-    <summary><Icon name="table" />Data table</summary>
+    <summary><Icon name="table" />{app.t.chart.table}</summary>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th scope="col">Year</th>
+            <th scope="col">{app.t.chart.year}</th>
             {#each lines as l (l.side)}<th scope="col">{l.label}</th>{/each}
           </tr>
         </thead>
@@ -220,7 +221,7 @@
               <th scope="row" class="num">{yr}</th>
               {#each lines as l (l.side)}
                 {@const pt = valueAt(l, yr)}
-                <td class="num">{pt ? fmt(pt[1], ind.decimals) : "–"}{pt && isEstimate(pt[2]?.n) ? " e" : ""}</td>
+                <td class="num">{pt ? app.fmt(pt[1], ind.decimals) : "–"}{pt && isEstimate(pt[2]?.n) ? " e" : ""}</td>
               {/each}
             </tr>
           {/each}

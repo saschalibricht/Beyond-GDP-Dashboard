@@ -4,44 +4,33 @@
   import Sheet from "./Sheet.svelte";
 
   const f = $derived(app.reg?.framework);
+  const h = $derived(app.t.help);
 </script>
 
-<Sheet open={app.sheet === "help"} onclose={() => (app.sheet = null)} title="How to read · About">
+<Sheet open={app.sheet === "help"} onclose={() => (app.sheet = null)} title={h.title}>
   {#if f}
-    <p>
-      This dashboard shows the indicators proposed in
-      <a href={f.report.url} target="_blank" rel="noopener"><em>{f.report.title}</em></a>, the {f.report.year} report of the
-      {f.report.publisher}. The report asks countries to measure progress as equitable, inclusive and sustainable well-being,
-      complementing rather than replacing GDP. This is an independent prototype built only from openly available data, not
-      produced or endorsed by the United Nations.
-    </p>
+    {@const intro = h.intro(f.report.title, f.report.year, f.report.publisher)}
+    <p>{intro[0]}<a href={f.report.url} target="_blank" rel="noopener"><em>{intro[1]}</em></a>{intro[2]}</p>
 
-    <h3>Reading a tile</h3>
-    <p>
-      Each tile is one indicator, titled in the colour of its component. It shows the latest value, the year it refers to and
-      the trend over time. <em>Latest</em> / <em>Trend</em> next to the compare selector switches between the latest values
-      and the values over time. Select a tile for the explanation, caveats, full time series and sources. Pin tiles to build
-      your own set.
-    </p>
+    <h3>{h.tileTitle}</h3>
+    <p>{h.tile}</p>
     <ul class="pillars">
       {#each f.pillars as p (p.id)}
         <li class="p-{p.id}"><strong>{p.name}.</strong> {p.summary ?? p.justification}</li>
       {/each}
     </ul>
+    <p class="rail-note"><span class="rail" aria-hidden="true"><Icon name="arrowUp" /></span>{h.rail}</p>
 
-    <h3>Comparing two countries</h3>
+    <h3>{h.compareTitle}</h3>
     <ul class="rules">
-      <li><span class="dot"></span>Pick a second country under <em>Compare</em>; remove it with the × button.</li>
-      <li>The first country is always blue, the comparison country indigo. Bars share one scale, so their lengths compare directly.</li>
-      <li>
-        <span class="better">68.9</span>A green background marks the country that does better, following the indicator's
-        direction. It is left out when the two values come from different sources.
-      </li>
-      <li><span class="older">2018</span>A yellow year is older than the other country's year.</li>
+      <li><span class="dot"></span>{h.compare1}</li>
+      <li><span class="dot"></span>{h.compare2}</li>
+      <li><span class="better">{app.fmt(68.9, 1)}</span>{h.compare3}</li>
+      <li><span class="older">2018</span>{h.compare4}</li>
     </ul>
 
-    <h3>Caveat icons</h3>
-    <p>Tiles show caveats as icons; the detail view spells them out. They describe the data, not the country.</p>
+    <h3>{h.caveatsTitle}</h3>
+    <p>{h.caveats}</p>
     <ul class="taglist">
       {#each app.reg?.tags ?? [] as t (t.id)}
         <li>
@@ -51,45 +40,31 @@
       {/each}
       <li>
         <span class="badge err"><Icon name="stale" /></span>
-        <div>
-          <strong>Not updated</strong>
-          <p>The source could not be reached in the latest daily check. The last value retrieved is shown until it works again.</p>
-        </div>
+        <div><strong>{h.staleTitle}</strong><p>{h.stale}</p></div>
       </li>
       <li>
         <span class="badge warn"><Icon name="warn" /></span>
-        <div>
-          <strong>Comparison caveat</strong>
-          <p>The two values come from different sources, or one survey measures income and the other consumption.</p>
-        </div>
+        <div><strong>{h.cmpTitle}</strong><p>{h.cmp}</p></div>
       </li>
     </ul>
 
-    <h3>Missing values and years</h3>
-    <p>
-      Nothing is hidden or filled in. A hatched area says why a value is missing: <strong>No data</strong> (the source does not
-      cover this country), <strong>Not applicable</strong> (e.g. the global poverty index is not computed for high-income
-      countries) or <strong>Source unavailable</strong>. Years are the years the data refer to, not when they were published;
-      values more than {app.reg?.outdatedAfterYears ?? 5} years old are marked as outdated.
-    </p>
+    <h3>{h.missingTitle}</h3>
+    <p>{h.missing(app.reg?.outdatedAfterYears ?? 5)}</p>
 
-    <h3>Countries and sources</h3>
-    <p>
-      Every country with data for at least five indicators is listed. Where the report's exact indicator is not openly
-      available, the closest open alternative is shown and marked as a substitute; all countries use the same measure, so they
-      stay comparable.
-    </p>
+    <h3>{h.countriesTitle}</h3>
+    <p>{h.countries}</p>
+    <p class="muted">{h.languageNote}</p>
 
-    <h3>Deliberately not shown</h3>
+    <h3>{h.notShownTitle}</h3>
     {#each f.notIncluded as n (n.name)}
       <p><strong>{n.name}.</strong> {n.text} <span class="muted">({n.ref})</span></p>
     {/each}
 
-    <h3>Updates and privacy</h3>
+    <h3>{h.updatesTitle}</h3>
     <p>
-      An automated job checks every source once a day. If a source fails, the last good value stays visible and is marked. See
-      <button type="button" class="link-btn" onclick={() => (app.sheet = "health")}>source health</button>. The page loads
-      nothing from third parties (fonts are self-hosted) and sets no cookies; your theme and pins stay in your browser.
+      {h.updates1}
+      <button type="button" class="link-btn" onclick={() => (app.sheet = "health")}>{h.updatesLink}</button>.
+      {h.updates2}
     </p>
   {/if}
 </Sheet>
@@ -192,5 +167,23 @@
 
   .muted {
     color: var(--muted);
+  }
+
+  .rail-note {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    margin-top: 10px;
+  }
+
+  .rail {
+    flex: none;
+    color: var(--good);
+  }
+
+  .rail :global(.ic) {
+    width: 13px;
+    height: 13px;
+    stroke-width: 2;
   }
 </style>

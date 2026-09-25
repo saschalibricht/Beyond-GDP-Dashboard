@@ -32,6 +32,10 @@ export interface Indicator {
   why?: string;
   secondary?: string;
   hidden?: boolean;
+  /** shown when the indicator does not apply to a country's income group */
+  naNote?: string;
+  /** shown when no source has data */
+  unavailableNote?: string;
   sources: Source[];
 }
 
@@ -61,6 +65,8 @@ export interface Tag {
 
 export interface Country {
   iso3: string;
+  /** ISO 3166 alpha-2, for localized names via Intl.DisplayNames */
+  iso2?: string | null;
   name: string;
   income?: string | null;
   incomeLabel?: string | null;
@@ -79,6 +85,8 @@ export interface Registry {
   defaultCountry?: string | null;
   defaultCompare?: string | null;
   outdatedAfterYears: number;
+  /** other languages' content texts, keyed by language (see config/i18n/) */
+  i18n?: Record<string, unknown>;
 }
 
 export interface PointMeta {

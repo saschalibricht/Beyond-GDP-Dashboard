@@ -1,8 +1,15 @@
 // Pure dashboard rules: what counts as outdated, which country is "better",
 // which year is older, and which warning flags a tile carries.
 // Kept free of Svelte so it can be unit-tested.
-import { fmtDate } from "./format";
+import type { Messages } from "./i18n";
 import type { Entry, Indicator, OkEntry, Registry } from "./types";
+
+/** Language-dependent pieces the rules need: interface text, date format, note translation. */
+export interface Texts {
+  m: Messages;
+  date: (iso: string) => string;
+  note: (text: string) => string;
+}
 
 export const isOk = (e: Entry | null | undefined): e is OkEntry =>
   !!e && e.status === "ok" && !!e.latest && typeof e.src === "number";
@@ -80,7 +87,9 @@ export function flagsFor(
   ind: Indicator,
   countries: { iso3: string; entry: Entry | null | undefined }[],
   thisYear: number,
+  L: Texts,
 ): Flag[] {
+  const { m } = L;
   const after = reg.outdatedAfterYears;
   const sets = countries.map((c) => new Set(entryTags(ind, c.entry, thisYear, after)));
   const flags: Flag[] = [];
@@ -103,9 +112,9 @@ export function flagsFor(
     flags.push({
       id: `stale-${c.iso3}`,
       icon: "stale",
-      label: `Not updated since ${fmtDate(s.since)}`,
-      short: "The source could not be reached; showing the last value retrieved.",
-      long: `The source could not be reached in the latest daily check, so the last value retrieved is shown. It is retried every day.${s.reason ? ` Error: ${s.reason}` : ""}`,
+      label: m.flags.staleLabel(L.date(s.since)),
+      short: m.flags.staleShort,
+      long: m.flags.staleLong + (s.reason ? m.flags.staleError(s.reason) : ""),
       tone: "error",
       only: countries.length > 1 ? [c.iso3] : undefined,
     });
@@ -117,9 +126,9 @@ export function flagsFor(
       flags.push({
         id: "diff-source",
         icon: "warn",
-        label: "Different sources",
-        short: "The two values come from different sources.",
-        long: "The two countries' values come from different sources or methods, so the gap between them may partly reflect how they were measured. No “better” label is shown.",
+        label: m.flags.diffSourceLabel,
+        short: m.flags.diffSourceShort,
+        long: m.flags.diffSourceLong,
         tone: "warn",
       });
     }
@@ -127,9 +136,9 @@ export function flagsFor(
       flags.push({
         id: "diff-welfare",
         icon: "warn",
-        label: "Income vs consumption",
-        short: "One survey measures income, the other consumption.",
-        long: `${a.iso3} measures ${a.entry?.meta?.welfare}, ${b.iso3} measures ${b.entry?.meta?.welfare}. Consumption surveys usually show lower inequality and different levels than income surveys.`,
+        label: m.flags.welfareLabel,
+        short: m.flags.welfareShort,
+        long: m.flags.welfareLong(a.iso3, welfareWord(a.entry?.meta?.welfare, m), b.iso3, welfareWord(b.entry?.meta?.welfare, m)),
         tone: "warn",
       });
     }
@@ -137,31 +146,30 @@ export function flagsFor(
   return flags;
 }
 
+const welfareWord = (w: string | undefined, m: Messages) =>
+  (w ?? "")
+    .split("/")
+    .map((x) => m.flags.welfare[x] ?? x)
+    .join("/");
+
 export interface MissingInfo {
   title: string;
   text: string;
   kind: "none" | "na" | "err";
 }
 
-export function missingInfo(e: Entry | null | undefined, countryName: string): MissingInfo {
-  const note = e?.notes?.[0];
+export function missingInfo(e: Entry | null | undefined, countryName: string, L: Texts): MissingInfo {
+  const { m } = L;
+  const note = e?.notes?.[0] ? L.note(e.notes[0]) : "";
   switch (e?.status) {
     case "no_data":
-      return { title: "No data", text: note || `The source has no value for ${countryName}.`, kind: "none" };
+      return { title: m.missing.noData, text: note || m.missing.noDataText(countryName), kind: "none" };
     case "not_applicable":
-      return { title: "Not applicable", text: note || "Not computed for this country.", kind: "na" };
+      return { title: m.missing.na, text: note || m.missing.naText, kind: "na" };
     case "source_error":
-      return {
-        title: "Source unavailable",
-        text: "The data source could not be reached and no earlier value is stored. It is retried daily.",
-        kind: "err",
-      };
+      return { title: m.missing.error, text: m.missing.errorText, kind: "err" };
     default:
-      return {
-        title: "Not fetched yet",
-        text: "This country was added recently; values appear after the next data update.",
-        kind: "none",
-      };
+      return { title: m.missing.pending, text: m.missing.pendingText, kind: "none" };
   }
 }
 

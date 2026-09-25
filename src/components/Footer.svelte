@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { fmtDate } from "../lib/format";
   import { app } from "../lib/state.svelte";
 
   const summary = $derived.by(() => {
@@ -11,15 +10,16 @@
 
 <footer class="wrap foot">
   <p>
-    <span class="dot {summary.level}" aria-hidden="true"></span>Checked daily. Last check {fmtDate(app.status?.lastChecked)},
-    data last changed {fmtDate(app.status?.lastChanged)}.
+    <span class="dot {summary.level}" aria-hidden="true"></span>{app.t.footer.checked(
+      app.fmtDate(app.status?.lastChecked),
+      app.fmtDate(app.status?.lastChanged),
+    )}
     <button type="button" class="link-btn" onclick={() => (app.sheet = "health")}>
-      {summary.total ? `${summary.total - summary.failing} of ${summary.total} sources working` : "Source health"}
+      {summary.total ? app.t.footer.working(summary.total - summary.failing, summary.total) : app.t.footer.health}
     </button>
   </p>
   <p>
-    Independent prototype based on the UN High-Level Expert Group on Beyond GDP report (2026). Not affiliated with the United
-    Nations. Data belong to their respective publishers.
+    {app.t.footer.disclaimer}
   </p>
 </footer>
 

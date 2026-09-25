@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { fmt } from "../lib/format";
   import { compare, flagsFor, isEstimate, isOk, missingInfo, type Side } from "../lib/logic";
   import { app } from "../lib/state.svelte";
   import Icon from "./Icon.svelte";
@@ -34,9 +33,9 @@
         source: isOk(e) ? ind.sources[e.src] : undefined,
         better: cmp?.better === side,
         older: cmp?.older === side,
-        missing: missingInfo(e, app.cname(iso3)),
+        missing: missingInfo(e, app.cname(iso3), app.texts(ind.id)),
         sec: isOk(sec) ? sec : null,
-        notes: (e?.notes ?? []).filter((_, i) => isOk(e) || i > 0),
+        notes: (e?.notes ?? []).filter((_, i) => isOk(e) || i > 0).map((n) => app.note(ind.id, n)),
       };
     });
   });
@@ -53,6 +52,7 @@
           ind,
           sides.map(([, iso3]) => ({ iso3, entry: app.entry(ind.id, iso3) })),
           app.thisYear,
+          app.texts(ind.id),
         )
       : [],
   );
@@ -73,7 +73,7 @@
 >
   {#if ind && pillar}
     <p class="lead">{ind.explanation}</p>
-    <p class="report">Report indicator{ind.sdg ? ` (SDG ${ind.sdg})` : ""}: <q>{ind.name}</q></p>
+    <p class="report">{app.t.detail.reportIndicator(ind.sdg)}: <q>{ind.name}</q></p>
 
     <!-- one top tile: latest values, the full time series, then sources -->
     <div class="top">
@@ -83,23 +83,23 @@
             <div class="who"><span class="dot"></span>{c.name}</div>
             {#if isOk(c.e)}
               <div class="big">
-                <span class="v">{fmt(c.e.latest.value, ind.decimals)}</span>
+                <span class="v">{app.fmt(c.e.latest.value, ind.decimals)}</span>
                 <span class="unit">{ind.unit}</span>
               </div>
               <div class="line">
                 <span class="year num" class:older={c.older}>{c.e.latest.year}</span>
-                {#if c.older}<span class="older-note">older data</span>{/if}
-                {#if c.better}<span class="better">Does better</span>{/if}
-                {#if isEstimate(c.e.latest.nature)}<span class="muted">estimate</span>{/if}
+                {#if c.older}<span class="older-note">{app.t.detail.olderData}</span>{/if}
+                {#if c.better}<span class="better">{app.t.tile.doesBetter}</span>{/if}
+                {#if isEstimate(c.e.latest.nature)}<span class="muted">{app.t.detail.estimate}</span>{/if}
               </div>
               {#if typeof c.e.latest.lo === "number" && typeof c.e.latest.hi === "number"}
                 <p class="muted">
-                  Range <span class="num">{fmt(c.e.latest.lo, ind.decimals)}–{fmt(c.e.latest.hi, ind.decimals)}</span>
+                  {app.t.detail.range} <span class="num">{app.fmt(c.e.latest.lo, ind.decimals)}–{app.fmt(c.e.latest.hi, ind.decimals)}</span>
                 </p>
               {/if}
               {#if secondary && c.sec}
                 <p class="muted">
-                  {secondary.label}: <span class="num">{fmt(c.sec.latest.value, secondary.decimals)}</span>
+                  {secondary.label}: <span class="num">{app.fmt(c.sec.latest.value, secondary.decimals)}</span>
                   {secondary.unitShort ?? secondary.unit} ({c.sec.latest.year})
                 </p>
               {/if}
@@ -115,7 +115,7 @@
       <div class="sources">
         {#if sharedSource}
           <p class="muted">
-            Source:
+            {app.t.detail.source}:
             {#if sharedSource.url}<a href={sharedSource.url} target="_blank" rel="noopener">{sharedSource.label}</a>{:else}{sharedSource.label}{/if}
           </p>
         {/if}
@@ -124,7 +124,7 @@
             <div class="side-{c.side}">
               {#if c.source && !sharedSource}
                 <p class="muted">
-                  {#if cards.length > 1}<span class="dot"></span>{/if}Source:
+                  {#if cards.length > 1}<span class="dot"></span>{/if}{app.t.detail.source}:
                   {#if c.source.url}<a href={c.source.url} target="_blank" rel="noopener">{c.source.label}</a>{:else}{c.source.label}{/if}
                 </p>
               {/if}
@@ -138,11 +138,11 @@
         {/each}
         {#if ind.sources.length > 1}
           <p class="muted chain">
-            Sources checked in order, the first with data is used:
+            {app.t.detail.chain}
             {#each ind.sources as s, i (i)}
               {#if i > 0}<span aria-hidden="true"> → </span>{/if}{#if s.url}<a href={s.url} target="_blank" rel="noopener"
                   >{s.label}</a
-                >{:else}{s.label}{/if}{s.proxy ? " (substitute)" : ""}
+                >{:else}{s.label}{/if}{s.proxy ? ` (${app.t.detail.substitute})` : ""}
             {/each}
           </p>
         {/if}
@@ -150,13 +150,12 @@
     </div>
     {#if app.viewB}
       <p class="hint">
-        The green marker is left out when the two values come from different sources; a yellow year is the older of the
-        two.
+        {app.t.detail.compareHint}
       </p>
     {/if}
 
     {#if flags.length}
-      <h3>Caveats</h3>
+      <h3>{app.t.detail.caveats}</h3>
       <ul class="flags">
         {#each flags as f (f.id)}
           <li class="tone-{f.tone}">
@@ -171,15 +170,15 @@
     {/if}
 
 
-    <h3>Limitations</h3>
+    <h3>{app.t.detail.limitations}</h3>
     <p>{ind.limitations}</p>
 
-    <h3>Context</h3>
+    <h3>{app.t.detail.context}</h3>
     <div class="context">
       <p>
         <strong>{pillar.name}.</strong>
         {pillar.summary ?? pillar.justification}
-        <span class="muted">(Report: Table 1 and Annex; {pillar.ref})</span>
+        <span class="muted">{app.t.detail.reportRef(pillar.ref)}</span>
       </p>
       {#if domain}<p><strong>{domain.name}.</strong> {domain.why} {ind.why ?? ""}</p>{/if}
     </div>

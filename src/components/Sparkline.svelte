@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Side } from "../lib/logic";
   import type { Direction, Point } from "../lib/types";
+  import { app } from "../lib/state.svelte";
   import BetterRail from "./BetterRail.svelte";
 
   /** one or two countries' series on a shared scale; each line takes its country colour */
@@ -71,7 +72,7 @@
     <BetterRail {direction} />
     <div class="years num" class:single>
       {#if single}
-        <span>{y0} · only year</span>
+        <span>{app.t.tile.onlyYear(y0)}</span>
       {:else}
         <span>{y0}</span><span>{y1}</span>
       {/if}

@@ -66,6 +66,17 @@ Layout: `src/lib/` holds types, formatting and the pure dashboard rules (`logic.
 
 Do not commit demo output. The real run overwrites it anyway.
 
+## Languages
+
+The site is available in English and German. The language follows the browser on the first visit, can be switched with EN / DE in the header, is remembered, and goes into shared links (`?lang=de`).
+
+- **Interface text** lives in `src/lib/i18n/en.ts` (the source) and `de.ts`. Both share one TypeScript type, so a missing German string fails `npm run check`.
+- **Content** (indicators, sections, caveat tags) is written in English in `config/*.json`; German lives in `config/i18n/de.json`, keyed by the same ids. The pipeline copies it into `registry.json`. Anything missing falls back to English, and `python -m unittest` lists any gap.
+- **Country names, numbers and dates** come from the browser (`Intl.DisplayNames`, `Intl.NumberFormat`), so all countries get correct German names without a list to maintain.
+- **Notes written by the pipeline** ("Breakdown shown: …", "Survey measures …") are recognised by their template and shown in German (`translateNote` in `src/lib/i18n/index.ts`). A new template needs a pattern there; until then it is shown in English. Source names and technical error messages stay in English.
+
+To add a language: add its catalog next to `de.ts`, its content file next to `config/i18n/de.json`, and the code to `LANGS`.
+
 ## Countries
 
 With `"all": true` in `config/countries.json`, every economy the World Bank lists is included (regional and income aggregates are excluded). A country is shown once it has data for at least `minIndicators` indicators. Names, income groups and regions come from the World Bank; UN M49 codes and alternative spellings from `config/country_codes.json` (generated from ISO 3166, whose numeric codes equal M49 for countries). Its `short` field replaces the World Bank's inverted names, e.g. "Korea, Rep." becomes "South Korea".

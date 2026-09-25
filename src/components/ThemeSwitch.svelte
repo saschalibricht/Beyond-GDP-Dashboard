@@ -2,14 +2,14 @@
   import { app, type Theme } from "../lib/state.svelte";
   import Icon from "./Icon.svelte";
 
-  const choices: { id: Theme; icon: string; label: string }[] = [
-    { id: "light", icon: "sun", label: "Light theme" },
-    { id: "dark", icon: "moon", label: "Dark theme" },
-    { id: "system", icon: "auto", label: "Follow system theme" },
-  ];
+  const choices = $derived<{ id: Theme; icon: string; label: string }[]>([
+    { id: "light", icon: "sun", label: app.t.theme.light },
+    { id: "dark", icon: "moon", label: app.t.theme.dark },
+    { id: "system", icon: "auto", label: app.t.theme.system },
+  ]);
 </script>
 
-<div class="switch" role="radiogroup" aria-label="Colour theme">
+<div class="switch" role="radiogroup" aria-label={app.t.theme.group}>
   {#each choices as c (c.id)}
     <button
       type="button"

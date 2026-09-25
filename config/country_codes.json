@@ -1,169 +1,194 @@
 {
- "_help": "ISO3 -> UN M49 code and alternative spellings, used to match countries across sources. Generated once from ISO 3166 (the numeric codes equal UN M49 for countries); edit by hand to add spellings. 'short' replaces the World Bank's inverted names (e.g. 'Korea, Rep.') in the country picker.",
+ "_help": "ISO3 -> UN M49 code and alternative spellings, used to match countries across sources. Generated once from ISO 3166 (the numeric codes equal UN M49 for countries); edit by hand to add spellings. 'short' replaces the World Bank's inverted names (e.g. 'Korea, Rep.') in the country picker. 'iso2' lets the site show country names in the reader's language.",
  "codes": {
   "ABW": {
    "m49": 533,
    "names": [
     "Aruba"
-   ]
+   ],
+   "iso2": "AW"
   },
   "AFG": {
    "m49": 4,
    "names": [
     "Afghanistan",
     "Islamic Republic of Afghanistan"
-   ]
+   ],
+   "iso2": "AF"
   },
   "AGO": {
    "m49": 24,
    "names": [
     "Angola",
     "Republic of Angola"
-   ]
+   ],
+   "iso2": "AO"
   },
   "AIA": {
    "m49": 660,
    "names": [
     "Anguilla"
-   ]
+   ],
+   "iso2": "AI"
   },
   "ALA": {
    "m49": 248,
    "names": [
     "Åland Islands"
-   ]
+   ],
+   "iso2": "AX"
   },
   "ALB": {
    "m49": 8,
    "names": [
     "Albania",
     "Republic of Albania"
-   ]
+   ],
+   "iso2": "AL"
   },
   "AND": {
    "m49": 20,
    "names": [
     "Andorra",
     "Principality of Andorra"
-   ]
+   ],
+   "iso2": "AD"
   },
   "ARE": {
    "m49": 784,
    "names": [
     "United Arab Emirates"
-   ]
+   ],
+   "iso2": "AE"
   },
   "ARG": {
    "m49": 32,
    "names": [
     "Argentina",
     "Argentine Republic"
-   ]
+   ],
+   "iso2": "AR"
   },
   "ARM": {
    "m49": 51,
    "names": [
     "Armenia",
     "Republic of Armenia"
-   ]
+   ],
+   "iso2": "AM"
   },
   "ASM": {
    "m49": 16,
    "names": [
     "American Samoa"
-   ]
+   ],
+   "iso2": "AS"
   },
   "ATA": {
    "m49": 10,
    "names": [
     "Antarctica"
-   ]
+   ],
+   "iso2": "AQ"
   },
   "ATF": {
    "m49": 260,
    "names": [
     "French Southern Territories"
-   ]
+   ],
+   "iso2": "TF"
   },
   "ATG": {
    "m49": 28,
    "names": [
     "Antigua and Barbuda"
-   ]
+   ],
+   "iso2": "AG"
   },
   "AUS": {
    "m49": 36,
    "names": [
     "Australia"
-   ]
+   ],
+   "iso2": "AU"
   },
   "AUT": {
    "m49": 40,
    "names": [
     "Austria",
     "Republic of Austria"
-   ]
+   ],
+   "iso2": "AT"
   },
   "AZE": {
    "m49": 31,
    "names": [
     "Azerbaijan",
     "Republic of Azerbaijan"
-   ]
+   ],
+   "iso2": "AZ"
   },
   "BDI": {
    "m49": 108,
    "names": [
     "Burundi",
     "Republic of Burundi"
-   ]
+   ],
+   "iso2": "BI"
   },
   "BEL": {
    "m49": 56,
    "names": [
     "Belgium",
     "Kingdom of Belgium"
-   ]
+   ],
+   "iso2": "BE"
   },
   "BEN": {
    "m49": 204,
    "names": [
     "Benin",
     "Republic of Benin"
-   ]
+   ],
+   "iso2": "BJ"
   },
   "BES": {
    "m49": 535,
    "names": [
     "Bonaire, Sint Eustatius and Saba"
-   ]
+   ],
+   "iso2": "BQ"
   },
   "BFA": {
    "m49": 854,
    "names": [
     "Burkina Faso"
-   ]
+   ],
+   "iso2": "BF"
   },
   "BGD": {
    "m49": 50,
    "names": [
     "Bangladesh",
     "People's Republic of Bangladesh"
-   ]
+   ],
+   "iso2": "BD"
   },
   "BGR": {
    "m49": 100,
    "names": [
     "Bulgaria",
     "Republic of Bulgaria"
-   ]
+   ],
+   "iso2": "BG"
   },
   "BHR": {
    "m49": 48,
    "names": [
     "Bahrain",
     "Kingdom of Bahrain"
-   ]
+   ],
+   "iso2": "BH"
   },
   "BHS": {
    "m49": 44,
@@ -171,39 +196,45 @@
     "Bahamas",
     "Commonwealth of the Bahamas"
    ],
-   "short": "Bahamas"
+   "short": "Bahamas",
+   "iso2": "BS"
   },
   "BIH": {
    "m49": 70,
    "names": [
     "Bosnia and Herzegovina",
     "Republic of Bosnia and Herzegovina"
-   ]
+   ],
+   "iso2": "BA"
   },
   "BLM": {
    "m49": 652,
    "names": [
     "Saint Barthélemy"
-   ]
+   ],
+   "iso2": "BL"
   },
   "BLR": {
    "m49": 112,
    "names": [
     "Belarus",
     "Republic of Belarus"
-   ]
+   ],
+   "iso2": "BY"
   },
   "BLZ": {
    "m49": 84,
    "names": [
     "Belize"
-   ]
+   ],
+   "iso2": "BZ"
   },
   "BMU": {
    "m49": 60,
    "names": [
     "Bermuda"
-   ]
+   ],
+   "iso2": "BM"
   },
   "BOL": {
    "m49": 68,
@@ -212,20 +243,23 @@
     "Bolivia",
     "Plurinational State of Bolivia"
    ],
-   "short": "Bolivia"
+   "short": "Bolivia",
+   "iso2": "BO"
   },
   "BRA": {
    "m49": 76,
    "names": [
     "Brazil",
     "Federative Republic of Brazil"
-   ]
+   ],
+   "iso2": "BR"
   },
   "BRB": {
    "m49": 52,
    "names": [
     "Barbados"
-   ]
+   ],
+   "iso2": "BB"
   },
   "BRN": {
    "m49": 96,
@@ -233,66 +267,76 @@
     "Brunei Darussalam",
     "Brunei"
    ],
-   "short": "Brunei"
+   "short": "Brunei",
+   "iso2": "BN"
   },
   "BTN": {
    "m49": 64,
    "names": [
     "Bhutan",
     "Kingdom of Bhutan"
-   ]
+   ],
+   "iso2": "BT"
   },
   "BVT": {
    "m49": 74,
    "names": [
     "Bouvet Island"
-   ]
+   ],
+   "iso2": "BV"
   },
   "BWA": {
    "m49": 72,
    "names": [
     "Botswana",
     "Republic of Botswana"
-   ]
+   ],
+   "iso2": "BW"
   },
   "CAF": {
    "m49": 140,
    "names": [
     "Central African Republic"
-   ]
+   ],
+   "iso2": "CF"
   },
   "CAN": {
    "m49": 124,
    "names": [
     "Canada"
-   ]
+   ],
+   "iso2": "CA"
   },
   "CCK": {
    "m49": 166,
    "names": [
     "Cocos (Keeling) Islands"
-   ]
+   ],
+   "iso2": "CC"
   },
   "CHE": {
    "m49": 756,
    "names": [
     "Switzerland",
     "Swiss Confederation"
-   ]
+   ],
+   "iso2": "CH"
   },
   "CHL": {
    "m49": 152,
    "names": [
     "Chile",
     "Republic of Chile"
-   ]
+   ],
+   "iso2": "CL"
   },
   "CHN": {
    "m49": 156,
    "names": [
     "China",
     "People's Republic of China"
-   ]
+   ],
+   "iso2": "CN"
   },
   "CIV": {
    "m49": 384,
@@ -302,14 +346,16 @@
     "Ivory Coast",
     "Cote d'Ivoire"
    ],
-   "short": "Côte d'Ivoire"
+   "short": "Côte d'Ivoire",
+   "iso2": "CI"
   },
   "CMR": {
    "m49": 120,
    "names": [
     "Cameroon",
     "Republic of Cameroon"
-   ]
+   ],
+   "iso2": "CM"
   },
   "COD": {
    "m49": 180,
@@ -319,7 +365,8 @@
     "DR Congo",
     "Democratic Republic of the Congo"
    ],
-   "short": "DR Congo"
+   "short": "DR Congo",
+   "iso2": "CD"
   },
   "COG": {
    "m49": 178,
@@ -328,27 +375,31 @@
     "Republic of the Congo",
     "Congo (Brazzaville)"
    ],
-   "short": "Republic of the Congo"
+   "short": "Republic of the Congo",
+   "iso2": "CG"
   },
   "COK": {
    "m49": 184,
    "names": [
     "Cook Islands"
-   ]
+   ],
+   "iso2": "CK"
   },
   "COL": {
    "m49": 170,
    "names": [
     "Colombia",
     "Republic of Colombia"
-   ]
+   ],
+   "iso2": "CO"
   },
   "COM": {
    "m49": 174,
    "names": [
     "Comoros",
     "Union of the Comoros"
-   ]
+   ],
+   "iso2": "KM"
   },
   "CPV": {
    "m49": 132,
@@ -356,47 +407,54 @@
     "Cabo Verde",
     "Republic of Cabo Verde",
     "Cape Verde"
-   ]
+   ],
+   "iso2": "CV"
   },
   "CRI": {
    "m49": 188,
    "names": [
     "Costa Rica",
     "Republic of Costa Rica"
-   ]
+   ],
+   "iso2": "CR"
   },
   "CUB": {
    "m49": 192,
    "names": [
     "Cuba",
     "Republic of Cuba"
-   ]
+   ],
+   "iso2": "CU"
   },
   "CUW": {
    "m49": 531,
    "names": [
     "Curaçao"
    ],
-   "short": "Curaçao"
+   "short": "Curaçao",
+   "iso2": "CW"
   },
   "CXR": {
    "m49": 162,
    "names": [
     "Christmas Island"
-   ]
+   ],
+   "iso2": "CX"
   },
   "CYM": {
    "m49": 136,
    "names": [
     "Cayman Islands"
-   ]
+   ],
+   "iso2": "KY"
   },
   "CYP": {
    "m49": 196,
    "names": [
     "Cyprus",
     "Republic of Cyprus"
-   ]
+   ],
+   "iso2": "CY"
   },
   "CZE": {
    "m49": 203,
@@ -404,55 +462,63 @@
     "Czechia",
     "Czech Republic"
    ],
-   "short": "Czechia"
+   "short": "Czechia",
+   "iso2": "CZ"
   },
   "DEU": {
    "m49": 276,
    "names": [
     "Germany",
     "Federal Republic of Germany"
-   ]
+   ],
+   "iso2": "DE"
   },
   "DJI": {
    "m49": 262,
    "names": [
     "Djibouti",
     "Republic of Djibouti"
-   ]
+   ],
+   "iso2": "DJ"
   },
   "DMA": {
    "m49": 212,
    "names": [
     "Dominica",
     "Commonwealth of Dominica"
-   ]
+   ],
+   "iso2": "DM"
   },
   "DNK": {
    "m49": 208,
    "names": [
     "Denmark",
     "Kingdom of Denmark"
-   ]
+   ],
+   "iso2": "DK"
   },
   "DOM": {
    "m49": 214,
    "names": [
     "Dominican Republic"
-   ]
+   ],
+   "iso2": "DO"
   },
   "DZA": {
    "m49": 12,
    "names": [
     "Algeria",
     "People's Democratic Republic of Algeria"
-   ]
+   ],
+   "iso2": "DZ"
   },
   "ECU": {
    "m49": 218,
    "names": [
     "Ecuador",
     "Republic of Ecuador"
-   ]
+   ],
+   "iso2": "EC"
   },
   "EGY": {
    "m49": 818,
@@ -460,74 +526,85 @@
     "Egypt",
     "Arab Republic of Egypt"
    ],
-   "short": "Egypt"
+   "short": "Egypt",
+   "iso2": "EG"
   },
   "ERI": {
    "m49": 232,
    "names": [
     "Eritrea",
     "the State of Eritrea"
-   ]
+   ],
+   "iso2": "ER"
   },
   "ESH": {
    "m49": 732,
    "names": [
     "Western Sahara"
-   ]
+   ],
+   "iso2": "EH"
   },
   "ESP": {
    "m49": 724,
    "names": [
     "Spain",
     "Kingdom of Spain"
-   ]
+   ],
+   "iso2": "ES"
   },
   "EST": {
    "m49": 233,
    "names": [
     "Estonia",
     "Republic of Estonia"
-   ]
+   ],
+   "iso2": "EE"
   },
   "ETH": {
    "m49": 231,
    "names": [
     "Ethiopia",
     "Federal Democratic Republic of Ethiopia"
-   ]
+   ],
+   "iso2": "ET"
   },
   "FIN": {
    "m49": 246,
    "names": [
     "Finland",
     "Republic of Finland"
-   ]
+   ],
+   "iso2": "FI"
   },
   "FJI": {
    "m49": 242,
    "names": [
     "Fiji",
     "Republic of Fiji"
-   ]
+   ],
+   "iso2": "FJ"
   },
   "FLK": {
    "m49": 238,
    "names": [
     "Falkland Islands (Malvinas)"
-   ]
+   ],
+   "iso2": "FK"
   },
   "FRA": {
    "m49": 250,
    "names": [
     "France",
     "French Republic"
-   ]
+   ],
+   "iso2": "FR"
   },
   "FRO": {
    "m49": 234,
    "names": [
     "Faroe Islands"
-   ]
+   ],
+   "iso2": "FO"
   },
   "FSM": {
    "m49": 583,
@@ -536,59 +613,68 @@
     "Federated States of Micronesia",
     "Micronesia"
    ],
-   "short": "Micronesia"
+   "short": "Micronesia",
+   "iso2": "FM"
   },
   "GAB": {
    "m49": 266,
    "names": [
     "Gabon",
     "Gabonese Republic"
-   ]
+   ],
+   "iso2": "GA"
   },
   "GBR": {
    "m49": 826,
    "names": [
     "United Kingdom",
     "United Kingdom of Great Britain and Northern Ireland"
-   ]
+   ],
+   "iso2": "GB"
   },
   "GEO": {
    "m49": 268,
    "names": [
     "Georgia"
-   ]
+   ],
+   "iso2": "GE"
   },
   "GGY": {
    "m49": 831,
    "names": [
     "Guernsey"
-   ]
+   ],
+   "iso2": "GG"
   },
   "GHA": {
    "m49": 288,
    "names": [
     "Ghana",
     "Republic of Ghana"
-   ]
+   ],
+   "iso2": "GH"
   },
   "GIB": {
    "m49": 292,
    "names": [
     "Gibraltar"
-   ]
+   ],
+   "iso2": "GI"
   },
   "GIN": {
    "m49": 324,
    "names": [
     "Guinea",
     "Republic of Guinea"
-   ]
+   ],
+   "iso2": "GN"
   },
   "GLP": {
    "m49": 312,
    "names": [
     "Guadeloupe"
-   ]
+   ],
+   "iso2": "GP"
   },
   "GMB": {
    "m49": 270,
@@ -596,66 +682,76 @@
     "Gambia",
     "Republic of the Gambia"
    ],
-   "short": "Gambia"
+   "short": "Gambia",
+   "iso2": "GM"
   },
   "GNB": {
    "m49": 624,
    "names": [
     "Guinea-Bissau",
     "Republic of Guinea-Bissau"
-   ]
+   ],
+   "iso2": "GW"
   },
   "GNQ": {
    "m49": 226,
    "names": [
     "Equatorial Guinea",
     "Republic of Equatorial Guinea"
-   ]
+   ],
+   "iso2": "GQ"
   },
   "GRC": {
    "m49": 300,
    "names": [
     "Greece",
     "Hellenic Republic"
-   ]
+   ],
+   "iso2": "GR"
   },
   "GRD": {
    "m49": 308,
    "names": [
     "Grenada"
-   ]
+   ],
+   "iso2": "GD"
   },
   "GRL": {
    "m49": 304,
    "names": [
     "Greenland"
-   ]
+   ],
+   "iso2": "GL"
   },
   "GTM": {
    "m49": 320,
    "names": [
     "Guatemala",
     "Republic of Guatemala"
-   ]
+   ],
+   "iso2": "GT"
   },
   "GUF": {
    "m49": 254,
    "names": [
     "French Guiana"
-   ]
+   ],
+   "iso2": "GF"
   },
   "GUM": {
    "m49": 316,
    "names": [
     "Guam"
-   ]
+   ],
+   "iso2": "GU"
   },
   "GUY": {
    "m49": 328,
    "names": [
     "Guyana",
     "Republic of Guyana"
-   ]
+   ],
+   "iso2": "GY"
   },
   "HKG": {
    "m49": 344,
@@ -664,72 +760,83 @@
     "Hong Kong Special Administrative Region of China",
     "Hong Kong S.A.R. of China"
    ],
-   "short": "Hong Kong"
+   "short": "Hong Kong",
+   "iso2": "HK"
   },
   "HMD": {
    "m49": 334,
    "names": [
     "Heard Island and McDonald Islands"
-   ]
+   ],
+   "iso2": "HM"
   },
   "HND": {
    "m49": 340,
    "names": [
     "Honduras",
     "Republic of Honduras"
-   ]
+   ],
+   "iso2": "HN"
   },
   "HRV": {
    "m49": 191,
    "names": [
     "Croatia",
     "Republic of Croatia"
-   ]
+   ],
+   "iso2": "HR"
   },
   "HTI": {
    "m49": 332,
    "names": [
     "Haiti",
     "Republic of Haiti"
-   ]
+   ],
+   "iso2": "HT"
   },
   "HUN": {
    "m49": 348,
    "names": [
     "Hungary"
-   ]
+   ],
+   "iso2": "HU"
   },
   "IDN": {
    "m49": 360,
    "names": [
     "Indonesia",
     "Republic of Indonesia"
-   ]
+   ],
+   "iso2": "ID"
   },
   "IMN": {
    "m49": 833,
    "names": [
     "Isle of Man"
-   ]
+   ],
+   "iso2": "IM"
   },
   "IND": {
    "m49": 356,
    "names": [
     "India",
     "Republic of India"
-   ]
+   ],
+   "iso2": "IN"
   },
   "IOT": {
    "m49": 86,
    "names": [
     "British Indian Ocean Territory"
-   ]
+   ],
+   "iso2": "IO"
   },
   "IRL": {
    "m49": 372,
    "names": [
     "Ireland"
-   ]
+   ],
+   "iso2": "IE"
   },
   "IRN": {
    "m49": 364,
@@ -738,74 +845,85 @@
     "Iran",
     "Islamic Republic of Iran"
    ],
-   "short": "Iran"
+   "short": "Iran",
+   "iso2": "IR"
   },
   "IRQ": {
    "m49": 368,
    "names": [
     "Iraq",
     "Republic of Iraq"
-   ]
+   ],
+   "iso2": "IQ"
   },
   "ISL": {
    "m49": 352,
    "names": [
     "Iceland",
     "Republic of Iceland"
-   ]
+   ],
+   "iso2": "IS"
   },
   "ISR": {
    "m49": 376,
    "names": [
     "Israel",
     "State of Israel"
-   ]
+   ],
+   "iso2": "IL"
   },
   "ITA": {
    "m49": 380,
    "names": [
     "Italy",
     "Italian Republic"
-   ]
+   ],
+   "iso2": "IT"
   },
   "JAM": {
    "m49": 388,
    "names": [
     "Jamaica"
-   ]
+   ],
+   "iso2": "JM"
   },
   "JEY": {
    "m49": 832,
    "names": [
     "Jersey"
-   ]
+   ],
+   "iso2": "JE"
   },
   "JOR": {
    "m49": 400,
    "names": [
     "Jordan",
     "Hashemite Kingdom of Jordan"
-   ]
+   ],
+   "iso2": "JO"
   },
   "JPN": {
    "m49": 392,
    "names": [
     "Japan"
-   ]
+   ],
+   "iso2": "JP"
   },
   "KAZ": {
    "m49": 398,
    "names": [
     "Kazakhstan",
     "Republic of Kazakhstan"
-   ]
+   ],
+   "iso2": "KZ"
   },
   "KEN": {
    "m49": 404,
    "names": [
     "Kenya",
     "Republic of Kenya"
-   ]
+   ],
+   "iso2": "KE"
   },
   "KGZ": {
    "m49": 417,
@@ -813,28 +931,32 @@
     "Kyrgyzstan",
     "Kyrgyz Republic"
    ],
-   "short": "Kyrgyzstan"
+   "short": "Kyrgyzstan",
+   "iso2": "KG"
   },
   "KHM": {
    "m49": 116,
    "names": [
     "Cambodia",
     "Kingdom of Cambodia"
-   ]
+   ],
+   "iso2": "KH"
   },
   "KIR": {
    "m49": 296,
    "names": [
     "Kiribati",
     "Republic of Kiribati"
-   ]
+   ],
+   "iso2": "KI"
   },
   "KNA": {
    "m49": 659,
    "names": [
     "Saint Kitts and Nevis"
    ],
-   "short": "Saint Kitts and Nevis"
+   "short": "Saint Kitts and Nevis",
+   "iso2": "KN"
   },
   "KOR": {
    "m49": 410,
@@ -843,14 +965,16 @@
     "South Korea",
     "Korea, Rep."
    ],
-   "short": "South Korea"
+   "short": "South Korea",
+   "iso2": "KR"
   },
   "KWT": {
    "m49": 414,
    "names": [
     "Kuwait",
     "State of Kuwait"
-   ]
+   ],
+   "iso2": "KW"
   },
   "LAO": {
    "m49": 418,
@@ -858,76 +982,87 @@
     "Lao People's Democratic Republic",
     "Laos"
    ],
-   "short": "Laos"
+   "short": "Laos",
+   "iso2": "LA"
   },
   "LBN": {
    "m49": 422,
    "names": [
     "Lebanon",
     "Lebanese Republic"
-   ]
+   ],
+   "iso2": "LB"
   },
   "LBR": {
    "m49": 430,
    "names": [
     "Liberia",
     "Republic of Liberia"
-   ]
+   ],
+   "iso2": "LR"
   },
   "LBY": {
    "m49": 434,
    "names": [
     "Libya"
-   ]
+   ],
+   "iso2": "LY"
   },
   "LCA": {
    "m49": 662,
    "names": [
     "Saint Lucia"
    ],
-   "short": "Saint Lucia"
+   "short": "Saint Lucia",
+   "iso2": "LC"
   },
   "LIE": {
    "m49": 438,
    "names": [
     "Liechtenstein",
     "Principality of Liechtenstein"
-   ]
+   ],
+   "iso2": "LI"
   },
   "LKA": {
    "m49": 144,
    "names": [
     "Sri Lanka",
     "Democratic Socialist Republic of Sri Lanka"
-   ]
+   ],
+   "iso2": "LK"
   },
   "LSO": {
    "m49": 426,
    "names": [
     "Lesotho",
     "Kingdom of Lesotho"
-   ]
+   ],
+   "iso2": "LS"
   },
   "LTU": {
    "m49": 440,
    "names": [
     "Lithuania",
     "Republic of Lithuania"
-   ]
+   ],
+   "iso2": "LT"
   },
   "LUX": {
    "m49": 442,
    "names": [
     "Luxembourg",
     "Grand Duchy of Luxembourg"
-   ]
+   ],
+   "iso2": "LU"
   },
   "LVA": {
    "m49": 428,
    "names": [
     "Latvia",
     "Republic of Latvia"
-   ]
+   ],
+   "iso2": "LV"
   },
   "MAC": {
    "m49": 446,
@@ -935,28 +1070,32 @@
     "Macao",
     "Macao Special Administrative Region of China"
    ],
-   "short": "Macao"
+   "short": "Macao",
+   "iso2": "MO"
   },
   "MAF": {
    "m49": 663,
    "names": [
     "Saint Martin (French part)"
    ],
-   "short": "Saint Martin"
+   "short": "Saint Martin",
+   "iso2": "MF"
   },
   "MAR": {
    "m49": 504,
    "names": [
     "Morocco",
     "Kingdom of Morocco"
-   ]
+   ],
+   "iso2": "MA"
   },
   "MCO": {
    "m49": 492,
    "names": [
     "Monaco",
     "Principality of Monaco"
-   ]
+   ],
+   "iso2": "MC"
   },
   "MDA": {
    "m49": 498,
@@ -965,35 +1104,40 @@
     "Moldova",
     "Republic of Moldova"
    ],
-   "short": "Moldova"
+   "short": "Moldova",
+   "iso2": "MD"
   },
   "MDG": {
    "m49": 450,
    "names": [
     "Madagascar",
     "Republic of Madagascar"
-   ]
+   ],
+   "iso2": "MG"
   },
   "MDV": {
    "m49": 462,
    "names": [
     "Maldives",
     "Republic of Maldives"
-   ]
+   ],
+   "iso2": "MV"
   },
   "MEX": {
    "m49": 484,
    "names": [
     "Mexico",
     "United Mexican States"
-   ]
+   ],
+   "iso2": "MX"
   },
   "MHL": {
    "m49": 584,
    "names": [
     "Marshall Islands",
     "Republic of the Marshall Islands"
-   ]
+   ],
+   "iso2": "MH"
   },
   "MKD": {
    "m49": 807,
@@ -1001,166 +1145,191 @@
     "North Macedonia",
     "Republic of North Macedonia"
    ],
-   "short": "North Macedonia"
+   "short": "North Macedonia",
+   "iso2": "MK"
   },
   "MLI": {
    "m49": 466,
    "names": [
     "Mali",
     "Republic of Mali"
-   ]
+   ],
+   "iso2": "ML"
   },
   "MLT": {
    "m49": 470,
    "names": [
     "Malta",
     "Republic of Malta"
-   ]
+   ],
+   "iso2": "MT"
   },
   "MMR": {
    "m49": 104,
    "names": [
     "Myanmar",
     "Republic of Myanmar"
-   ]
+   ],
+   "iso2": "MM"
   },
   "MNE": {
    "m49": 499,
    "names": [
     "Montenegro"
-   ]
+   ],
+   "iso2": "ME"
   },
   "MNG": {
    "m49": 496,
    "names": [
     "Mongolia"
-   ]
+   ],
+   "iso2": "MN"
   },
   "MNP": {
    "m49": 580,
    "names": [
     "Northern Mariana Islands",
     "Commonwealth of the Northern Mariana Islands"
-   ]
+   ],
+   "iso2": "MP"
   },
   "MOZ": {
    "m49": 508,
    "names": [
     "Mozambique",
     "Republic of Mozambique"
-   ]
+   ],
+   "iso2": "MZ"
   },
   "MRT": {
    "m49": 478,
    "names": [
     "Mauritania",
     "Islamic Republic of Mauritania"
-   ]
+   ],
+   "iso2": "MR"
   },
   "MSR": {
    "m49": 500,
    "names": [
     "Montserrat"
-   ]
+   ],
+   "iso2": "MS"
   },
   "MTQ": {
    "m49": 474,
    "names": [
     "Martinique"
-   ]
+   ],
+   "iso2": "MQ"
   },
   "MUS": {
    "m49": 480,
    "names": [
     "Mauritius",
     "Republic of Mauritius"
-   ]
+   ],
+   "iso2": "MU"
   },
   "MWI": {
    "m49": 454,
    "names": [
     "Malawi",
     "Republic of Malawi"
-   ]
+   ],
+   "iso2": "MW"
   },
   "MYS": {
    "m49": 458,
    "names": [
     "Malaysia"
-   ]
+   ],
+   "iso2": "MY"
   },
   "MYT": {
    "m49": 175,
    "names": [
     "Mayotte"
-   ]
+   ],
+   "iso2": "YT"
   },
   "NAM": {
    "m49": 516,
    "names": [
     "Namibia",
     "Republic of Namibia"
-   ]
+   ],
+   "iso2": "NA"
   },
   "NCL": {
    "m49": 540,
    "names": [
     "New Caledonia"
-   ]
+   ],
+   "iso2": "NC"
   },
   "NER": {
    "m49": 562,
    "names": [
     "Niger",
     "Republic of the Niger"
-   ]
+   ],
+   "iso2": "NE"
   },
   "NFK": {
    "m49": 574,
    "names": [
     "Norfolk Island"
-   ]
+   ],
+   "iso2": "NF"
   },
   "NGA": {
    "m49": 566,
    "names": [
     "Nigeria",
     "Federal Republic of Nigeria"
-   ]
+   ],
+   "iso2": "NG"
   },
   "NIC": {
    "m49": 558,
    "names": [
     "Nicaragua",
     "Republic of Nicaragua"
-   ]
+   ],
+   "iso2": "NI"
   },
   "NIU": {
    "m49": 570,
    "names": [
     "Niue"
-   ]
+   ],
+   "iso2": "NU"
   },
   "NLD": {
    "m49": 528,
    "names": [
     "Netherlands",
     "Kingdom of the Netherlands"
-   ]
+   ],
+   "iso2": "NL"
   },
   "NOR": {
    "m49": 578,
    "names": [
     "Norway",
     "Kingdom of Norway"
-   ]
+   ],
+   "iso2": "NO"
   },
   "NPL": {
    "m49": 524,
    "names": [
     "Nepal",
     "Federal Democratic Republic of Nepal"
-   ]
+   ],
+   "iso2": "NP"
   },
   "NRU": {
    "m49": 520,
@@ -1168,82 +1337,94 @@
     "Nauru",
     "Republic of Nauru"
    ],
-   "short": "Nauru"
+   "short": "Nauru",
+   "iso2": "NR"
   },
   "NZL": {
    "m49": 554,
    "names": [
     "New Zealand"
-   ]
+   ],
+   "iso2": "NZ"
   },
   "OMN": {
    "m49": 512,
    "names": [
     "Oman",
     "Sultanate of Oman"
-   ]
+   ],
+   "iso2": "OM"
   },
   "PAK": {
    "m49": 586,
    "names": [
     "Pakistan",
     "Islamic Republic of Pakistan"
-   ]
+   ],
+   "iso2": "PK"
   },
   "PAN": {
    "m49": 591,
    "names": [
     "Panama",
     "Republic of Panama"
-   ]
+   ],
+   "iso2": "PA"
   },
   "PCN": {
    "m49": 612,
    "names": [
     "Pitcairn"
-   ]
+   ],
+   "iso2": "PN"
   },
   "PER": {
    "m49": 604,
    "names": [
     "Peru",
     "Republic of Peru"
-   ]
+   ],
+   "iso2": "PE"
   },
   "PHL": {
    "m49": 608,
    "names": [
     "Philippines",
     "Republic of the Philippines"
-   ]
+   ],
+   "iso2": "PH"
   },
   "PLW": {
    "m49": 585,
    "names": [
     "Palau",
     "Republic of Palau"
-   ]
+   ],
+   "iso2": "PW"
   },
   "PNG": {
    "m49": 598,
    "names": [
     "Papua New Guinea",
     "Independent State of Papua New Guinea"
-   ]
+   ],
+   "iso2": "PG"
   },
   "POL": {
    "m49": 616,
    "names": [
     "Poland",
     "Republic of Poland"
-   ]
+   ],
+   "iso2": "PL"
   },
   "PRI": {
    "m49": 630,
    "names": [
     "Puerto Rico"
    ],
-   "short": "Puerto Rico"
+   "short": "Puerto Rico",
+   "iso2": "PR"
   },
   "PRK": {
    "m49": 408,
@@ -1252,21 +1433,24 @@
     "North Korea",
     "Democratic People's Republic of Korea"
    ],
-   "short": "North Korea"
+   "short": "North Korea",
+   "iso2": "KP"
   },
   "PRT": {
    "m49": 620,
    "names": [
     "Portugal",
     "Portuguese Republic"
-   ]
+   ],
+   "iso2": "PT"
   },
   "PRY": {
    "m49": 600,
    "names": [
     "Paraguay",
     "Republic of Paraguay"
-   ]
+   ],
+   "iso2": "PY"
   },
   "PSE": {
    "m49": 275,
@@ -1277,32 +1461,37 @@
     "Palestinian Territories",
     "Palestine"
    ],
-   "short": "Palestine"
+   "short": "Palestine",
+   "iso2": "PS"
   },
   "PYF": {
    "m49": 258,
    "names": [
     "French Polynesia"
-   ]
+   ],
+   "iso2": "PF"
   },
   "QAT": {
    "m49": 634,
    "names": [
     "Qatar",
     "State of Qatar"
-   ]
+   ],
+   "iso2": "QA"
   },
   "REU": {
    "m49": 638,
    "names": [
     "Réunion"
-   ]
+   ],
+   "iso2": "RE"
   },
   "ROU": {
    "m49": 642,
    "names": [
     "Romania"
-   ]
+   ],
+   "iso2": "RO"
   },
   "RUS": {
    "m49": 643,
@@ -1310,87 +1499,100 @@
     "Russian Federation",
     "Russia"
    ],
-   "short": "Russia"
+   "short": "Russia",
+   "iso2": "RU"
   },
   "RWA": {
    "m49": 646,
    "names": [
     "Rwanda",
     "Rwandese Republic"
-   ]
+   ],
+   "iso2": "RW"
   },
   "SAU": {
    "m49": 682,
    "names": [
     "Saudi Arabia",
     "Kingdom of Saudi Arabia"
-   ]
+   ],
+   "iso2": "SA"
   },
   "SDN": {
    "m49": 729,
    "names": [
     "Sudan",
     "Republic of the Sudan"
-   ]
+   ],
+   "iso2": "SD"
   },
   "SEN": {
    "m49": 686,
    "names": [
     "Senegal",
     "Republic of Senegal"
-   ]
+   ],
+   "iso2": "SN"
   },
   "SGP": {
    "m49": 702,
    "names": [
     "Singapore",
     "Republic of Singapore"
-   ]
+   ],
+   "iso2": "SG"
   },
   "SGS": {
    "m49": 239,
    "names": [
     "South Georgia and the South Sandwich Islands"
-   ]
+   ],
+   "iso2": "GS"
   },
   "SHN": {
    "m49": 654,
    "names": [
     "Saint Helena, Ascension and Tristan da Cunha"
-   ]
+   ],
+   "iso2": "SH"
   },
   "SJM": {
    "m49": 744,
    "names": [
     "Svalbard and Jan Mayen"
-   ]
+   ],
+   "iso2": "SJ"
   },
   "SLB": {
    "m49": 90,
    "names": [
     "Solomon Islands"
-   ]
+   ],
+   "iso2": "SB"
   },
   "SLE": {
    "m49": 694,
    "names": [
     "Sierra Leone",
     "Republic of Sierra Leone"
-   ]
+   ],
+   "iso2": "SL"
   },
   "SLV": {
    "m49": 222,
    "names": [
     "El Salvador",
     "Republic of El Salvador"
-   ]
+   ],
+   "iso2": "SV"
   },
   "SMR": {
    "m49": 674,
    "names": [
     "San Marino",
     "Republic of San Marino"
-   ]
+   ],
+   "iso2": "SM"
   },
   "SOM": {
    "m49": 706,
@@ -1398,27 +1600,31 @@
     "Somalia",
     "Federal Republic of Somalia"
    ],
-   "short": "Somalia"
+   "short": "Somalia",
+   "iso2": "SO"
   },
   "SPM": {
    "m49": 666,
    "names": [
     "Saint Pierre and Miquelon"
-   ]
+   ],
+   "iso2": "PM"
   },
   "SRB": {
    "m49": 688,
    "names": [
     "Serbia",
     "Republic of Serbia"
-   ]
+   ],
+   "iso2": "RS"
   },
   "SSD": {
    "m49": 728,
    "names": [
     "South Sudan",
     "Republic of South Sudan"
-   ]
+   ],
+   "iso2": "SS"
   },
   "STP": {
    "m49": 678,
@@ -1426,14 +1632,16 @@
     "Sao Tome and Principe",
     "Democratic Republic of Sao Tome and Principe"
    ],
-   "short": "São Tomé and Príncipe"
+   "short": "São Tomé and Príncipe",
+   "iso2": "ST"
   },
   "SUR": {
    "m49": 740,
    "names": [
     "Suriname",
     "Republic of Suriname"
-   ]
+   ],
+   "iso2": "SR"
   },
   "SVK": {
    "m49": 703,
@@ -1441,21 +1649,24 @@
     "Slovakia",
     "Slovak Republic"
    ],
-   "short": "Slovakia"
+   "short": "Slovakia",
+   "iso2": "SK"
   },
   "SVN": {
    "m49": 705,
    "names": [
     "Slovenia",
     "Republic of Slovenia"
-   ]
+   ],
+   "iso2": "SI"
   },
   "SWE": {
    "m49": 752,
    "names": [
     "Sweden",
     "Kingdom of Sweden"
-   ]
+   ],
+   "iso2": "SE"
   },
   "SWZ": {
    "m49": 748,
@@ -1463,21 +1674,24 @@
     "Eswatini",
     "Kingdom of Eswatini",
     "Swaziland"
-   ]
+   ],
+   "iso2": "SZ"
   },
   "SXM": {
    "m49": 534,
    "names": [
     "Sint Maarten (Dutch part)"
    ],
-   "short": "Sint Maarten"
+   "short": "Sint Maarten",
+   "iso2": "SX"
   },
   "SYC": {
    "m49": 690,
    "names": [
     "Seychelles",
     "Republic of Seychelles"
-   ]
+   ],
+   "iso2": "SC"
   },
   "SYR": {
    "m49": 760,
@@ -1485,81 +1699,93 @@
     "Syrian Arab Republic",
     "Syria"
    ],
-   "short": "Syria"
+   "short": "Syria",
+   "iso2": "SY"
   },
   "TCA": {
    "m49": 796,
    "names": [
     "Turks and Caicos Islands"
-   ]
+   ],
+   "iso2": "TC"
   },
   "TCD": {
    "m49": 148,
    "names": [
     "Chad",
     "Republic of Chad"
-   ]
+   ],
+   "iso2": "TD"
   },
   "TGO": {
    "m49": 768,
    "names": [
     "Togo",
     "Togolese Republic"
-   ]
+   ],
+   "iso2": "TG"
   },
   "THA": {
    "m49": 764,
    "names": [
     "Thailand",
     "Kingdom of Thailand"
-   ]
+   ],
+   "iso2": "TH"
   },
   "TJK": {
    "m49": 762,
    "names": [
     "Tajikistan",
     "Republic of Tajikistan"
-   ]
+   ],
+   "iso2": "TJ"
   },
   "TKL": {
    "m49": 772,
    "names": [
     "Tokelau"
-   ]
+   ],
+   "iso2": "TK"
   },
   "TKM": {
    "m49": 795,
    "names": [
     "Turkmenistan"
-   ]
+   ],
+   "iso2": "TM"
   },
   "TLS": {
    "m49": 626,
    "names": [
     "Timor-Leste",
     "Democratic Republic of Timor-Leste"
-   ]
+   ],
+   "iso2": "TL"
   },
   "TON": {
    "m49": 776,
    "names": [
     "Tonga",
     "Kingdom of Tonga"
-   ]
+   ],
+   "iso2": "TO"
   },
   "TTO": {
    "m49": 780,
    "names": [
     "Trinidad and Tobago",
     "Republic of Trinidad and Tobago"
-   ]
+   ],
+   "iso2": "TT"
   },
   "TUN": {
    "m49": 788,
    "names": [
     "Tunisia",
     "Republic of Tunisia"
-   ]
+   ],
+   "iso2": "TN"
   },
   "TUR": {
    "m49": 792,
@@ -1569,13 +1795,15 @@
     "Turkey",
     "Turkiye"
    ],
-   "short": "Türkiye"
+   "short": "Türkiye",
+   "iso2": "TR"
   },
   "TUV": {
    "m49": 798,
    "names": [
     "Tuvalu"
-   ]
+   ],
+   "iso2": "TV"
   },
   "TWN": {
    "m49": 158,
@@ -1583,7 +1811,8 @@
     "Taiwan, Province of China",
     "Taiwan",
     "Taiwan Province of China"
-   ]
+   ],
+   "iso2": "TW"
   },
   "TZA": {
    "m49": 834,
@@ -1592,33 +1821,38 @@
     "Tanzania",
     "United Republic of Tanzania"
    ],
-   "short": "Tanzania"
+   "short": "Tanzania",
+   "iso2": "TZ"
   },
   "UGA": {
    "m49": 800,
    "names": [
     "Uganda",
     "Republic of Uganda"
-   ]
+   ],
+   "iso2": "UG"
   },
   "UKR": {
    "m49": 804,
    "names": [
     "Ukraine"
-   ]
+   ],
+   "iso2": "UA"
   },
   "UMI": {
    "m49": 581,
    "names": [
     "United States Minor Outlying Islands"
-   ]
+   ],
+   "iso2": "UM"
   },
   "URY": {
    "m49": 858,
    "names": [
     "Uruguay",
     "Eastern Republic of Uruguay"
-   ]
+   ],
+   "iso2": "UY"
   },
   "USA": {
    "m49": 840,
@@ -1626,27 +1860,31 @@
     "United States",
     "United States of America",
     "USA"
-   ]
+   ],
+   "iso2": "US"
   },
   "UZB": {
    "m49": 860,
    "names": [
     "Uzbekistan",
     "Republic of Uzbekistan"
-   ]
+   ],
+   "iso2": "UZ"
   },
   "VAT": {
    "m49": 336,
    "names": [
     "Holy See (Vatican City State)"
-   ]
+   ],
+   "iso2": "VA"
   },
   "VCT": {
    "m49": 670,
    "names": [
     "Saint Vincent and the Grenadines"
    ],
-   "short": "Saint Vincent and the Grenadines"
+   "short": "Saint Vincent and the Grenadines",
+   "iso2": "VC"
   },
   "VEN": {
    "m49": 862,
@@ -1655,7 +1893,8 @@
     "Venezuela",
     "Bolivarian Republic of Venezuela"
    ],
-   "short": "Venezuela"
+   "short": "Venezuela",
+   "iso2": "VE"
   },
   "VGB": {
    "m49": 92,
@@ -1663,7 +1902,8 @@
     "Virgin Islands, British",
     "British Virgin Islands"
    ],
-   "short": "British Virgin Islands"
+   "short": "British Virgin Islands",
+   "iso2": "VG"
   },
   "VIR": {
    "m49": 850,
@@ -1671,7 +1911,8 @@
     "Virgin Islands, U.S.",
     "Virgin Islands of the United States"
    ],
-   "short": "US Virgin Islands"
+   "short": "US Virgin Islands",
+   "iso2": "VI"
   },
   "VNM": {
    "m49": 704,
@@ -1680,34 +1921,39 @@
     "Vietnam",
     "Socialist Republic of Viet Nam"
    ],
-   "short": "Vietnam"
+   "short": "Vietnam",
+   "iso2": "VN"
   },
   "VUT": {
    "m49": 548,
    "names": [
     "Vanuatu",
     "Republic of Vanuatu"
-   ]
+   ],
+   "iso2": "VU"
   },
   "WLF": {
    "m49": 876,
    "names": [
     "Wallis and Futuna"
-   ]
+   ],
+   "iso2": "WF"
   },
   "WSM": {
    "m49": 882,
    "names": [
     "Samoa",
     "Independent State of Samoa"
-   ]
+   ],
+   "iso2": "WS"
   },
   "XKX": {
    "m49": null,
    "names": [
     "Kosovo"
    ],
-   "short": "Kosovo"
+   "short": "Kosovo",
+   "iso2": "XK"
   },
   "YEM": {
    "m49": 887,
@@ -1715,27 +1961,37 @@
     "Yemen",
     "Republic of Yemen"
    ],
-   "short": "Yemen"
+   "short": "Yemen",
+   "iso2": "YE"
   },
   "ZAF": {
    "m49": 710,
    "names": [
     "South Africa",
     "Republic of South Africa"
-   ]
+   ],
+   "iso2": "ZA"
   },
   "ZMB": {
    "m49": 894,
    "names": [
     "Zambia",
     "Republic of Zambia"
-   ]
+   ],
+   "iso2": "ZM"
   },
   "ZWE": {
    "m49": 716,
    "names": [
     "Zimbabwe",
     "Republic of Zimbabwe"
+   ],
+   "iso2": "ZW"
+  },
+  "CHI": {
+   "m49": null,
+   "names": [
+    "Channel Islands"
    ]
   }
  }

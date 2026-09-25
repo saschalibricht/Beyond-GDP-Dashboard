@@ -1,6 +1,7 @@
 <script lang="ts">
   import { app } from "../lib/state.svelte";
   import Icon from "./Icon.svelte";
+  import LangSwitch from "./LangSwitch.svelte";
   import ThemeSwitch from "./ThemeSwitch.svelte";
 
   const PILLARS = ["foundational", "current", "equity", "sustainability"];
@@ -11,13 +12,14 @@
     {#each PILLARS as p (p)}<span class="p-{p}"></span>{/each}
   </div>
   <h1><span class="light">Beyond</span> GDP</h1>
-  <p class="sub">The UN expert group's proposed indicators, filled with open data</p>
+  <p class="sub">{app.t.header.tagline}</p>
   <div class="corner">
+    <LangSwitch />
     <button
       type="button"
       class="soft-btn help"
-      aria-label="How to read and about"
-      title="How to read · About"
+      aria-label={app.t.header.help}
+      title={app.t.header.help}
       onclick={() => (app.sheet = "help")}
     >
       <Icon name="help" />
@@ -69,7 +71,7 @@
     font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.625rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    padding-right: 170px;
+    padding-right: 260px;
   }
 
   .light {
@@ -82,14 +84,34 @@
     font-size: 0.875rem;
   }
 
-  @media (max-width: 420px) {
-    h1 {
-      padding-right: 0;
-      margin-top: 6px;
+  /* phones: the dots and the corner controls share the first row, the title goes below */
+  @media (max-width: 640px) {
+    .top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
     }
 
     .dots {
-      margin-top: 12px;
+      grid-row: 1;
+      grid-column: 1;
+      margin: 0;
+    }
+
+    .corner {
+      grid-row: 1;
+      grid-column: 2;
+      position: static;
+    }
+
+    h1,
+    .sub {
+      grid-column: 1 / -1;
+    }
+
+    h1 {
+      padding-right: 0;
+      margin-top: 16px;
     }
   }
 </style>

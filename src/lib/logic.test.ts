@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { fmt } from "./format";
-import { barScale, compare, entryTags, flagsFor, isOutdated, missingInfo, niceTicks } from "./logic";
+import { de } from "./i18n/de";
+import { en } from "./i18n/en";
+import { barScale, compare, entryTags, flagsFor, isOutdated, missingInfo, niceTicks, type Texts } from "./logic";
+
+const L: Texts = { m: en, date: (iso) => iso, note: (s) => s };
 import type { Entry, Indicator, Registry } from "./types";
 
 const ind = (over: Partial<Indicator> = {}): Indicator => ({
@@ -86,6 +90,7 @@ describe("flags", () => {
         { iso3: "BRA", entry: ok(2023, 1, { tags: ["survey"] }) },
       ],
       2026,
+      L,
     );
     expect(f.map((x) => x.id)).toEqual(["outdated", "survey"]);
     expect(f[0]).toMatchObject({ only: ["DEU"], tone: "warn" });
@@ -101,20 +106,25 @@ describe("flags", () => {
         { iso3: "IND", entry: ok(2023, 1, { tags: [], src: 1, proxy: true, meta: { welfare: "consumption" } }) },
       ],
       2026,
+      L,
     );
     expect(f.map((x) => x.id)).toEqual(["stale-DEU", "diff-source", "diff-welfare"]);
+    expect(f[0]?.label).toBe("Not updated since 2026-09-01");
+    const g = flagsFor(reg, ind({ tags: [] }), [{ iso3: "DEU", entry: ok(2023, 1, { tags: [], stale: { since: "x" } }) }], 2026, { ...L, m: de });
+    expect(g[0]?.label).toBe("Nicht aktualisiert seit x");
     expect(f[0]?.tone).toBe("error");
   });
 });
 
 describe("helpers", () => {
   it("explains missing values", () => {
-    expect(missingInfo({ status: "not_applicable", notes: ["Only for developing countries."] }, "Germany")).toEqual({
+    expect(missingInfo({ status: "not_applicable", notes: ["Only for developing countries."] }, "Germany", L)).toEqual({
       title: "Not applicable",
       text: "Only for developing countries.",
       kind: "na",
     });
-    expect(missingInfo(undefined, "Germany").title).toBe("Not fetched yet");
+    expect(missingInfo(undefined, "Germany", L).title).toBe("Not fetched yet");
+    expect(missingInfo({ status: "no_data" }, "Deutschland", { ...L, m: de }).text).toBe("Die Quelle hat keinen Wert für Deutschland.");
   });
 
   it("uses the natural scale for bars when there is one", () => {

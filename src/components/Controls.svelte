@@ -3,10 +3,10 @@
   import Icon from "./Icon.svelte";
 
   const countries = $derived(app.countries);
-  const SHOWS = [
-    { id: "latest", icon: "bars", label: "Latest", title: "Latest values" },
-    { id: "trend", icon: "trend", label: "Trend", title: "Values over time" },
-  ] as const;
+  const SHOWS = $derived([
+    { id: "latest", icon: "bars", label: app.t.controls.latest, title: app.t.controls.latestTitle },
+    { id: "trend", icon: "trend", label: app.t.controls.trend, title: app.t.controls.trendTitle },
+  ] as const);
 </script>
 
 <div class="bar">
@@ -14,11 +14,11 @@
     <label class="pill side-a">
       <span class="dot" aria-hidden="true"></span>
       <span class="text">
-        <span class="role">Country</span>
+        <span class="role">{app.t.controls.country}</span>
         <span class="name">{app.cname(app.a)}</span>
       </span>
       <Icon name="chevron" class="chev" />
-      <select aria-label="Country" value={app.a} onchange={(e) => app.setA(e.currentTarget.value)}>
+      <select aria-label={app.t.controls.country} value={app.a} onchange={(e) => app.setA(e.currentTarget.value)}>
         {#each countries as c (c.iso3)}
           <option value={c.iso3}>{c.name}</option>
         {/each}
@@ -29,42 +29,42 @@
       <button
         type="button"
         class="soft-btn swap"
-        title="Swap countries"
-        aria-label="Swap countries"
+        title={app.t.controls.swap}
+        aria-label={app.t.controls.swap}
         onclick={() => app.swap()}
       >
         <Icon name="exchange" />
       </button>
     {:else}
-      <span class="vs" aria-hidden="true">vs</span>
+      <span class="vs" aria-hidden="true">{app.t.controls.vs}</span>
     {/if}
 
     <label class="pill side-b" class:empty={!app.b}>
       <span class="dot" aria-hidden="true"></span>
       <span class="text">
-        <span class="role">Compare</span>
-        <span class="name">{app.b ? app.cname(app.b) : "Add country"}</span>
+        <span class="role">{app.t.controls.compare}</span>
+        <span class="name">{app.b ? app.cname(app.b) : app.t.controls.addCountry}</span>
       </span>
       {#if !app.b}<Icon name="plus" class="chev" />{/if}
       <select
-        aria-label="Compare with"
+        aria-label={app.t.controls.compareWith}
         value={app.b ?? ""}
         onchange={(e) => app.setB(e.currentTarget.value || null)}
       >
-        <option value="">No comparison</option>
+        <option value="">{app.t.controls.noComparison}</option>
         {#each countries.filter((c) => c.iso3 !== app.a) as c (c.iso3)}
           <option value={c.iso3}>{c.name}</option>
         {/each}
       </select>
       {#if app.b}
-        <button type="button" class="clear" aria-label="Remove comparison" title="Remove comparison" onclick={() => app.setB(null)}>
+        <button type="button" class="clear" aria-label={app.t.controls.removeComparison} title={app.t.controls.removeComparison} onclick={() => app.setB(null)}>
           <Icon name="close" />
         </button>
       {/if}
     </label>
 
     <div class="tools">
-      <div class="show" role="radiogroup" aria-label="Show in tiles">
+      <div class="show" role="radiogroup" aria-label={app.t.controls.showGroup}>
         {#each SHOWS as s (s.id)}
           <button
             type="button"
@@ -73,7 +73,7 @@
             title={s.title}
             onclick={() => app.setShow(s.id)}
           >
-            <Icon name={s.icon} /><span>{s.label}</span>
+            <Icon name={s.icon} /><span class="lbl">{s.label}</span>
           </button>
         {/each}
       </div>
@@ -82,12 +82,12 @@
         type="button"
         class="soft-btn pins"
         aria-pressed={app.view === "pinned"}
-        title={app.view === "pinned" ? "Show all indicators" : "Show pinned indicators only"}
+        title={app.view === "pinned" ? app.t.controls.showAll : app.t.controls.showPinned}
         onclick={() => (app.view = app.view === "pinned" ? "all" : "pinned")}
       >
         <Icon name={app.view === "pinned" ? "pinFilled" : "pin"} />
         {#if app.pins.length}<span class="count num" aria-hidden="true">{app.pins.length}</span>{/if}
-        <span class="visually-hidden">Pinned only, {app.pins.length} pinned</span>
+        <span class="visually-hidden">{app.t.controls.pinnedOnly(app.pins.length)}</span>
       </button>
     </div>
   </div>
@@ -279,32 +279,71 @@
     height: 44px;
   }
 
+  /* phones: everything on one row; the view switch shows icons only, swap is hidden */
   @media (max-width: 560px) {
     .inner {
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    /* second row on phones: the view toggle left, pinned toggle right */
-    .tools {
-      flex-basis: 100%;
+      gap: 6px;
     }
 
     .pill {
-      gap: 7px;
-      padding: 7px 10px;
+      gap: 6px;
+      padding: 6px 8px 6px 10px;
     }
 
     .pill :global(.chev) {
       display: none;
     }
 
+    .role {
+      font-size: 0.625rem;
+    }
+
+    .name {
+      font-size: 0.875rem;
+    }
+
     .swap,
     .vs {
-      width: 32px;
-      height: 32px;
+      display: none;
+    }
+
+    .clear {
+      width: 22px;
+      height: 22px;
+      margin: -2px -2px -2px 0;
+    }
+
+    .tools {
+      flex: 0 0 auto;
+      gap: 6px;
+    }
+
+    .show {
+      padding: 3px;
+    }
+
+    .show button {
+      height: 30px;
+      width: 30px;
+      padding: 0;
+      justify-content: center;
+    }
+
+    .show .lbl {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .pins {
+      width: 38px;
+      height: 38px;
     }
   }
+
 
   .count {
     position: absolute;

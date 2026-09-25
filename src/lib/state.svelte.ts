@@ -1,6 +1,9 @@
-// App state: loaded data plus the reader's choices (countries, pins, view, theme).
+// App state: loaded data plus the reader's choices (countries, pins, view, theme, language).
 // Choices are mirrored to the URL so any view can be shared as a link.
 import { SvelteMap } from "svelte/reactivity";
+import { fmt, fmtDate } from "./format";
+import { detectLang, isLang, LOCALE, localizeRegistry, MESSAGES, translateNote, type Lang } from "./i18n";
+import type { Texts } from "./logic";
 import type { CountryValues, Entry, Indicator, Manifest, Pillar, Registry, Status, Tag } from "./types";
 
 export type Theme = "light" | "dark" | "system";
@@ -11,6 +14,16 @@ const SHOW_DEFAULT = { single: "trend", compare: "latest" } as const;
 
 const PIN_KEY = "bgdp-pins";
 const THEME_KEY = "bgdp-theme";
+const LANG_KEY = "bgdp-lang";
+
+/** URL first (shared links), then the reader's last choice, then the browser's languages. */
+function initialLang(): Lang {
+  const q = new URLSearchParams(location.search).get("lang");
+  if (isLang(q)) return q;
+  const stored = readStore(LANG_KEY);
+  if (isLang(stored)) return stored;
+  return detectLang(navigator.languages?.length ? navigator.languages : [navigator.language]);
+}
 
 function readStore(key: string): string | null {
   try {
@@ -35,7 +48,13 @@ async function load<T>(path: string): Promise<T> {
 }
 
 class AppState {
-  reg = $state<Registry | null>(null);
+  /** the registry as published (English), and localized for the chosen language */
+  raw = $state<Registry | null>(null);
+  lang = $state<Lang>("en");
+  reg = $derived(this.raw ? localizeRegistry(this.raw, this.lang) : null);
+  t = $derived(MESSAGES[this.lang]);
+  locale = $derived(LOCALE[this.lang]);
+  rawInd = $derived(new Map<string, Indicator>((this.raw?.indicators ?? []).map((i) => [i.id, i])));
   manifest = $state<Manifest | null>(null);
   /** per-country values, fetched when a country is first shown */
   values = new SvelteMap<string, CountryValues | "failed">();
@@ -74,11 +93,31 @@ class AppState {
   /** true while a shown country's values are still loading */
   pending = $derived([this.a, this.b].some((c) => !!c && !this.values.has(c)));
 
+  /** numbers and dates in the chosen language */
+  fmt = (v: number | null | undefined, d = 1) => fmt(v, d, this.locale);
+  fmtDate = (iso: string | null | undefined) => fmtDate(iso, this.lang === "en" ? "en-GB" : this.locale, this.t.footer.never);
+
+  /** a pipeline note in the chosen language */
+  note(indId: string, text: string): string {
+    return this.raw ? translateNote(text, this.lang, this.raw, this.rawInd.get(indId), this.t, this.fmt) : text;
+  }
+
+  /** texts the pure rules in logic.ts need, for one indicator */
+  texts(indId: string): Texts {
+    return { m: this.t, date: (iso) => this.fmtDate(iso), note: (s) => this.note(indId, s) };
+  }
+
+  setLang(l: Lang): void {
+    this.lang = l;
+    writeStore(LANG_KEY, l);
+  }
+
   async init(): Promise<void> {
+    this.lang = initialLang();
     const t = readStore(THEME_KEY);
     this.theme = t === "light" || t === "dark" ? t : "system";
     try {
-      this.reg = await load<Registry>("data/registry.json");
+      this.raw = await load<Registry>("data/registry.json");
     } catch {
       this.phase = "failed";
       return;
@@ -109,7 +148,7 @@ class AppState {
   private loading = new Set<string>();
 
   private readUrl(): void {
-    const reg = this.reg!;
+    const reg = this.raw!;
     const q = new URLSearchParams(location.search);
     const shown = new Set(this.countries.map((c) => c.iso3));
     const valid = (c: string | null | undefined) => {
@@ -133,6 +172,7 @@ class AppState {
   persist(): void {
     if (this.phase !== "ready") return;
     const q = new URLSearchParams();
+    q.set("lang", this.lang); // shared links open in the same language
     q.set("c", this.a);
     q.set("vs", this.b ?? "none");
     if (this.pins.length) q.set("pins", this.pins.join(","));

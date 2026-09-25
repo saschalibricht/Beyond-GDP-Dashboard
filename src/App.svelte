@@ -12,7 +12,7 @@
 
   // mirror choices to the URL and local storage
   $effect(() => {
-    void [app.a, app.b, app.view, app.pins, app.detail, app.phase, app.show.single, app.show.compare];
+    void [app.a, app.b, app.view, app.pins, app.detail, app.phase, app.show.single, app.show.compare, app.lang];
     app.persist();
   });
 
@@ -49,6 +49,13 @@
     return () => removeEventListener("popstate", onPop);
   });
 
+  // language: the page's lang attribute (screen readers, hyphenation), title and description
+  $effect(() => {
+    document.documentElement.lang = app.lang;
+    document.title = app.t.meta.title;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", app.t.meta.description);
+  });
+
   // theme: explicit choice wins, "system" follows the OS (see index.html for the pre-paint copy)
   $effect(() => {
     const root = document.documentElement;
@@ -71,17 +78,14 @@
   });
 </script>
 
-<a class="skip" href="#main">Skip to indicators</a>
+<a class="skip" href="#main">{app.t.app.skip}</a>
 <Header />
 
 {#if app.phase === "failed"}
   <main id="main" class="wrap">
     <div class="note">
-      <h2>The dashboard could not load its configuration</h2>
-      <p>
-        The file <code>data/registry.json</code> is missing. Run the data update once (GitHub → Actions → Update data → Run
-        workflow) or <code>python -m etl.build</code> locally.
-      </p>
+      <h2>{app.t.app.loadFailedTitle}</h2>
+      <p>{app.t.app.loadFailed}</p>
     </div>
   </main>
 {:else if app.phase === "ready"}
@@ -89,26 +93,19 @@
   <main id="main" class="wrap" tabindex="-1" class:busy={app.pending && !!app.viewA}>
     {#if !app.hasData}
       <div class="note">
-        <h2>No data yet</h2>
-        <p>
-          The data update runs automatically every day. To fetch data now, open the repository on GitHub, go to
-          <strong>Actions → Update data</strong> and choose <strong>Run workflow</strong>. The site updates by itself once the
-          run has finished.
-        </p>
+        <h2>{app.t.app.noDataTitle}</h2>
+        <p>{app.t.app.noData}</p>
       </div>
     {:else}
       {#if app.manifest?.demo}
-        <div class="note demo">
-          <strong>Demo data.</strong> These values are random placeholders for previewing the layout. Run the data update to replace
-          them with real figures.
-        </div>
+        <div class="note demo">{app.t.app.demo}</div>
       {/if}
       {#each sections as s (s.pillar.id)}
         <Section pillar={s.pillar} indicators={s.indicators} />
       {:else}
         <div class="note">
-          <h2>No pinned indicators yet</h2>
-          <p>Use the pin on any tile to collect the indicators you care about, then switch to this view again.</p>
+          <h2>{app.t.app.noPinsTitle}</h2>
+          <p>{app.t.app.noPins}</p>
         </div>
       {/each}
     {/if}

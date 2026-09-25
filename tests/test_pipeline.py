@@ -405,5 +405,34 @@ class BuildTest(Base):
         self.assertEqual(dash2["lastChanged"], first)
 
 
+class TranslationTest(unittest.TestCase):
+    """Every English text in config/ has a German counterpart (the site falls back to English otherwise)."""
+
+    def test_german_is_complete(self):
+        cfg = Path(__file__).resolve().parents[1] / "config"
+        de = json.loads((cfg / "i18n" / "de.json").read_text())
+        fw = json.loads((cfg / "framework.json").read_text())
+        tags = json.loads((cfg / "tags.json").read_text())["tags"]
+        inds = json.loads((cfg / "indicators.json").read_text())["indicators"]
+        missing = []
+        for p in fw["pillars"]:
+            missing += [f"pillar {p['id']}.{k}" for k in ("name", "summary", "justification") if k in p and not de["framework"]["pillars"].get(p["id"], {}).get(k)]
+            for d in p["domains"]:
+                missing += [f"domain {d['id']}.{k}" for k in ("name", "why") if not de["framework"]["domains"].get(d["id"], {}).get(k)]
+        if len(de["framework"]["notIncluded"]) != len(fw["notIncluded"]):
+            missing.append("framework.notIncluded")
+        for tg in tags:
+            missing += [f"tag {tg['id']}.{k}" for k in ("label", "short", "long") if not de["tags"].get(tg["id"], {}).get(k)]
+        for ind in inds:
+            tr = de["indicators"].get(ind["id"], {})
+            for k in ("label", "name", "explanation", "unit", "unitShort", "limitations", "why", "naNote", "unavailableNote"):
+                if ind.get(k) and not tr.get(k):
+                    missing.append(f"indicator {ind['id']}.{k}")
+            for s in ind["sources"]:
+                if s.get("proxyNote") and s["proxyNote"] not in tr.get("proxyNotes", {}):
+                    missing.append(f"indicator {ind['id']} proxyNote '{s['proxyNote']}'")
+        self.assertEqual(missing, [])
+
+
 if __name__ == "__main__":
     unittest.main()

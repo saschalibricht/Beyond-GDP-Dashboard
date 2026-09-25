@@ -1,5 +1,6 @@
 <script lang="ts">
   import { directionText } from "../lib/format";
+  import { app } from "../lib/state.svelte";
   import type { Direction } from "../lib/types";
   import Icon from "./Icon.svelte";
 
@@ -9,7 +10,7 @@
 </script>
 
 {#if direction !== "neutral"}
-  <div class="rail {direction}" role="img" aria-label={directionText(direction)} title={directionText(direction)}>
+  <div class="rail {direction}" role="img" aria-label={directionText(direction, app.t)} title={directionText(direction, app.t)}>
     <Icon name={direction === "higher" ? "arrowUp" : "arrowDown"} />
     <span class="bar"></span>
   </div>
