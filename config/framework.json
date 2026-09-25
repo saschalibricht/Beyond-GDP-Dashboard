@@ -1,0 +1,82 @@
+{
+  "_help": "Structure of the dashboard, following Table 1 and Figure 3 of 'Counting What Counts' (UN High-Level Expert Group on Beyond GDP, 2026). Justifications paraphrase the report; 'ref' points to the paragraph or box.",
+  "report": {
+    "title": "Counting What Counts: A Compass of Progress for People and Planet",
+    "publisher": "UN Secretary-General's High-Level Expert Group on Beyond GDP",
+    "year": 2026,
+    "url": "https://www.un.org/en/beyondGDP"
+  },
+  "pillars": [
+    {
+      "id": "foundational",
+      "name": "Foundational principles",
+      "color": "#A62C5C",
+      "ink": "#8E2250",
+      "inkDark": "#E57FA8",
+      "justification": "Peace, human rights and respect for the planet are the conditions for progress set out in the UN Charter. The report proposes five indicators here while stressing they give only a partial picture: some violations, such as torture or forced disappearances, cannot be reduced to a number and need qualitative monitoring and institutional safeguards.",
+      "ref": "Box 2, para. 27",
+      "domains": [
+        { "id": "peace", "name": "Peace", "why": "Peace means more than the absence of violence: it includes the norms and institutions that let societies manage conflict and cooperate." },
+        { "id": "human_rights", "name": "Human rights", "why": "Progress and human rights are intertwined; civil, political, economic, social and cultural rights are treated as universal and indivisible." },
+        { "id": "planet", "name": "Respect for the planet", "why": "Planetary boundaries mark the environmental limits within which humanity can operate safely; crossing them risks irreversible damage." }
+      ]
+    },
+    {
+      "id": "current",
+      "name": "Current well-being",
+      "color": "#F5A81C",
+      "ink": "#8A5700",
+      "inkDark": "#F7C35F",
+      "justification": "How people experience their lives today. The eight domains were chosen because they have strong empirical backing, recur across national and international well-being frameworks, and reflect conditions that policy can influence.",
+      "ref": "para. 28, Box 4",
+      "domains": [
+        { "id": "material", "name": "Material conditions and work", "why": "Sufficient material resources let people plan, invest in their future and take part in society; work also brings dignity beyond income." },
+        { "id": "health", "name": "Health", "why": "Good health underpins quality of life and the ability to work, learn and participate; early-life disadvantages last a lifetime." },
+        { "id": "education", "name": "Education", "why": "Education supports civic participation, autonomy and the skills needed to adapt to changing labour markets." },
+        { "id": "security", "name": "Security", "why": "Fear of violence restricts mobility and economic life and erodes trust; the burden falls unequally on women and vulnerable groups." },
+        { "id": "subjective", "name": "Subjective well-being", "why": "How people perceive their lives shapes their behaviour and choices, and captures what objective indicators miss." },
+        { "id": "cohesion", "name": "Social cohesion", "why": "Social ties form informal safety nets; isolation harms mental and physical health and is rising in many societies." },
+        { "id": "institutions", "name": "Quality of institutions", "why": "Effective institutions deliver public services, protect rights and determine whether citizens can trust public systems." },
+        { "id": "environment", "name": "Environmental quality", "why": "Pollution and degraded environments directly affect health, livelihoods and life satisfaction." }
+      ]
+    },
+    {
+      "id": "equity",
+      "name": "Equity and inclusion",
+      "color": "#9E62A6",
+      "ink": "#6F3E7A",
+      "inkDark": "#CFA3D6",
+      "justification": "A cross-cutting lens: averages hide who is left behind. These indicators cover vertical inequality between rich and poor, horizontal gaps between groups such as women and men or rural and urban residents, and people facing several deprivations at once. Gender gets special attention because it compounds every other inequality.",
+      "ref": "para. 29, Box 5",
+      "domains": [
+        { "id": "wealth_ineq", "name": "Wealth inequality", "why": "Concentrated wealth can become concentrated political power." },
+        { "id": "income_ineq", "name": "Income inequality", "why": "How evenly income is shared determines whether growth reaches most people." },
+        { "id": "poverty", "name": "Poverty", "why": "Shows how many people fall below a minimum standard of living." },
+        { "id": "work_inclusion", "name": "Work inclusion", "why": "Gender is a universal horizontal inequality; pay gaps are its most visible economic trace." },
+        { "id": "regional", "name": "Regional inequalities", "why": "Where people live shapes their access to markets, schools and health care." },
+        { "id": "overlapping", "name": "Overlapping deprivations", "why": "People deprived in several dimensions at once are those most truly left behind." }
+      ]
+    },
+    {
+      "id": "sustainability",
+      "name": "Sustainability and resilience",
+      "color": "#6DB33F",
+      "ink": "#3E7520",
+      "inkDark": "#9AD274",
+      "justification": "Connects today with tomorrow by tracking the stocks of capital that sustain well-being over time: produced, human, social, institutional and natural. Unlike GDP, a wealth view registers when output grows by running down other assets. The report acknowledges that specific indicators here still need development.",
+      "ref": "para. 30",
+      "domains": [
+        { "id": "produced", "name": "Produced capital", "why": "Machinery, buildings and infrastructure that enable future production." },
+        { "id": "human", "name": "Human capital", "why": "The skills and health of the population, which determine future capabilities." },
+        { "id": "social", "name": "Social capital", "why": "Trust between people makes cooperation and collective action possible." },
+        { "id": "institutional", "name": "Institutional capital", "why": "Confidence in public institutions sustains their capacity to act." },
+        { "id": "natural", "name": "Natural capital", "why": "Land, water, forests and subsoil resources that underpin all other forms of capital." }
+      ]
+    }
+  ],
+  "notIncluded": [
+    { "name": "Headline aggregate indicators", "text": "The report recommends developing a small number of 'Well-being Beyond GDP' headline indices but the Group reached no consensus on which. They are not shown here.", "ref": "paras. 32–38" },
+    { "name": "Cross-country spillovers", "text": "How one country's actions affect others (e.g. emissions embodied in trade, development cooperation). The report calls for these indicators but notes that comprehensive measures do not yet exist.", "ref": "paras. 39–42" },
+    { "name": "Enablers", "text": "Technology, innovation, governance and state capacity are part of the conceptual framework but deliberately left out of the dashboard, which is limited to outcomes.", "ref": "para. 31" }
+  ]
+}

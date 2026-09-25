@@ -1,0 +1,1284 @@
+{
+  "framework": {
+    "_help": "Structure of the dashboard, following Table 1 and Figure 3 of 'Counting What Counts' (UN High-Level Expert Group on Beyond GDP, 2026). Justifications paraphrase the report; 'ref' points to the paragraph or box.",
+    "report": {
+      "title": "Counting What Counts: A Compass of Progress for People and Planet",
+      "publisher": "UN Secretary-General's High-Level Expert Group on Beyond GDP",
+      "year": 2026,
+      "url": "https://www.un.org/en/beyondGDP"
+    },
+    "pillars": [
+      {
+        "id": "foundational",
+        "name": "Foundational principles",
+        "color": "#A62C5C",
+        "ink": "#8E2250",
+        "inkDark": "#E57FA8",
+        "justification": "Peace, human rights and respect for the planet are the conditions for progress set out in the UN Charter. The report proposes five indicators here while stressing they give only a partial picture: some violations, such as torture or forced disappearances, cannot be reduced to a number and need qualitative monitoring and institutional safeguards.",
+        "ref": "Box 2, para. 27",
+        "domains": [
+          {
+            "id": "peace",
+            "name": "Peace",
+            "why": "Peace means more than the absence of violence: it includes the norms and institutions that let societies manage conflict and cooperate."
+          },
+          {
+            "id": "human_rights",
+            "name": "Human rights",
+            "why": "Progress and human rights are intertwined; civil, political, economic, social and cultural rights are treated as universal and indivisible."
+          },
+          {
+            "id": "planet",
+            "name": "Respect for the planet",
+            "why": "Planetary boundaries mark the environmental limits within which humanity can operate safely; crossing them risks irreversible damage."
+          }
+        ]
+      },
+      {
+        "id": "current",
+        "name": "Current well-being",
+        "color": "#F5A81C",
+        "ink": "#8A5700",
+        "inkDark": "#F7C35F",
+        "justification": "How people experience their lives today. The eight domains were chosen because they have strong empirical backing, recur across national and international well-being frameworks, and reflect conditions that policy can influence.",
+        "ref": "para. 28, Box 4",
+        "domains": [
+          {
+            "id": "material",
+            "name": "Material conditions and work",
+            "why": "Sufficient material resources let people plan, invest in their future and take part in society; work also brings dignity beyond income."
+          },
+          {
+            "id": "health",
+            "name": "Health",
+            "why": "Good health underpins quality of life and the ability to work, learn and participate; early-life disadvantages last a lifetime."
+          },
+          {
+            "id": "education",
+            "name": "Education",
+            "why": "Education supports civic participation, autonomy and the skills needed to adapt to changing labour markets."
+          },
+          {
+            "id": "security",
+            "name": "Security",
+            "why": "Fear of violence restricts mobility and economic life and erodes trust; the burden falls unequally on women and vulnerable groups."
+          },
+          {
+            "id": "subjective",
+            "name": "Subjective well-being",
+            "why": "How people perceive their lives shapes their behaviour and choices, and captures what objective indicators miss."
+          },
+          {
+            "id": "cohesion",
+            "name": "Social cohesion",
+            "why": "Social ties form informal safety nets; isolation harms mental and physical health and is rising in many societies."
+          },
+          {
+            "id": "institutions",
+            "name": "Quality of institutions",
+            "why": "Effective institutions deliver public services, protect rights and determine whether citizens can trust public systems."
+          },
+          {
+            "id": "environment",
+            "name": "Environmental quality",
+            "why": "Pollution and degraded environments directly affect health, livelihoods and life satisfaction."
+          }
+        ]
+      },
+      {
+        "id": "equity",
+        "name": "Equity and inclusion",
+        "color": "#9E62A6",
+        "ink": "#6F3E7A",
+        "inkDark": "#CFA3D6",
+        "justification": "A cross-cutting lens: averages hide who is left behind. These indicators cover vertical inequality between rich and poor, horizontal gaps between groups such as women and men or rural and urban residents, and people facing several deprivations at once. Gender gets special attention because it compounds every other inequality.",
+        "ref": "para. 29, Box 5",
+        "domains": [
+          {
+            "id": "wealth_ineq",
+            "name": "Wealth inequality",
+            "why": "Concentrated wealth can become concentrated political power."
+          },
+          {
+            "id": "income_ineq",
+            "name": "Income inequality",
+            "why": "How evenly income is shared determines whether growth reaches most people."
+          },
+          {
+            "id": "poverty",
+            "name": "Poverty",
+            "why": "Shows how many people fall below a minimum standard of living."
+          },
+          {
+            "id": "work_inclusion",
+            "name": "Work inclusion",
+            "why": "Gender is a universal horizontal inequality; pay gaps are its most visible economic trace."
+          },
+          {
+            "id": "regional",
+            "name": "Regional inequalities",
+            "why": "Where people live shapes their access to markets, schools and health care."
+          },
+          {
+            "id": "overlapping",
+            "name": "Overlapping deprivations",
+            "why": "People deprived in several dimensions at once are those most truly left behind."
+          }
+        ]
+      },
+      {
+        "id": "sustainability",
+        "name": "Sustainability and resilience",
+        "color": "#6DB33F",
+        "ink": "#3E7520",
+        "inkDark": "#9AD274",
+        "justification": "Connects today with tomorrow by tracking the stocks of capital that sustain well-being over time: produced, human, social, institutional and natural. Unlike GDP, a wealth view registers when output grows by running down other assets. The report acknowledges that specific indicators here still need development.",
+        "ref": "para. 30",
+        "domains": [
+          {
+            "id": "produced",
+            "name": "Produced capital",
+            "why": "Machinery, buildings and infrastructure that enable future production."
+          },
+          {
+            "id": "human",
+            "name": "Human capital",
+            "why": "The skills and health of the population, which determine future capabilities."
+          },
+          {
+            "id": "social",
+            "name": "Social capital",
+            "why": "Trust between people makes cooperation and collective action possible."
+          },
+          {
+            "id": "institutional",
+            "name": "Institutional capital",
+            "why": "Confidence in public institutions sustains their capacity to act."
+          },
+          {
+            "id": "natural",
+            "name": "Natural capital",
+            "why": "Land, water, forests and subsoil resources that underpin all other forms of capital."
+          }
+        ]
+      }
+    ],
+    "notIncluded": [
+      {
+        "name": "Headline aggregate indicators",
+        "text": "The report recommends developing a small number of 'Well-being Beyond GDP' headline indices but the Group reached no consensus on which. They are not shown here.",
+        "ref": "paras. 32–38"
+      },
+      {
+        "name": "Cross-country spillovers",
+        "text": "How one country's actions affect others (e.g. emissions embodied in trade, development cooperation). The report calls for these indicators but notes that comprehensive measures do not yet exist.",
+        "ref": "paras. 39–42"
+      },
+      {
+        "name": "Enablers",
+        "text": "Technology, innovation, governance and state capacity are part of the conceptual framework but deliberately left out of the dashboard, which is limited to outcomes.",
+        "ref": "para. 31"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "id": "outdated",
+      "label": "Outdated",
+      "icon": "clock",
+      "auto": true,
+      "short": "Latest value is more than 3 years old.",
+      "long": "The most recent observation is more than three years old, so it may not reflect current conditions. The report names timeliness as a major weakness: lags of two to four years are common."
+    },
+    {
+      "id": "modelled",
+      "label": "Modelled",
+      "icon": "model",
+      "short": "An estimate from a statistical model, not a direct measurement.",
+      "long": "Values come from a model that fills gaps or combines sources. Model estimates can be revised substantially and may miss sudden changes. Where a source marks a value as estimated or modelled, this tag is applied automatically."
+    },
+    {
+      "id": "survey",
+      "label": "Survey-based",
+      "icon": "survey",
+      "short": "Based on what a sample of people report.",
+      "long": "Derived from answers to survey questions. Results carry sampling error (roughly ±3 percentage points with ~1,000 respondents), and cultural differences in how people answer can distort comparisons between countries."
+    },
+    {
+      "id": "infrequent",
+      "label": "Infrequent",
+      "icon": "repeat",
+      "short": "Produced only every few years.",
+      "long": "The source publishes this indicator irregularly or every three to five years, so trends rest on few data points and short-term change is invisible."
+    },
+    {
+      "id": "low_coverage",
+      "label": "Low coverage",
+      "icon": "globe",
+      "short": "Available for fewer than half of all countries.",
+      "long": "According to the report's annex, fewer than half of countries produce this indicator. Gaps are common and comparisons are limited to the countries that report."
+    },
+    {
+      "id": "substitute",
+      "label": "Substitute",
+      "icon": "swap",
+      "short": "A proxy or different source than the report specifies.",
+      "long": "The measure the report proposes is not freely available here, so the dashboard shows the closest open alternative. Read the explanation before treating it as the report's intended measure."
+    },
+    {
+      "id": "comparability",
+      "label": "Limited comparability",
+      "icon": "scale",
+      "short": "Methods differ between countries.",
+      "long": "Countries measure this differently (for example income vs. consumption surveys, or different national definitions), so gaps between countries may partly reflect method rather than reality."
+    }
+  ],
+  "indicators": [
+    {
+      "id": "conflict_deaths",
+      "pillar": "foundational",
+      "domain": "peace",
+      "concept": "Peace",
+      "name": "Number of total conflict-related deaths per 100,000 population",
+      "label": "Conflict-related deaths",
+      "explanation": "People killed in armed conflict each year, relative to population size. Includes deaths of combatants and civilians.",
+      "unit": "deaths per 100,000 people",
+      "unitShort": "per 100k",
+      "decimals": 2,
+      "direction": "lower",
+      "tier": "II",
+      "sdg": "16.1.2",
+      "tags": [
+        "low_coverage",
+        "modelled"
+      ],
+      "limitations": "The official SDG series covers only about a third of countries in conflict. Where it is missing, the dashboard uses UCDP event data (all three types of organised violence) or, failing that, World Bank battle-related deaths (state-based conflict only), which undercount one-sided violence against civilians. A value of zero from UCDP means no recorded conflict events, not a verified absence of violence.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (16.1.2)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        },
+        {
+          "label": "UCDP organised violence (API)",
+          "url": "https://ucdp.uu.se/",
+          "proxy": true,
+          "proxyNote": "UCDP event-based fatality counts, aggregated to country-years"
+        },
+        {
+          "label": "World Bank / UCDP battle-related deaths",
+          "url": "https://data.worldbank.org/indicator/VC.BTL.DETH",
+          "proxy": true,
+          "proxyNote": "Battle-related deaths in state-based conflicts only, divided by population"
+        }
+      ]
+    },
+    {
+      "id": "discrimination",
+      "pillar": "foundational",
+      "domain": "human_rights",
+      "concept": "Human rights",
+      "name": "Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months",
+      "label": "Felt discriminated against",
+      "explanation": "Share of people who say they personally experienced discrimination or harassment in the past year, on any ground prohibited by international human rights law.",
+      "unit": "% of population",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "II",
+      "sdg": "10.3.1",
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "survey",
+        "low_coverage",
+        "infrequent",
+        "comparability"
+      ],
+      "limitations": "Only about half of countries collect this, mostly every two years, through different national surveys. Willingness to report discrimination varies with awareness and social norms, so higher values can reflect greater awareness rather than more discrimination.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (10.3.1)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "ipv",
+      "pillar": "foundational",
+      "domain": "human_rights",
+      "concept": "Human rights",
+      "name": "Proportion of ever-partnered women and girls subjected to physical and/or sexual violence by a current or former intimate partner in the previous 12 months",
+      "label": "Intimate partner violence",
+      "explanation": "Share of women aged 15–49 who have ever had a partner and experienced physical or sexual violence from a partner in the past year.",
+      "unit": "% of ever-partnered women",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "I",
+      "sdg": "5.2.1",
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "modelled",
+        "infrequent"
+      ],
+      "limitations": "The global estimates are modelled by WHO and partners and currently refer to a single year (2018), so no trend can be tracked. Violence is widely under-reported; values are lower bounds.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (5.2.1)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "ghg_pc",
+      "pillar": "foundational",
+      "domain": "planet",
+      "concept": "Respect for the planet",
+      "name": "Total greenhouse gas emissions and greenhouse gas emissions per capita",
+      "label": "Greenhouse gas emissions per person",
+      "explanation": "All greenhouse gases emitted within the country per resident, expressed in tonnes of CO₂-equivalent. The detail view also shows the national total.",
+      "unit": "tonnes CO₂e per person",
+      "unitShort": "t CO₂e",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "I",
+      "sdg": "13.2.2",
+      "tags": [
+        "substitute",
+        "modelled"
+      ],
+      "secondary": "ghg_total",
+      "limitations": "The report cites official UNFCCC inventories (SDG 13.2.2), but these are complete and annual only for industrialised (Annex I) countries. For comparability across all countries this dashboard uses the harmonised dataset published by Our World in Data (based on Jones et al. / PRIMAP / EDGAR). Emissions are counted where they occur, not where goods are consumed.",
+      "sources": [
+        {
+          "label": "Our World in Data – GHG emissions per capita",
+          "url": "https://ourworldindata.org/grapher/per-capita-ghg-emissions",
+          "proxy": true,
+          "proxyNote": "Harmonised global dataset instead of UNFCCC national inventories"
+        }
+      ]
+    },
+    {
+      "id": "ghg_total",
+      "hidden": true,
+      "pillar": "foundational",
+      "domain": "planet",
+      "concept": "Respect for the planet",
+      "name": "Total greenhouse gas emissions",
+      "label": "Total greenhouse gas emissions",
+      "explanation": "All greenhouse gases emitted within the country per year.",
+      "unit": "million tonnes CO₂e",
+      "unitShort": "Mt CO₂e",
+      "decimals": 0,
+      "divide": 1000000,
+      "direction": "lower",
+      "tier": "I",
+      "sdg": "13.2.2",
+      "tags": [
+        "substitute",
+        "modelled"
+      ],
+      "limitations": "See per-person emissions.",
+      "sources": [
+        {
+          "label": "Our World in Data – total GHG emissions",
+          "url": "https://ourworldindata.org/grapher/total-ghg-emissions",
+          "proxy": true,
+          "proxyNote": "Harmonised global dataset instead of UNFCCC national inventories"
+        }
+      ]
+    },
+    {
+      "id": "bii",
+      "pillar": "foundational",
+      "domain": "planet",
+      "concept": "Respect for the planet",
+      "name": "Biodiversity intactness index",
+      "label": "Biodiversity intactness",
+      "explanation": "How much of the original abundance of species remains on land, compared with an undisturbed ecosystem. 100% means fully intact; the planetary-boundary literature suggests around 90% as a safe level.",
+      "unit": "% of original species abundance",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": null,
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "modelled",
+        "outdated"
+      ],
+      "limitations": "Modelled from land-use maps and local biodiversity surveys (PREDICTS database). The openly available national series is frozen at the 2021 release and marked deprecated by its publisher; newer versions are in limited release. The report itself notes data run only to 2014 and calls for investment in annual production.",
+      "sources": [
+        {
+          "label": "Natural History Museum London – Biodiversity Trends Explorer",
+          "url": "https://data.nhm.ac.uk/dataset/bii-bte"
+        }
+      ]
+    },
+    {
+      "id": "disposable_income",
+      "pillar": "current",
+      "domain": "material",
+      "concept": "Disposable income",
+      "name": "Household disposable income per capita",
+      "label": "Household income per person",
+      "explanation": "Average income (or consumption, where surveys measure that instead) available to each household member per year, in international dollars that adjust for price differences between countries.",
+      "unit": "int. $ per person per year (2021 PPP)",
+      "unitShort": "$ / year",
+      "decimals": 0,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": null,
+      "tags": [
+        "substitute",
+        "comparability",
+        "infrequent"
+      ],
+      "limitations": "The report's measure comes from national accounts, which only 70–80 countries publish. To compare all countries on one basis, the dashboard uses the household-survey mean from the World Bank Poverty and Inequality Platform. Some countries measure income, others consumption (shown in the detail view); consumption surveys give lower and smoother values, and surveys tend to miss the very rich.",
+      "sources": [
+        {
+          "label": "World Bank PIP – survey mean income/consumption",
+          "url": "https://pip.worldbank.org/",
+          "proxy": true,
+          "proxyNote": "Household-survey mean (annualised) instead of national-accounts disposable income"
+        }
+      ]
+    },
+    {
+      "id": "labour_underutil",
+      "pillar": "current",
+      "domain": "material",
+      "concept": "Work status",
+      "name": "Composite rate of labour underutilization (LU4)",
+      "label": "Labour underutilisation",
+      "explanation": "Share of the extended labour force that is unemployed, working fewer hours than they want, or available and willing to work but not actively searching. A broader picture than the unemployment rate.",
+      "unit": "% of extended labour force",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "I",
+      "sdg": null,
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "survey",
+        "comparability"
+      ],
+      "limitations": "Based on labour force surveys; about two-thirds of countries produce it annually. Large informal sectors make underemployment harder to capture in lower-income countries.",
+      "sources": [
+        {
+          "label": "ILOSTAT (LU4)",
+          "url": "https://ilostat.ilo.org/"
+        }
+      ]
+    },
+    {
+      "id": "unpaid_care",
+      "pillar": "current",
+      "domain": "material",
+      "concept": "Work",
+      "name": "Proportion of time spent on unpaid domestic and care work",
+      "label": "Time on unpaid care work",
+      "explanation": "Share of a 24-hour day spent on unpaid domestic chores and caring for household members. Much of this work is done by women and is invisible in GDP.",
+      "unit": "% of a day",
+      "unitShort": "% of day",
+      "decimals": 1,
+      "direction": "neutral",
+      "tier": "II",
+      "sdg": "5.4.1",
+      "scale": [
+        0,
+        30
+      ],
+      "tags": [
+        "survey",
+        "low_coverage",
+        "infrequent",
+        "comparability"
+      ],
+      "limitations": "Requires dedicated time-use surveys, which only about 46% of countries run, on average every five years. Survey designs differ strongly between countries. The dashboard shows the value for women, where the burden is concentrated; neither 'high' nor 'low' is simply good.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (5.4.1)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "hale",
+      "pillar": "current",
+      "domain": "health",
+      "concept": "Life expectancy",
+      "name": "Healthy life expectancy at birth",
+      "label": "Healthy life expectancy",
+      "explanation": "Number of years a newborn can expect to live in full health, taking into account years lived with illness or disability.",
+      "unit": "years",
+      "unitShort": "years",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": null,
+      "tags": [
+        "modelled",
+        "outdated"
+      ],
+      "limitations": "WHO estimates combine mortality and disease-burden models. Coverage is near-universal but the latest data available in early 2026 were for 2021. WHO is also migrating its data API, so the dashboard falls back to a mirror if needed.",
+      "sources": [
+        {
+          "label": "WHO Global Health Observatory",
+          "url": "https://www.who.int/data/gho"
+        },
+        {
+          "label": "WHO via Our World in Data",
+          "url": "https://ourworldindata.org/grapher/healthy-life-expectancy-at-birth"
+        }
+      ]
+    },
+    {
+      "id": "low_birthweight",
+      "pillar": "current",
+      "domain": "health",
+      "concept": "Infant health",
+      "name": "Low-birthweight babies (percentage of births)",
+      "label": "Low birthweight",
+      "explanation": "Share of newborns weighing less than 2,500 grams, a strong predictor of health problems later in life.",
+      "unit": "% of births",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "I",
+      "sdg": null,
+      "scale": [
+        0,
+        30
+      ],
+      "tags": [
+        "modelled",
+        "outdated"
+      ],
+      "limitations": "UNICEF–WHO modelled estimates; many births in low-income countries are not weighed. The latest data available in early 2026 were for 2020.",
+      "sources": [
+        {
+          "label": "World Bank WDI (UNICEF–WHO estimates)",
+          "url": "https://data.worldbank.org/indicator/SH.STA.BRTW.ZS"
+        }
+      ]
+    },
+    {
+      "id": "min_proficiency",
+      "pillar": "current",
+      "domain": "education",
+      "concept": "Educational attainment",
+      "name": "Proportion of children and young people achieving a minimum proficiency level in reading and mathematics",
+      "label": "Minimum proficiency in reading & maths",
+      "explanation": "Share of students at the end of lower secondary school who reach at least a minimum level in reading and in mathematics. The dashboard shows the average of the two.",
+      "unit": "% of students",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": "4.1.1",
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "infrequent",
+        "comparability"
+      ],
+      "limitations": "Based on different international and regional learning assessments (e.g. PISA, TIMSS, PASEC) mapped onto a common minimum level, which makes comparisons approximate. Assessments run every three to five years and cover only children in school.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (4.1.1, UNESCO-UIS)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "ict_skills",
+      "pillar": "current",
+      "domain": "education",
+      "concept": "Technological skills",
+      "name": "Proportion of youth and adults with information and communications technology skills",
+      "label": "Digital skills",
+      "explanation": "Share of people aged 15 and over who can perform a basic digital task. The dashboard uses 'sending e-mails with attached files', one of the skill types in the official series.",
+      "unit": "% of population",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "II",
+      "sdg": "4.4.1",
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "survey",
+        "low_coverage",
+        "comparability"
+      ],
+      "limitations": "Self-reported in household surveys, available for about half of countries. The official indicator is split into many skill types without a single total, so one representative skill is shown. The report notes the indicator misses how digital opportunity and risk are distributed.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (4.4.1, ITU)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "homicides",
+      "pillar": "current",
+      "domain": "security",
+      "concept": "Crime",
+      "name": "Intentional homicides per 100,000 population",
+      "label": "Intentional homicides",
+      "explanation": "Number of people unlawfully and deliberately killed each year, relative to population size.",
+      "unit": "per 100,000 people",
+      "unitShort": "per 100k",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "I",
+      "sdg": "16.1.1",
+      "tags": [
+        "comparability"
+      ],
+      "limitations": "Among the most comparable crime statistics, but still depends on police and health records and national legal definitions. Homicide captures only the most severe violence; the report suggests a broader security index as future work.",
+      "sources": [
+        {
+          "label": "World Bank WDI (UNODC)",
+          "url": "https://data.worldbank.org/indicator/VC.IHR.PSRC.P5"
+        },
+        {
+          "label": "UN SDG Global Database (16.1.1)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "safe_after_dark",
+      "pillar": "current",
+      "domain": "security",
+      "concept": "Sense of security",
+      "name": "Proportion of population that feel safe walking alone around the area they live after dark",
+      "label": "Feel safe walking alone at night",
+      "explanation": "Share of people who say they feel safe walking alone in their neighbourhood after dark.",
+      "unit": "% of population",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "II",
+      "sdg": "16.1.4",
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "survey",
+        "low_coverage"
+      ],
+      "limitations": "Official national data exist for only about a quarter of countries. Perceptions of safety do not always match actual crime levels and vary with gender and age.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (16.1.4)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "life_satisfaction",
+      "pillar": "current",
+      "domain": "subjective",
+      "concept": "Subjective well-being",
+      "name": "Life satisfaction",
+      "label": "Life satisfaction",
+      "explanation": "Average answer when people rate their current life on a ladder from 0 (worst possible) to 10 (best possible).",
+      "unit": "score 0–10",
+      "unitShort": "/ 10",
+      "decimals": 2,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": null,
+      "scale": [
+        0,
+        10
+      ],
+      "tags": [
+        "survey",
+        "comparability"
+      ],
+      "limitations": "Collected by the Gallup World Poll (about 1,000 respondents per country per year) and published through the World Happiness Report, a private source. Cultural response styles affect cross-country comparisons; the report recommends country-led surveys to reduce reliance on private data.",
+      "sources": [
+        {
+          "label": "World Happiness Report (Gallup) via Our World in Data",
+          "url": "https://ourworldindata.org/grapher/happiness-cantril-ladder"
+        },
+        {
+          "label": "World Happiness Report data file",
+          "url": "https://worldhappiness.report/"
+        }
+      ]
+    },
+    {
+      "id": "loneliness",
+      "pillar": "current",
+      "domain": "cohesion",
+      "concept": "Loneliness",
+      "name": "Proportion of people saying they felt loneliness \"a lot of the day yesterday\"",
+      "label": "Social support (loneliness proxy)",
+      "explanation": "The report's measure, daily loneliness from the Gallup World Poll, is not openly published. As a proxy, this shows the share of people who say they have relatives or friends they can count on in times of trouble.",
+      "unit": "% with someone to count on",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": null,
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "substitute",
+        "survey"
+      ],
+      "unavailableNote": "Gallup's loneliness data are proprietary and not freely available.",
+      "limitations": "Social support is related to, but not the same as, loneliness: people can have support and still feel lonely. The report itself notes social cohesion is more nuanced than loneliness alone. The value is a Gallup-based figure published in the World Happiness Report data.",
+      "sources": [
+        {
+          "label": "World Happiness Report data (Gallup) – social support",
+          "url": "https://worldhappiness.report/",
+          "proxy": true,
+          "proxyNote": "Social support used as proxy for loneliness"
+        }
+      ]
+    },
+    {
+      "id": "public_services",
+      "pillar": "current",
+      "domain": "institutions",
+      "concept": "Effectiveness of public services",
+      "name": "Proportion of population satisfied with their last experience of public services",
+      "label": "Satisfied with public services",
+      "explanation": "Share of people who say they are satisfied overall with the quality of government services they used.",
+      "unit": "% of population",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "II",
+      "sdg": "16.6.2",
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "survey",
+        "low_coverage"
+      ],
+      "limitations": "Only about 18% of countries publish this indicator, the lowest coverage on the dashboard. Satisfaction depends on expectations as much as on service quality.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (16.6.2)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "pm25",
+      "pillar": "current",
+      "domain": "environment",
+      "concept": "Air",
+      "name": "Annual mean levels of fine particulate matter in cities",
+      "label": "Urban air pollution (PM2.5)",
+      "explanation": "Average yearly concentration of fine particles (smaller than 2.5 micrometres) in urban air, weighted by population. WHO's guideline is 5 µg/m³.",
+      "unit": "µg/m³",
+      "unitShort": "µg/m³",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "I",
+      "sdg": "11.6.2",
+      "tags": [
+        "modelled",
+        "outdated"
+      ],
+      "limitations": "Modelled by WHO from satellite data, ground monitors and chemical transport models. Available for 98% of countries, but the latest data available in early 2026 were for 2019.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (11.6.2, WHO)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        },
+        {
+          "label": "World Bank WDI – national mean PM2.5",
+          "url": "https://data.worldbank.org/indicator/EN.ATM.PM25.MC.M3",
+          "proxy": true,
+          "proxyNote": "National population-weighted mean, not only cities"
+        }
+      ]
+    },
+    {
+      "id": "safe_water",
+      "pillar": "current",
+      "domain": "environment",
+      "concept": "Water",
+      "name": "Proportion of population using safely managed drinking water services",
+      "label": "Safely managed drinking water",
+      "explanation": "Share of people using an improved water source that is on their premises, available when needed and free from contamination.",
+      "unit": "% of population",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": "6.1.1",
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "modelled"
+      ],
+      "limitations": "Estimated by the WHO/UNICEF Joint Monitoring Programme from surveys and administrative data. Water-quality testing is sparse in many countries, so the 'safely managed' level is often modelled; timely data exist for about 70% of countries.",
+      "sources": [
+        {
+          "label": "World Bank WDI (WHO/UNICEF JMP)",
+          "url": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS"
+        },
+        {
+          "label": "UN SDG Global Database (6.1.1)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "wealth_top1",
+      "pillar": "equity",
+      "domain": "wealth_ineq",
+      "concept": "Wealth inequality",
+      "name": "Wealth share of the richest 1%",
+      "label": "Wealth share of the richest 1%",
+      "explanation": "Share of all personal wealth (assets minus debts) owned by the wealthiest 1% of adults.",
+      "unit": "% of total wealth",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "II",
+      "sdg": null,
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "modelled"
+      ],
+      "limitations": "Estimates are available for most countries but largely modelled: only about 30% of countries have estimates based directly on surveys and wealth accounts. Hidden offshore wealth is hard to capture.",
+      "sources": [
+        {
+          "label": "World Inequality Database via Our World in Data",
+          "url": "https://wid.world/"
+        }
+      ]
+    },
+    {
+      "id": "gini",
+      "pillar": "equity",
+      "domain": "income_ineq",
+      "concept": "Income inequality",
+      "name": "Gini index",
+      "label": "Income inequality (Gini)",
+      "explanation": "Summarises how unequally income or consumption is distributed, from 0 (everyone has the same) to 100 (one person has everything).",
+      "unit": "index 0–100",
+      "unitShort": "Gini",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "I",
+      "sdg": null,
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "infrequent",
+        "comparability"
+      ],
+      "limitations": "Based on household surveys conducted on average every three years. Some countries measure income, others consumption; consumption-based Gini values are typically lower. Surveys under-represent top incomes.",
+      "sources": [
+        {
+          "label": "World Bank WDI (PIP)",
+          "url": "https://data.worldbank.org/indicator/SI.POV.GINI"
+        }
+      ]
+    },
+    {
+      "id": "poverty_spl",
+      "pillar": "equity",
+      "domain": "poverty",
+      "concept": "Poverty",
+      "name": "Poverty headcount ratio at societal poverty line (fixed at a baseline)",
+      "label": "Poverty (societal line, fixed)",
+      "explanation": "Share of people living below a poverty line that reflects each country's typical living standard. The line is fixed at its value in a baseline year so changes over time show real progress, not a moving threshold.",
+      "unit": "% of population",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "I",
+      "sdg": null,
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "infrequent",
+        "comparability"
+      ],
+      "baseline": 2017,
+      "limitations": "The societal poverty line is the higher of the international extreme poverty line and a fixed amount plus half of the national median, so it rises with national prosperity. The dashboard fixes each country's line at the survey year closest to 2017. Survey frequency and income/consumption differences limit comparability.",
+      "sources": [
+        {
+          "label": "World Bank Poverty and Inequality Platform",
+          "url": "https://pip.worldbank.org/"
+        }
+      ]
+    },
+    {
+      "id": "gender_pay",
+      "pillar": "equity",
+      "domain": "work_inclusion",
+      "concept": "Work inclusion",
+      "name": "Average hourly earnings of women as a proportion of men",
+      "label": "Women's hourly earnings vs men's",
+      "explanation": "Women's average hourly pay as a percentage of men's. 100% means equal average pay.",
+      "unit": "% of men's earnings",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": "8.5.1",
+      "scale": [
+        0,
+        120
+      ],
+      "tags": [
+        "infrequent",
+        "comparability",
+        "low_coverage"
+      ],
+      "limitations": "Calculated from average hourly earnings by sex (SDG 8.5.1), available for about 65% of countries every two years. It is an unadjusted gap: it does not account for differences in occupation or hours, and excludes informal work in many countries.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (8.5.1, ILO)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "rural_access",
+      "pillar": "equity",
+      "domain": "regional",
+      "concept": "Regional inequalities",
+      "name": "Proportion of the rural population who live within 2 km of an all-season road",
+      "label": "Rural road access",
+      "explanation": "Share of people in rural areas living within 2 km of a road usable all year round, a basic measure of connectivity to markets and services.",
+      "unit": "% of rural population",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "II",
+      "sdg": "9.1.1",
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "modelled",
+        "low_coverage",
+        "infrequent"
+      ],
+      "limitations": "Estimated with geospatial models from road and population maps, published irregularly and for a limited set of countries.",
+      "sources": [
+        {
+          "label": "UN SDG Global Database (9.1.1, World Bank)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "mpi",
+      "pillar": "equity",
+      "domain": "overlapping",
+      "concept": "Overlapping deprivations",
+      "name": "Multidimensional poverty index",
+      "label": "Multidimensional poverty",
+      "explanation": "Share of people deprived in at least a third of weighted indicators of health, education and living standards (such as nutrition, schooling, sanitation and housing) at the same time.",
+      "unit": "% of population (MPI headcount)",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "II",
+      "sdg": null,
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "infrequent",
+        "substitute"
+      ],
+      "naIncome": [
+        "HIC"
+      ],
+      "naNote": "The global MPI is computed for low- and middle-income countries only.",
+      "limitations": "Shows the MPI headcount (share of people who are multidimensionally poor) rather than the index value, which also reflects how intense poverty is. Depends on demographic and household surveys run every few years.",
+      "sources": [
+        {
+          "label": "UNDP/OPHI global MPI via Our World in Data",
+          "url": "https://ophi.org.uk/global-mpi",
+          "proxy": true,
+          "proxyNote": "MPI headcount ratio instead of the index value"
+        }
+      ]
+    },
+    {
+      "id": "produced_capital",
+      "pillar": "sustainability",
+      "domain": "produced",
+      "concept": "Produced capital",
+      "name": "Net produced capital stock",
+      "label": "Produced capital per person",
+      "explanation": "Value of machinery, buildings, infrastructure and urban land per resident, after depreciation.",
+      "unit": "constant US$ per person",
+      "unitShort": "$ / person",
+      "decimals": 0,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": null,
+      "tags": [
+        "modelled",
+        "infrequent"
+      ],
+      "limitations": "From the World Bank's Changing Wealth of Nations accounts, which are estimated with the perpetual-inventory method and released every few years. Shown per person so countries of different size can be compared.",
+      "sources": [
+        {
+          "label": "World Bank Changing Wealth of Nations",
+          "url": "https://www.worldbank.org/en/publication/changing-wealth-of-nations"
+        }
+      ]
+    },
+    {
+      "id": "neet",
+      "pillar": "sustainability",
+      "domain": "human",
+      "concept": "Human capital",
+      "name": "Share of youth not in education, employment or training (NEET)",
+      "label": "Youth not in education, work or training",
+      "explanation": "Share of people aged 15–24 who are neither working nor in education or training, a sign of skills and potential going unused.",
+      "unit": "% of youth",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "I",
+      "sdg": "8.6.1",
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "survey",
+        "low_coverage"
+      ],
+      "limitations": "Based on labour force surveys; data are available for about half of countries.",
+      "sources": [
+        {
+          "label": "World Bank WDI (ILO)",
+          "url": "https://data.worldbank.org/indicator/SL.UEM.NEET.ZS"
+        },
+        {
+          "label": "UN SDG Global Database (8.6.1)",
+          "url": "https://unstats.un.org/sdgs/dataportal"
+        }
+      ]
+    },
+    {
+      "id": "pyll",
+      "pillar": "sustainability",
+      "domain": "human",
+      "concept": "Human capital",
+      "name": "Potential years of life lost (PYLL), all causes",
+      "label": "Premature deaths (PYLL proxy)",
+      "explanation": "The report's measure adds up the years lost when people die before age 75. It is only produced for about 40–50 mostly OECD countries, so this tile shows the closest global proxy: the probability of dying between ages 30 and 70 from heart disease, cancer, diabetes or chronic lung disease.",
+      "unit": "% probability",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "lower",
+      "tier": "II",
+      "sdg": "3.4.1",
+      "scale": [
+        0,
+        50
+      ],
+      "tags": [
+        "substitute",
+        "modelled"
+      ],
+      "limitations": "The proxy covers four major non-communicable disease groups only, not injuries, infections or maternal deaths, and is a WHO modelled estimate. PYLL for OECD countries is a planned addition.",
+      "sources": [
+        {
+          "label": "World Bank WDI (WHO, SDG 3.4.1)",
+          "url": "https://data.worldbank.org/indicator/SH.DYN.NCOM.ZS",
+          "proxy": true,
+          "proxyNote": "NCD mortality ages 30–70 instead of PYLL"
+        }
+      ]
+    },
+    {
+      "id": "trust",
+      "pillar": "sustainability",
+      "domain": "social",
+      "concept": "Social capital",
+      "name": "Share of people who say most people can be trusted",
+      "label": "Most people can be trusted",
+      "explanation": "Share of people who agree that 'most people can be trusted' rather than 'you need to be very careful in dealing with people'.",
+      "unit": "% of population",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": null,
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "survey",
+        "infrequent",
+        "comparability"
+      ],
+      "limitations": "From the World Values Survey and European Values Study, conducted in waves roughly every five years and covering about 56% of countries. Each wave is dated to its final year, although fieldwork may be several years earlier.",
+      "sources": [
+        {
+          "label": "World Values Survey via Our World in Data",
+          "url": "https://ourworldindata.org/grapher/self-reported-trust-attitudes"
+        }
+      ]
+    },
+    {
+      "id": "confidence_civil_service",
+      "pillar": "sustainability",
+      "domain": "institutional",
+      "concept": "Institutional capital",
+      "name": "Proportion of population reporting they have confidence in the civil services",
+      "label": "Confidence in the civil service",
+      "explanation": "Share of people who say they have 'a great deal' or 'quite a lot' of confidence in their country's civil service.",
+      "unit": "% of population",
+      "unitShort": "%",
+      "decimals": 1,
+      "direction": "higher",
+      "tier": "I",
+      "sdg": null,
+      "scale": [
+        0,
+        100
+      ],
+      "tags": [
+        "survey",
+        "infrequent",
+        "comparability"
+      ],
+      "limitations": "From the World Values Survey and European Values Study, conducted in waves about every five years and covering about 56% of countries; the latest wave ends in 2022. If this series cannot be found, confidence in the national government (Gallup, via OECD) is used as a proxy.",
+      "sources": [
+        {
+          "label": "World Values Survey via Our World in Data",
+          "url": "https://www.worldvaluessurvey.org/"
+        },
+        {
+          "label": "Gallup via OECD – trust in national government",
+          "url": "https://www.oecd.org/en/data/datasets/oecd-trust-survey-data.html",
+          "proxy": true,
+          "proxyNote": "Confidence in national government instead of civil service"
+        }
+      ]
+    },
+    {
+      "id": "natural_capital",
+      "pillar": "sustainability",
+      "domain": "natural",
+      "concept": "Natural capital",
+      "name": "Environmental assets (land, water, soil and subsoil resources, etc.) building on the System of Environmental Economic Accounting (SEEA)",
+      "label": "Natural capital per person",
+      "explanation": "Estimated value of forests, farmland, protected areas, fisheries, minerals and fossil fuel reserves per resident.",
+      "unit": "constant US$ per person",
+      "unitShort": "$ / person",
+      "decimals": 0,
+      "direction": "higher",
+      "tier": "II",
+      "sdg": null,
+      "tags": [
+        "modelled",
+        "infrequent",
+        "substitute"
+      ],
+      "limitations": "The report calls for SEEA-based national environmental accounts, which only about 44% of countries publish. The World Bank's wealth accounts value natural assets in a comparable way for most countries but only by their market value, missing many ecosystem services. Rising fossil fuel prices can raise the value even as reserves shrink.",
+      "sources": [
+        {
+          "label": "World Bank Changing Wealth of Nations",
+          "url": "https://www.worldbank.org/en/publication/changing-wealth-of-nations",
+          "proxy": true,
+          "proxyNote": "Monetary wealth accounts instead of full SEEA environmental accounts"
+        }
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "iso3": "DEU",
+      "name": "Germany",
+      "income": null,
+      "incomeLabel": null,
+      "region": null
+    },
+    {
+      "iso3": "USA",
+      "name": "United States",
+      "income": null,
+      "incomeLabel": null,
+      "region": null
+    },
+    {
+      "iso3": "BRA",
+      "name": "Brazil",
+      "income": null,
+      "incomeLabel": null,
+      "region": null
+    },
+    {
+      "iso3": "IND",
+      "name": "India",
+      "income": null,
+      "incomeLabel": null,
+      "region": null
+    },
+    {
+      "iso3": "IDN",
+      "name": "Indonesia",
+      "income": null,
+      "incomeLabel": null,
+      "region": null
+    },
+    {
+      "iso3": "KEN",
+      "name": "Kenya",
+      "income": null,
+      "incomeLabel": null,
+      "region": null
+    }
+  ],
+  "defaultCountry": "DEU",
+  "defaultCompare": "BRA",
+  "outdatedAfterYears": 3
+}

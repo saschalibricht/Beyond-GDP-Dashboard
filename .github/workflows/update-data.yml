@@ -1,0 +1,57 @@
+name: Update data
+
+on:
+  schedule:
+    - cron: "17 4 * * *"      # every day at 04:17 UTC
+  workflow_dispatch:           # "Run workflow" button in the Actions tab
+  push:
+    paths:                     # re-run when indicators or countries change
+      - "config/**"
+      - "etl/**"
+
+permissions:
+  contents: write              # commit refreshed data
+  issues: write                # open/close the failure alert issue
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run offline tests
+        run: python -m unittest discover -s tests
+
+      - name: Fetch all sources
+        env:
+          UCDP_TOKEN: ${{ secrets.UCDP_TOKEN }}   # optional
+        run: python -m etl.build
+
+      - name: Alert on repeated failures
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m etl.alert
+
+      - name: Commit data
+        run: |
+          git config user.name  "data-bot"
+          git config user.email "data-bot@users.noreply.github.com"
+          git add site/data data
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Data update $(date -u +%Y-%m-%d)"
+            git push
+          fi
