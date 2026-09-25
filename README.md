@@ -2,26 +2,28 @@
 
 A web dashboard of the 31 indicators proposed in *Counting What Counts: A Compass of Progress for People and Planet* (UN High-Level Expert Group on Beyond GDP, 2026), filled with openly available data. It shows every indicator's limitations and never hides missing values.
 
-- Structure follows the report: four components (foundational principles, current well-being, equity and inclusion, sustainability and resilience), coloured as in the report.
-- Each tile shows an explanation, the latest value and year, and recurring limitation tags. Selecting a tile's title opens a time series, the full limitations and the source chain.
-- A two-country comparison uses shared-scale bars, and warns when years, sources or survey types differ.
-- You can pin indicators to build a custom comparison set. The view is shareable via the URL.
-- Light, dark or system theme; responsive for phone and desktop.
+- Structure follows the report: four components (foundational principles, current well-being, equity and inclusion, sustainability and resilience), each with its own pastel tile colour.
+- Each tile shows one indicator: its latest value and year, a sparkline, and its caveats as icons. Selecting a tile opens the explanation, the caveats in words, a time series with a data table, the limitations and the source chain.
+- Comparing two countries puts both values on shared-scale bars in each tile. A green "Better" follows the indicator's direction (left out when sources differ), and the older of two years is shown in bold orange.
+- You can pin indicators to build a custom set. Every view, including an open detail, is shareable via the URL.
+- Two tile columns on phones, as many as fit on desktop. Light, dark or system theme.
+- Built with Svelte 5 and TypeScript; the data pipeline is Python.
 
 ## How it works
 
 ```
 GitHub Actions (daily, free)                 Render (free static site)
 ┌──────────────────────────────┐   commit   ┌──────────────────────┐
-│ python -m etl.build          │ ─────────► │ serves ./site        │
-│  fetch ~11 open data sources │  site/data │ auto-redeploys on    │
-│  choose fallbacks, tag, check│            │ every commit         │
-│  keep last good values       │            └──────────────────────┘
+│ python -m etl.build          │ ─────────► │ npm run build        │
+│  fetch ~11 open data sources │ public/data│ serves ./dist        │
+│  choose fallbacks, tag, check│            │ auto-redeploys on    │
+│  keep last good values       │            │ every commit to main │
+│                              │            └──────────────────────┘
 │ python -m etl.alert          │ ─► GitHub issue (+ email) if a source
 └──────────────────────────────┘    fails 3 days in a row
 ```
 
-- **No server, no database, no build step.** The site is plain HTML/CSS/JS with zero dependencies, and the browser only reads three JSON files.
+- **No server, no database.** The site is a static Svelte app (about 32 KB of JavaScript, gzipped). The browser reads three JSON files that the pipeline writes to `public/data/`; they are fetched at runtime, not bundled.
 - **Users never wait for slow APIs.** All fetching happens in the daily job.
 - **Failures are contained.** If a source fails, its last good values stay online and are marked "Not updated since…". An issue opens automatically after three failed days and closes itself when the source recovers.
 - **Commits are idempotent.** The data files only change when something actually changed, apart from the "last checked" timestamp.
@@ -34,23 +36,32 @@ GitHub Actions (daily, free)                 Render (free static site)
 4. **Run the first data update.** Go to *Actions → Update data → Run workflow*. This also runs automatically on the first push. It takes 2–5 minutes.
 5. **Create the site on Render.**
    - Go to *New → Blueprint*, pick the repository, and Render reads `render.yaml`.
-   - Alternatively: *New → Static Site*, with an empty build command and publish directory `site`.
+   - Alternatively: *New → Static Site*, with build command `npm ci && npm run build`, publish directory `dist` and environment variable `NODE_VERSION=22`.
    - The free static plan has no sleep and no time limits.
 
-After that nothing needs doing. The job runs daily at 04:17 UTC and Render redeploys when data change.
+After that nothing needs doing. The job runs daily at 04:17 UTC and Render rebuilds (about a minute) when data change.
 
 **Registration summary:** only the optional UCDP token. Every other source works without a key.
 
 ## Local development
 
 ```bash
+# web app (Node 20.19+)
+npm install
+npm run dev                               # http://localhost:5173, uses public/data/
+npm run check                             # TypeScript + Svelte checks
+npm test                                  # unit tests for the comparison and caveat rules
+npm run build                             # production build into dist/
+
+# data pipeline (Python 3.11+)
 pip install -r requirements.txt
 python -m unittest discover -s tests      # offline tests, fake APIs
 python -m etl.demo                        # random DEMO data to preview the layout
 python -m etl.build                       # real data (needs internet)
 python -m etl.build --only gini hale      # refresh selected indicators
-python -m http.server -d site 8000        # open http://localhost:8000
 ```
+
+Layout: `src/lib/` holds types, formatting and the pure dashboard rules (`logic.ts`, unit-tested); `src/components/` the Svelte components; `src/app.css` the design tokens (pastel pillar colours, neumorphic shadows, both themes).
 
 Do not commit demo output. The real run overwrites it anyway.
 
@@ -109,9 +120,9 @@ New source type? Add a module in `etl/adapters/` returning a `Result`, register 
 
 ## Limitation tags
 
-Defined in `config/tags.json` and shown identically on every tile:
+Defined in `config/tags.json`. Tiles show them as icons only; the detail view spells them out.
 
-- **Outdated**: set automatically when the latest value is more than 3 years old.
+- **Outdated**: set automatically when the latest value is more than 5 years old.
 - **Modelled**: set statically, and also automatically when the source flags a value as estimated or modelled.
 - **Survey-based**
 - **Infrequent**
@@ -119,11 +130,12 @@ Defined in `config/tags.json` and shown identically on every tile:
 - **Substitute**: set automatically when a proxy source is used.
 - **Limited comparability**
 
-In comparison mode, a tag that applies to only one country carries its code (e.g. "Outdated KEN").
+In comparison mode, the detail view names the country a tag applies to when it applies to only one.
 
-The site also shows two status markers:
-- **Not updated since…**: the source failed and the last good value is shown.
-- **Tier I/II**: the report's own classification.
+The site also shows:
+- **Not updated since…** (red icon): the source failed and the last good value is shown.
+- **Comparison caveats** (orange warning icon): the two values come from different sources, or one survey measures income and the other consumption.
+- The report's Tier I/II classification, in the detail view only.
 
 ## Substitutes currently used
 
@@ -151,24 +163,22 @@ The issue created by the workflow names the source, the affected indicators and 
 
 Then run *Actions → Update data → Run workflow*. The *source health* panel on the site shows the result.
 
-## To verify after the first run
+## Known source issues
 
-The build environment had no internet access, so parsers were tested against payloads shaped like each API's documented format, but not against live responses. After the first run, open **Source health** (footer link) and check these for errors or suspicious values:
+The first live run (25 Sep 2026) succeeded for all sources except these, which **Source health** lists with their errors:
 
-- **UN SDG series codes and dimension names:** discrimination, unpaid care, proficiency, ICT skills, safety after dark, pay ratio, rural roads.
-- **ILOSTAT bulk file URL and `classif1` codes** for LU4.
-- **World Bank wealth accounts** (`NW.PCA.PC`, `NW.NCA.PC`, source 59).
-- **NHM Biodiversity Intactness file columns.**
-- **World Happiness Report data page and file naming.**
-- **The OWID indicator lookup for "confidence in the civil services".**
-- **UCDP field names** (once a token is set).
+- **NHM Biodiversity Intactness:** the file contained none of the configured countries (column or name matching).
+- **World Happiness Report data file** (two entries): no data file link found on the page. Life satisfaction still comes from the OWID mirror.
+- **World Bank natural capital** (`NW.NCA.PC`): the API rejects the request parameters.
+- **UCDP:** disabled until the `UCDP_TOKEN` secret is set.
 
-Each is a one-line config change if it needs adjusting.
+Each is likely a one-line config or adapter change.
 
 ## Maintenance notes
 
 - **Scheduled workflows** are paused by GitHub after 60 days without repository activity. The daily status commit counts as activity. If the job is ever paused, re-enable it in the Actions tab.
-- **Fonts and privacy:** Roboto (the report's typeface) is self-hosted in `site/fonts/` (SIL Open Font License, Latin and Latin Extended subsets, weights 400/500/700) and declared in `site/css/fonts.css`. The page makes no requests to Google or any other third party, so no visitor IP addresses are passed on. It sets no cookies and uses `localStorage` only to remember the light/dark choice and pinned indicators.
+- **Fonts and privacy:** Roboto (the report's typeface) comes from the `@fontsource/roboto` package (SIL Open Font License) and is bundled into the site at build time. The page makes no requests to Google or any other third party, so no visitor IP addresses are passed on. It sets no cookies and uses `localStorage` only to remember the theme and pinned indicators.
+- **Colours:** the two country colours (blue, pink) come from a colour-blind-safe categorical palette and were validated for separation in both themes. Orange, green and red are reserved for "older year", "better" and "source failing". All text meets 4.5:1 contrast on every tile colour in both themes.
 - **One comparable basis for all countries:** income and premature mortality use the same global series for every country, including Germany and the US, rather than the OECD's measures where they exist. This is deliberate so the six countries can be compared directly.
 - **Adapters:** most sources publish yearly, so on most days nothing changes.
 

@@ -4,9 +4,9 @@
     python -m etl.build --only gini     # re-run selected indicators, keep the rest
 
 Outputs (all committed to the repo and served as static files):
-    site/data/registry.json   framework, tags, indicator descriptions, countries
-    site/data/dashboard.json  values per indicator and country
-    site/data/status.json     health of every data source, last check / last change
+    public/data/registry.json   framework, tags, indicator descriptions, countries
+    public/data/dashboard.json  values per indicator and country
+    public/data/status.json     health of every data source, last check / last change
     data/etl_state.json       failure counters (drives the GitHub issue alert)
     data/alerts.json          sources that failed 3+ runs in a row
 """
@@ -26,10 +26,10 @@ from .adapters.base import AdapterDisabled, Point, Result
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config"
-SITE_DATA = ROOT / "site" / "data"
+SITE_DATA = ROOT / "public" / "data"
 STATE_DIR = ROOT / "data"
 
-OUTDATED_AFTER_YEARS = 3
+OUTDATED_AFTER_YEARS = 5
 ALERT_AFTER_FAILURES = 3
 MODELLED_NATURE = {"E", "M", "EST", "MODELLED", "ESTIMATED"}
 DYNAMIC_TAGS = {"outdated", "substitute"}

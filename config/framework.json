@@ -9,7 +9,7 @@
   "pillars": [
     {
       "id": "foundational",
-      "name": "Foundational principles",
+      "name": "Foundational principles", "summary": "The conditions for progress: peace, human rights and respect for the planet. Numbers capture only part of them.",
       "color": "#A62C5C",
       "ink": "#8E2250",
       "inkDark": "#E57FA8",
@@ -23,7 +23,7 @@
     },
     {
       "id": "current",
-      "name": "Current well-being",
+      "name": "Current well-being", "summary": "How people experience their lives today, across eight domains with strong evidence behind them.",
       "color": "#F5A81C",
       "ink": "#8A5700",
       "inkDark": "#F7C35F",
@@ -42,7 +42,7 @@
     },
     {
       "id": "equity",
-      "name": "Equity and inclusion",
+      "name": "Equity and inclusion", "summary": "Who is left behind: gaps between rich and poor, between groups such as women and men, and people facing several deprivations at once.",
       "color": "#9E62A6",
       "ink": "#6F3E7A",
       "inkDark": "#CFA3D6",
@@ -59,7 +59,7 @@
     },
     {
       "id": "sustainability",
-      "name": "Sustainability and resilience",
+      "name": "Sustainability and resilience", "summary": "The stocks that sustain well-being over time: produced, human, social, institutional and natural capital.",
       "color": "#6DB33F",
       "ink": "#3E7520",
       "inkDark": "#9AD274",

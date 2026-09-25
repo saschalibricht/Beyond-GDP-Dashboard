@@ -2,8 +2,8 @@
   "_help": "Recurring limitations shown as tags on every affected tile. 'auto' tags are computed by the pipeline for each country value; the others are set per indicator in indicators.json (and 'modelled'/'substitute' are also added automatically when a source marks a value as estimated or a proxy source is used).",
   "tags": [
     { "id": "outdated", "label": "Outdated", "icon": "clock", "auto": true,
-      "short": "Latest value is more than 3 years old.",
-      "long": "The most recent observation is more than three years old, so it may not reflect current conditions. The report names timeliness as a major weakness: lags of two to four years are common." },
+      "short": "Latest value is more than 5 years old.",
+      "long": "The most recent observation is more than five years old, so it may not reflect current conditions. The report names timeliness as a major weakness: lags of two to four years are common." },
     { "id": "modelled", "label": "Modelled", "icon": "model",
       "short": "An estimate from a statistical model, not a direct measurement.",
       "long": "Values come from a model that fills gaps or combines sources. Model estimates can be revised substantially and may miss sudden changes. Where a source marks a value as estimated or modelled, this tag is applied automatically." },

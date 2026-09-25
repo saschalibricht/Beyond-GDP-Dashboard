@@ -1,0 +1,272 @@
+/* Design tokens. Soft-UI (neumorphic) surfaces on a cool grey page; each of the
+   report's four components gets a pastel tile colour. All text colours were checked
+   for ≥4.5:1 contrast on every tile and page surface in both themes, and the two
+   country colours with the categorical palette validator (CVD-separated). */
+
+:root {
+  color-scheme: light;
+  --page: #e9edf4;
+  --raised: #eef2f8;
+  --sunken: #dfe5ee;
+  --ink: #1d2733;
+  --muted: #526071;
+  --faint: #8391a3;
+  --line: rgb(29 39 51 / 0.1);
+  --focus: #2a78d6;
+
+  /* countries: categorical slots (validated pair) */
+  --a: #2a78d6;
+  --b: #e87ba4;
+
+  /* status, reserved meanings */
+  --good: #11703a;
+  --good-ink: #ffffff;
+  --older: #a3450a;
+  --warn: #a3450a;
+  --err: #b42318;
+
+  --hi: rgb(250 251 255 / 0.95);
+  --lo: rgb(22 27 29 / 0.16);
+  --lift: -6px -6px 14px var(--hi), 7px 7px 16px var(--lo);
+  --lift-sm: -3px -3px 7px var(--hi), 3px 3px 8px var(--lo);
+  --press: inset 2px 2px 5px var(--lo), inset -2px -2px 5px var(--hi);
+
+  --r-tile: 22px;
+  --r-ctl: 14px;
+  --r-pill: 999px;
+
+  --font: "Roboto", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* pillar pastels (OKLCH L≈0.95 tile, L≈0.62 accent, L≈0.44 ink) */
+  --foundational-tile: #ffe7ed;
+  --foundational-tile2: #ffd7e1;
+  --foundational-accent: #cf5582;
+  --foundational-ink: #853050;
+  --current-tile: #fcebd5;
+  --current-tile2: #f7dfbf;
+  --current-accent: #b37900;
+  --current-ink: #704a00;
+  --equity-tile: #f8e7fc;
+  --equity-tile2: #f2d9f8;
+  --equity-accent: #af62c1;
+  --equity-ink: #6f397b;
+  --sustainability-tile: #e2f4de;
+  --sustainability-tile2: #d2eccc;
+  --sustainability-accent: #4a9c36;
+  --sustainability-ink: #28621a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #1b2027;
+    --raised: #20262e;
+    --sunken: #161a20;
+    --ink: #e8ecf1;
+    --muted: #a5b0be;
+    --faint: #7d8898;
+    --line: rgb(232 236 241 / 0.1);
+    --focus: #6fa8f0;
+    --a: #3987e5;
+    --b: #d55181;
+    --good: #5cc97f;
+    --good-ink: #0e1a12;
+    --older: #ff9f43;
+    --warn: #ff9f43;
+    --err: #f97066;
+    --hi: rgb(255 255 255 / 0.045);
+    --lo: rgb(0 0 0 / 0.5);
+    --foundational-tile: #372429;
+    --foundational-tile2: #472d34;
+    --foundational-accent: #f183a7;
+    --foundational-ink: #f7b5c8;
+    --current-tile: #332819;
+    --current-tile2: #42321d;
+    --current-accent: #de9c31;
+    --current-ink: #eac490;
+    --equity-tile: #312533;
+    --equity-tile2: #3f2f42;
+    --equity-accent: #d28ce1;
+    --equity-ink: #e2baeb;
+    --sustainability-tile: #222e20;
+    --sustainability-tile2: #2a3b27;
+    --sustainability-accent: #79c069;
+    --sustainability-ink: #afd8a6;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #1b2027;
+  --raised: #20262e;
+  --sunken: #161a20;
+  --ink: #e8ecf1;
+  --muted: #a5b0be;
+  --faint: #7d8898;
+  --line: rgb(232 236 241 / 0.1);
+  --focus: #6fa8f0;
+  --a: #3987e5;
+  --b: #d55181;
+  --good: #5cc97f;
+  --good-ink: #0e1a12;
+  --older: #ff9f43;
+  --warn: #ff9f43;
+  --err: #f97066;
+  --hi: rgb(255 255 255 / 0.045);
+  --lo: rgb(0 0 0 / 0.5);
+  --foundational-tile: #372429;
+  --foundational-tile2: #472d34;
+  --foundational-accent: #f183a7;
+  --foundational-ink: #f7b5c8;
+  --current-tile: #332819;
+  --current-tile2: #42321d;
+  --current-accent: #de9c31;
+  --current-ink: #eac490;
+  --equity-tile: #312533;
+  --equity-tile2: #3f2f42;
+  --equity-accent: #d28ce1;
+  --equity-ink: #e2baeb;
+  --sustainability-tile: #222e20;
+  --sustainability-tile2: #2a3b27;
+  --sustainability-accent: #79c069;
+  --sustainability-ink: #afd8a6;
+}
+
+/* Pillar scopes: components read --tile / --tile2 / --accent / --pillar-ink */
+.p-foundational { --tile: var(--foundational-tile); --tile2: var(--foundational-tile2); --accent: var(--foundational-accent); --pillar-ink: var(--foundational-ink); }
+.p-current { --tile: var(--current-tile); --tile2: var(--current-tile2); --accent: var(--current-accent); --pillar-ink: var(--current-ink); }
+.p-equity { --tile: var(--equity-tile); --tile2: var(--equity-tile2); --accent: var(--equity-accent); --pillar-ink: var(--equity-ink); }
+.p-sustainability { --tile: var(--sustainability-tile); --tile2: var(--sustainability-tile2); --accent: var(--sustainability-accent); --pillar-ink: var(--sustainability-ink); }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+a {
+  color: var(--focus);
+}
+
+button,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(14px, 3vw, 36px);
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  z-index: 50;
+  background: var(--raised);
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.skip:focus {
+  left: 8px;
+}
+
+/* Soft icon button, used across header, controls and sheets */
+.soft-btn {
+  border: 0;
+  background: var(--raised);
+  box-shadow: var(--lift-sm);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--muted);
+  flex: none;
+}
+
+.soft-btn:hover {
+  color: var(--ink);
+}
+
+.soft-btn:active,
+.soft-btn[aria-pressed="true"] {
+  box-shadow: var(--press);
+  color: var(--ink);
+}
+
+.soft-btn .ic {
+  width: 16px;
+  height: 16px;
+}
+
+.link-btn {
+  border: 0;
+  background: none;
+  color: var(--focus);
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

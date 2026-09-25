@@ -1,6 +1,6 @@
 """Generate a synthetic dataset to preview the interface locally.
 
-    python -m etl.demo            # writes site/data/*.json with DEMO values
+    python -m etl.demo            # writes public/data/*.json with DEMO values
     python -m etl.build           # replaces them with real data
 
 Demo values are random and clearly labelled as such in the interface.
@@ -64,7 +64,7 @@ def main() -> None:
                             "error": None if hash(ind["id"]) % 5 else "HTTP 503 (demo)", "optional": bool(s.get("optional")),
                             "indicators": [ind["id"]], "lastSuccess": stamp, "consecutiveFailures": 0})
     write_json(SITE_DATA / "status.json", {"demo": True, "lastChecked": stamp, "lastChanged": stamp, "sources": sources})
-    print("Demo data written to site/data/. Run `python -m etl.build` for real data.")
+    print("Demo data written to public/data/. Run `python -m etl.build` for real data.")
 
 
 if __name__ == "__main__":
