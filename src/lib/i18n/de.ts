@@ -33,6 +33,7 @@ export const de: Messages = {
     latestTitle: "Neueste Werte",
     trend: "Verlauf",
     trendTitle: "Werte im Zeitverlauf",
+    pinned: "Angeheftet",
     showAll: "Alle Indikatoren zeigen",
     showPinned: "Nur angeheftete Indikatoren zeigen",
     pinnedOnly: (n) => `Nur angeheftete, ${n} angeheftet`,

@@ -86,6 +86,7 @@
         onclick={() => (app.view = app.view === "pinned" ? "all" : "pinned")}
       >
         <Icon name={app.view === "pinned" ? "pinFilled" : "pin"} />
+        <span class="pins-lbl" aria-hidden="true">{app.t.controls.pinned}</span>
         {#if app.pins.length}<span class="count num" aria-hidden="true">{app.pins.length}</span>{/if}
         <span class="visually-hidden">{app.t.controls.pinnedOnly(app.pins.length)}</span>
       </button>
@@ -279,15 +280,24 @@
     height: 44px;
   }
 
-  /* phones: everything on one row; the view switch shows icons only, swap is hidden */
+  .pins-lbl {
+    display: none;
+  }
+
+  /* phones: a 2×2 grid. The country pills on top; the view switch and the pinned
+     toggle below, each exactly as wide as the pill above it and equally tall. */
   @media (max-width: 560px) {
     .inner {
-      gap: 6px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
     }
 
     .pill {
-      gap: 6px;
-      padding: 6px 8px 6px 10px;
+      max-width: none;
+      height: 44px;
+      gap: 7px;
+      padding: 0 8px 0 12px;
     }
 
     .pill :global(.chev) {
@@ -313,36 +323,50 @@
       margin: -2px -2px -2px 0;
     }
 
+    /* the switch and the pin button become grid items of their own */
     .tools {
-      flex: 0 0 auto;
-      gap: 6px;
+      display: contents;
+    }
+
+    /* same size and corner radius as the country pills above */
+    .show,
+    .pins {
+      height: 44px;
+      width: 100%;
+      margin: 0;
+      border-radius: var(--r-ctl);
     }
 
     .show {
-      padding: 3px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 4px;
     }
 
     .show button {
-      height: 30px;
-      width: 30px;
-      padding: 0;
+      height: 100%;
       justify-content: center;
-    }
-
-    .show .lbl {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      white-space: nowrap;
+      padding: 0 6px;
+      border-radius: 10px;
     }
 
     .pins {
-      width: 38px;
-      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      font-size: 0.8125rem;
+    }
+
+    .pins-lbl {
+      display: inline;
+    }
+
+    .pins .count {
+      position: static;
     }
   }
+
 
 
   .count {

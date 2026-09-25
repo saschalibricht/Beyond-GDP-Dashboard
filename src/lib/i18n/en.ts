@@ -32,6 +32,7 @@ export const en = {
     latestTitle: "Latest values",
     trend: "Trend",
     trendTitle: "Values over time",
+    pinned: "Pinned",
     showAll: "Show all indicators",
     showPinned: "Show pinned indicators only",
     pinnedOnly: (n: number) => `Pinned only, ${n} pinned`,
