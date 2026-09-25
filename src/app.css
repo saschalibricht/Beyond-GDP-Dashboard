@@ -1,7 +1,11 @@
-/* Design tokens. Soft-UI (neumorphic) neutral tiles on a cool grey page. Each of the
-   report's four components colours its titles (pink, orange, purple, teal). Title and
-   status text colours were checked for >=4.5:1 on tiles in both themes; the two country
-   colours with the categorical palette validator (CVD-separated, >=3:1 on tiles). */
+/* Design tokens. Soft-UI (neumorphic) neutral tiles on a cool grey page.
+   Palette: electric indigo #6434e9, azure blue #2c7ce5, malachite #49cc5c,
+   saffron #f8c421, tomato #fb6640, hot fuchsia #f82553 – with darker shades for text
+   on light surfaces and lighter ones for dark mode.
+   Countries: azure (first) and fuchsia (second), validated as a colour-blind-safe pair.
+   Components colour their titles: indigo, saffron, tomato, malachite.
+   Status: malachite = better, saffron = older year / warning, tomato = source failing.
+   Every text colour was checked for >=4.5:1 on its surfaces in both themes. */
 
 :root {
   color-scheme: light;
@@ -14,18 +18,18 @@
   --faint: #8391a3;
   --line: rgb(29 39 51 / 0.1);
   --edge: transparent;
-  --focus: #2f8fe8;
+  --focus: #1862c4;
 
   /* countries: categorical slots (validated pair) */
-  --a: #2f8fe8;
-  --b: #3d4fa8;
+  --a: #2c7ce5;
+  --b: #f82553;
 
   /* status, reserved meanings */
-  --good: #11703a;
-  --good-bg: #dcf4e4;
-  --older: #846800;
-  --warn: #a3450a;
-  --err: #b42318;
+  --good: #00761f;
+  --good-bg: #d2f7d4;
+  --older: #7d6100;
+  --warn: #7d6100;
+  --err: #cc390b;
 
   --hi: rgb(255 255 255 / 0.95);
   --lo: rgb(22 27 29 / 0.14);
@@ -40,14 +44,14 @@
   --font: "Roboto", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
 
   /* component colours: accent for marks, ink for titles */
-  --foundational-accent: #e8508a;
-  --foundational-ink: #c2386a;
-  --current-accent: #f5a524;
-  --current-ink: #a85f00;
-  --equity-accent: #7c6cf4;
-  --equity-ink: #6246d8;
-  --sustainability-accent: #20bf9a;
-  --sustainability-ink: #0b7d63;
+  --foundational-accent: #6434e9;
+  --foundational-ink: #6434e9;
+  --current-accent: #f8c421;
+  --current-ink: #7d6100;
+  --equity-accent: #fb6640;
+  --equity-ink: #cc390b;
+  --sustainability-accent: #49cc5c;
+  --sustainability-ink: #00761f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -62,24 +66,24 @@
     --faint: #7d8898;
     --line: rgb(238 242 246 / 0.1);
     --edge: rgb(255 255 255 / 0.07);
-    --focus: #4da6f5;
-    --a: #3e97ec;
-    --b: #4d57cc;
-    --good: #6fdc95;
-    --good-bg: #1f3d2e;
-    --older: #f7cd45;
-    --warn: #ff9f43;
-    --err: #f97066;
+    --focus: #4896ff;
+    --a: #2c7ce5;
+    --b: #f82553;
+    --good: #49cc5c;
+    --good-bg: #1a3f1e;
+    --older: #f8c421;
+    --warn: #f8c421;
+    --err: #fb6640;
     --hi: rgb(255 255 255 / 0.05);
     --lo: rgb(0 0 0 / 0.55);
-    --foundational-accent: #f0679a;
-    --foundational-ink: #ff8db4;
-    --current-accent: #ffb547;
-    --current-ink: #ffb547;
-    --equity-accent: #a99bff;
-    --equity-ink: #a99bff;
-    --sustainability-accent: #4fd8b4;
-    --sustainability-ink: #4fd8b4;
+    --foundational-accent: #9285ff;
+    --foundational-ink: #9285ff;
+    --current-accent: #f8c421;
+    --current-ink: #f8c421;
+    --equity-accent: #fb6640;
+    --equity-ink: #fb6640;
+    --sustainability-accent: #49cc5c;
+    --sustainability-ink: #49cc5c;
   }
 }
 
@@ -94,24 +98,24 @@
   --faint: #7d8898;
   --line: rgb(238 242 246 / 0.1);
   --edge: rgb(255 255 255 / 0.07);
-  --focus: #4da6f5;
-  --a: #3e97ec;
-  --b: #4d57cc;
-  --good: #6fdc95;
-  --good-bg: #1f3d2e;
-  --older: #f7cd45;
-  --warn: #ff9f43;
-  --err: #f97066;
+  --focus: #4896ff;
+  --a: #2c7ce5;
+  --b: #f82553;
+  --good: #49cc5c;
+  --good-bg: #1a3f1e;
+  --older: #f8c421;
+  --warn: #f8c421;
+  --err: #fb6640;
   --hi: rgb(255 255 255 / 0.05);
   --lo: rgb(0 0 0 / 0.55);
-  --foundational-accent: #f0679a;
-  --foundational-ink: #ff8db4;
-  --current-accent: #ffb547;
-  --current-ink: #ffb547;
-  --equity-accent: #a99bff;
-  --equity-ink: #a99bff;
-  --sustainability-accent: #4fd8b4;
-  --sustainability-ink: #4fd8b4;
+  --foundational-accent: #9285ff;
+  --foundational-ink: #9285ff;
+  --current-accent: #f8c421;
+  --current-ink: #f8c421;
+  --equity-accent: #fb6640;
+  --equity-ink: #fb6640;
+  --sustainability-accent: #49cc5c;
+  --sustainability-ink: #49cc5c;
 }
 
 /* Pillar scopes: components read --accent / --pillar-ink */

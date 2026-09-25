@@ -145,7 +145,7 @@ export const de: Messages = {
     tile: "Jede Kachel zeigt einen Indikator; der Titel trägt die Farbe seines Bereichs. Angegeben sind der neueste Wert und das Jahr, auf das er sich bezieht. Der Schalter „Aktuell / Verlauf“ neben der Länderauswahl wechselt zwischen den neuesten Werten und dem Zeitverlauf. Ein Klick auf eine Kachel öffnet Erläuterung, Hinweise, die vollständige Zeitreihe und die Quellen. Über das Nadelsymbol lassen sich Kacheln zu einer eigenen Auswahl zusammenstellen.",
     compareTitle: "Zwei Länder vergleichen",
     compare1: "Unter „Vergleich“ ein zweites Land wählen; die Schaltfläche × entfernt es wieder.",
-    compare2: "Das erste Land ist immer blau, das Vergleichsland indigo. Die Balken haben eine gemeinsame Skala, ihre Längen sind also direkt vergleichbar.",
+    compare2: "Das erste Land ist immer blau, das Vergleichsland pink. Die Balken haben eine gemeinsame Skala, ihre Längen sind also direkt vergleichbar.",
     compare3: "Ein grüner Hintergrund markiert das Land, das besser abschneidet – je nachdem, ob beim Indikator ein höherer oder ein niedrigerer Wert besser ist. Die Markierung entfällt, wenn die beiden Werte aus unterschiedlichen Quellen stammen oder ihre Jahre mehr als ein Jahr auseinanderliegen.",
     compare4: "Ein fett und gelb hervorgehobenes Jahr ist älter als das Jahr des anderen Landes.",
     rail: "Der grüne Balken neben einer Grafik markiert das bessere Ende: oben, wenn ein höherer Wert besser ist, unten, wenn ein niedrigerer besser ist.",

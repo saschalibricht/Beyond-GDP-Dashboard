@@ -139,7 +139,7 @@ export const en = {
     tile: "Each tile is one indicator, titled in the colour of its component. It shows the latest value and the year it refers to. The Latest / Trend switch next to the compare selector chooses between the latest values and the values over time. Select a tile for the explanation, caveats, full time series and sources. Pin tiles to build your own set.",
     compareTitle: "Comparing two countries",
     compare1: "Pick a second country under Compare; remove it with the × button.",
-    compare2: "The first country is always blue, the comparison country indigo. Bars share one scale, so their lengths compare directly.",
+    compare2: "The first country is always blue, the comparison country fuchsia. Bars share one scale, so their lengths compare directly.",
     compare3: "A green background marks the country that does better, following the indicator's direction. It is left out when the two values come from different sources or their years are more than one year apart.",
     compare4: "A bold yellow year is older than the other country's year.",
     rail: "The green bar beside a graph marks the better end: top when higher is better, bottom when lower is better.",
