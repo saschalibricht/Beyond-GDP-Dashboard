@@ -1542,7 +1542,7 @@
     },
     {
       "iso3": "CUW",
-      "name": "Curacao",
+      "name": "Curaçao",
       "income": "HIC",
       "incomeLabel": "High income",
       "region": "Latin America & Caribbean "
@@ -2109,7 +2109,7 @@
     },
     {
       "iso3": "NRU",
-      "name": "Naoero",
+      "name": "Nauru",
       "income": "HIC",
       "incomeLabel": "High income",
       "region": "East Asia & Pacific"
@@ -2263,7 +2263,7 @@
     },
     {
       "iso3": "PRI",
-      "name": "Puerto Rico (US)",
+      "name": "Puerto Rico",
       "income": "HIC",
       "incomeLabel": "High income",
       "region": "Latin America & Caribbean "
@@ -2403,7 +2403,7 @@
     },
     {
       "iso3": "SOM",
-      "name": "Somalia, Fed. Rep.",
+      "name": "Somalia",
       "income": "LIC",
       "incomeLabel": "Low income",
       "region": "Sub-Saharan Africa "

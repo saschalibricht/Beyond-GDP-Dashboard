@@ -376,7 +376,8 @@
    "m49": 531,
    "names": [
     "Curaçao"
-   ]
+   ],
+   "short": "Curaçao"
   },
   "CXR": {
    "m49": 162,
@@ -1166,7 +1167,8 @@
    "names": [
     "Nauru",
     "Republic of Nauru"
-   ]
+   ],
+   "short": "Nauru"
   },
   "NZL": {
    "m49": 554,
@@ -1240,7 +1242,8 @@
    "m49": 630,
    "names": [
     "Puerto Rico"
-   ]
+   ],
+   "short": "Puerto Rico"
   },
   "PRK": {
    "m49": 408,
@@ -1394,7 +1397,8 @@
    "names": [
     "Somalia",
     "Federal Republic of Somalia"
-   ]
+   ],
+   "short": "Somalia"
   },
   "SPM": {
    "m49": 666,
