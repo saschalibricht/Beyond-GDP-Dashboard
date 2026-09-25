@@ -7,7 +7,8 @@ A web dashboard of the 31 indicators proposed in *Counting What Counts: A Compas
 - Each tile shows one indicator for one country: its latest value and year, its trend over time, and its caveats as icons. Selecting a tile opens the explanation, the caveats in words, a time series with a data table, the limitations and the source chain.
 - Comparing two countries puts both values on shared-scale bars in each tile. A green pill marks the country that does better, following the indicator's direction (left out when sources differ or the latest years are more than one year apart); the older of two years is shown in yellow. The × on the comparison removes it.
 - You can pin indicators to build a custom set. Every view, including an open detail, is shareable via the URL.
-- Two tile columns on phones, as many as fit on desktop. Light, dark or system theme.
+- A Latest / Trend toggle switches the tiles between the latest value and the time series. A single country opens on Trend, a comparison on Latest; the choice goes into shared links (`?show=`).
+- Two tile columns on phones (countries shown as ISO codes), as many as fit on desktop. Light, dark or system theme.
 - Built with Svelte 5 and TypeScript; the data pipeline is Python.
 
 ## How it works
@@ -24,9 +25,10 @@ GitHub Actions (daily, free)                 Render (free static site)
 └──────────────────────────────┘    fails 3 days in a row
 ```
 
-- **No server, no database.** The site is a static Svelte app (about 32 KB of JavaScript, gzipped). The pipeline writes JSON to `public/data/`: `registry.json` (texts, countries), `dashboard.json` (which countries have data), `status.json` (source health) and one `values/XXX.json` per country (~20 KB). The browser fetches only the countries on screen.
+- **No server, no database.** The site is a static Svelte app (about 42 KB of JavaScript, gzipped). The pipeline writes JSON to `public/data/`: `registry.json` (texts, countries), `dashboard.json` (which countries have data), `status.json` (source health) and one `values/XXX.json` per country (~15 KB). The browser fetches only the countries on screen.
 - **Users never wait for slow APIs.** All fetching happens in the daily job.
 - **Failures are contained.** If a source fails, its last good values stay online and are marked "Not updated since…". An issue opens automatically after three failed days and closes itself when the source recovers.
+- **Pipeline state** (last good values, failure counts, resolved OWID ids and countries) lives in `data/` and is committed with the data.
 - **Commits are idempotent.** The data files only change when something actually changed, apart from the "last checked" timestamp.
 
 ## Deploy (about 10 minutes, all free)
@@ -62,7 +64,9 @@ python -m etl.build                       # real data (needs internet)
 python -m etl.build --only gini hale      # refresh selected indicators
 ```
 
-Layout: `src/lib/` holds types, formatting and the pure dashboard rules (`logic.ts`, unit-tested); `src/components/` the Svelte components; `src/app.css` the design tokens (pastel pillar colours, neumorphic shadows, both themes).
+Layout: `src/lib/` holds types, formatting and the pure dashboard rules (`logic.ts`, unit-tested); `src/components/` the Svelte components; `src/app.css` the design tokens (colour palette, soft neumorphic tiles, both themes).
+
+The *Web app* workflow (`.github/workflows/web.yml`) runs `npm run check`, `npm test` and `npm run build` on every pull request and on pushes to `main` that touch the web app.
 
 Do not commit demo output. The real run overwrites it anyway.
 
@@ -185,9 +189,9 @@ Each is likely a one-line config or adapter change.
 ## Maintenance notes
 
 - **Scheduled workflows** are paused by GitHub after 60 days without repository activity. The daily status commit counts as activity. If the job is ever paused, re-enable it in the Actions tab.
-- **Fonts and privacy:** Roboto (the report's typeface) comes from the `@fontsource/roboto` package (SIL Open Font License) and is bundled into the site at build time. The page makes no requests to Google or any other third party, so no visitor IP addresses are passed on. It sets no cookies and uses `localStorage` only to remember the theme and pinned indicators.
+- **Fonts and privacy:** Roboto (the report's typeface) comes from the `@fontsource/roboto` package (SIL Open Font License) and is bundled into the site at build time. The page makes no requests to Google or any other third party, so no visitor IP addresses are passed on. It sets no cookies and uses `localStorage` only to remember the theme, language and pinned indicators.
 - **Colours:** one palette – electric indigo, azure blue, malachite, saffron, tomato, hot fuchsia – in darker shades for text on light surfaces and lighter ones for dark mode. The two countries are azure and fuchsia (validated for colour-blind separation in both themes). The four components colour their tile titles indigo, saffron, tomato and malachite. Malachite marks "better", saffron the older year and warnings, tomato a failing source. All text meets 4.5:1 contrast in both themes.
-- **One comparable basis for all countries:** income and premature mortality use the same global series for every country, including Germany and the US, rather than the OECD's measures where they exist. This is deliberate so the six countries can be compared directly.
+- **One comparable basis for all countries:** income and premature mortality use the same global series for every country, including Germany and the US, rather than the OECD's measures where they exist. This is deliberate so any two countries can be compared directly.
 - **Run time:** sources are fetched 8 at a time (at most 6 parallel requests per host). Each source has an 8-minute budget and the whole fetch 22 minutes; a source that runs over counts as failed for that day and keeps its last good values, so the job always saves. The log lists every source with its duration.
 - **Adapters:** most sources publish yearly, so on most days nothing changes.
 
