@@ -5,7 +5,7 @@ A web dashboard of the 31 indicators proposed in *Counting What Counts: A Compas
 - Structure follows the report: four components (foundational principles, current well-being, equity and inclusion, sustainability and resilience), each with its own title colour.
 - Every country with enough open data (currently those with at least 5 indicators) can be picked, listed A–Z.
 - Each tile shows one indicator for one country: its latest value and year, its trend over time, and its caveats as icons. Selecting a tile opens the explanation, the caveats in words, a time series with a data table, the limitations and the source chain.
-- Comparing two countries puts both values on shared-scale bars in each tile. A green pill marks the country that does better, following the indicator's direction (left out when sources differ); the older of two years is shown in yellow. The × on the comparison removes it.
+- Comparing two countries puts both values on shared-scale bars in each tile. A green pill marks the country that does better, following the indicator's direction (left out when sources differ or the latest years are more than one year apart); the older of two years is shown in yellow. The × on the comparison removes it.
 - You can pin indicators to build a custom set. Every view, including an open detail, is shareable via the URL.
 - Two tile columns on phones, as many as fit on desktop. Light, dark or system theme.
 - Built with Svelte 5 and TypeScript; the data pipeline is Python.

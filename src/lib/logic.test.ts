@@ -69,6 +69,12 @@ describe("compare", () => {
     expect(c.sameSource).toBe(false);
   });
 
+  it("does not rank values whose latest years are more than one year apart", () => {
+    expect(compare(ind(), ok(2022, 5), ok(2023, 3)).better).toBe("a");
+    expect(compare(ind(), ok(2021, 5), ok(2023, 3)).better).toBeNull();
+    expect(compare(ind(), ok(2021, 5), ok(2023, 3)).older).toBe("a");
+  });
+
   it("names the older year", () => {
     expect(compare(ind(), ok(2018, 1), ok(2022, 1)).older).toBe("a");
     expect(compare(ind(), ok(2022, 1), ok(2021, 1)).older).toBe("b");

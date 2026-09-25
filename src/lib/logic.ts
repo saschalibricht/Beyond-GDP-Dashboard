@@ -40,6 +40,9 @@ export interface Comparison {
   welfareDiffers: boolean;
 }
 
+/** Latest years further apart than this are not ranked against each other. */
+export const MAX_YEAR_GAP = 1;
+
 export function compare(ind: Indicator, a: Entry | null | undefined, b: Entry | null | undefined): Comparison {
   const none: Comparison = { better: null, older: null, sameSource: true, welfareDiffers: false };
   if (!isOk(a) || !isOk(b)) return none;
@@ -53,8 +56,10 @@ export function compare(ind: Indicator, a: Entry | null | undefined, b: Entry | 
   let better: Side | null = null;
   const va = a.latest.value;
   const vb = b.latest.value;
-  // no ranking across different sources or for indicators without a "good" direction
-  if (sameSource && ind.direction !== "neutral" && va !== vb) {
+  // no ranking across different sources, across years too far apart,
+  // or for indicators without a "good" direction
+  const closeInTime = Math.abs(ya - yb) <= MAX_YEAR_GAP;
+  if (sameSource && closeInTime && ind.direction !== "neutral" && va !== vb) {
     const aWins = ind.direction === "higher" ? va > vb : va < vb;
     better = aWins ? "a" : "b";
   }

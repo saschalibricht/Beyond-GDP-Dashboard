@@ -98,7 +98,7 @@ export const de: Messages = {
     chain: "Geprüfte Quellen in dieser Reihenfolge; verwendet wird die erste mit Daten:",
     substitute: "Ersatzindikator",
     compareHint:
-      "Die grüne Markierung entfällt, wenn die beiden Werte aus unterschiedlichen Quellen stammen; ein gelb hervorgehobenes Jahr ist das ältere der beiden.",
+      "Die grüne Markierung entfällt, wenn die beiden Werte aus unterschiedlichen Quellen stammen oder ihre Jahre mehr als ein Jahr auseinanderliegen; ein gelb hervorgehobenes Jahr ist das ältere der beiden.",
     caveats: "Hinweise zu den Daten",
     limitations: "Grenzen der Daten",
     context: "Einordnung",
@@ -146,7 +146,7 @@ export const de: Messages = {
     compareTitle: "Zwei Länder vergleichen",
     compare1: "Unter „Vergleich“ ein zweites Land wählen; die Schaltfläche × entfernt es wieder.",
     compare2: "Das erste Land ist immer blau, das Vergleichsland indigo. Die Balken haben eine gemeinsame Skala, ihre Längen sind also direkt vergleichbar.",
-    compare3: "Ein grüner Hintergrund markiert das Land, das besser abschneidet – je nachdem, ob beim Indikator ein höherer oder ein niedrigerer Wert besser ist. Die Markierung entfällt, wenn die beiden Werte aus unterschiedlichen Quellen stammen.",
+    compare3: "Ein grüner Hintergrund markiert das Land, das besser abschneidet – je nachdem, ob beim Indikator ein höherer oder ein niedrigerer Wert besser ist. Die Markierung entfällt, wenn die beiden Werte aus unterschiedlichen Quellen stammen oder ihre Jahre mehr als ein Jahr auseinanderliegen.",
     compare4: "Ein fett und gelb hervorgehobenes Jahr ist älter als das Jahr des anderen Landes.",
     rail: "Der grüne Balken neben einer Grafik markiert das bessere Ende: oben, wenn ein höherer Wert besser ist, unten, wenn ein niedrigerer besser ist.",
     caveatsTitle: "Hinweissymbole",

@@ -95,7 +95,8 @@ export const en = {
     source: "Source",
     chain: "Sources checked in order, the first with data is used:",
     substitute: "substitute",
-    compareHint: "The green marker is left out when the two values come from different sources; a yellow year is the older of the two.",
+    compareHint:
+      "The green marker is left out when the two values come from different sources or their years are more than one year apart; a yellow year is the older of the two.",
     caveats: "Caveats",
     limitations: "Limitations",
     context: "Context",
@@ -139,7 +140,7 @@ export const en = {
     compareTitle: "Comparing two countries",
     compare1: "Pick a second country under Compare; remove it with the × button.",
     compare2: "The first country is always blue, the comparison country indigo. Bars share one scale, so their lengths compare directly.",
-    compare3: "A green background marks the country that does better, following the indicator's direction. It is left out when the two values come from different sources.",
+    compare3: "A green background marks the country that does better, following the indicator's direction. It is left out when the two values come from different sources or their years are more than one year apart.",
     compare4: "A bold yellow year is older than the other country's year.",
     rail: "The green bar beside a graph marks the better end: top when higher is better, bottom when lower is better.",
     caveatsTitle: "Caveat icons",
