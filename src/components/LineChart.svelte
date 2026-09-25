@@ -284,18 +284,18 @@
 
   .dot {
     fill: var(--c);
-    stroke: var(--page);
+    stroke: var(--tile, var(--page));
     stroke-width: 2;
   }
 
   .dot.end {
     fill: var(--c);
-    stroke: var(--page);
+    stroke: var(--tile, var(--page));
     stroke-width: 2;
   }
 
   .dot.est:not(.end) {
-    fill: var(--page);
+    fill: var(--tile, var(--page));
     stroke: var(--c);
     stroke-width: 1.6;
   }
@@ -307,7 +307,7 @@
 
   .hot {
     fill: var(--c);
-    stroke: var(--page);
+    stroke: var(--tile, var(--page));
     stroke-width: 2.5;
   }
 

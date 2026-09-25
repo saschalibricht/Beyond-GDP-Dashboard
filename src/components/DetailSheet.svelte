@@ -5,7 +5,6 @@
   import Icon from "./Icon.svelte";
   import LineChart from "./LineChart.svelte";
   import Sheet from "./Sheet.svelte";
-  import Sparkline from "./Sparkline.svelte";
 
   const ind = $derived(app.detail ? app.ind.get(app.detail) : undefined);
   const pillar = $derived(ind ? app.pillar.get(ind.pillar) : undefined);
@@ -42,6 +41,11 @@
     });
   });
 
+  // one "Source" line when both countries' values come from the same source
+  const sharedSource = $derived(
+    cards.length === 2 && !!cards[0]?.source && cards[0]?.source?.label === cards[1]?.source?.label ? cards[0]?.source : null,
+  );
+
   const flags = $derived(
     ind && app.reg
       ? flagsFor(
@@ -70,56 +74,73 @@
   {#if ind && pillar}
     <p class="lead">{ind.explanation}</p>
 
-    <div class="cards" class:two={cards.length === 2}>
-      {#each cards as c (c.side)}
-        <div class="card side-{c.side}">
-          <div class="who"><span class="dot"></span>{c.name}</div>
-          {#if isOk(c.e)}
-            <div class="big">
-              <span class="v">{fmt(c.e.latest.value, ind.decimals)}</span>
-              <span class="unit">{ind.unit}</span>
+    <!-- one top tile: latest values, the full time series, then sources -->
+    <div class="top">
+      <div class="values" class:two={cards.length === 2}>
+        {#each cards as c (c.side)}
+          <div class="val side-{c.side}">
+            <div class="who"><span class="dot"></span>{c.name}</div>
+            {#if isOk(c.e)}
+              <div class="big">
+                <span class="v">{fmt(c.e.latest.value, ind.decimals)}</span>
+                <span class="unit">{ind.unit}</span>
+              </div>
+              <div class="line">
+                <span class="year num" class:older={c.older}>{c.e.latest.year}</span>
+                {#if c.older}<span class="older-note">older data</span>{/if}
+                {#if c.better}<span class="better">Does better</span>{/if}
+                {#if isEstimate(c.e.latest.nature)}<span class="muted">estimate</span>{/if}
+              </div>
+              {#if typeof c.e.latest.lo === "number" && typeof c.e.latest.hi === "number"}
+                <p class="muted">
+                  Range <span class="num">{fmt(c.e.latest.lo, ind.decimals)}–{fmt(c.e.latest.hi, ind.decimals)}</span>
+                </p>
+              {/if}
+              {#if secondary && c.sec}
+                <p class="muted">
+                  {secondary.label}: <span class="num">{fmt(c.sec.latest.value, secondary.decimals)}</span>
+                  {secondary.unitShort ?? secondary.unit} ({c.sec.latest.year})
+                </p>
+              {/if}
+            {:else}
+              <p class="missing {c.missing.kind}"><strong>{c.missing.title}.</strong> {c.missing.text}</p>
+            {/if}
+          </div>
+        {/each}
+      </div>
+
+      <LineChart {ind} {lines} />
+
+      <div class="sources">
+        {#if sharedSource}
+          <p class="muted">
+            Source:
+            {#if sharedSource.url}<a href={sharedSource.url} target="_blank" rel="noopener">{sharedSource.label}</a>{:else}{sharedSource.label}{/if}
+          </p>
+        {/if}
+        {#each cards as c (c.side)}
+          {#if (c.source && !sharedSource) || c.notes.length}
+            <div class="side-{c.side}">
+              {#if c.source && !sharedSource}
+                <p class="muted">
+                  {#if cards.length > 1}<span class="dot"></span>{/if}Source:
+                  {#if c.source.url}<a href={c.source.url} target="_blank" rel="noopener">{c.source.label}</a>{:else}{c.source.label}{/if}
+                </p>
+              {/if}
+              {#if c.notes.length}
+                <ul class="notes">
+                  {#each c.notes as n, i (i)}<li>{n}</li>{/each}
+                </ul>
+              {/if}
             </div>
-            <div class="line">
-              <span class="year num" class:older={c.older}>{c.e.latest.year}</span>
-              {#if c.older}<span class="older-note">older data</span>{/if}
-              {#if c.better}<span class="better">Does better</span>{/if}
-              {#if isEstimate(c.e.latest.nature)}<span class="muted">estimate</span>{/if}
-            </div>
-            {#if c.e.series?.length}
-              <div class="trend"><Sparkline series={c.e.series ?? []} direction={ind.direction} /></div>
-            {/if}
-            {#if typeof c.e.latest.lo === "number" && typeof c.e.latest.hi === "number"}
-              <p class="muted">
-                Uncertainty range <span class="num">{fmt(c.e.latest.lo, ind.decimals)}–{fmt(c.e.latest.hi, ind.decimals)}</span>
-              </p>
-            {/if}
-            {#if secondary && c.sec}
-              <p class="muted">
-                {secondary.label}: <span class="num">{fmt(c.sec.latest.value, secondary.decimals)}</span>
-                {secondary.unitShort ?? secondary.unit} ({c.sec.latest.year})
-              </p>
-            {/if}
-            {#if c.source}
-              <p class="muted src">
-                Source:
-                {#if c.source.url}<a href={c.source.url} target="_blank" rel="noopener">{c.source.label}</a>{:else}{c.source.label}{/if}
-              </p>
-            {/if}
-          {:else}
-            <p class="missing {c.missing.kind}"><strong>{c.missing.title}.</strong> {c.missing.text}</p>
           {/if}
-          {#if c.notes.length}
-            <ul class="notes">
-              {#each c.notes as n, i (i)}<li>{n}</li>{/each}
-            </ul>
-          {/if}
-        </div>
-      {/each}
+        {/each}
+      </div>
     </div>
     {#if app.viewB}
       <p class="hint">
-        {directionText(ind.direction)}. The green marker is left out when the two values come from different sources; a
-        yellow year is the older of the two.
+        The green marker is left out when the two values come from different sources; a yellow year is the older of the
+        two.
       </p>
     {/if}
 
@@ -138,8 +159,6 @@
       </ul>
     {/if}
 
-    <h3>Over time</h3>
-    <LineChart {ind} {lines} />
 
     <h3>Limitations</h3>
     <p>{ind.limitations}</p>
@@ -192,25 +211,43 @@
     font-size: 1rem;
   }
 
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 14px;
+  .top {
     margin-top: 16px;
-  }
-
-  .cards.two {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .card {
-    min-width: 0;
-    padding: 14px 16px;
-    border-radius: 18px;
+    padding: 16px 16px 14px;
+    border-radius: 20px;
     background: var(--tile);
     border: 1px solid var(--edge);
     box-shadow: var(--lift-sm);
     font-size: 0.875rem;
+  }
+
+  .values {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 6px;
+  }
+
+  .values.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .val {
+    min-width: 0;
+  }
+
+  .sources {
+    display: grid;
+    gap: 6px;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+  }
+
+  .sources .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
   }
 
   .side-a {
@@ -283,14 +320,6 @@
     color: var(--good);
     font-size: 0.75rem;
     font-weight: 700;
-  }
-
-  .trend {
-    margin: 2px 0 8px;
-  }
-
-  .src {
-    margin-top: 4px;
   }
 
   .missing {
@@ -381,12 +410,12 @@
   }
 
   @media (max-width: 520px) {
-    .cards.two {
+    .values.two {
       gap: 10px;
     }
 
-    .two .card {
-      padding: 12px;
+    .top {
+      padding: 14px 12px 12px;
     }
 
     .two .big .v {
