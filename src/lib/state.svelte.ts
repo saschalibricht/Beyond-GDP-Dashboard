@@ -129,7 +129,7 @@ class AppState {
     if (this.pins.length) q.set("pins", this.pins.join(","));
     if (this.view === "pinned") q.set("view", "pinned");
     if (this.detail) q.set("i", this.detail);
-    history.replaceState(null, "", `${location.pathname}?${q}`);
+    history.replaceState(history.state, "", `${location.pathname}?${q}`); // keep the sheet marker
     writeStore(PIN_KEY, this.pins.join(","));
   }
 

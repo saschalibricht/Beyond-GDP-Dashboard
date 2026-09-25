@@ -5,6 +5,7 @@
   import Icon from "./Icon.svelte";
   import LineChart from "./LineChart.svelte";
   import Sheet from "./Sheet.svelte";
+  import Sparkline from "./Sparkline.svelte";
 
   const ind = $derived(app.detail ? app.ind.get(app.detail) : undefined);
   const pillar = $derived(ind ? app.pillar.get(ind.pillar) : undefined);
@@ -84,6 +85,9 @@
               {#if c.better}<span class="better">Does better</span>{/if}
               {#if isEstimate(c.e.latest.nature)}<span class="muted">estimate</span>{/if}
             </div>
+            {#if (c.e.series?.length ?? 0) > 1}
+              <div class="trend"><Sparkline series={c.e.series ?? []} /></div>
+            {/if}
             {#if typeof c.e.latest.lo === "number" && typeof c.e.latest.hi === "number"}
               <p class="muted">
                 Uncertainty range <span class="num">{fmt(c.e.latest.lo, ind.decimals)}–{fmt(c.e.latest.hi, ind.decimals)}</span>
@@ -279,6 +283,10 @@
     color: var(--good);
     font-size: 0.75rem;
     font-weight: 700;
+  }
+
+  .trend {
+    margin: 2px 0 8px;
   }
 
   .src {

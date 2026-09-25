@@ -39,8 +39,8 @@
     <svg width={w} height={h} viewBox="0 0 {w} {h}">
       <defs>
         <linearGradient id={gid} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="var(--a)" stop-opacity="0.28" />
-          <stop offset="1" stop-color="var(--a)" stop-opacity="0" />
+          <stop offset="0" stop-color="var(--c, var(--a))" stop-opacity="0.28" />
+          <stop offset="1" stop-color="var(--c, var(--a))" stop-opacity="0" />
         </linearGradient>
       </defs>
       <polygon points={geo.area} fill="url(#{gid})" />
@@ -64,14 +64,14 @@
 
   polyline {
     fill: none;
-    stroke: var(--a);
+    stroke: var(--c, var(--a));
     stroke-width: 2;
     stroke-linejoin: round;
     stroke-linecap: round;
   }
 
   circle {
-    fill: var(--a);
+    fill: var(--c, var(--a));
     stroke: var(--tile, var(--page));
     stroke-width: 2;
   }

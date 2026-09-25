@@ -23,6 +23,55 @@
   let body: HTMLDivElement | undefined = $state();
   const id = `sheet-${Math.random().toString(36).slice(2, 8)}`;
 
+  // Swipe from the left edge to close. Deliberately without a visible hint: the sheet
+  // just follows the finger, like the system back gesture.
+  const EDGE = 32; // px from the left screen edge where a swipe may start
+  let swipe: { x: number; y: number; t: number; dx: number; horizontal: boolean | null } | null = null;
+
+  function setOffset(dx: number, animate: boolean) {
+    if (!dlg) return;
+    dlg.style.transition = animate ? "transform 0.22s ease-out" : "none";
+    dlg.style.transform = dx ? `translateX(${dx}px)` : "";
+  }
+
+  function onTouchStart(e: TouchEvent) {
+    const t = e.touches[0];
+    swipe = t && e.touches.length === 1 && t.clientX <= EDGE ? { x: t.clientX, y: t.clientY, t: e.timeStamp, dx: 0, horizontal: null } : null;
+  }
+
+  function onTouchMove(e: TouchEvent) {
+    const t = e.touches[0];
+    if (!swipe || !t) return;
+    const dx = t.clientX - swipe.x;
+    const dy = t.clientY - swipe.y;
+    if (swipe.horizontal === null) {
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+      swipe.horizontal = Math.abs(dx) > Math.abs(dy) * 1.2;
+    }
+    if (!swipe.horizontal) {
+      swipe = null; // a vertical scroll that happened to start at the edge
+      return;
+    }
+    swipe.dx = Math.max(0, dx);
+    setOffset(swipe.dx, false);
+  }
+
+  function onTouchEnd(e: TouchEvent) {
+    if (!swipe?.horizontal) {
+      swipe = null;
+      return;
+    }
+    const { dx, t } = swipe;
+    swipe = null;
+    const fast = dx / Math.max(1, e.timeStamp - t) > 0.5; // px per ms
+    if (dx > Math.min(120, innerWidth * 0.3) || (fast && dx > 40)) {
+      setOffset(innerWidth, true);
+      setTimeout(() => dlg?.close(), 200);
+    } else {
+      setOffset(0, true);
+    }
+  }
+
   $effect(() => {
     if (!dlg) return;
     if (open && !dlg.open) {
@@ -31,6 +80,7 @@
     } else if (!open && dlg.open) {
       dlg.close();
     }
+    if (!open) setOffset(0, false);
   });
 </script>
 
@@ -38,7 +88,17 @@
   bind:this={dlg}
   class="sheet {tone}"
   aria-labelledby={id}
-  onclose={onclose}
+  onclose={() => {
+    setOffset(0, false);
+    onclose();
+  }}
+  ontouchstart={onTouchStart}
+  ontouchmove={onTouchMove}
+  ontouchend={onTouchEnd}
+  ontouchcancel={() => {
+    swipe = null;
+    setOffset(0, true);
+  }}
   onclick={(e) => {
     if (e.target === dlg) dlg?.close();
   }}

@@ -28,6 +28,27 @@
     }
   });
 
+  // An open sheet owns one history entry: the back button, the system back gesture and
+  // our own edge swipe all close it instead of leaving the page.
+  const SHEET = "bgdp-sheet";
+  const sheetOpen = $derived(!!app.detail || !!app.sheet);
+  $effect(() => {
+    const marked = history.state?.[SHEET] === true;
+    if (sheetOpen && !marked) history.pushState({ [SHEET]: true }, "", location.href);
+    else if (!sheetOpen && marked) history.back();
+  });
+  $effect(() => {
+    const onPop = () => {
+      if (history.state?.[SHEET] !== true) {
+        app.detail = null;
+        app.sheet = null;
+      }
+      app.persist(); // the entry we came back to may still carry the old ?i= link
+    };
+    addEventListener("popstate", onPop);
+    return () => removeEventListener("popstate", onPop);
+  });
+
   // theme: explicit choice wins, "system" follows the OS (see index.html for the pre-paint copy)
   $effect(() => {
     const root = document.documentElement;
