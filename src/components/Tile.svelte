@@ -220,6 +220,7 @@
 
   .year.older {
     color: var(--older);
+    font-weight: 700;
   }
 
   /* single country: value and trend */

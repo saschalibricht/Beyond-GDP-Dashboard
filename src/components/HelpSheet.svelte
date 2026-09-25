@@ -147,6 +147,7 @@
   .older {
     flex: none;
     color: var(--older);
+    font-weight: 700;
   }
 
   .taglist {

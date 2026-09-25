@@ -306,6 +306,7 @@
 
   .year.older {
     color: var(--older);
+    font-weight: 700;
   }
 
   .older-note {
