@@ -30,6 +30,33 @@ def _rows(iso3: str, povline: float | None = None) -> list[dict]:
     return data
 
 
+MANY = 40
+
+
+def _by_country(countries: list[dict]) -> dict[str, list[dict]]:
+    """National rows per country: one bulk request when the list is long, else one per country."""
+    wanted = [c["iso3"] for c in countries]
+    out: dict[str, list[dict]] = {}
+    if len(wanted) > MANY:
+        rows = _national(_rows("all"))
+        if not rows:
+            raise AdapterError("PIP returned no rows for all countries")
+        for r in rows:
+            code = str(r.get("country_code") or "")
+            if code in wanted:
+                out.setdefault(code, []).append(r)
+        return out
+    errors = 0
+    for iso3 in wanted:
+        try:
+            out[iso3] = _national(_rows(iso3))
+        except Exception:
+            errors += 1
+    if errors == len(wanted):
+        raise AdapterError("PIP API unreachable for all countries")
+    return out
+
+
 def _national(rows: list[dict]) -> list[dict]:
     nat = [r for r in rows if str(r.get("reporting_level", "national")).lower() == "national"]
     return nat or []
@@ -52,13 +79,8 @@ def _spl(r: dict) -> float | None:
 
 def fetch_mean(params: dict, countries: list[dict], ctx: dict) -> Result:
     res = Result()
-    errors = 0
-    for c in countries:
-        try:
-            rows = _national(_rows(c["iso3"]))
-        except Exception:
-            errors += 1
-            continue
+    for iso3, rows in _by_country(countries).items():
+        c = {"iso3": iso3}
         welfare = set()
         for r in rows:
             y, mean = _year(r), to_float(r.get("mean"))
@@ -70,8 +92,6 @@ def fetch_mean(params: dict, countries: list[dict], ctx: dict) -> Result:
         if welfare:
             res.meta[c["iso3"]] = {"welfare": "/".join(sorted(welfare))}
             res.note(c["iso3"], "Survey measures " + " and ".join(sorted(welfare)) + ".")
-    if errors == len(countries):
-        raise AdapterError("PIP API unreachable for all countries")
     return res.finalize()
 
 
@@ -79,13 +99,8 @@ def fetch_spl(params: dict, countries: list[dict], ctx: dict) -> Result:
     baseline = int(params.get("baseline", 2017))
     res = Result()
     errors = 0
-    for c in countries:
-        iso3 = c["iso3"]
-        try:
-            rows = _national(_rows(iso3))
-        except Exception:
-            errors += 1
-            continue
+    base_rows = _by_country(countries)
+    for iso3, rows in base_rows.items():
         candidates = [(abs(_year(r) - baseline), _year(r), _spl(r)) for r in rows if _year(r) and _spl(r)]
         if not candidates:
             continue
@@ -107,6 +122,6 @@ def fetch_spl(params: dict, countries: list[dict], ctx: dict) -> Result:
         res.note(iso3, f"Poverty line fixed at ${line:.2f} per person per day (2021 PPP), the societal line in {base_year}.")
         if welfare:
             res.note(iso3, "Survey measures " + " and ".join(sorted(welfare)) + ".")
-    if errors and errors >= len(countries):
+    if errors and errors >= len(base_rows):
         raise AdapterError("PIP API unreachable for all countries")
     return res.finalize()

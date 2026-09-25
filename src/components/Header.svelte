@@ -7,22 +7,23 @@
 </script>
 
 <header class="top wrap">
-  <div class="brand">
-    <div class="dots" aria-hidden="true">
-      {#each PILLARS as p (p)}<span class="p-{p}"></span>{/each}
-    </div>
-    <h1><span class="light">Beyond</span> GDP</h1>
-    <p class="sub">The UN expert group's proposed indicators, filled with open data</p>
-    <div class="links">
-      <button type="button" class="chip" onclick={() => (app.sheet = "legend")}>
-        <Icon name="help" />How to read
-      </button>
-      <button type="button" class="chip" onclick={() => (app.sheet = "about")}>
-        <Icon name="info" />About
-      </button>
-    </div>
+  <div class="dots" aria-hidden="true">
+    {#each PILLARS as p (p)}<span class="p-{p}"></span>{/each}
   </div>
-  <div class="corner"><ThemeSwitch /></div>
+  <h1><span class="light">Beyond</span> GDP</h1>
+  <p class="sub">The UN expert group's proposed indicators, filled with open data</p>
+  <div class="corner">
+    <button
+      type="button"
+      class="soft-btn help"
+      aria-label="How to read and about"
+      title="How to read · About"
+      onclick={() => (app.sheet = "help")}
+    >
+      <Icon name="help" />
+    </button>
+    <ThemeSwitch />
+  </div>
 </header>
 
 <style>
@@ -36,6 +37,19 @@
     position: absolute;
     top: max(env(safe-area-inset-top, 0px), 18px);
     right: clamp(14px, 3vw, 36px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .help {
+    width: 38px;
+    height: 38px;
+  }
+
+  .help :global(.ic) {
+    width: 18px;
+    height: 18px;
   }
 
   .dots {
@@ -55,7 +69,7 @@
     font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.625rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    padding-right: 120px;
+    padding-right: 170px;
   }
 
   .light {
@@ -68,32 +82,14 @@
     font-size: 0.875rem;
   }
 
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 14px;
-  }
+  @media (max-width: 420px) {
+    h1 {
+      padding-right: 0;
+      margin-top: 6px;
+    }
 
-  .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    border: 0;
-    border-radius: var(--r-pill);
-    padding: 7px 13px 7px 10px;
-    background: var(--raised);
-    box-shadow: var(--lift-sm);
-    color: var(--muted);
-    font-size: 0.8125rem;
-    cursor: pointer;
-  }
-
-  .chip:hover {
-    color: var(--ink);
-  }
-
-  .chip:active {
-    box-shadow: var(--press);
+    .dots {
+      margin-top: 12px;
+    }
   }
 </style>

@@ -12,17 +12,17 @@
   const secondary = $derived(ind?.secondary ? app.ind.get(ind.secondary) : undefined);
 
   const sides = $derived(
-    (app.b
+    (app.viewB
       ? [
-          ["a", app.a],
-          ["b", app.b],
+          ["a", app.viewA],
+          ["b", app.viewB],
         ]
-      : [["a", app.a]]) as [Side, string][],
+      : [["a", app.viewA]]) as [Side, string][],
   );
 
   const cards = $derived.by(() => {
     if (!ind) return [];
-    const cmp = app.b ? compare(ind, app.entry(ind.id, app.a), app.entry(ind.id, app.b)) : null;
+    const cmp = app.viewB ? compare(ind, app.entry(ind.id, app.viewA), app.entry(ind.id, app.viewB)) : null;
     return sides.map(([side, iso3]) => {
       const e = app.entry(ind.id, iso3);
       const sec = secondary ? app.entry(secondary.id, iso3) : null;
@@ -81,7 +81,7 @@
             <div class="line">
               <span class="year num" class:older={c.older}>{c.e.latest.year}</span>
               {#if c.older}<span class="older-note">older data</span>{/if}
-              {#if c.better}<span class="better"><Icon name="check" />Better</span>{/if}
+              {#if c.better}<span class="better">Does better</span>{/if}
               {#if isEstimate(c.e.latest.nature)}<span class="muted">estimate</span>{/if}
             </div>
             {#if typeof c.e.latest.lo === "number" && typeof c.e.latest.hi === "number"}
@@ -112,10 +112,10 @@
         </div>
       {/each}
     </div>
-    {#if app.b}
+    {#if app.viewB}
       <p class="hint">
-        {directionText(ind.direction)}. Green “Better” is left out when the two values come from different sources; an orange
-        year is the older of the two.
+        {directionText(ind.direction)}. The green marker is left out when the two values come from different sources; a
+        yellow year is the older of the two.
       </p>
     {/if}
 
@@ -126,7 +126,7 @@
           <li class="tone-{f.tone}">
             <span class="badge"><Icon name={f.icon} /></span>
             <div>
-              <strong>{f.label}</strong>{#if f.only && app.b}<span class="only"> · {f.only.join(", ")}</span>{/if}
+              <strong>{f.label}</strong>{#if f.only && app.viewB}<span class="only"> · {f.only.join(", ")}</span>{/if}
               <p>{f.long}</p>
             </div>
           </li>
@@ -204,6 +204,7 @@
     padding: 14px 16px;
     border-radius: 18px;
     background: var(--tile);
+    border: 1px solid var(--edge);
     box-shadow: var(--lift-sm);
     font-size: 0.875rem;
   }
@@ -264,7 +265,6 @@
 
   .year.older {
     color: var(--older);
-    font-weight: 900;
   }
 
   .older-note {
@@ -273,21 +273,12 @@
   }
 
   .better {
-    display: inline-flex;
-    align-items: center;
-    gap: 3px;
-    padding: 2px 8px 2px 5px;
+    padding: 2px 9px;
     border-radius: var(--r-pill);
-    background: var(--good);
-    color: var(--good-ink);
+    background: var(--good-bg);
+    color: var(--good);
     font-size: 0.75rem;
     font-weight: 700;
-  }
-
-  .better :global(.ic) {
-    width: 12px;
-    height: 12px;
-    stroke-width: 2.2;
   }
 
   .src {
@@ -342,7 +333,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: var(--tile);
+    background: var(--track);
     color: var(--muted);
   }
 

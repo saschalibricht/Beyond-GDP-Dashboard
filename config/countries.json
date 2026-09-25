@@ -1,7 +1,9 @@
 {
-  "_help": "To add a country, add an entry with its ISO3 code, e.g. { \"iso3\": \"FRA\" }. Name, income group and UN M49 code are looked up automatically on the next data run. 'gw' (Gleditsch-Ward code) is only needed for the optional UCDP conflict source. 'aliases' helps match sources that spell the country differently.",
+  "_help": "'all': true includes every economy the World Bank lists (regional aggregates excluded); a country is shown once it has data for at least 'minIndicators' indicators. Entries under 'countries' are always shown and can add manual values: 'gw' (Gleditsch-Ward code, only needed for the optional UCDP conflict source), 'aliases' (other spellings), 'm49'. Names and UN M49 codes otherwise come from config/country_codes.json and the World Bank.",
+  "all": true,
+  "minIndicators": 5,
   "default": "DEU",
-  "defaultCompare": "BRA",
+  "defaultCompare": null,
   "countries": [
     { "iso3": "DEU", "name": "Germany",       "m49": 276, "gw": 260, "aliases": ["Germany"] },
     { "iso3": "USA", "name": "United States", "m49": 840, "gw": 2,   "aliases": ["United States", "United States of America", "USA"] },

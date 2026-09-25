@@ -1240,25 +1240,18 @@
   ],
   "countries": [
     {
-      "iso3": "DEU",
-      "name": "Germany",
-      "income": "HIC",
-      "incomeLabel": "High income",
-      "region": "Europe & Central Asia"
-    },
-    {
-      "iso3": "USA",
-      "name": "United States",
-      "income": "HIC",
-      "incomeLabel": "High income",
-      "region": "North America"
-    },
-    {
       "iso3": "BRA",
       "name": "Brazil",
       "income": "UMC",
       "incomeLabel": "Upper middle income",
       "region": "Latin America & Caribbean "
+    },
+    {
+      "iso3": "DEU",
+      "name": "Germany",
+      "income": "HIC",
+      "incomeLabel": "High income",
+      "region": "Europe & Central Asia"
     },
     {
       "iso3": "IND",
@@ -1280,9 +1273,16 @@
       "income": "LMC",
       "incomeLabel": "Lower middle income",
       "region": "Sub-Saharan Africa "
+    },
+    {
+      "iso3": "USA",
+      "name": "United States",
+      "income": "HIC",
+      "incomeLabel": "High income",
+      "region": "North America"
     }
   ],
   "defaultCountry": "DEU",
-  "defaultCompare": "BRA",
+  "defaultCompare": null,
   "outdatedAfterYears": 5
 }

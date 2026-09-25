@@ -1,0 +1,1738 @@
+{
+ "_help": "ISO3 -> UN M49 code and alternative spellings, used to match countries across sources. Generated once from ISO 3166 (the numeric codes equal UN M49 for countries); edit by hand to add spellings. 'short' replaces the World Bank's inverted names (e.g. 'Korea, Rep.') in the country picker.",
+ "codes": {
+  "ABW": {
+   "m49": 533,
+   "names": [
+    "Aruba"
+   ]
+  },
+  "AFG": {
+   "m49": 4,
+   "names": [
+    "Afghanistan",
+    "Islamic Republic of Afghanistan"
+   ]
+  },
+  "AGO": {
+   "m49": 24,
+   "names": [
+    "Angola",
+    "Republic of Angola"
+   ]
+  },
+  "AIA": {
+   "m49": 660,
+   "names": [
+    "Anguilla"
+   ]
+  },
+  "ALA": {
+   "m49": 248,
+   "names": [
+    "Åland Islands"
+   ]
+  },
+  "ALB": {
+   "m49": 8,
+   "names": [
+    "Albania",
+    "Republic of Albania"
+   ]
+  },
+  "AND": {
+   "m49": 20,
+   "names": [
+    "Andorra",
+    "Principality of Andorra"
+   ]
+  },
+  "ARE": {
+   "m49": 784,
+   "names": [
+    "United Arab Emirates"
+   ]
+  },
+  "ARG": {
+   "m49": 32,
+   "names": [
+    "Argentina",
+    "Argentine Republic"
+   ]
+  },
+  "ARM": {
+   "m49": 51,
+   "names": [
+    "Armenia",
+    "Republic of Armenia"
+   ]
+  },
+  "ASM": {
+   "m49": 16,
+   "names": [
+    "American Samoa"
+   ]
+  },
+  "ATA": {
+   "m49": 10,
+   "names": [
+    "Antarctica"
+   ]
+  },
+  "ATF": {
+   "m49": 260,
+   "names": [
+    "French Southern Territories"
+   ]
+  },
+  "ATG": {
+   "m49": 28,
+   "names": [
+    "Antigua and Barbuda"
+   ]
+  },
+  "AUS": {
+   "m49": 36,
+   "names": [
+    "Australia"
+   ]
+  },
+  "AUT": {
+   "m49": 40,
+   "names": [
+    "Austria",
+    "Republic of Austria"
+   ]
+  },
+  "AZE": {
+   "m49": 31,
+   "names": [
+    "Azerbaijan",
+    "Republic of Azerbaijan"
+   ]
+  },
+  "BDI": {
+   "m49": 108,
+   "names": [
+    "Burundi",
+    "Republic of Burundi"
+   ]
+  },
+  "BEL": {
+   "m49": 56,
+   "names": [
+    "Belgium",
+    "Kingdom of Belgium"
+   ]
+  },
+  "BEN": {
+   "m49": 204,
+   "names": [
+    "Benin",
+    "Republic of Benin"
+   ]
+  },
+  "BES": {
+   "m49": 535,
+   "names": [
+    "Bonaire, Sint Eustatius and Saba"
+   ]
+  },
+  "BFA": {
+   "m49": 854,
+   "names": [
+    "Burkina Faso"
+   ]
+  },
+  "BGD": {
+   "m49": 50,
+   "names": [
+    "Bangladesh",
+    "People's Republic of Bangladesh"
+   ]
+  },
+  "BGR": {
+   "m49": 100,
+   "names": [
+    "Bulgaria",
+    "Republic of Bulgaria"
+   ]
+  },
+  "BHR": {
+   "m49": 48,
+   "names": [
+    "Bahrain",
+    "Kingdom of Bahrain"
+   ]
+  },
+  "BHS": {
+   "m49": 44,
+   "names": [
+    "Bahamas",
+    "Commonwealth of the Bahamas"
+   ],
+   "short": "Bahamas"
+  },
+  "BIH": {
+   "m49": 70,
+   "names": [
+    "Bosnia and Herzegovina",
+    "Republic of Bosnia and Herzegovina"
+   ]
+  },
+  "BLM": {
+   "m49": 652,
+   "names": [
+    "Saint Barthélemy"
+   ]
+  },
+  "BLR": {
+   "m49": 112,
+   "names": [
+    "Belarus",
+    "Republic of Belarus"
+   ]
+  },
+  "BLZ": {
+   "m49": 84,
+   "names": [
+    "Belize"
+   ]
+  },
+  "BMU": {
+   "m49": 60,
+   "names": [
+    "Bermuda"
+   ]
+  },
+  "BOL": {
+   "m49": 68,
+   "names": [
+    "Bolivia, Plurinational State of",
+    "Bolivia",
+    "Plurinational State of Bolivia"
+   ],
+   "short": "Bolivia"
+  },
+  "BRA": {
+   "m49": 76,
+   "names": [
+    "Brazil",
+    "Federative Republic of Brazil"
+   ]
+  },
+  "BRB": {
+   "m49": 52,
+   "names": [
+    "Barbados"
+   ]
+  },
+  "BRN": {
+   "m49": 96,
+   "names": [
+    "Brunei Darussalam",
+    "Brunei"
+   ],
+   "short": "Brunei"
+  },
+  "BTN": {
+   "m49": 64,
+   "names": [
+    "Bhutan",
+    "Kingdom of Bhutan"
+   ]
+  },
+  "BVT": {
+   "m49": 74,
+   "names": [
+    "Bouvet Island"
+   ]
+  },
+  "BWA": {
+   "m49": 72,
+   "names": [
+    "Botswana",
+    "Republic of Botswana"
+   ]
+  },
+  "CAF": {
+   "m49": 140,
+   "names": [
+    "Central African Republic"
+   ]
+  },
+  "CAN": {
+   "m49": 124,
+   "names": [
+    "Canada"
+   ]
+  },
+  "CCK": {
+   "m49": 166,
+   "names": [
+    "Cocos (Keeling) Islands"
+   ]
+  },
+  "CHE": {
+   "m49": 756,
+   "names": [
+    "Switzerland",
+    "Swiss Confederation"
+   ]
+  },
+  "CHL": {
+   "m49": 152,
+   "names": [
+    "Chile",
+    "Republic of Chile"
+   ]
+  },
+  "CHN": {
+   "m49": 156,
+   "names": [
+    "China",
+    "People's Republic of China"
+   ]
+  },
+  "CIV": {
+   "m49": 384,
+   "names": [
+    "Côte d'Ivoire",
+    "Republic of Côte d'Ivoire",
+    "Ivory Coast",
+    "Cote d'Ivoire"
+   ],
+   "short": "Côte d'Ivoire"
+  },
+  "CMR": {
+   "m49": 120,
+   "names": [
+    "Cameroon",
+    "Republic of Cameroon"
+   ]
+  },
+  "COD": {
+   "m49": 180,
+   "names": [
+    "Congo, The Democratic Republic of the",
+    "Congo (Kinshasa)",
+    "DR Congo",
+    "Democratic Republic of the Congo"
+   ],
+   "short": "DR Congo"
+  },
+  "COG": {
+   "m49": 178,
+   "names": [
+    "Congo",
+    "Republic of the Congo",
+    "Congo (Brazzaville)"
+   ],
+   "short": "Republic of the Congo"
+  },
+  "COK": {
+   "m49": 184,
+   "names": [
+    "Cook Islands"
+   ]
+  },
+  "COL": {
+   "m49": 170,
+   "names": [
+    "Colombia",
+    "Republic of Colombia"
+   ]
+  },
+  "COM": {
+   "m49": 174,
+   "names": [
+    "Comoros",
+    "Union of the Comoros"
+   ]
+  },
+  "CPV": {
+   "m49": 132,
+   "names": [
+    "Cabo Verde",
+    "Republic of Cabo Verde",
+    "Cape Verde"
+   ]
+  },
+  "CRI": {
+   "m49": 188,
+   "names": [
+    "Costa Rica",
+    "Republic of Costa Rica"
+   ]
+  },
+  "CUB": {
+   "m49": 192,
+   "names": [
+    "Cuba",
+    "Republic of Cuba"
+   ]
+  },
+  "CUW": {
+   "m49": 531,
+   "names": [
+    "Curaçao"
+   ]
+  },
+  "CXR": {
+   "m49": 162,
+   "names": [
+    "Christmas Island"
+   ]
+  },
+  "CYM": {
+   "m49": 136,
+   "names": [
+    "Cayman Islands"
+   ]
+  },
+  "CYP": {
+   "m49": 196,
+   "names": [
+    "Cyprus",
+    "Republic of Cyprus"
+   ]
+  },
+  "CZE": {
+   "m49": 203,
+   "names": [
+    "Czechia",
+    "Czech Republic"
+   ],
+   "short": "Czechia"
+  },
+  "DEU": {
+   "m49": 276,
+   "names": [
+    "Germany",
+    "Federal Republic of Germany"
+   ]
+  },
+  "DJI": {
+   "m49": 262,
+   "names": [
+    "Djibouti",
+    "Republic of Djibouti"
+   ]
+  },
+  "DMA": {
+   "m49": 212,
+   "names": [
+    "Dominica",
+    "Commonwealth of Dominica"
+   ]
+  },
+  "DNK": {
+   "m49": 208,
+   "names": [
+    "Denmark",
+    "Kingdom of Denmark"
+   ]
+  },
+  "DOM": {
+   "m49": 214,
+   "names": [
+    "Dominican Republic"
+   ]
+  },
+  "DZA": {
+   "m49": 12,
+   "names": [
+    "Algeria",
+    "People's Democratic Republic of Algeria"
+   ]
+  },
+  "ECU": {
+   "m49": 218,
+   "names": [
+    "Ecuador",
+    "Republic of Ecuador"
+   ]
+  },
+  "EGY": {
+   "m49": 818,
+   "names": [
+    "Egypt",
+    "Arab Republic of Egypt"
+   ],
+   "short": "Egypt"
+  },
+  "ERI": {
+   "m49": 232,
+   "names": [
+    "Eritrea",
+    "the State of Eritrea"
+   ]
+  },
+  "ESH": {
+   "m49": 732,
+   "names": [
+    "Western Sahara"
+   ]
+  },
+  "ESP": {
+   "m49": 724,
+   "names": [
+    "Spain",
+    "Kingdom of Spain"
+   ]
+  },
+  "EST": {
+   "m49": 233,
+   "names": [
+    "Estonia",
+    "Republic of Estonia"
+   ]
+  },
+  "ETH": {
+   "m49": 231,
+   "names": [
+    "Ethiopia",
+    "Federal Democratic Republic of Ethiopia"
+   ]
+  },
+  "FIN": {
+   "m49": 246,
+   "names": [
+    "Finland",
+    "Republic of Finland"
+   ]
+  },
+  "FJI": {
+   "m49": 242,
+   "names": [
+    "Fiji",
+    "Republic of Fiji"
+   ]
+  },
+  "FLK": {
+   "m49": 238,
+   "names": [
+    "Falkland Islands (Malvinas)"
+   ]
+  },
+  "FRA": {
+   "m49": 250,
+   "names": [
+    "France",
+    "French Republic"
+   ]
+  },
+  "FRO": {
+   "m49": 234,
+   "names": [
+    "Faroe Islands"
+   ]
+  },
+  "FSM": {
+   "m49": 583,
+   "names": [
+    "Micronesia, Federated States of",
+    "Federated States of Micronesia",
+    "Micronesia"
+   ],
+   "short": "Micronesia"
+  },
+  "GAB": {
+   "m49": 266,
+   "names": [
+    "Gabon",
+    "Gabonese Republic"
+   ]
+  },
+  "GBR": {
+   "m49": 826,
+   "names": [
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland"
+   ]
+  },
+  "GEO": {
+   "m49": 268,
+   "names": [
+    "Georgia"
+   ]
+  },
+  "GGY": {
+   "m49": 831,
+   "names": [
+    "Guernsey"
+   ]
+  },
+  "GHA": {
+   "m49": 288,
+   "names": [
+    "Ghana",
+    "Republic of Ghana"
+   ]
+  },
+  "GIB": {
+   "m49": 292,
+   "names": [
+    "Gibraltar"
+   ]
+  },
+  "GIN": {
+   "m49": 324,
+   "names": [
+    "Guinea",
+    "Republic of Guinea"
+   ]
+  },
+  "GLP": {
+   "m49": 312,
+   "names": [
+    "Guadeloupe"
+   ]
+  },
+  "GMB": {
+   "m49": 270,
+   "names": [
+    "Gambia",
+    "Republic of the Gambia"
+   ],
+   "short": "Gambia"
+  },
+  "GNB": {
+   "m49": 624,
+   "names": [
+    "Guinea-Bissau",
+    "Republic of Guinea-Bissau"
+   ]
+  },
+  "GNQ": {
+   "m49": 226,
+   "names": [
+    "Equatorial Guinea",
+    "Republic of Equatorial Guinea"
+   ]
+  },
+  "GRC": {
+   "m49": 300,
+   "names": [
+    "Greece",
+    "Hellenic Republic"
+   ]
+  },
+  "GRD": {
+   "m49": 308,
+   "names": [
+    "Grenada"
+   ]
+  },
+  "GRL": {
+   "m49": 304,
+   "names": [
+    "Greenland"
+   ]
+  },
+  "GTM": {
+   "m49": 320,
+   "names": [
+    "Guatemala",
+    "Republic of Guatemala"
+   ]
+  },
+  "GUF": {
+   "m49": 254,
+   "names": [
+    "French Guiana"
+   ]
+  },
+  "GUM": {
+   "m49": 316,
+   "names": [
+    "Guam"
+   ]
+  },
+  "GUY": {
+   "m49": 328,
+   "names": [
+    "Guyana",
+    "Republic of Guyana"
+   ]
+  },
+  "HKG": {
+   "m49": 344,
+   "names": [
+    "Hong Kong",
+    "Hong Kong Special Administrative Region of China",
+    "Hong Kong S.A.R. of China"
+   ],
+   "short": "Hong Kong"
+  },
+  "HMD": {
+   "m49": 334,
+   "names": [
+    "Heard Island and McDonald Islands"
+   ]
+  },
+  "HND": {
+   "m49": 340,
+   "names": [
+    "Honduras",
+    "Republic of Honduras"
+   ]
+  },
+  "HRV": {
+   "m49": 191,
+   "names": [
+    "Croatia",
+    "Republic of Croatia"
+   ]
+  },
+  "HTI": {
+   "m49": 332,
+   "names": [
+    "Haiti",
+    "Republic of Haiti"
+   ]
+  },
+  "HUN": {
+   "m49": 348,
+   "names": [
+    "Hungary"
+   ]
+  },
+  "IDN": {
+   "m49": 360,
+   "names": [
+    "Indonesia",
+    "Republic of Indonesia"
+   ]
+  },
+  "IMN": {
+   "m49": 833,
+   "names": [
+    "Isle of Man"
+   ]
+  },
+  "IND": {
+   "m49": 356,
+   "names": [
+    "India",
+    "Republic of India"
+   ]
+  },
+  "IOT": {
+   "m49": 86,
+   "names": [
+    "British Indian Ocean Territory"
+   ]
+  },
+  "IRL": {
+   "m49": 372,
+   "names": [
+    "Ireland"
+   ]
+  },
+  "IRN": {
+   "m49": 364,
+   "names": [
+    "Iran, Islamic Republic of",
+    "Iran",
+    "Islamic Republic of Iran"
+   ],
+   "short": "Iran"
+  },
+  "IRQ": {
+   "m49": 368,
+   "names": [
+    "Iraq",
+    "Republic of Iraq"
+   ]
+  },
+  "ISL": {
+   "m49": 352,
+   "names": [
+    "Iceland",
+    "Republic of Iceland"
+   ]
+  },
+  "ISR": {
+   "m49": 376,
+   "names": [
+    "Israel",
+    "State of Israel"
+   ]
+  },
+  "ITA": {
+   "m49": 380,
+   "names": [
+    "Italy",
+    "Italian Republic"
+   ]
+  },
+  "JAM": {
+   "m49": 388,
+   "names": [
+    "Jamaica"
+   ]
+  },
+  "JEY": {
+   "m49": 832,
+   "names": [
+    "Jersey"
+   ]
+  },
+  "JOR": {
+   "m49": 400,
+   "names": [
+    "Jordan",
+    "Hashemite Kingdom of Jordan"
+   ]
+  },
+  "JPN": {
+   "m49": 392,
+   "names": [
+    "Japan"
+   ]
+  },
+  "KAZ": {
+   "m49": 398,
+   "names": [
+    "Kazakhstan",
+    "Republic of Kazakhstan"
+   ]
+  },
+  "KEN": {
+   "m49": 404,
+   "names": [
+    "Kenya",
+    "Republic of Kenya"
+   ]
+  },
+  "KGZ": {
+   "m49": 417,
+   "names": [
+    "Kyrgyzstan",
+    "Kyrgyz Republic"
+   ],
+   "short": "Kyrgyzstan"
+  },
+  "KHM": {
+   "m49": 116,
+   "names": [
+    "Cambodia",
+    "Kingdom of Cambodia"
+   ]
+  },
+  "KIR": {
+   "m49": 296,
+   "names": [
+    "Kiribati",
+    "Republic of Kiribati"
+   ]
+  },
+  "KNA": {
+   "m49": 659,
+   "names": [
+    "Saint Kitts and Nevis"
+   ],
+   "short": "Saint Kitts and Nevis"
+  },
+  "KOR": {
+   "m49": 410,
+   "names": [
+    "Korea, Republic of",
+    "South Korea",
+    "Korea, Rep."
+   ],
+   "short": "South Korea"
+  },
+  "KWT": {
+   "m49": 414,
+   "names": [
+    "Kuwait",
+    "State of Kuwait"
+   ]
+  },
+  "LAO": {
+   "m49": 418,
+   "names": [
+    "Lao People's Democratic Republic",
+    "Laos"
+   ],
+   "short": "Laos"
+  },
+  "LBN": {
+   "m49": 422,
+   "names": [
+    "Lebanon",
+    "Lebanese Republic"
+   ]
+  },
+  "LBR": {
+   "m49": 430,
+   "names": [
+    "Liberia",
+    "Republic of Liberia"
+   ]
+  },
+  "LBY": {
+   "m49": 434,
+   "names": [
+    "Libya"
+   ]
+  },
+  "LCA": {
+   "m49": 662,
+   "names": [
+    "Saint Lucia"
+   ],
+   "short": "Saint Lucia"
+  },
+  "LIE": {
+   "m49": 438,
+   "names": [
+    "Liechtenstein",
+    "Principality of Liechtenstein"
+   ]
+  },
+  "LKA": {
+   "m49": 144,
+   "names": [
+    "Sri Lanka",
+    "Democratic Socialist Republic of Sri Lanka"
+   ]
+  },
+  "LSO": {
+   "m49": 426,
+   "names": [
+    "Lesotho",
+    "Kingdom of Lesotho"
+   ]
+  },
+  "LTU": {
+   "m49": 440,
+   "names": [
+    "Lithuania",
+    "Republic of Lithuania"
+   ]
+  },
+  "LUX": {
+   "m49": 442,
+   "names": [
+    "Luxembourg",
+    "Grand Duchy of Luxembourg"
+   ]
+  },
+  "LVA": {
+   "m49": 428,
+   "names": [
+    "Latvia",
+    "Republic of Latvia"
+   ]
+  },
+  "MAC": {
+   "m49": 446,
+   "names": [
+    "Macao",
+    "Macao Special Administrative Region of China"
+   ],
+   "short": "Macao"
+  },
+  "MAF": {
+   "m49": 663,
+   "names": [
+    "Saint Martin (French part)"
+   ],
+   "short": "Saint Martin"
+  },
+  "MAR": {
+   "m49": 504,
+   "names": [
+    "Morocco",
+    "Kingdom of Morocco"
+   ]
+  },
+  "MCO": {
+   "m49": 492,
+   "names": [
+    "Monaco",
+    "Principality of Monaco"
+   ]
+  },
+  "MDA": {
+   "m49": 498,
+   "names": [
+    "Moldova, Republic of",
+    "Moldova",
+    "Republic of Moldova"
+   ],
+   "short": "Moldova"
+  },
+  "MDG": {
+   "m49": 450,
+   "names": [
+    "Madagascar",
+    "Republic of Madagascar"
+   ]
+  },
+  "MDV": {
+   "m49": 462,
+   "names": [
+    "Maldives",
+    "Republic of Maldives"
+   ]
+  },
+  "MEX": {
+   "m49": 484,
+   "names": [
+    "Mexico",
+    "United Mexican States"
+   ]
+  },
+  "MHL": {
+   "m49": 584,
+   "names": [
+    "Marshall Islands",
+    "Republic of the Marshall Islands"
+   ]
+  },
+  "MKD": {
+   "m49": 807,
+   "names": [
+    "North Macedonia",
+    "Republic of North Macedonia"
+   ],
+   "short": "North Macedonia"
+  },
+  "MLI": {
+   "m49": 466,
+   "names": [
+    "Mali",
+    "Republic of Mali"
+   ]
+  },
+  "MLT": {
+   "m49": 470,
+   "names": [
+    "Malta",
+    "Republic of Malta"
+   ]
+  },
+  "MMR": {
+   "m49": 104,
+   "names": [
+    "Myanmar",
+    "Republic of Myanmar"
+   ]
+  },
+  "MNE": {
+   "m49": 499,
+   "names": [
+    "Montenegro"
+   ]
+  },
+  "MNG": {
+   "m49": 496,
+   "names": [
+    "Mongolia"
+   ]
+  },
+  "MNP": {
+   "m49": 580,
+   "names": [
+    "Northern Mariana Islands",
+    "Commonwealth of the Northern Mariana Islands"
+   ]
+  },
+  "MOZ": {
+   "m49": 508,
+   "names": [
+    "Mozambique",
+    "Republic of Mozambique"
+   ]
+  },
+  "MRT": {
+   "m49": 478,
+   "names": [
+    "Mauritania",
+    "Islamic Republic of Mauritania"
+   ]
+  },
+  "MSR": {
+   "m49": 500,
+   "names": [
+    "Montserrat"
+   ]
+  },
+  "MTQ": {
+   "m49": 474,
+   "names": [
+    "Martinique"
+   ]
+  },
+  "MUS": {
+   "m49": 480,
+   "names": [
+    "Mauritius",
+    "Republic of Mauritius"
+   ]
+  },
+  "MWI": {
+   "m49": 454,
+   "names": [
+    "Malawi",
+    "Republic of Malawi"
+   ]
+  },
+  "MYS": {
+   "m49": 458,
+   "names": [
+    "Malaysia"
+   ]
+  },
+  "MYT": {
+   "m49": 175,
+   "names": [
+    "Mayotte"
+   ]
+  },
+  "NAM": {
+   "m49": 516,
+   "names": [
+    "Namibia",
+    "Republic of Namibia"
+   ]
+  },
+  "NCL": {
+   "m49": 540,
+   "names": [
+    "New Caledonia"
+   ]
+  },
+  "NER": {
+   "m49": 562,
+   "names": [
+    "Niger",
+    "Republic of the Niger"
+   ]
+  },
+  "NFK": {
+   "m49": 574,
+   "names": [
+    "Norfolk Island"
+   ]
+  },
+  "NGA": {
+   "m49": 566,
+   "names": [
+    "Nigeria",
+    "Federal Republic of Nigeria"
+   ]
+  },
+  "NIC": {
+   "m49": 558,
+   "names": [
+    "Nicaragua",
+    "Republic of Nicaragua"
+   ]
+  },
+  "NIU": {
+   "m49": 570,
+   "names": [
+    "Niue"
+   ]
+  },
+  "NLD": {
+   "m49": 528,
+   "names": [
+    "Netherlands",
+    "Kingdom of the Netherlands"
+   ]
+  },
+  "NOR": {
+   "m49": 578,
+   "names": [
+    "Norway",
+    "Kingdom of Norway"
+   ]
+  },
+  "NPL": {
+   "m49": 524,
+   "names": [
+    "Nepal",
+    "Federal Democratic Republic of Nepal"
+   ]
+  },
+  "NRU": {
+   "m49": 520,
+   "names": [
+    "Nauru",
+    "Republic of Nauru"
+   ]
+  },
+  "NZL": {
+   "m49": 554,
+   "names": [
+    "New Zealand"
+   ]
+  },
+  "OMN": {
+   "m49": 512,
+   "names": [
+    "Oman",
+    "Sultanate of Oman"
+   ]
+  },
+  "PAK": {
+   "m49": 586,
+   "names": [
+    "Pakistan",
+    "Islamic Republic of Pakistan"
+   ]
+  },
+  "PAN": {
+   "m49": 591,
+   "names": [
+    "Panama",
+    "Republic of Panama"
+   ]
+  },
+  "PCN": {
+   "m49": 612,
+   "names": [
+    "Pitcairn"
+   ]
+  },
+  "PER": {
+   "m49": 604,
+   "names": [
+    "Peru",
+    "Republic of Peru"
+   ]
+  },
+  "PHL": {
+   "m49": 608,
+   "names": [
+    "Philippines",
+    "Republic of the Philippines"
+   ]
+  },
+  "PLW": {
+   "m49": 585,
+   "names": [
+    "Palau",
+    "Republic of Palau"
+   ]
+  },
+  "PNG": {
+   "m49": 598,
+   "names": [
+    "Papua New Guinea",
+    "Independent State of Papua New Guinea"
+   ]
+  },
+  "POL": {
+   "m49": 616,
+   "names": [
+    "Poland",
+    "Republic of Poland"
+   ]
+  },
+  "PRI": {
+   "m49": 630,
+   "names": [
+    "Puerto Rico"
+   ]
+  },
+  "PRK": {
+   "m49": 408,
+   "names": [
+    "Korea, Democratic People's Republic of",
+    "North Korea",
+    "Democratic People's Republic of Korea"
+   ],
+   "short": "North Korea"
+  },
+  "PRT": {
+   "m49": 620,
+   "names": [
+    "Portugal",
+    "Portuguese Republic"
+   ]
+  },
+  "PRY": {
+   "m49": 600,
+   "names": [
+    "Paraguay",
+    "Republic of Paraguay"
+   ]
+  },
+  "PSE": {
+   "m49": 275,
+   "names": [
+    "Palestine, State of",
+    "the State of Palestine",
+    "State of Palestine",
+    "Palestinian Territories",
+    "Palestine"
+   ],
+   "short": "Palestine"
+  },
+  "PYF": {
+   "m49": 258,
+   "names": [
+    "French Polynesia"
+   ]
+  },
+  "QAT": {
+   "m49": 634,
+   "names": [
+    "Qatar",
+    "State of Qatar"
+   ]
+  },
+  "REU": {
+   "m49": 638,
+   "names": [
+    "Réunion"
+   ]
+  },
+  "ROU": {
+   "m49": 642,
+   "names": [
+    "Romania"
+   ]
+  },
+  "RUS": {
+   "m49": 643,
+   "names": [
+    "Russian Federation",
+    "Russia"
+   ],
+   "short": "Russia"
+  },
+  "RWA": {
+   "m49": 646,
+   "names": [
+    "Rwanda",
+    "Rwandese Republic"
+   ]
+  },
+  "SAU": {
+   "m49": 682,
+   "names": [
+    "Saudi Arabia",
+    "Kingdom of Saudi Arabia"
+   ]
+  },
+  "SDN": {
+   "m49": 729,
+   "names": [
+    "Sudan",
+    "Republic of the Sudan"
+   ]
+  },
+  "SEN": {
+   "m49": 686,
+   "names": [
+    "Senegal",
+    "Republic of Senegal"
+   ]
+  },
+  "SGP": {
+   "m49": 702,
+   "names": [
+    "Singapore",
+    "Republic of Singapore"
+   ]
+  },
+  "SGS": {
+   "m49": 239,
+   "names": [
+    "South Georgia and the South Sandwich Islands"
+   ]
+  },
+  "SHN": {
+   "m49": 654,
+   "names": [
+    "Saint Helena, Ascension and Tristan da Cunha"
+   ]
+  },
+  "SJM": {
+   "m49": 744,
+   "names": [
+    "Svalbard and Jan Mayen"
+   ]
+  },
+  "SLB": {
+   "m49": 90,
+   "names": [
+    "Solomon Islands"
+   ]
+  },
+  "SLE": {
+   "m49": 694,
+   "names": [
+    "Sierra Leone",
+    "Republic of Sierra Leone"
+   ]
+  },
+  "SLV": {
+   "m49": 222,
+   "names": [
+    "El Salvador",
+    "Republic of El Salvador"
+   ]
+  },
+  "SMR": {
+   "m49": 674,
+   "names": [
+    "San Marino",
+    "Republic of San Marino"
+   ]
+  },
+  "SOM": {
+   "m49": 706,
+   "names": [
+    "Somalia",
+    "Federal Republic of Somalia"
+   ]
+  },
+  "SPM": {
+   "m49": 666,
+   "names": [
+    "Saint Pierre and Miquelon"
+   ]
+  },
+  "SRB": {
+   "m49": 688,
+   "names": [
+    "Serbia",
+    "Republic of Serbia"
+   ]
+  },
+  "SSD": {
+   "m49": 728,
+   "names": [
+    "South Sudan",
+    "Republic of South Sudan"
+   ]
+  },
+  "STP": {
+   "m49": 678,
+   "names": [
+    "Sao Tome and Principe",
+    "Democratic Republic of Sao Tome and Principe"
+   ],
+   "short": "São Tomé and Príncipe"
+  },
+  "SUR": {
+   "m49": 740,
+   "names": [
+    "Suriname",
+    "Republic of Suriname"
+   ]
+  },
+  "SVK": {
+   "m49": 703,
+   "names": [
+    "Slovakia",
+    "Slovak Republic"
+   ],
+   "short": "Slovakia"
+  },
+  "SVN": {
+   "m49": 705,
+   "names": [
+    "Slovenia",
+    "Republic of Slovenia"
+   ]
+  },
+  "SWE": {
+   "m49": 752,
+   "names": [
+    "Sweden",
+    "Kingdom of Sweden"
+   ]
+  },
+  "SWZ": {
+   "m49": 748,
+   "names": [
+    "Eswatini",
+    "Kingdom of Eswatini",
+    "Swaziland"
+   ]
+  },
+  "SXM": {
+   "m49": 534,
+   "names": [
+    "Sint Maarten (Dutch part)"
+   ],
+   "short": "Sint Maarten"
+  },
+  "SYC": {
+   "m49": 690,
+   "names": [
+    "Seychelles",
+    "Republic of Seychelles"
+   ]
+  },
+  "SYR": {
+   "m49": 760,
+   "names": [
+    "Syrian Arab Republic",
+    "Syria"
+   ],
+   "short": "Syria"
+  },
+  "TCA": {
+   "m49": 796,
+   "names": [
+    "Turks and Caicos Islands"
+   ]
+  },
+  "TCD": {
+   "m49": 148,
+   "names": [
+    "Chad",
+    "Republic of Chad"
+   ]
+  },
+  "TGO": {
+   "m49": 768,
+   "names": [
+    "Togo",
+    "Togolese Republic"
+   ]
+  },
+  "THA": {
+   "m49": 764,
+   "names": [
+    "Thailand",
+    "Kingdom of Thailand"
+   ]
+  },
+  "TJK": {
+   "m49": 762,
+   "names": [
+    "Tajikistan",
+    "Republic of Tajikistan"
+   ]
+  },
+  "TKL": {
+   "m49": 772,
+   "names": [
+    "Tokelau"
+   ]
+  },
+  "TKM": {
+   "m49": 795,
+   "names": [
+    "Turkmenistan"
+   ]
+  },
+  "TLS": {
+   "m49": 626,
+   "names": [
+    "Timor-Leste",
+    "Democratic Republic of Timor-Leste"
+   ]
+  },
+  "TON": {
+   "m49": 776,
+   "names": [
+    "Tonga",
+    "Kingdom of Tonga"
+   ]
+  },
+  "TTO": {
+   "m49": 780,
+   "names": [
+    "Trinidad and Tobago",
+    "Republic of Trinidad and Tobago"
+   ]
+  },
+  "TUN": {
+   "m49": 788,
+   "names": [
+    "Tunisia",
+    "Republic of Tunisia"
+   ]
+  },
+  "TUR": {
+   "m49": 792,
+   "names": [
+    "Türkiye",
+    "Republic of Türkiye",
+    "Turkey",
+    "Turkiye"
+   ],
+   "short": "Türkiye"
+  },
+  "TUV": {
+   "m49": 798,
+   "names": [
+    "Tuvalu"
+   ]
+  },
+  "TWN": {
+   "m49": 158,
+   "names": [
+    "Taiwan, Province of China",
+    "Taiwan",
+    "Taiwan Province of China"
+   ]
+  },
+  "TZA": {
+   "m49": 834,
+   "names": [
+    "Tanzania, United Republic of",
+    "Tanzania",
+    "United Republic of Tanzania"
+   ],
+   "short": "Tanzania"
+  },
+  "UGA": {
+   "m49": 800,
+   "names": [
+    "Uganda",
+    "Republic of Uganda"
+   ]
+  },
+  "UKR": {
+   "m49": 804,
+   "names": [
+    "Ukraine"
+   ]
+  },
+  "UMI": {
+   "m49": 581,
+   "names": [
+    "United States Minor Outlying Islands"
+   ]
+  },
+  "URY": {
+   "m49": 858,
+   "names": [
+    "Uruguay",
+    "Eastern Republic of Uruguay"
+   ]
+  },
+  "USA": {
+   "m49": 840,
+   "names": [
+    "United States",
+    "United States of America",
+    "USA"
+   ]
+  },
+  "UZB": {
+   "m49": 860,
+   "names": [
+    "Uzbekistan",
+    "Republic of Uzbekistan"
+   ]
+  },
+  "VAT": {
+   "m49": 336,
+   "names": [
+    "Holy See (Vatican City State)"
+   ]
+  },
+  "VCT": {
+   "m49": 670,
+   "names": [
+    "Saint Vincent and the Grenadines"
+   ],
+   "short": "Saint Vincent and the Grenadines"
+  },
+  "VEN": {
+   "m49": 862,
+   "names": [
+    "Venezuela, Bolivarian Republic of",
+    "Venezuela",
+    "Bolivarian Republic of Venezuela"
+   ],
+   "short": "Venezuela"
+  },
+  "VGB": {
+   "m49": 92,
+   "names": [
+    "Virgin Islands, British",
+    "British Virgin Islands"
+   ],
+   "short": "British Virgin Islands"
+  },
+  "VIR": {
+   "m49": 850,
+   "names": [
+    "Virgin Islands, U.S.",
+    "Virgin Islands of the United States"
+   ],
+   "short": "US Virgin Islands"
+  },
+  "VNM": {
+   "m49": 704,
+   "names": [
+    "Viet Nam",
+    "Vietnam",
+    "Socialist Republic of Viet Nam"
+   ],
+   "short": "Vietnam"
+  },
+  "VUT": {
+   "m49": 548,
+   "names": [
+    "Vanuatu",
+    "Republic of Vanuatu"
+   ]
+  },
+  "WLF": {
+   "m49": 876,
+   "names": [
+    "Wallis and Futuna"
+   ]
+  },
+  "WSM": {
+   "m49": 882,
+   "names": [
+    "Samoa",
+    "Independent State of Samoa"
+   ]
+  },
+  "XKX": {
+   "m49": null,
+   "names": [
+    "Kosovo"
+   ],
+   "short": "Kosovo"
+  },
+  "YEM": {
+   "m49": 887,
+   "names": [
+    "Yemen",
+    "Republic of Yemen"
+   ],
+   "short": "Yemen"
+  },
+  "ZAF": {
+   "m49": 710,
+   "names": [
+    "South Africa",
+    "Republic of South Africa"
+   ]
+  },
+  "ZMB": {
+   "m49": 894,
+   "names": [
+    "Zambia",
+    "Republic of Zambia"
+   ]
+  },
+  "ZWE": {
+   "m49": 716,
+   "names": [
+    "Zimbabwe",
+    "Republic of Zimbabwe"
+   ]
+  }
+ }
+}

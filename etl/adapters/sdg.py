@@ -20,6 +20,9 @@ from .base import TOTAL_CODES, AdapterError, Point, Result, match_pref, to_float
 
 BASE = "https://unstats.un.org/SDGAPI/v1/sdg"
 PAGE = 5000
+MAX_PAGES = 80
+# above this many countries, fetch all areas and filter locally (keeps URLs short)
+MANY = 40
 DEFAULT_DIMS = {"Reporting Type": ["G", "N"]}
 IGNORE_DIMS = {"Units", "Nature", "Observation Status", "UnitMultiplier", "Unit multiplier"}
 
@@ -33,17 +36,18 @@ def _pages(endpoint: str, params: dict) -> list[dict]:
             raise AdapterError(f"Unexpected SDG API response from {endpoint}")
         rows.extend(data["data"] or [])
         total_pages = int(data.get("totalPages") or 1)
-        if page >= total_pages or page >= 20:
+        if page >= total_pages or page >= MAX_PAGES:
             break
         page += 1
     return rows
 
 
 def _load(params: dict, m49s: list[str]) -> tuple[list[dict], str]:
+    area = {"areaCode": m49s} if len(m49s) <= MANY else {}
     series = params.get("series")
     if series:
         try:
-            rows = _pages("Series/Data", {"seriesCode": series, "areaCode": m49s})
+            rows = _pages("Series/Data", {"seriesCode": series, **area})
             if rows:
                 return rows, f"series {series}"
         except Exception:
@@ -52,7 +56,7 @@ def _load(params: dict, m49s: list[str]) -> tuple[list[dict], str]:
     ind = params.get("indicator")
     if not ind:
         return [], ""
-    rows = _pages("Indicator/Data", {"indicator": ind, "areaCode": m49s})
+    rows = _pages("Indicator/Data", {"indicator": ind, **area})
     return rows, f"indicator {ind}"
 
 

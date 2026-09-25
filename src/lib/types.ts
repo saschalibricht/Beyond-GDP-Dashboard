@@ -111,12 +111,16 @@ export interface Entry {
 
 export type OkEntry = Entry & { status: "ok"; latest: Latest; src: number };
 
-export interface Dashboard {
+/** public/data/dashboard.json: which countries have a values file */
+export interface Manifest {
   dataHash?: string;
   lastChanged?: string;
   demo?: boolean;
-  values: Record<string, Record<string, Entry>>;
+  countries: string[];
 }
+
+/** public/data/values/XXX.json: one country's entries by indicator id */
+export type CountryValues = Record<string, Entry>;
 
 export interface SourceStatus {
   key: string;

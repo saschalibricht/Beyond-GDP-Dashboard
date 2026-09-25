@@ -35,7 +35,7 @@
     height: 12px;
     border-radius: 50%;
     background: var(--accent);
-    box-shadow: 0 0 0 4px var(--tile);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
   }
 
   .grid {

@@ -2,9 +2,10 @@
 
 A web dashboard of the 31 indicators proposed in *Counting What Counts: A Compass of Progress for People and Planet* (UN High-Level Expert Group on Beyond GDP, 2026), filled with openly available data. It shows every indicator's limitations and never hides missing values.
 
-- Structure follows the report: four components (foundational principles, current well-being, equity and inclusion, sustainability and resilience), each with its own pastel tile colour.
-- Each tile shows one indicator: its latest value and year, a sparkline, and its caveats as icons. Selecting a tile opens the explanation, the caveats in words, a time series with a data table, the limitations and the source chain.
-- Comparing two countries puts both values on shared-scale bars in each tile. A green "Better" follows the indicator's direction (left out when sources differ), and the older of two years is shown in bold orange.
+- Structure follows the report: four components (foundational principles, current well-being, equity and inclusion, sustainability and resilience), each with its own title colour.
+- Every country with enough open data (currently those with at least 5 indicators) can be picked, listed A–Z.
+- Each tile shows one indicator for one country: its latest value and year, its trend over time, and its caveats as icons. Selecting a tile opens the explanation, the caveats in words, a time series with a data table, the limitations and the source chain.
+- Comparing two countries puts both values on shared-scale bars in each tile. A green pill marks the country that does better, following the indicator's direction (left out when sources differ); the older of two years is shown in yellow. The × on the comparison removes it.
 - You can pin indicators to build a custom set. Every view, including an open detail, is shareable via the URL.
 - Two tile columns on phones, as many as fit on desktop. Light, dark or system theme.
 - Built with Svelte 5 and TypeScript; the data pipeline is Python.
@@ -23,7 +24,7 @@ GitHub Actions (daily, free)                 Render (free static site)
 └──────────────────────────────┘    fails 3 days in a row
 ```
 
-- **No server, no database.** The site is a static Svelte app (about 32 KB of JavaScript, gzipped). The browser reads three JSON files that the pipeline writes to `public/data/`; they are fetched at runtime, not bundled.
+- **No server, no database.** The site is a static Svelte app (about 32 KB of JavaScript, gzipped). The pipeline writes JSON to `public/data/`: `registry.json` (texts, countries), `dashboard.json` (which countries have data), `status.json` (source health) and one `values/XXX.json` per country (~20 KB). The browser fetches only the countries on screen.
 - **Users never wait for slow APIs.** All fetching happens in the daily job.
 - **Failures are contained.** If a source fails, its last good values stay online and are marked "Not updated since…". An issue opens automatically after three failed days and closes itself when the source recovers.
 - **Commits are idempotent.** The data files only change when something actually changed, apart from the "last checked" timestamp.
@@ -65,19 +66,16 @@ Layout: `src/lib/` holds types, formatting and the pure dashboard rules (`logic.
 
 Do not commit demo output. The real run overwrites it anyway.
 
-## Adding a country
+## Countries
 
-Add one line to `config/countries.json`:
+With `"all": true` in `config/countries.json`, every economy the World Bank lists is included (regional and income aggregates are excluded). A country is shown once it has data for at least `minIndicators` indicators. Names, income groups and regions come from the World Bank; UN M49 codes and alternative spellings from `config/country_codes.json` (generated from ISO 3166, whose numeric codes equal M49 for countries). Its `short` field replaces the World Bank's inverted names, e.g. "Korea, Rep." becomes "South Korea".
 
-```json
-{ "iso3": "FRA" }
-```
-
-The next run looks up the name, income group and UN M49 code automatically. Optional fields:
-- `gw`: Gleditsch-Ward code, needed only for UCDP.
+Entries under `countries` are always shown and can add manual values:
+- `gw`: Gleditsch-Ward code, needed only for the optional UCDP source (currently set for the six original countries only).
 - `aliases`: other spellings used by name-matched sources (World Happiness Report, NHM).
+- `m49`: overrides the code table.
 
-The push triggers a data run on its own.
+With a long country list, the World Bank, UN SDG and PIP adapters request all countries at once and filter locally. Only PIP's societal poverty line still needs one request per country.
 
 ## Adding or changing an indicator
 

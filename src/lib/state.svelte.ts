@@ -1,9 +1,10 @@
 // App state: loaded data plus the reader's choices (countries, pins, view, theme).
 // Choices are mirrored to the URL so any view can be shared as a link.
-import type { Dashboard, Entry, Indicator, Pillar, Registry, Status, Tag } from "./types";
+import { SvelteMap } from "svelte/reactivity";
+import type { CountryValues, Entry, Indicator, Manifest, Pillar, Registry, Status, Tag } from "./types";
 
 export type Theme = "light" | "dark" | "system";
-export type Sheet = "legend" | "about" | "health" | null;
+export type Sheet = "help" | "health" | null;
 
 const PIN_KEY = "bgdp-pins";
 const THEME_KEY = "bgdp-theme";
@@ -32,12 +33,18 @@ async function load<T>(path: string): Promise<T> {
 
 class AppState {
   reg = $state<Registry | null>(null);
-  dash = $state<Dashboard | null>(null);
+  manifest = $state<Manifest | null>(null);
+  /** per-country values, fetched when a country is first shown */
+  values = new SvelteMap<string, CountryValues | "failed">();
   status = $state<Status | null>(null);
   phase = $state<"loading" | "ready" | "failed">("loading");
 
+  /** the reader's selection */
   a = $state("");
   b = $state<string | null>(null);
+  /** what the tiles show: follows a/b once their values have loaded, so tiles never flash empty */
+  viewA = $state("");
+  viewB = $state<string | null>(null);
   view = $state<"all" | "pinned">("all");
   pins = $state<string[]>([]);
   detail = $state<string | null>(null);
@@ -50,7 +57,15 @@ class AppState {
   pillar = $derived(new Map<string, Pillar>((this.reg?.framework.pillars ?? []).map((p) => [p.id, p])));
   tag = $derived(new Map<string, Tag>((this.reg?.tags ?? []).map((t) => [t.id, t])));
   country = $derived(new Map((this.reg?.countries ?? []).map((c) => [c.iso3, c])));
-  hasData = $derived(!!this.dash?.values && Object.keys(this.dash.values).length > 0);
+  /** countries with data, A–Z by name */
+  countries = $derived(
+    (this.reg?.countries ?? [])
+      .filter((c) => !this.manifest || this.manifest.countries.includes(c.iso3))
+      .sort((x, y) => x.name.localeCompare(y.name)),
+  );
+  hasData = $derived((this.manifest?.countries.length ?? 0) > 0);
+  /** true while a shown country's values are still loading */
+  pending = $derived([this.a, this.b].some((c) => !!c && !this.values.has(c)));
 
   async init(): Promise<void> {
     const t = readStore(THEME_KEY);
@@ -61,24 +76,40 @@ class AppState {
       this.phase = "failed";
       return;
     }
-    const [dash, status] = await Promise.all([
-      load<Dashboard>("data/dashboard.json").catch(() => null),
+    const [manifest, status] = await Promise.all([
+      load<Manifest>("data/dashboard.json").catch(() => null),
       load<Status>("data/status.json").catch(() => null),
     ]);
-    this.dash = dash;
+    this.manifest = manifest && Array.isArray(manifest.countries) ? manifest : { countries: [] };
     this.status = status;
     this.readUrl();
     this.phase = "ready";
   }
 
+  /** Fetch a country's values once; called from an effect whenever a or b changes. */
+  async ensureValues(iso3: string | null): Promise<void> {
+    if (!iso3 || this.values.has(iso3) || this.loading.has(iso3)) return;
+    this.loading.add(iso3);
+    try {
+      this.values.set(iso3, await load<CountryValues>(`data/values/${iso3}.json`));
+    } catch {
+      this.values.set(iso3, "failed");
+    } finally {
+      this.loading.delete(iso3);
+    }
+  }
+
+  private loading = new Set<string>();
+
   private readUrl(): void {
     const reg = this.reg!;
     const q = new URLSearchParams(location.search);
+    const shown = new Set(this.countries.map((c) => c.iso3));
     const valid = (c: string | null | undefined) => {
       const iso = c?.toUpperCase();
-      return iso && this.country.has(iso) ? iso : null;
+      return iso && shown.has(iso) ? iso : null;
     };
-    this.a = valid(q.get("c")) ?? valid(reg.defaultCountry) ?? reg.countries[0]?.iso3 ?? "";
+    this.a = valid(q.get("c")) ?? valid(reg.defaultCountry) ?? this.countries[0]?.iso3 ?? "";
     const vs = q.get("vs");
     this.b = vs === "none" ? null : (valid(vs) ?? (q.has("c") ? null : valid(reg.defaultCompare)));
     if (this.b === this.a) this.b = null;
@@ -127,7 +158,9 @@ class AppState {
 
   entry(id: string, iso3: string | null): Entry | null {
     if (!iso3) return null;
-    return this.dash?.values?.[id]?.[iso3] ?? null;
+    const v = this.values.get(iso3);
+    if (v === "failed") return { status: "source_error" };
+    return v?.[id] ?? null;
   }
 
   cname(iso3: string): string {

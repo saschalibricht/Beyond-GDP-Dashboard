@@ -11,7 +11,7 @@ from __future__ import annotations
 import datetime as dt
 import random
 
-from .build import CONFIG, SITE_DATA, auto_tags, load_json, now_iso, public_registry, write_json
+from .build import CONFIG, SITE_DATA, auto_tags, load_json, now_iso, public_registry, write_json, write_values
 
 
 def main() -> None:
@@ -55,7 +55,9 @@ def main() -> None:
         values[ind["id"]] = per
     stamp = now_iso()
     write_json(SITE_DATA / "registry.json", public_registry(framework, tags, inds, countries, ccfg))
-    write_json(SITE_DATA / "dashboard.json", {"demo": True, "dataHash": "demo", "lastChanged": stamp, "values": values}, compact=True)
+    iso3s = sorted(c["iso3"] for c in countries)
+    write_values(values, iso3s)
+    write_json(SITE_DATA / "dashboard.json", {"demo": True, "dataHash": "demo", "lastChanged": stamp, "countries": iso3s})
     sources = []
     for ind in inds:
         for s in ind["sources"]:

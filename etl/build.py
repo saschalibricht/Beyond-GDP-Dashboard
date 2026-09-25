@@ -5,7 +5,8 @@
 
 Outputs (all committed to the repo and served as static files):
     public/data/registry.json   framework, tags, indicator descriptions, countries
-    public/data/dashboard.json  values per indicator and country
+    public/data/dashboard.json  manifest: data hash, last change, countries with data
+    public/data/values/XXX.json values per indicator for one country (loaded on demand)
     public/data/status.json     health of every data source, last check / last change
     data/etl_state.json       failure counters (drives the GitHub issue alert)
     data/alerts.json          sources that failed 3+ runs in a row
@@ -62,22 +63,39 @@ def source_key(src: dict) -> str:
 
 # ------------------------------------------------------------------- countries
 def resolve_countries(cfg: dict, log) -> list[dict]:
-    """Fill in name, income group and M49 code for configured countries.
+    """Fill in name, income group and M49 code for every country.
 
-    Manual values in countries.json always win. Lookups are cached so a failing
-    API never removes information that was known before.
+    With "all": true in countries.json, every economy the World Bank lists is
+    included (regional aggregates excluded); entries in "countries" add manual
+    values, which always win. Lookups are cached so a failing API never removes
+    information that was known before.
     """
     from .adapters import sdg, worldbank
 
     cache_path = STATE_DIR / "countries_resolved.json"
     cache = load_json(cache_path, {}) or {}
-    countries = [dict(c) for c in cfg["countries"]]
-    iso3s = [c["iso3"].upper() for c in countries]
-    try:
-        wb = worldbank.country_metadata(iso3s)
-    except Exception as e:
-        log(f"  ! country metadata lookup failed: {e}")
-        wb = {}
+    codes = (load_json(CONFIG / "country_codes.json", {}) or {}).get("codes", {})
+    configured = {c["iso3"].upper(): dict(c, iso3=c["iso3"].upper()) for c in cfg.get("countries", [])}
+    if cfg.get("all"):
+        try:
+            wb = worldbank.all_countries()
+        except Exception as e:
+            log(f"  ! country list lookup failed, using the cached list: {e}")
+            wb = {k: v for k, v in cache.items() if v.get("listed")}
+        iso3s = sorted(set(wb) | set(configured))
+    else:
+        iso3s = list(configured)
+        try:
+            wb = worldbank.country_metadata(iso3s)
+        except Exception as e:
+            log(f"  ! country metadata lookup failed: {e}")
+            wb = {}
+    countries = [configured.get(i, {"iso3": i}) for i in iso3s]
+    for c in countries:
+        code = codes.get(c["iso3"], {})
+        if not c.get("m49") and code.get("m49"):
+            c["m49"] = code["m49"]
+        c["aliases"] = list(dict.fromkeys(c.get("aliases", []) + code.get("names", [])))
     need_m49 = [c for c in countries if not c.get("m49") and not cache.get(c["iso3"], {}).get("m49")]
     geo = {}
     if need_m49:
@@ -89,7 +107,10 @@ def resolve_countries(cfg: dict, log) -> list[dict]:
         c["iso3"] = c["iso3"].upper()
         known = cache.get(c["iso3"], {})
         info = wb.get(c["iso3"], {})
-        c.setdefault("name", info.get("name") or known.get("name") or c["iso3"])
+        short = codes.get(c["iso3"], {}).get("short")
+        c.setdefault("name", short or info.get("name") or known.get("name") or c["iso3"])
+        if info.get("name") and info["name"] not in c["aliases"]:
+            c["aliases"].append(info["name"])
         c["income"] = info.get("income") or known.get("income")
         c["incomeLabel"] = info.get("incomeLabel") or known.get("incomeLabel")
         c["region"] = info.get("region") or known.get("region")
@@ -102,6 +123,7 @@ def resolve_countries(cfg: dict, log) -> list[dict]:
         if c["name"] not in c["aliases"]:
             c["aliases"].append(c["name"])
         cache[c["iso3"]] = {k: c.get(k) for k in ("name", "income", "incomeLabel", "region", "m49")}
+        cache[c["iso3"]]["listed"] = c["iso3"] in wb or bool(known.get("listed"))
     write_json(cache_path, cache)
     return countries
 
@@ -196,6 +218,47 @@ def choose(ind: dict, country: dict, runs: dict, prev_entry: dict | None, this_y
 
 
 # ------------------------------------------------------------------------ main
+def values_dir() -> Path:
+    return SITE_DATA / "values"
+
+
+def load_values(manifest: dict) -> dict:
+    """Previous values as {indicator: {iso3: entry}}; reads the old single-file format too."""
+    if manifest.get("values"):
+        return manifest["values"]
+    values: dict = {}
+    for path in sorted(values_dir().glob("*.json")):
+        per = load_json(path, {}) or {}
+        for ind_id, entry in per.items():
+            values.setdefault(ind_id, {})[path.stem] = entry
+    return values
+
+
+def write_values(values: dict, iso3s: list[str]) -> None:
+    """One compact file per country; files of countries no longer shown are removed."""
+    out = values_dir()
+    out.mkdir(parents=True, exist_ok=True)
+    for iso3 in iso3s:
+        per = {ind_id: cs[iso3] for ind_id, cs in values.items() if iso3 in cs}
+        write_json(out / f"{iso3}.json", per, compact=True)
+    keep = set(iso3s)
+    for path in out.glob("*.json"):
+        if path.stem not in keep:
+            path.unlink()
+
+
+def applicable(countries: list[dict], values: dict, ccfg: dict) -> list[dict]:
+    """Countries with data for at least `minIndicators` indicators; configured ones always stay."""
+    min_n = int(ccfg.get("minIndicators", 0) or 0)
+    configured = {c["iso3"].upper() for c in ccfg.get("countries", [])}
+    keep = []
+    for c in countries:
+        n = sum(1 for cs in values.values() if (cs.get(c["iso3"]) or {}).get("status") == "ok")
+        if c["iso3"] in configured or n >= min_n:
+            keep.append(c)
+    return keep
+
+
 def public_registry(framework: dict, tags: dict, indicators: list[dict], countries: list[dict], ccfg: dict) -> dict:
     inds = []
     for ind in indicators:
@@ -207,7 +270,8 @@ def public_registry(framework: dict, tags: dict, indicators: list[dict], countri
         "framework": framework,
         "tags": tags["tags"],
         "indicators": inds,
-        "countries": [{k: c.get(k) for k in ("iso3", "name", "income", "incomeLabel", "region")} for c in countries],
+        "countries": sorted(({k: c.get(k) for k in ("iso3", "name", "income", "incomeLabel", "region")} for c in countries),
+                            key=lambda c: str(c["name"] or c["iso3"]).casefold()),
         "defaultCountry": ccfg.get("default"),
         "defaultCompare": ccfg.get("defaultCompare"),
         "outdatedAfterYears": OUTDATED_AFTER_YEARS,
@@ -229,7 +293,7 @@ def run(only: list[str] | None = None, log=print) -> int:
 
     log("Resolving countries…")
     countries = resolve_countries(ccfg, log)
-    log("  " + ", ".join(f"{c['iso3']} ({c.get('income') or '?'}, m49={c.get('m49')})" for c in countries))
+    log(f"  {len(countries)} countries, {sum(1 for c in countries if c.get('m49'))} with an M49 code")
 
     selected = [i for i in indicators if not only or i["id"] in only]
     runs: dict[str, dict] = {}
@@ -257,9 +321,10 @@ def run(only: list[str] | None = None, log=print) -> int:
                     traceback.print_exc()
             runs[key] = entry
 
-    values = dict(prev.get("values", {})) if only else {}
+    prev_values = load_values(prev)
+    values = dict(prev_values) if only else {}
     for ind in selected:
-        prev_ind = (prev.get("values") or {}).get(ind["id"], {})
+        prev_ind = prev_values.get(ind["id"], {})
         values[ind["id"]] = {c["iso3"]: choose(ind, c, runs, prev_ind.get(c["iso3"]), this_year, today) for c in countries}
 
     # --- source health + failure counters
@@ -285,12 +350,18 @@ def run(only: list[str] | None = None, log=print) -> int:
         seen = {s["key"] for s in sources_out}
         sources_out += [s for k, s in prev_sources.items() if k not in seen]
 
+    shown = applicable(countries, values, ccfg)
+    shown_iso = {c["iso3"] for c in shown}
+    values = {i: {iso: e for iso, e in cs.items() if iso in shown_iso} for i, cs in values.items()}
+    log(f"  {len(shown)} of {len(countries)} countries have enough data to be shown")
     data_hash = hashlib.sha256(json.dumps(values, sort_keys=True).encode()).hexdigest()[:16]
     changed = data_hash != prev.get("dataHash")
     last_changed = started if changed or not prev.get("lastChanged") else prev["lastChanged"]
 
-    write_json(SITE_DATA / "registry.json", public_registry(framework, tags, indicators, countries, ccfg))
-    write_json(SITE_DATA / "dashboard.json", {"dataHash": data_hash, "lastChanged": last_changed, "values": values}, compact=True)
+    write_json(SITE_DATA / "registry.json", public_registry(framework, tags, indicators, shown, ccfg))
+    write_values(values, sorted(shown_iso))
+    write_json(SITE_DATA / "dashboard.json", {"dataHash": data_hash, "lastChanged": last_changed,
+                                               "countries": sorted(shown_iso)})
     write_json(SITE_DATA / "status.json", {"lastChecked": started, "lastChanged": last_changed, "sources": sources_out})
     write_json(STATE_DIR / "etl_state.json", state)
     write_json(STATE_DIR / "alerts.json", alerts)

@@ -2,7 +2,7 @@
   import { app } from "../lib/state.svelte";
   import Icon from "./Icon.svelte";
 
-  const countries = $derived(app.reg?.countries ?? []);
+  const countries = $derived(app.countries);
 </script>
 
 <div class="bar">
@@ -41,7 +41,7 @@
         <span class="role">Compare</span>
         <span class="name">{app.b ? app.cname(app.b) : "Add country"}</span>
       </span>
-      <Icon name={app.b ? "chevron" : "plus"} class="chev" />
+      {#if !app.b}<Icon name="plus" class="chev" />{/if}
       <select
         aria-label="Compare with"
         value={app.b ?? ""}
@@ -52,6 +52,11 @@
           <option value={c.iso3}>{c.name}</option>
         {/each}
       </select>
+      {#if app.b}
+        <button type="button" class="clear" aria-label="Remove comparison" title="Remove comparison" onclick={() => app.setB(null)}>
+          <Icon name="close" />
+        </button>
+      {/if}
     </label>
 
     <button
@@ -95,7 +100,8 @@
     gap: 9px;
     padding: 7px 12px 7px 14px;
     border-radius: var(--r-ctl);
-    background: var(--raised);
+    background: var(--tile);
+    border: 1px solid var(--edge);
     box-shadow: var(--lift-sm);
     cursor: pointer;
   }
@@ -166,6 +172,34 @@
     opacity: 0;
     cursor: pointer;
     font-size: 16px; /* prevents iOS zoom on focus */
+  }
+
+  /* sits above the invisible select so it gets the tap */
+  .clear {
+    position: relative;
+    z-index: 1;
+    flex: none;
+    width: 28px;
+    height: 28px;
+    margin: -4px -4px -4px 0;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: var(--track);
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .clear :global(.ic) {
+    width: 13px;
+    height: 13px;
+    stroke-width: 1.8;
+  }
+
+  .clear:hover {
+    background: var(--b);
+    color: #fff;
   }
 
   .vs {

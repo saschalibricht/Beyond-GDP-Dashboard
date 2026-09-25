@@ -1,11 +1,10 @@
 <script lang="ts">
-  import AboutSheet from "./components/AboutSheet.svelte";
   import Controls from "./components/Controls.svelte";
   import DetailSheet from "./components/DetailSheet.svelte";
   import Footer from "./components/Footer.svelte";
   import Header from "./components/Header.svelte";
   import HealthSheet from "./components/HealthSheet.svelte";
-  import LegendSheet from "./components/LegendSheet.svelte";
+  import HelpSheet from "./components/HelpSheet.svelte";
   import Section from "./components/Section.svelte";
   import { app } from "./lib/state.svelte";
 
@@ -15,6 +14,18 @@
   $effect(() => {
     void [app.a, app.b, app.view, app.pins, app.detail, app.phase];
     app.persist();
+  });
+
+  // load the selected countries' values, then show them
+  $effect(() => {
+    app.ensureValues(app.a);
+    app.ensureValues(app.b);
+  });
+  $effect(() => {
+    if (app.phase === "ready" && !app.pending) {
+      app.viewA = app.a;
+      app.viewB = app.b;
+    }
   });
 
   // theme: explicit choice wins, "system" follows the OS (see index.html for the pre-paint copy)
@@ -54,7 +65,7 @@
   </main>
 {:else if app.phase === "ready"}
   <Controls />
-  <main id="main" class="wrap" tabindex="-1">
+  <main id="main" class="wrap" tabindex="-1" class:busy={app.pending && !!app.viewA}>
     {#if !app.hasData}
       <div class="note">
         <h2>No data yet</h2>
@@ -65,7 +76,7 @@
         </p>
       </div>
     {:else}
-      {#if app.dash?.demo}
+      {#if app.manifest?.demo}
         <div class="note demo">
           <strong>Demo data.</strong> These values are random placeholders for previewing the layout. Run the data update to replace
           them with real figures.
@@ -83,14 +94,19 @@
   </main>
   <Footer />
   <DetailSheet />
-  <LegendSheet />
-  <AboutSheet />
+  <HelpSheet />
   <HealthSheet />
 {/if}
 
 <style>
   main:focus {
     outline: none;
+  }
+
+  /* hold the previous render while a newly picked country loads */
+  main.busy {
+    opacity: 0.55;
+    transition: opacity 0.2s 0.1s;
   }
 
   .note {

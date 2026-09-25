@@ -102,6 +102,37 @@ class WorldBankTest(Base):
             worldbank.fetch({"indicator": "BAD"}, COUNTRIES, {})
 
 
+class ManyCountriesTest(Base):
+    """With a long country list, bulk sources are asked for all countries once."""
+    MANY = [{"iso3": f"C{i:02d}", "m49": 900 + i} for i in range(45)] + [{"iso3": "DEU", "m49": 276}]
+
+    def test_world_bank_uses_all(self):
+        self.srv.on(r"country/all/indicator/X", wb_payload([("DEU", 2020, 1.5), ("EUU", 2020, 9.0)]))
+        res = worldbank.fetch({"indicator": "X"}, self.MANY, {})
+        self.assertEqual(list(res.series), ["DEU"])  # aggregates filtered out locally
+
+    def test_sdg_omits_area_list(self):
+        seen = {}
+        def handler(u, p, h):
+            seen.update(p)
+            return {"totalPages": 1, "data": [sdg_row(276, 2020, 5, {}), sdg_row(150, 2020, 6, {})]}
+        self.srv.on(r"Series/Data", handler)
+        res = sdg.fetch({"series": "S1"}, self.MANY, {})
+        self.assertNotIn("areaCode", seen)
+        self.assertEqual(list(res.series), ["DEU"])
+
+    def test_pip_single_bulk_request(self):
+        calls = []
+        def handler(u, p, h):
+            calls.append(p["country"])
+            return [{"country_code": "DEU", "reporting_year": 2019, "reporting_level": "national", "mean": 50, "welfare_type": "income"},
+                    {"country_code": "ZZZ", "reporting_year": 2019, "reporting_level": "national", "mean": 1}]
+        self.srv.on(r"pip/v1/pip", handler)
+        res = pip.fetch_mean({}, self.MANY, {})
+        self.assertEqual(calls, ["all"])
+        self.assertEqual(list(res.series), ["DEU"])
+
+
 class SdgTest(Base):
     def test_prefers_configured_and_total_dims(self):
         rows = [
@@ -255,10 +286,13 @@ class BuildTest(Base):
         for p in self.patches:
             p.start()
         s = self.srv
-        s.on(r"api\.worldbank\.org/v2/country/[A-Z;]+$", [{}, [
-            {"id": c, "name": n, "incomeLevel": {"id": inc, "value": inc}, "region": {"value": "R"}}
-            for c, n, inc in [("DEU", "Germany", "HIC"), ("USA", "United States", "HIC"), ("BRA", "Brazil", "UMC"),
-                              ("IND", "India", "LMC"), ("IDN", "Indonesia", "UMC"), ("KEN", "Kenya", "LMC")]]])
+        s.on(r"api\.worldbank\.org/v2/country/(all|[A-Z;]+)$", [{"page": 1, "pages": 1}, [
+            {"id": c, "name": n, "incomeLevel": {"id": inc, "value": inc}, "region": {"id": reg, "value": "R"}}
+            for c, n, inc, reg in [("DEU", "Germany", "HIC", "ECS"), ("USA", "United States", "HIC", "NAC"),
+                                   ("BRA", "Brazil", "UMC", "LCN"), ("IND", "India", "LMC", "SAS"),
+                                   ("IDN", "Indonesia", "UMC", "EAS"), ("KEN", "Kenya", "LMC", "SSF"),
+                                   ("KOR", "Korea, Rep.", "HIC", "EAS"),     # listed, but no data -> not shown
+                                   ("EUU", "European Union", "", "NA")]]])   # aggregate -> never a country
         s.on(r"/indicator/", lambda u, p, h: wb_payload([(iso, y, 10 + y % 7) for iso in ("DEU", "USA", "BRA", "IND", "IDN", "KEN") for y in (2019, 2020, 2021)]))
         s.on(r"SDGAPI/v1/sdg/(Series|Indicator)/Data", lambda u, p, h: {"totalPages": 1, "data": [
             sdg_row(a, 2018, 12, {"Sex": "BOTHSEX"}, series=p.get("seriesCode", "S")) for a in (276, 404, 76)] + [
@@ -281,7 +315,9 @@ class BuildTest(Base):
         http.reset_memo()
         build.run(log=lambda *a: None)
         site = self.tmp / "site"
-        return (json.loads((site / "dashboard.json").read_text()),
+        dash = json.loads((site / "dashboard.json").read_text())
+        dash["values"] = build.load_values({})  # per-country files, regrouped by indicator
+        return (dash,
                 json.loads((site / "status.json").read_text()),
                 json.loads((site / "registry.json").read_text()))
 
@@ -289,6 +325,16 @@ class BuildTest(Base):
         dash, status, reg = self.run_build()
         v = dash["values"]
         self.assertEqual(len([i for i in reg["indicators"] if not i.get("hidden")]), 31)
+        # all listed economies are considered; aggregates never, data-less ones are not shown
+        self.assertEqual(dash["countries"], ["BRA", "DEU", "IDN", "IND", "KEN", "USA"])
+        self.assertEqual([c["name"] for c in reg["countries"]],
+                         ["Brazil", "Germany", "India", "Indonesia", "Kenya", "United States"])
+        self.assertTrue((self.tmp / "site" / "values" / "DEU.json").exists())
+        self.assertFalse((self.tmp / "site" / "values" / "KOR.json").exists())
+        resolved = json.loads((self.tmp / "state" / "countries_resolved.json").read_text())
+        self.assertEqual(resolved["KOR"]["name"], "South Korea")
+        self.assertEqual(resolved["KOR"]["m49"], 410)
+        self.assertNotIn("EUU", resolved)
         # not applicable: MPI for a high-income country, value for Kenya
         self.assertEqual(v["mpi"]["DEU"]["status"], "not_applicable")
         self.assertEqual(v["mpi"]["KEN"]["latest"]["value"], 37.0)

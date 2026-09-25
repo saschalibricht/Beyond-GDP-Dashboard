@@ -31,6 +31,7 @@
     padding: 4px;
     border-radius: var(--r-pill);
     background: var(--raised);
+    border: 1px solid var(--edge);
     box-shadow: var(--lift-sm);
   }
 
