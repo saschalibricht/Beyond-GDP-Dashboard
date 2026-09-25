@@ -16,6 +16,7 @@
       <span class="text">
         <span class="role">{app.t.controls.country}</span>
         <span class="name">{app.cname(app.a)}</span>
+        <span class="iso" aria-hidden="true">{app.a}</span>
       </span>
       <Icon name="chevron" class="chev" />
       <select aria-label={app.t.controls.country} value={app.a} onchange={(e) => app.setA(e.currentTarget.value)}>
@@ -44,6 +45,7 @@
       <span class="text">
         <span class="role">{app.t.controls.compare}</span>
         <span class="name">{app.b ? app.cname(app.b) : app.t.controls.addCountry}</span>
+        {#if app.b}<span class="iso" aria-hidden="true">{app.b}</span>{/if}
       </span>
       {#if !app.b}<Icon name="plus" class="chev" />{/if}
       <select
@@ -280,94 +282,10 @@
     height: 44px;
   }
 
-  .pins-lbl {
+  .pins-lbl,
+  .iso {
     display: none;
   }
-
-  /* phones: a 2×2 grid. The country pills on top; the view switch and the pinned
-     toggle below, each exactly as wide as the pill above it and equally tall. */
-  @media (max-width: 560px) {
-    .inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .pill {
-      max-width: none;
-      height: 44px;
-      gap: 7px;
-      padding: 0 8px 0 12px;
-    }
-
-    .pill :global(.chev) {
-      display: none;
-    }
-
-    .role {
-      font-size: 0.625rem;
-    }
-
-    .name {
-      font-size: 0.875rem;
-    }
-
-    .swap,
-    .vs {
-      display: none;
-    }
-
-    .clear {
-      width: 22px;
-      height: 22px;
-      margin: -2px -2px -2px 0;
-    }
-
-    /* the switch and the pin button become grid items of their own */
-    .tools {
-      display: contents;
-    }
-
-    /* same size and corner radius as the country pills above */
-    .show,
-    .pins {
-      height: 44px;
-      width: 100%;
-      margin: 0;
-      border-radius: var(--r-ctl);
-    }
-
-    .show {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 4px;
-    }
-
-    .show button {
-      height: 100%;
-      justify-content: center;
-      padding: 0 6px;
-      border-radius: 10px;
-    }
-
-    .pins {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
-      font-size: 0.8125rem;
-    }
-
-    .pins-lbl {
-      display: inline;
-    }
-
-    .pins .count {
-      position: static;
-    }
-  }
-
-
 
   .count {
     position: absolute;
@@ -384,4 +302,89 @@
     font-size: 0.6875rem;
     font-weight: 700;
   }
+
+  /* phones: one row. Countries shown by ISO code, the view switch and the pin as icons. */
+  @media (max-width: 560px) {
+    .inner {
+      gap: 8px;
+    }
+
+    .pill {
+      max-width: none;
+      height: 44px;
+      gap: 7px;
+      padding: 0 8px 0 11px;
+    }
+
+    .pill :global(.chev) {
+      display: none;
+    }
+
+    /* the empty compare pill keeps its plus as the only hint */
+    .empty :global(.chev) {
+      display: block;
+    }
+
+    .role {
+      font-size: 0.625rem;
+    }
+
+    .name {
+      display: none;
+    }
+
+    .iso {
+      display: block;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      letter-spacing: 0.03em;
+    }
+
+    .swap,
+    .vs {
+      display: none;
+    }
+
+    .clear {
+      width: 22px;
+      height: 22px;
+      margin: 0 -2px 0 0;
+    }
+
+    .tools {
+      flex: 0 0 auto;
+      gap: 8px;
+    }
+
+    .show {
+      height: 44px;
+      padding: 4px;
+      border-radius: var(--r-ctl);
+    }
+
+    .show button {
+      width: 34px;
+      height: 100%;
+      padding: 0;
+      justify-content: center;
+      border-radius: 10px;
+    }
+
+    .show .lbl {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .pins {
+      width: 44px;
+      height: 44px;
+      margin: 0;
+      border-radius: var(--r-ctl);
+    }
+  }
+
 </style>
