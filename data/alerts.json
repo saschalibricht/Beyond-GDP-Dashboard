@@ -13,7 +13,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 3
+    "consecutiveFailures": 4
   },
   {
     "key": "whr:{\"column\":[\"Life Ladder\",\"Ladder score\"]}",
@@ -29,7 +29,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 3
+    "consecutiveFailures": 4
   },
   {
     "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
@@ -45,7 +45,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 3
+    "consecutiveFailures": 4
   },
   {
     "key": "worldbank:{\"indicator\":\"NW.NCA.PC\",\"source\":59}",
@@ -61,6 +61,6 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 3
+    "consecutiveFailures": 4
   }
 ]

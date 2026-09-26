@@ -408,7 +408,7 @@
     "listed": true
   },
   "CUW": {
-    "name": "Curacao",
+    "name": "Curaçao",
     "income": "HIC",
     "incomeLabel": "High income",
     "region": "Latin America & Caribbean ",
@@ -1184,7 +1184,7 @@
     "listed": true
   },
   "NRU": {
-    "name": "Naoero",
+    "name": "Nauru",
     "income": "HIC",
     "incomeLabel": "High income",
     "region": "East Asia & Pacific",
@@ -1264,7 +1264,7 @@
     "listed": true
   },
   "PRI": {
-    "name": "Puerto Rico (US)",
+    "name": "Puerto Rico",
     "income": "HIC",
     "incomeLabel": "High income",
     "region": "Latin America & Caribbean ",
@@ -1408,7 +1408,7 @@
     "listed": true
   },
   "SOM": {
-    "name": "Somalia, Fed. Rep.",
+    "name": "Somalia",
     "income": "LIC",
     "incomeLabel": "Low income",
     "region": "Sub-Saharan Africa ",
