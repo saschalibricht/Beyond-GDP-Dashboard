@@ -1,5 +1,5 @@
 {
-  "lastChecked": "2026-09-26T09:23:57+00:00",
+  "lastChecked": "2026-09-27T10:03:14+00:00",
   "lastChanged": "2026-09-26T09:23:57+00:00",
   "sources": [
     {
@@ -36,7 +36,7 @@
         "UKR",
         "YEM"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -178,7 +178,7 @@
         "YEM",
         "ZAF"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -317,7 +317,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -496,7 +496,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -708,7 +708,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -920,7 +920,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -937,7 +937,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 4
+      "consecutiveFailures": 5
     },
     {
       "key": "pip_mean:{}",
@@ -1123,7 +1123,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1283,7 +1283,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1396,7 +1396,7 @@
         "USA",
         "ZAF"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1598,7 +1598,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1800,7 +1800,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1974,7 +1974,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2123,7 +2123,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2258,7 +2258,7 @@
         "ZAF",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2471,7 +2471,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2677,7 +2677,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2785,7 +2785,7 @@
         "ZAF",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2965,7 +2965,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2982,7 +2982,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 4
+      "consecutiveFailures": 5
     },
     {
       "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
@@ -2998,7 +2998,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 4
+      "consecutiveFailures": 5
     },
     {
       "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Disability status\":[\"_T\",\"TOTAL\"],\"Location\":[\"ALLAREA\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.6.2\",\"series\":\"SP_PSR_OSATIS_GOV\"}",
@@ -3060,7 +3060,7 @@
         "VNM",
         "ZAF"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3290,7 +3290,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3507,7 +3507,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3675,7 +3675,7 @@
         "ZAF",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3849,7 +3849,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4075,7 +4075,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4263,7 +4263,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4450,7 +4450,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4599,7 +4599,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4641,7 +4641,7 @@
         "UGA",
         "ZMB"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4746,7 +4746,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4913,7 +4913,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5112,7 +5112,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5308,7 +5308,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5510,7 +5510,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5641,7 +5641,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5769,7 +5769,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5833,7 +5833,7 @@
         "USA",
         "ZAF"
       ],
-      "lastSuccess": "2026-09-26T09:23:57+00:00",
+      "lastSuccess": "2026-09-27T10:03:14+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5850,7 +5850,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 4
+      "consecutiveFailures": 5
     }
   ]
 }
