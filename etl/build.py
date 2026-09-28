@@ -17,6 +17,7 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 import sys
 import threading
 import time
@@ -411,7 +412,18 @@ def run(only: list[str] | None = None, log=print) -> int:
     return 0
 
 
+def load_dotenv(path: Path = ROOT / ".env") -> None:
+    """Local runs: read KEY=value lines from the gitignored .env. Real env vars win."""
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        key, sep, value = line.strip().partition("=")
+        if sep and key and not key.startswith("#"):
+            os.environ.setdefault(key.strip(), value.strip().strip("\"'"))
+
+
 def main() -> None:
+    load_dotenv()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--only", nargs="*", help="indicator ids to refresh")
     ap.add_argument("--debug", action="store_true")

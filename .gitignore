@@ -5,5 +5,8 @@ __pycache__/
 node_modules/
 dist/
 
+# local secrets (e.g. UCDP_TOKEN), never committed; GitHub Actions uses repository secrets
+.env
+
 # local notes for Claude Code, not published
 CLAUDE.md
