@@ -1,6 +1,6 @@
 {
-  "lastChecked": "2026-10-07T11:08:09+00:00",
-  "lastChanged": "2026-10-07T11:08:09+00:00",
+  "lastChecked": "2026-10-08T11:25:56+00:00",
+  "lastChanged": "2026-10-08T11:25:56+00:00",
   "sources": [
     {
       "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Cause of death\":[\"ALL\",\"TOTAL\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.1.2\",\"series\":\"VC_DTH_TOTR\"}",
@@ -36,7 +36,7 @@
         "UKR",
         "YEM"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -59,7 +59,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -185,7 +185,7 @@
         "YEM",
         "ZAF"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -337,7 +337,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -516,7 +516,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -728,7 +728,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -940,7 +940,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -957,7 +957,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 16
+      "consecutiveFailures": 17
     },
     {
       "key": "pip_mean:{}",
@@ -1143,7 +1143,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1304,7 +1304,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1418,7 +1418,7 @@
         "USA",
         "ZAF"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1427,201 +1427,15 @@
       "providerUrl": "https://www.who.int/data/gho",
       "label": "WHO Global Health Observatory",
       "url": "https://www.who.int/data/gho",
-      "status": "ok",
-      "error": null,
+      "status": "error",
+      "error": "AdapterError: WHO GHO returned no data for WHOSIS_000002: HTTP 503 from https://ghoapi.azureedge.net/api/WHOSIS_000002",
       "optional": false,
       "indicators": [
         "hale"
       ],
-      "countries": [
-        "AFG",
-        "AGO",
-        "ALB",
-        "ARE",
-        "ARG",
-        "ARM",
-        "ATG",
-        "AUS",
-        "AUT",
-        "AZE",
-        "BDI",
-        "BEL",
-        "BEN",
-        "BFA",
-        "BGD",
-        "BGR",
-        "BHR",
-        "BHS",
-        "BIH",
-        "BLR",
-        "BLZ",
-        "BOL",
-        "BRA",
-        "BRB",
-        "BRN",
-        "BTN",
-        "BWA",
-        "CAF",
-        "CAN",
-        "CHE",
-        "CHL",
-        "CHN",
-        "CIV",
-        "CMR",
-        "COD",
-        "COG",
-        "COL",
-        "COM",
-        "CPV",
-        "CRI",
-        "CUB",
-        "CYP",
-        "CZE",
-        "DEU",
-        "DJI",
-        "DNK",
-        "DOM",
-        "DZA",
-        "ECU",
-        "EGY",
-        "ERI",
-        "ESP",
-        "EST",
-        "ETH",
-        "FIN",
-        "FJI",
-        "FRA",
-        "FSM",
-        "GAB",
-        "GBR",
-        "GEO",
-        "GHA",
-        "GIN",
-        "GMB",
-        "GNB",
-        "GNQ",
-        "GRC",
-        "GRD",
-        "GTM",
-        "GUY",
-        "HND",
-        "HRV",
-        "HTI",
-        "HUN",
-        "IDN",
-        "IND",
-        "IRL",
-        "IRN",
-        "IRQ",
-        "ISL",
-        "ISR",
-        "ITA",
-        "JAM",
-        "JOR",
-        "JPN",
-        "KAZ",
-        "KEN",
-        "KGZ",
-        "KHM",
-        "KIR",
-        "KOR",
-        "KWT",
-        "LAO",
-        "LBN",
-        "LBR",
-        "LBY",
-        "LCA",
-        "LKA",
-        "LSO",
-        "LTU",
-        "LUX",
-        "LVA",
-        "MAR",
-        "MDA",
-        "MDG",
-        "MDV",
-        "MEX",
-        "MKD",
-        "MLI",
-        "MLT",
-        "MMR",
-        "MNE",
-        "MNG",
-        "MOZ",
-        "MRT",
-        "MUS",
-        "MWI",
-        "MYS",
-        "NAM",
-        "NER",
-        "NGA",
-        "NIC",
-        "NLD",
-        "NOR",
-        "NPL",
-        "NZL",
-        "OMN",
-        "PAK",
-        "PAN",
-        "PER",
-        "PHL",
-        "PNG",
-        "POL",
-        "PRI",
-        "PRK",
-        "PRT",
-        "PRY",
-        "PSE",
-        "QAT",
-        "ROU",
-        "RUS",
-        "RWA",
-        "SAU",
-        "SDN",
-        "SEN",
-        "SGP",
-        "SLB",
-        "SLE",
-        "SLV",
-        "SOM",
-        "SRB",
-        "SSD",
-        "STP",
-        "SUR",
-        "SVK",
-        "SVN",
-        "SWE",
-        "SWZ",
-        "SYC",
-        "SYR",
-        "TCD",
-        "TGO",
-        "THA",
-        "TJK",
-        "TKM",
-        "TLS",
-        "TON",
-        "TTO",
-        "TUN",
-        "TUR",
-        "TZA",
-        "UGA",
-        "UKR",
-        "URY",
-        "USA",
-        "UZB",
-        "VCT",
-        "VEN",
-        "VNM",
-        "VUT",
-        "WSM",
-        "YEM",
-        "ZAF",
-        "ZMB",
-        "ZWE"
-      ],
+      "countries": [],
       "lastSuccess": "2026-10-07T11:08:09+00:00",
-      "consecutiveFailures": 0
+      "consecutiveFailures": 1
     },
     {
       "key": "owid_grapher:{\"slug\":\"healthy-life-expectancy-at-birth\"}",
@@ -1822,7 +1636,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1996,7 +1810,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2145,7 +1959,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2280,7 +2094,7 @@
         "ZAF",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2493,7 +2307,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2699,7 +2513,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2807,7 +2621,7 @@
         "ZAF",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2987,7 +2801,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3004,7 +2818,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 16
+      "consecutiveFailures": 17
     },
     {
       "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
@@ -3020,7 +2834,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 16
+      "consecutiveFailures": 17
     },
     {
       "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Disability status\":[\"_T\",\"TOTAL\"],\"Location\":[\"ALLAREA\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.6.2\",\"series\":\"SP_PSR_OSATIS_GOV\"}",
@@ -3082,7 +2896,7 @@
         "VNM",
         "ZAF"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3312,7 +3126,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3529,7 +3343,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3697,7 +3511,7 @@
         "ZAF",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3871,7 +3685,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4097,7 +3911,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4285,7 +4099,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4472,7 +4286,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4621,7 +4435,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4663,7 +4477,7 @@
         "UGA",
         "ZMB"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4768,7 +4582,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4935,7 +4749,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5134,7 +4948,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5330,7 +5144,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5532,7 +5346,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5663,7 +5477,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5791,7 +5605,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5855,7 +5669,7 @@
         "USA",
         "ZAF"
       ],
-      "lastSuccess": "2026-10-07T11:08:09+00:00",
+      "lastSuccess": "2026-10-08T11:25:56+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5872,7 +5686,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 16
+      "consecutiveFailures": 17
     }
   ]
 }
