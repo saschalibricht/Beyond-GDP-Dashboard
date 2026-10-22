@@ -13,7 +13,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 30
+    "consecutiveFailures": 31
   },
   {
     "key": "whr:{\"column\":[\"Life Ladder\",\"Ladder score\"]}",
@@ -22,14 +22,14 @@
     "label": "World Happiness Report data file",
     "url": "https://worldhappiness.report/",
     "status": "error",
-    "error": "AdapterError: No WHR data file link found",
+    "error": "AdapterError: Columns ['Life Ladder', 'Ladder score'] not found in WHR file",
     "optional": false,
     "indicators": [
       "life_satisfaction"
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 30
+    "consecutiveFailures": 31
   },
   {
     "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
@@ -38,14 +38,14 @@
     "label": "World Happiness Report data (Gallup) – social support",
     "url": "https://worldhappiness.report/",
     "status": "error",
-    "error": "AdapterError: No WHR data file link found",
+    "error": "AdapterError: Columns ['Social support'] not found in WHR file",
     "optional": false,
     "indicators": [
       "loneliness"
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 30
+    "consecutiveFailures": 31
   },
   {
     "key": "worldbank:{\"indicator\":\"NW.NCA.PC\",\"source\":59}",
@@ -61,6 +61,6 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 30
+    "consecutiveFailures": 31
   }
 ]
