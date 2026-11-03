@@ -13,7 +13,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 42
+    "consecutiveFailures": 43
   },
   {
     "key": "who_gho:{\"code\":\"WHOSIS_000002\",\"sex\":[\"SEX_BTSX\",\"BTSX\"]}",
@@ -29,7 +29,7 @@
     ],
     "countries": [],
     "lastSuccess": "2026-10-28T10:38:49+00:00",
-    "consecutiveFailures": 5
+    "consecutiveFailures": 6
   },
   {
     "key": "whr:{\"column\":[\"Life Ladder\",\"Ladder score\"]}",
@@ -45,7 +45,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 42
+    "consecutiveFailures": 43
   },
   {
     "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
@@ -61,7 +61,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 42
+    "consecutiveFailures": 43
   },
   {
     "key": "worldbank:{\"indicator\":\"NW.NCA.PC\",\"source\":59}",
@@ -77,6 +77,6 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 42
+    "consecutiveFailures": 43
   }
 ]
