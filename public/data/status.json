@@ -1,6 +1,6 @@
 {
-  "lastChecked": "2026-11-03T12:00:03+00:00",
-  "lastChanged": "2026-11-03T12:00:03+00:00",
+  "lastChecked": "2026-11-04T12:15:15+00:00",
+  "lastChanged": "2026-11-04T12:15:15+00:00",
   "sources": [
     {
       "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Cause of death\":[\"ALL\",\"TOTAL\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.1.2\",\"series\":\"VC_DTH_TOTR\"}",
@@ -36,7 +36,7 @@
         "UKR",
         "YEM"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -59,7 +59,7 @@
         "KEN",
         "USA"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -77,115 +77,62 @@
       "countries": [
         "AFG",
         "AGO",
-        "ALB",
         "ARE",
-        "ARG",
         "ARM",
-        "AUS",
         "AZE",
         "BDI",
-        "BEL",
         "BEN",
         "BFA",
         "BGD",
-        "BIH",
-        "BTN",
         "CAF",
         "CHN",
-        "CIV",
         "CMR",
         "COD",
         "COG",
         "COL",
-        "COM",
-        "DEU",
-        "DJI",
         "DZA",
-        "ECU",
         "EGY",
         "ERI",
-        "ESP",
         "ETH",
-        "FRA",
-        "GBR",
-        "GEO",
-        "GIN",
-        "GNB",
-        "GTM",
-        "HRV",
         "HTI",
         "IDN",
         "IND",
         "IRN",
         "IRQ",
         "ISR",
-        "ITA",
         "JOR",
         "KEN",
         "KGZ",
-        "KHM",
-        "KWT",
-        "LAO",
         "LBN",
-        "LBR",
         "LBY",
-        "LKA",
-        "LSO",
-        "MAR",
-        "MCO",
-        "MDA",
-        "MEX",
-        "MKD",
         "MLI",
-        "MLT",
         "MMR",
         "MOZ",
         "MRT",
-        "MYS",
-        "NAM",
         "NER",
         "NGA",
-        "NIC",
-        "NLD",
-        "NPL",
         "PAK",
-        "PAN",
         "PER",
         "PHL",
-        "PNG",
         "POL",
-        "PRY",
-        "QAT",
-        "ROU",
         "RUS",
         "RWA",
         "SAU",
         "SDN",
-        "SEN",
-        "SLB",
-        "SLE",
-        "SLV",
         "SOM",
-        "SRB",
         "SSD",
         "SYR",
         "TCD",
         "TGO",
         "THA",
         "TJK",
-        "TTO",
-        "TUN",
         "TUR",
         "TZA",
         "UGA",
         "UKR",
-        "USA",
-        "UZB",
-        "VEN",
-        "YEM",
-        "ZAF"
+        "YEM"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -337,7 +284,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -516,7 +463,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -728,7 +675,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -940,7 +887,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -957,7 +904,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 43
+      "consecutiveFailures": 44
     },
     {
       "key": "pip_mean:{}",
@@ -1143,7 +1090,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1304,7 +1251,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1418,7 +1365,7 @@
         "USA",
         "ZAF"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1428,14 +1375,14 @@
       "label": "WHO Global Health Observatory",
       "url": "https://www.who.int/data/gho",
       "status": "error",
-      "error": "AdapterError: WHO GHO returned no data for WHOSIS_000002: HTTP 500 from https://ghoapi.azureedge.net/api/WHOSIS_000002",
+      "error": "AdapterError: WHO GHO returned no data for WHOSIS_000002: HTTP 503 from https://ghoapi.azureedge.net/api/WHOSIS_000002",
       "optional": false,
       "indicators": [
         "hale"
       ],
       "countries": [],
       "lastSuccess": "2026-10-28T10:38:49+00:00",
-      "consecutiveFailures": 6
+      "consecutiveFailures": 7
     },
     {
       "key": "owid_grapher:{\"slug\":\"healthy-life-expectancy-at-birth\"}",
@@ -1636,7 +1583,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1810,7 +1757,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -1959,7 +1906,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2094,7 +2041,7 @@
         "ZAF",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2307,7 +2254,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2513,7 +2460,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2621,7 +2568,7 @@
         "ZAF",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2801,7 +2748,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -2818,7 +2765,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 43
+      "consecutiveFailures": 44
     },
     {
       "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
@@ -2834,7 +2781,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 43
+      "consecutiveFailures": 44
     },
     {
       "key": "sdg:{\"dims\":{\"Age\":[\"ALLAGE\"],\"Disability status\":[\"_T\",\"TOTAL\"],\"Location\":[\"ALLAREA\"],\"Sex\":[\"BOTHSEX\"]},\"indicator\":\"16.6.2\",\"series\":\"SP_PSR_OSATIS_GOV\"}",
@@ -2896,7 +2843,7 @@
         "VNM",
         "ZAF"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3126,7 +3073,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3343,7 +3290,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3511,7 +3458,7 @@
         "ZAF",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3685,7 +3632,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -3911,7 +3858,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4099,7 +4046,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4286,7 +4233,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4435,7 +4382,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4477,7 +4424,7 @@
         "UGA",
         "ZMB"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4582,7 +4529,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4749,7 +4696,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -4949,7 +4896,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5145,7 +5092,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5347,7 +5294,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5478,7 +5425,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5606,7 +5553,7 @@
         "ZMB",
         "ZWE"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5670,7 +5617,7 @@
         "USA",
         "ZAF"
       ],
-      "lastSuccess": "2026-11-03T12:00:03+00:00",
+      "lastSuccess": "2026-11-04T12:15:15+00:00",
       "consecutiveFailures": 0
     },
     {
@@ -5687,7 +5634,7 @@
       ],
       "countries": [],
       "lastSuccess": null,
-      "consecutiveFailures": 43
+      "consecutiveFailures": 44
     }
   ]
 }

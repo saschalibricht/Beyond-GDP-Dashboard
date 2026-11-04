@@ -13,7 +13,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 43
+    "consecutiveFailures": 44
   },
   {
     "key": "who_gho:{\"code\":\"WHOSIS_000002\",\"sex\":[\"SEX_BTSX\",\"BTSX\"]}",
@@ -22,14 +22,14 @@
     "label": "WHO Global Health Observatory",
     "url": "https://www.who.int/data/gho",
     "status": "error",
-    "error": "AdapterError: WHO GHO returned no data for WHOSIS_000002: HTTP 500 from https://ghoapi.azureedge.net/api/WHOSIS_000002",
+    "error": "AdapterError: WHO GHO returned no data for WHOSIS_000002: HTTP 503 from https://ghoapi.azureedge.net/api/WHOSIS_000002",
     "optional": false,
     "indicators": [
       "hale"
     ],
     "countries": [],
     "lastSuccess": "2026-10-28T10:38:49+00:00",
-    "consecutiveFailures": 6
+    "consecutiveFailures": 7
   },
   {
     "key": "whr:{\"column\":[\"Life Ladder\",\"Ladder score\"]}",
@@ -45,7 +45,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 43
+    "consecutiveFailures": 44
   },
   {
     "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
@@ -61,7 +61,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 43
+    "consecutiveFailures": 44
   },
   {
     "key": "worldbank:{\"indicator\":\"NW.NCA.PC\",\"source\":59}",
@@ -77,6 +77,6 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 43
+    "consecutiveFailures": 44
   }
 ]
