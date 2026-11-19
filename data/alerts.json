@@ -13,23 +13,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 44
-  },
-  {
-    "key": "who_gho:{\"code\":\"WHOSIS_000002\",\"sex\":[\"SEX_BTSX\",\"BTSX\"]}",
-    "provider": "WHO Global Health Observatory",
-    "providerUrl": "https://www.who.int/data/gho",
-    "label": "WHO Global Health Observatory",
-    "url": "https://www.who.int/data/gho",
-    "status": "error",
-    "error": "AdapterError: WHO GHO returned no data for WHOSIS_000002: HTTP 503 from https://ghoapi.azureedge.net/api/WHOSIS_000002",
-    "optional": false,
-    "indicators": [
-      "hale"
-    ],
-    "countries": [],
-    "lastSuccess": "2026-10-28T10:38:49+00:00",
-    "consecutiveFailures": 7
+    "consecutiveFailures": 45
   },
   {
     "key": "whr:{\"column\":[\"Life Ladder\",\"Ladder score\"]}",
@@ -45,7 +29,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 44
+    "consecutiveFailures": 45
   },
   {
     "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
@@ -61,7 +45,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 44
+    "consecutiveFailures": 45
   },
   {
     "key": "worldbank:{\"indicator\":\"NW.NCA.PC\",\"source\":59}",
@@ -70,13 +54,13 @@
     "label": "World Bank Changing Wealth of Nations",
     "url": "https://www.worldbank.org/en/publication/changing-wealth-of-nations",
     "status": "error",
-    "error": "AdapterError: World Bank API error for NW.NCA.PC: [{'id': '120', 'key': 'Invalid value', 'value': 'The provided parameter value is not valid'}]",
+    "error": "FetchError: HTTP 502 from https://api.worldbank.org/v2/country/all/indicator/NW.NCA.PC",
     "optional": false,
     "indicators": [
       "natural_capital"
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 44
+    "consecutiveFailures": 45
   }
 ]
