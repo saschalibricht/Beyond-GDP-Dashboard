@@ -13,7 +13,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 45
+    "consecutiveFailures": 46
   },
   {
     "key": "whr:{\"column\":[\"Life Ladder\",\"Ladder score\"]}",
@@ -29,7 +29,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 45
+    "consecutiveFailures": 46
   },
   {
     "key": "whr:{\"column\":[\"Social support\"],\"multiply\":100}",
@@ -45,7 +45,7 @@
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 45
+    "consecutiveFailures": 46
   },
   {
     "key": "worldbank:{\"indicator\":\"NW.NCA.PC\",\"source\":59}",
@@ -54,13 +54,13 @@
     "label": "World Bank Changing Wealth of Nations",
     "url": "https://www.worldbank.org/en/publication/changing-wealth-of-nations",
     "status": "error",
-    "error": "FetchError: HTTP 502 from https://api.worldbank.org/v2/country/all/indicator/NW.NCA.PC",
+    "error": "AdapterError: World Bank API error for NW.NCA.PC: [{'id': '120', 'key': 'Invalid value', 'value': 'The provided parameter value is not valid'}]",
     "optional": false,
     "indicators": [
       "natural_capital"
     ],
     "countries": [],
     "lastSuccess": null,
-    "consecutiveFailures": 45
+    "consecutiveFailures": 46
   }
 ]
